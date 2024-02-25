@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Box model</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      #parentBox {
+        width: 80%;
+        border: 1px solid red;
+        margin: auto;
+        display: flex;
+        /* can give height as auto so that it takes
+         the height of the content present inside it */
+        height: auto;
+      }
+      .box {
+        /* height: 92%; */
+        width: 23%;
+        border: 1px solid blue;
+        margin: auto;
+      }
+      .avatar {
+        width: 100%;
+      }
+      .tc {
+        text-align: center;
+      }
+      .logo {
+        width: 140px;
+       //display:block;
+        margin:auto
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Strategic Investors</h1>
+    <div id="parentBox">
+      <div class="box">
+        <img class="avatar" src="" alt="" />
+        <h2 class="tc">Name of investor</h2>
+        <p class="tc">Founder & CEO</p>
+        <img class="logo" src="" alt="" />
+      </div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
