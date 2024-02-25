@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2FlexPlay</title>
+  </head>
+  <body>
+    <div class="box1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+  </body>
+  <style>
+    .box1 {
+      border: 3px solid blue;
+      /* height: 100px; */
+      width: 500px;
+      /* text-align: center; */
+      margin-left: 250px;
+      margin-top: 100px;
+      display: flex;
+      /* flex-direction: column; */
+      /* flex-direction: column-reverse; */
+      /* flex-direction: row; */
+      /* flex-direction: row-reverse; */
+
+      /* flex-wrap: nowrap; */
+      /* flex-wrap: wrap; */
+      /* flex-wrap: wrap-reverse; */
+
+      /* justify-content: baseline; */
+      /* justify-content: center; */
+      /* justify-content: end; */
+      /* justify-content:first baseline; */
+      /* justify-content: flex-end; */
+      /* justify-content: flex-start; */
+      /* justify-content: last baseline; */
+      /* justify-content: left; */
+      /* justify-content: right; */
+      /* justify-content: safe; */
+      /* justify-content: space-around; */
+      /* justify-content: space-between; */
+      /* justify-content: space-evenly; */
+      /* justify-content: start; */
+      /* justify-content: stretch; */
+      /* justify-content: unsafe; */
+
+      /* align-items: baseline; */
+      /* align-items: center; */
+      /* align-items: end; */
+      /* align-items:first baseline; */
+      /* align-items: flex-end; */
+      /* align-items: flex-start; */
+      /* align-items: last baseline; */
+      /* align-items: normal; */
+      /* align-items: self-end; */
+      /* align-items: stretch; */
+    }
+    .box1 div {
+      border: 3px solid green;
+      width: 50px;
+      height: 50px;
+      margin-left: 5px;
+      margin-top: 5px;
+    }
+
+    .box1 > div:nth-child(9) {
+      background-color: brown;
+      /* margin-right: 410px; */
+      /* margin-top: 20px; */
+      /* margin-bottom: 5px; */
+      /* margin-left: 0px; */
+    }
+  </style>
+</html>
