@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <title>Descendant Selector</title>
+  <head>
+    <style>
+      div p {
+        background-color: teal;
+        /* It will select all p's which are descendants of div */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Descendant Selector in CSS</h1>
+    <div>
+      <p>Paragraph 1 in the div.</p>
+      <p>Paragraph 2 in the div.</p>
+      <span><p>Paragraph 3 in the div.</p></span>
+    </div>
+    <p>Paragraph 4. Not in a div, not a descendant</p>
+    <p>Paragraph 5. Not in a div, not a descendant</p>
+  </body>
+</html>

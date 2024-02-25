@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX1</title>
+</head>
+<body>
+    <p>  In flexbox, there are mainly two entities: a parent container (the flex container) and the immediate children elements (flex items).</p>
+
+    <p>Parent (Flex Container)
+        display: flex | inline-flex;
+        
+        flex-direction: row | row-reverse | column | column-reverse;
+        
+        flex-wrap: wrap | nowrap | wrap-reverse;
+        
+        flex-flow (shorthand for flex-direction and flex-wrap) (flex-flow: row wrap;)
+        ​
+        justify-content (main axis): flex-start | flex-end | center | space-between | space-around | space-evenly;
+        
+        align-items (cross axis): flex-start | flex-end | center | baseline | stretch;
+        
+        ​
+        align-content: flex-start | flex-end | center | stretch | space-between | space-around | space-evenly; [wrapping scenario]
+        ​
+        gap: <length></p>
+
+            <p>
+                Children (Flex Items)
+order: <integer>;
+
+align-self: overrides alignment set on parent
+
+flex-grow: <number>; (Defaults to 0)
+
+flex-shrink: <number>; (Defaults to 1)
+
+flex-basis: <length> | auto; (Defaults to auto ) [starting width]
+
+flex: shorthand for grow, shrink, and basis (default:  0 1 auto)
+            </p>
+</body>
+</html>
