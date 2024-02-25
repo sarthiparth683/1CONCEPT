@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex2ntChild</title>
+  </head>
+  <body>
+    <style>
+      .box {
+        background-color: bisque;
+        padding: 20px; 
+        display: flex;
+      }
+      .box > div {
+        padding: 30px;
+      }
+      /* starts form 2 and [(2n)means after 2 box]  */
+      .box > div:nth-child(3n + 2) {
+        background-color: blue;
+      }
+      .box > div:nth-child(8) {
+        /* order:1,2,3...any number comes to end; */
+        background-color: orangered;
+      }
+      .box > div:nth-child(3) {
+        background-color: aqua;
+      }
+    </style>
+
+    <div class="box">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+  </body>
+</html>

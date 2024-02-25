@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order</title>
+  </head>
+  <body>
+    <div class="fd">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div> 
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+    <style>
+      .fd > div:nth-child(5) {
+        /* order:1,2,3...any number comes to end; by default it is 0 so -ve no order comes before and +ve after it */
+        background-color: orangered;
+        order: 0;
+      }
+      .fd > div:nth-child(4) {
+        background-color: black;
+        order: 5;
+      }
+      .fd {
+        border: 10px solid blue;
+        display: flex;
+      }
+      .fd div {
+        background-color: antiquewhite;
+        border: 3px solid black;
+        width: 100px;
+        height: 100px;
+        font-size: 30px;
+      }
+    </style>
+  </body>
+</html>

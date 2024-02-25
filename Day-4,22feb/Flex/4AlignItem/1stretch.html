@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stretch</title>
+</head>
+<body>
+    #box {
+        display: flex;
+        align-items: stretch;
+        padding: 50px;
+        height: 300px;
+        background-color: #c3a7a7;
+      }
+      #box > div {
+        width: 100px;
+      }
+      #box > div:first-child {
+        background-color: cadetblue;
+        padding: 100px 0;
+      }
+      #box > div:nth-child(2) {
+        background-color: coral;
+        padding: 50px 0;
+      }
+      #box > div:last-child {
+        background-color: mediumslateblue;
+        padding: 75px 0;
+      }
+
+<div id="box">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+</body>
+</html>
