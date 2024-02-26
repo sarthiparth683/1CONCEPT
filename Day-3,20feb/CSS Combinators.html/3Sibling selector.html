@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Genreral Siblings</title>
+    <style>
+      .box1 ~ div  {
+        /* selects all p's which are general siblings of h3 */
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <p>Paragraph 1, general sibling</p>
+      <p>Paragraph 2, general sibling</p>
+    </div>
+
+    <div>
+      <p>Paragraph 3, general sibling of h3</p>
+      <p>Paragraph 4, general sibling of h3</p>
+      <p>Paragraph 5, general sibling of h3</p>
+    </div>
+  </body>
+</html>
