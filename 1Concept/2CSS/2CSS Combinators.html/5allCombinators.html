@@ -3,39 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      .gen {
-        background-color: aquamarine;
-        color: blue;
-      }
-      /*sibling*/
-      #parent > div + h1 {
-        color: brown;
-      }
-    </style>
+    <title>Combinators</title>
   </head>
   <body>
     <div id="parent">
       <div class="gen" id="child-1">
         Hi, I am div, child of the Parent div, "id = Parent"
       </div>
+
       <h1 class="gen" id="child-2">
         Hi I am h1, child of the Parent div, "id = Parent", also i am sibling of
         child-1, I am immediate sibling
       </h1>
+
       <p class="gen" id="child-4">
         Hi I am P, child of the Parent div, "id = Parent", also i am sibling of
         child-1 & 2, I am not immdiate sibling
       </p>
+
       <p class="gen" id="child-5">
         Hi I am P, child of the Parent div, "id = Parent", also i am sibling of
         child-1 & 2, I am not immdiate sibling
       </p>
+
       <h1 class="gen" id="child-3">
         Hi I am h1, child of the Parent div, "id = Parent", also i am sibling of
         child-1, I am not immediate sibling
       </h1>
     </div>
+    <style>
+      /* #parent  {    1.Descendant selector ( )   */
+      /* #parent > h1 {  2.Child selector (>) */
+      /* #parent h1 ~ h1 {   3.Sibling selector (~)      */
+      /* #parent h1 + p {   #parent h1 + p {  */
+      #parent h1 + p {
+        background-color: aquamarine;
+        color: blue;
+      }
+    </style>
   </body>
 </html>
