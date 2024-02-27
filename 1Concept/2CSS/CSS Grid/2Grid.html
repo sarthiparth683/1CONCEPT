@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2Grid</title>
+  </head>
+  <body>
+    <div id="mainBox">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+    </div>
+  </body>
+  <style>
+    #mainBox {
+      display: grid;
+
+      /* for column size and row size  */
+      /* grid-template-columns:100px 100px; */
+      /* grid-template-rows:100px 100px 100px 100px  ; */
+
+      /* Repeat (no. of times(columns or rows), size) */
+      /* grid-template-columns: repeat(5, 100px); */
+      /* grid-template-rows:repeat(2,100px); */
+
+      /* for  gap: ; */
+      /* grid-row-gap: 10px; */
+      /* grid-column-gap: 10px; */
+      /* gap: 20px 100px; */
+      /* gap: 10px; */
+
+      /* Fraction */
+        /* 100 -> 33.33% 33.33% 33.33% */
+        /* 100 -> 1fr 1fr 1fr */
+        /* grid-template-columns: repeat(3,1fr); */
+        /* grid-template-rows: repeat(2, 1fr); */
+
+      border: 7px solid green;
+      width: 700px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+
+      margin-left: 300px;
+      margin-top: 50px;
+    }
+    #mainBox > div {
+      background-color: aquamarine;
+      border: 2px solid black;
+      /* width: 50px; */
+      font-size: 21px;
+      font-weight: 500;
+    }
+    #mainBox > div:nth-child(5) {
+      /* background-color: chocolate; */
+      /* margin-top: 100px; */
+      /* padding: 10px; */
+    }
+  </style>
+</html>

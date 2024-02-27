@@ -18,19 +18,31 @@
     <style>
       #mainBox {
         display: grid;
+        /* for columns and rows  */
         /* grid-template-columns:100px 100px; */
         /* grid-template-rows:50px 50px; */
+
+      
+
+        /* Repeat (no. of times,size) */
+        /* grid-template-columns: repeat(3, 100px); */
+        /* grid-template-rows:repeat(2,100px); */
+
+          /*  for gap in column and rows  */
         /* grid-row-gap: 20px; */
         /* grid-column-gap: 10px; */
-        gap: 20px;
+        /* gap: 20px 20px;     for both row and column  */
+        /* gap: 10px; */
 
-        /* repeat (no. of times,size) */
-        grid-template-columns: repeat(3, 100px);
-        grid-template-rows: repeat(2, 100px);
+        /* Fraction */
+        /* 100 -> 33.33% 33.33% 33.33% */
+        /* 100 -> 1fr 1fr 1fr */
+        /* grid-template-columns: repeat(3,1fr); */
+        /* grid-template-rows: repeat(2, 100px); */
 
-        grid-template-areas:
+        /* grid-template-areas:
           "one two four"
-          "three six five";
+          "three six five"; */
       }
       #mainBox > div {
         padding: 20px;
