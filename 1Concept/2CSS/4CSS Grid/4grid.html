@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4Grid</title>
+  </head>
+  <body>
+    <h3>Grid Line Naming (just for Naming convention.)</h3>
+
+    <p>
+      In CSS Grid, you can name the lines of the grid using the
+      'grid-template-columns' and 'grid-template-rows' properties, and then
+      reference these names in the 'grid-column' and 'grid-row' properties.
+    </p>
+    <p>
+      This allows you to create more meaningful and reusable grid layouts and
+      makes it easier to understand and maintain your code.
+    </p>
+    <p>
+      Example <br />
+
+      .container {<br />
+      display: grid;<br />
+      grid-template-columns: [start] 1fr [mid] 2fr [end];<br />
+      grid-template-rows: [top] 100px [bottom];<br />
+      }<br /><br />
+
+      .item {<br />
+      grid-column: start / end;<br />
+      grid-row: top / bottom;<br />
+      }<br />
+    </p>
+  </body>
+</html>

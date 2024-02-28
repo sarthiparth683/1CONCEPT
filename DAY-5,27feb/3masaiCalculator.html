@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3Masai Calculator using Grid - (L3)</title>
+  </head>
+  <body>
+    <h1>Masai Calculator</h1>
+
+    <div id="mainBox">
+      <div id="box1"></div>
+      <div id="box2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>+</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>-</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>x</div>
+        <div>c</div>
+        <div>0</div>
+        <div>=</div>
+        <div>/</div>
+      </div>
+    </div>
+  </body>
+  <style>
+    h1 {
+      color: dodgerblue;
+      font-weight: bold;
+      text-align: center;
+    }
+    #mainBox {
+      width: 490px;
+      height: 500px;
+      margin-left: 420px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      border-radius: 10px;
+    }
+    #box1 {
+      width: 350px;
+      margin-left: 70px;
+
+      height: 70px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      border-radius: 10px;
+    }
+
+    #box2 {
+      display: grid;
+      grid-template-columns: repeat(4, 80px);
+      grid-template-rows: repeat(4, 80px);
+      gap: 10px 10px;
+      margin-left: 70px;
+      padding-bottom: 40px;
+      padding-top: 100px;
+      margin-top: -70px;
+    }
+    #box2 > div {
+      text-align: center;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      border-radius: 10px;
+    }
+    #box2 > div:nth-child(4n + 4) {
+      background-color: black;
+      color: white;
+    }
+    #box2 > div:nth-child(15) {
+      background-color: black;
+      color: white;
+    }
+    #box2 > div:nth-child(13) {
+      background-color: red;
+      color: white;
+    }
+  </style>
+</html>
