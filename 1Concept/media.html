@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div  id="parent-div">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+<style>
+    body{
+        background-color: aqua;
+    }
+    #parent-div{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        margin: 10px 20px;
+        gap: 10px;
+    }
+    @media screen and (min-width:720px) {
+        body{
+            background-color: chartreuse;
+        }
+    }
+</style>
+</html>
