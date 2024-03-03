@@ -22,6 +22,7 @@
         alt="omidyar"
       />
     </div>
+
     <h1 id="strategic">Strategic Investors</h1>
 
     <div id="mainBox">
@@ -364,6 +365,67 @@
     .round {
       border-start-start-radius: 30px;
       border-start-end-radius: 30px;
+    }
+  </style>
+
+  <style>
+    /* medium screeen  */
+    @media all and (min-width: 768px) and (max-width: 1023px) {
+      #boardImg {
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 80px;
+      }
+      #boardImg img {
+        width: 220px;
+      }
+      #strategic {
+        /* align-items: center; */
+        /* text-align: center; */
+        margin-left: 250px;
+      }
+      #mainBox {
+        display: grid;
+        grid-template-columns: repeat(3, 250px);
+      }
+      .round {
+        width: 220px;
+      }
+    }
+  </style>
+
+  <style>
+    /* small screen 2 card per row */
+    @media all and (min-width: 10px) and (max-width: 767px) {
+      #board {
+        font-size: 45px;
+        margin-left: 550px;
+      }
+      #boardImg img {
+        width: 350px;
+      }
+      #strategic {
+        font-size: 45px;
+      }
+      #mainBox {
+        display: grid;
+        grid-template-columns: repeat(2, 550px);
+      }
+      .round {
+        width: 530px;
+      }
+      .name {
+        font-size: 50px;
+      }
+      .founder {
+        font-size: 35px;
+        margin-top: -20px;
+      }
+      .logo {
+        width: 200px;
+      }
     }
   </style>
 </html>

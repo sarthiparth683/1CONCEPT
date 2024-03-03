@@ -1,0 +1,46 @@
+/* Two Cards per row */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  #head {
+    /* border: 3px solid black; */
+    width: 380px;
+  }
+  #head p {
+    text-align: center;
+    font-size: 10px;
+    width: 340px;
+  }
+  #box1 {
+    display: grid;
+    grid-template-columns: repeat(2, 185px);
+  }
+  #box1 img {
+    width: 170px;
+  }
+  #box1 p {
+    font-size: 10px;
+  }
+  #box1 h3 {
+    font-size: 15px;
+    margin-top: -5px;
+  }
+
+  #box2 {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    /* width: 500px; */
+    margin-left: 55px;
+    margin-top: 20px;
+    column-gap: 50px;
+
+    
+  }
+  #box22 img {
+    width: 50px;
+  }
+  #box23 h2 {
+    font-size: 15px;
+  }
+  #box23 p {
+    font-size: 7px;
+  }
+}

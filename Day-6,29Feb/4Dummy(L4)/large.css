@@ -1,0 +1,42 @@
+#portfolio {
+    color: aqua;
+    background-color: black;
+    text-align: center;
+    height:140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #navigation {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.509);
+    color: white;
+    height: 50px;
+  }
+  #mainBox {
+    margin-top: 20px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px ;
+  }
+  #mainBox > div {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    height: 150px;
+  }
+  #mainBox2 {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #mainBox2 img {
+    width: 130px;
+    border-radius: 10px;
+    margin-top: 30px;
+  }
+  #mainBox2 > div:nth-child(2) {
+    text-align: center;
+  }

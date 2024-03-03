@@ -72,7 +72,7 @@
       grid-template-rows: repeat(3, 160px);
       gap: 20px 20px;
       /* text-align: center; */
-    }
+    } 
     .coffee > div {
       border-radius: 20px;
       background-color: white;
@@ -94,6 +94,30 @@
       font-weight: 500;
       color: grey;
       font-size: 15px;
+    }
+  </style>
+
+  <style>
+    /* medium size screen width   */
+    @media all and (min-width: 768px) and (max-width: 1023px) {
+      .coffee {
+        display: grid;
+        grid-template-columns: repeat(2, 320px);
+      }
+      .dollar {
+        margin-right: 100px;
+      }
+    }
+  </style>
+
+  <style>
+    /* small screen 1 card per row */
+    @media all and (min-width: 10px) and (max-width: 767px) {
+      .coffee {
+        display: grid;
+        grid-template-columns: repeat(1, 400px);
+        margin-left: 300px;
+      }
     }
   </style>
 </html>

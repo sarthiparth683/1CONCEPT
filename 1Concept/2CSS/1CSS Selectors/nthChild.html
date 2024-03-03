@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex2ntChild</title>
+  </head>
+  <body>
+    <div class="box">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+      <div>15</div>
+      <div>16</div>
+      <div>17</div>
+      <div>18</div>
+      <div>19</div>
+      <div>20</div>
+      <div>21</div>
+      <div>22</div>
+      <div>23</div>
+      <div>24</div>
+      <div>25</div>
+      <div>26</div>
+      <div>27</div>
+      <div>28</div>
+    </div>
+  </body>
+
+  <style>
+    .box {
+      margin: 100px 0 0 100px ;
+      background-color: aqua;
+      width: 80%;
+      height: 400px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .box div{
+      border: 2px solid black;
+      width: 100px;
+      height: 100px;
+    }
+    .box > div:nth-child(3) {
+      background-color: black;
+    }
+
+    /* starts form 2 and [(5n)means after 5 box]  */
+    .box > div:nth-child(3n + 2) {
+      background-color: blue;
+    }
+
+    /* order:1,2,3...any number comes to end; */
+    .box > div:nth-child(8) {
+      background-color: orangered;
+      order: 5;
+    }
+  </style>
+</html>
