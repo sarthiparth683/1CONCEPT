@@ -40,31 +40,37 @@
 
   <style>
     .box {
-      margin: 100px 0 0 100px ;
+      display: grid;
+      grid-template-columns: repeat(8, 100px);
+      grid-template-rows: repeat(8, 100px);
+      border: 2px solid;
+      gap: 10px 10px;
+      width: 900px;
+      height: 450px;
+      margin-left: 200px;
+      margin-top: 80px;
+      text-align: center;
+    }
+    .box div {
+      border: 2px solid blue;
+    }
+    .box > div:nth-child(5) {
       background-color: aqua;
-      width: 80%;
-      height: 400px;
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .box div{
-      border: 2px solid black;
-      width: 100px;
-      height: 100px;
-    }
-    .box > div:nth-child(3) {
-      background-color: black;
     }
 
     /* starts form 2 and [(5n)means after 5 box]  */
-    .box > div:nth-child(3n + 2) {
-      background-color: blue;
+    .box > div:nth-child(5n + 5) {
+      background-color: chartreuse;
     }
 
     /* order:1,2,3...any number comes to end; */
     .box > div:nth-child(8) {
       background-color: orangered;
       order: 5;
+    }
+    .box > div:nth-child(11) {
+      background-color: chocolate;
+      order: 8;
     }
   </style>
 </html>
