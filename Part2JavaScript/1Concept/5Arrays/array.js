@@ -1,5 +1,5 @@
-let arr1 =["rahul", "rohit", "aman", "raju"];
-let arr2 = [7, 5, 43, "sonu",  true, false];
+// let arr1 =["rahul", "rohit", "aman", "raju"];
+// let arr2 = [7, 5, 43, "sonu",  true, false];
 
 // console.log(arr1);
 // console.log(arr1.length);
@@ -28,10 +28,21 @@ let arr2 = [7, 5, 43, "sonu",  true, false];
 // console.log(arr1);
 
 // using loops in array
-for (let i = 0; i < arr1.length; i++) {
+// for (let i = 0; i < arr1.length; i++) {
 //    console.log(arr1[i]);
 // or
-console.log((i+1) + "." + arr1[i]);
+// console.log((i+1) + "." + arr1[i]);
+//     }
+
+
+
+
+let table = [4,8,12,16,20,24,28,32,36,40];
+console.log(table.length);
+// for (let i = 0; i < table.length; i++) {
+//     console.log(table[i] / 2);
     
-}
+// }
+
+
 
