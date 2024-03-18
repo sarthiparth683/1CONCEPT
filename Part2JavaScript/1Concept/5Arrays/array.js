@@ -27,6 +27,13 @@
 // arr1.pop();
 // console.log(arr1);
 
+// pop method using loop
+// var numbers = [2, 3, 4, 5, 6, 7];
+// for (var i = 1; i <= 3; i++) {
+//   numbers.pop();
+// }
+// console.log(numbers);
+
 // using loops in array
 // for (let i = 0; i < arr1.length; i++) {
 //    console.log(arr1[i]);
@@ -37,12 +44,30 @@
 
 
 
-let table = [4,8,12,16,20,24,28,32,36,40];
-console.log(table.length);
+// let table = [4,8,12,16,20,24,28,32,36,40];
+// console.log(table.length);
 // for (let i = 0; i < table.length; i++) {
 //     console.log(table[i] / 2);
     
 // }
 
+
+// Finding Maximum scores
+// var scores = [87, 92, 78, 94, 89];
+// var maxScore = scores[0];
+// var minScore = scores[0];
+
+// for (var i = 1; i < scores.length; i++) {
+//   if (scores[i] > maxScore) {
+//     maxScore = scores[i];
+//   }
+
+//   if (scores[i] < minScore) {
+//     minScore = scores[i];
+//   }
+// }
+
+// console.log("Maximum Score:", maxScore); 
+// console.log("Minimum Score:", minScore); 
 
 
