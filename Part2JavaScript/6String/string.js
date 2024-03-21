@@ -63,3 +63,48 @@
 // }
 // console.log(input2 === reversed2);
 
+// for (let i = 0; i <12; i++) {
+//    for (let j = 0; j <60; j++) {
+//     console.log(i)
+//     }
+// }
+
+// for (let i = 0; i <12; i++) {
+//     let count = 0
+//     for (let j = 0; j <60; j++) {
+//    count = count + j;
+//      }
+//      console.log(count)
+//  }
+
+// let x = 0;
+// for (let i = 0; i < 5; i++) {
+//    for (let i = 0; i > -5; i--) {
+//       x += 1;
+//    }
+// }
+// console.log(x);
+
+// for (let i = 0; i < 3; i++) {
+//     let bag = "";
+//     for (let j = 0; j < 3; j++) {
+//        bag = bag + "*" + " ";
+//     }
+//     console.log(bag);
+//  }
+
+// for (let i = 1; i <= 5; i++) {
+//     for (let j = 1; j <= i; j++) {
+//        if (i % j == 0) {
+//           console.log(i);
+//           break;
+//        }
+//     }
+//  }
+
+
+let x = 0;
+while (x < 10) {
+   x += 2;
+}
+console.log(x);
