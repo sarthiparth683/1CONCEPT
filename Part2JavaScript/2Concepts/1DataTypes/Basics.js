@@ -8,8 +8,8 @@
 
 // concatination:- 
 // console.log(variable x + variable y );
-let string = "asd"; 
-for (let i=0; index < array.length; index++) {
-  const element = array[index];
+// let string = "asd"; 
+// for (let i=0; index < array.length; index++) {
+//   const element = array[index];
   
-}
+// }
