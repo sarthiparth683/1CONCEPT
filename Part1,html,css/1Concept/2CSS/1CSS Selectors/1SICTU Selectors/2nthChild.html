@@ -43,16 +43,25 @@
       display: grid;
       grid-template-columns: repeat(8, 100px);
       grid-template-rows: repeat(8, 100px);
-      border: 2px solid;
+      border: 5px solid black;
       gap: 10px 10px;
-      width: 900px;
+      /* width: 950px; */
+      width: fit-content;
+      /* height: fit-content; */
+      padding: 10px;
+      
       height: 450px;
       margin-left: 200px;
       margin-top: 80px;
       text-align: center;
+      
+     
     }
     .box div {
-      border: 2px solid blue;
+      border: 5px solid blue;
+      /* margin-left: px; */
+      /* display: flex;
+      justify-content: space-around; */
     }
     .box > div:nth-child(5) {
       background-color: aqua;
@@ -71,6 +80,11 @@
     .box > div:nth-child(11) {
       background-color: chocolate;
       order: 8;
+      /* padding-left: 10px; */
+      /* border-radius: 15px; */
+      /* margin-left: 20px; */
+      /* margin-top: -25px; */
+      /* z-index: 1; */
     }
   </style>
 </html>
