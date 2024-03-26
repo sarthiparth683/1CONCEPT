@@ -1,7 +1,7 @@
 // 11578-08  Print Characters of a String
 
 function printChar(N, str) {
- for (let i = 0; i <=N; i++) {
+ for (let i = 0; i <=N; i++) {       // asscending order  
    console.log(str[i]);
     
  }

@@ -4,21 +4,24 @@ function vowelsInRows(N, M, arr) {
 
     for (let i = 0; i < N; i++) {
         let count = 0;
-
+        // let row = "";
         for (let j = 0; j < M; j++) {
             if (arr[i][j] == "a" || arr[i][j] == "e" ||
                 arr[i][j] == "i" || arr[i][j] == "o" ||
                 arr[i][j] == "u") {
                 count = count + 1;
             }
+
+            // row = row + arr[i][j] + " ";
         }
+        // console.log( row);
 
         if (count > 0) {
             console.log("yes");
         } else {
             console.log("no");
         }
-
+        
 
     }
 }

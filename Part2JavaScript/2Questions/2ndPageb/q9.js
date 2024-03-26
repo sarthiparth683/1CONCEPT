@@ -11,7 +11,7 @@ function patternPrinting(N) {
         }
         console.log(bag);
 
-    }
+    }   
 }
 
 // patternPrinting(5);
