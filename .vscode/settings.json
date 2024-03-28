@@ -1,5 +1,6 @@
 {
     "liveServer.settings.CustomBrowser": "chrome",
     "terminal.integrated.mouseWheelZoom": true,
-    "editor.mouseWheelZoom": true
+    "editor.mouseWheelZoom": true,
+    "liveServer.settings.port": 5502
 }
