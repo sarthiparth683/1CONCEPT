@@ -3,55 +3,119 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Figma</title>
+    <title>Task-1</title>
   </head>
   <body>
     <div class="box1">
-      <div class="box2">
-        <div>Popular things to do</div>
-        <div>see all</div>
-      </div>
+      <div class="popular">Popular things to do</div>
+      <div class="seeAll">See all</div>
 
-      <div class="box3">
-        <img src="1.jpg" alt="">
-        <img src="Part1,html,css\2Projects\Day-7-Figma\Figma-Task-1\2.jpg" alt="">
-        <img src="2.jpg" alt="">
-<img src="https://drive.google.com/file/d/1-Ptbs82nb4NiG04w4W9WQcR0pCZX91Yr/view?usp=drive_link" alt="">
-      <img src="" alt="">
-      <img src="https://drive.google.com/file/d/152XGn5JCztFa0C70qtXdEMapoBflHHhr/view?usp=drive_link" alt="">
+      <div class="box2">
+        <img
+          class="img1"
+          src="https://th.bing.com/th/id/OIP.-KrVqC3X4JmR0EGRxoS2owHaFF?w=800&h=550&rs=1&pid=ImgDetMain"
+          alt=""
+        />
+        <img
+          class="img2"
+          src="https://images.hdqwalls.com/download/lamborghini-aventador-s-roadster-2019-4k-ok-1920x1080.jpg "
+          alt=""
+        />
+        <img
+          class="img3"
+          src="https://i.pinimg.com/originals/81/4e/d0/814ed0aa83d73d43052394e59cf06f6c.png"
+          alt=""
+        />
+        <img
+          class="img4"
+          src="https://wallpapercave.com/wp/wp9040665.jpg"
+          alt=""
+        />
+        <img
+          class="img5"
+          src="https://th.bing.com/th/id/OIP.zIbmCyr5FXv4GrhMxpLzjgHaEK?w=322&h=182&c=7&r=0&o=5&pid=1.7"
+          alt=""
+        />
+        <img
+          class="img6"
+          src="https://th.bing.com/th/id/OIP.-rvvOmtSkCKr2fVA4iG1fAHaFj?w=232&h=180&c=7&r=0&o=5&pid=1.7"
+          alt=""
+        />
       </div>
     </div>
   </body>
   <style>
     .box1 {
-      width: 1320px;
+      border: 2px solid blue;
+      /* width: 1320px;
       height: 600px;
-      margin-top: 136px;
-      margin-left: 300px;
-      border: 4px solid rgb(78, 13, 219);
+      top: 136px;
+      left: 300px;
+      gap: 0px;
+      opacity: 0px; */
+    }
+    .popular {
+      width: 294.31px;
+      height: 45px;
+      top: 5px;
+      left: 15px;
+      gap: 0px;
+      opacity: 0px;
+      font-size: 29.88px;
+      font-weight: 700;
+      line-height: 45px;
+      text-align: left;
+      color: #05073c;
+    }
+    .seeAll {
+      /* Link → See all */
+
+      position: absolute;
+      width: 44.79px;
+      height: 28.13px;
+      left: 1234.41px;
+      top: 21.88px;
+
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14.2969px;
+      line-height: 28px;
+      /* identical to box height, or 197% */
+      display: flex;
+      align-items: center;
+      color: #05073c;
+    }
+    .box2 img {
+      width: 250px;
     }
     .box2 {
-      border: 4px solid black;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      justify-content: space-between;
-      align-items: center;
+      display: grid;
+      grid-template-areas: 
+      "img1 img3 img4 img4 "
+      "img2 img3 img5 img6";
+      gap: 10px;
     }
-    .box2 > div:nth-child(1) {
-      border: 4px solid black;
-      margin-left: 5px;
-      color: #05073c;
-      font-weight: 700;
-      font-size: 29.88px;
-      line-height: 45px;
+
+    .img1 {
+      grid-area: img1;
     }
-    .box1 div:nth-child(2) {
-      border: 4px solid black;
-      margin-right: 5px;
-      font-weight: 400;
-      font-size: 14.3px;
-      line-height: 28.13px;
+    .img2 {
+      grid-area: img2;
+    }
+    .img3 {
+      grid-area: img3;
+      height: 400px;
+    }
+    .img4 {
+      grid-area: img4;
+      width:100px;
+    }
+    .img5 {
+      grid-area: img5;
+    }
+    .img6 {
+      grid-area: img6;
     }
   </style>
 </html>
