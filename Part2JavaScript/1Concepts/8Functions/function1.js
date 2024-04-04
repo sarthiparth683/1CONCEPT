@@ -12,7 +12,7 @@
 // fuction declaration
 // function defination/body
 // Calling Function
-// function argumenets :-value passed(GIVE VALUE) during function call - sum(2,3);
+// function argumenets :-value passed(GIVE VALUE) during function call - Example of arguments:-  add(3, 5);sum(2,3);
 // function parameters :- value RECEIVE VALUE in function defination - sum(x,y);
 
 // function sub(a,b,c,d) {
@@ -51,4 +51,3 @@
 // return at last , after returen statement no code will be executed
 
 
-// .fhlf
