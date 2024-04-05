@@ -24,10 +24,10 @@
 // console.log(student); 
 
 
-let laptop = {
-    name:"Dell",
-    price:50000,
-    warranty:"1year",
-    color:"black"
-}
-console.log(laptop);
+// let laptop = {
+//     name:"Dell",
+//     price:50000,
+//     warranty:"1year",
+//     color:"black"
+// }
+// console.log(laptop);
