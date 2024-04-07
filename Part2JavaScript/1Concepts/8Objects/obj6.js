@@ -9,12 +9,15 @@ var user2 = {
     hobbies: "coding",
     marks : [25, 100, 80, 90, 80]
 };
+ 
 
-// Ist Way
+// Adding data in object
+
+// Ist Way bracket notation
 user2['Date_of_Birth'] = "02-Oct-1984";
 
-// IInd Way
-user2.Date_of_Birth = "02-Oct-1984";
+// IInd Way dot notation
+user2.Date_of_Birth = "02-Oct-1986";
 
 console.log(user2);
 

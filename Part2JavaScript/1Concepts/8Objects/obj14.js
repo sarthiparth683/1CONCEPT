@@ -13,13 +13,13 @@ var amazon = [
 // Part 1 : Print those products name : whose rating is 4
 for (var i = 0; i < amazon.length; i++) {
     if (amazon[i].rating == 4) {
-        console.log("Part-1-" + amazon[i].name);
+        console.log( amazon[i].name);
     }
 }
 
 // Part 2 : Print All products name, whose prices are between 2500 and 10000  including both
 for (var i = 0; i < amazon.length; i++) {
     if (amazon[i].price >= 2500 && amazon[i].price <= 10000) {
-        console.log("Part-2-" + amazon[i].name, amazon[i].price);
+        console.log(amazon[i].name, amazon[i].price);
     }
 }

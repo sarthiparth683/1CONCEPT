@@ -14,7 +14,7 @@ var user2 = {
 delete user2["gender"];
 
 // IInd way
-delete user2.gender;
+delete user2.marks;
 
 console.log(user2);
 

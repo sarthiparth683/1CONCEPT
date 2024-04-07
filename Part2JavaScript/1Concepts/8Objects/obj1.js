@@ -1,19 +1,19 @@
-// let student = {
-//     name:"Rahul",
-//     age: 25,
-//     gender:"male",
-//     city:"Bangalore",
-//     hobbies:"coding"
-// };
-// console.log(student);
+let student = {
+    name:"Rahul",
+    age: 25,
+    gender:"male",
+    city:"Bangalore",
+    hobbies:"coding"
+};
+console.log(student);
 
 // Accesing object data:-
-// METHOD 1:-
+// METHOD 1:- Bracaket Notation
 // console.log(student["name"]);
 // console.log(student["age"]);
 // console.log(student["gender"]);
 
-// METHOD 2:- dot notation
+// METHOD 2:- Dot Notation
 // console.log(student.name);
 // console.log(student.age);
 // console.log(student.hobbies);
@@ -24,10 +24,4 @@
 // console.log(student); 
 
 
-// let laptop = {
-//     name:"Dell",
-//     price:50000,
-//     warranty:"1year",
-//     color:"black"
-// }
-// console.log(laptop);
+

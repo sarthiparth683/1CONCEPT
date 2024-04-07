@@ -11,6 +11,6 @@ var classroom = [
 // console.log(classroom[2].name);
 
 for (var i = 0; i < classroom.length; i++) {
-    // console.log(classroom[i].name);
-    console.log(classroom[i].age);
+    console.log(classroom[i].name);
+    // console.log(classroom[i].age);
 }

@@ -12,6 +12,10 @@ var details = {
 };
 
 for (var key in details) {
-    console.log(key, ' ', details[key]);
+    // console.log(key, ' ', details[key]);
+    // console.log(key);
     // console.log(details[key]);
+
 }
+// console.log(details.name)
+// console.log(details["age"])

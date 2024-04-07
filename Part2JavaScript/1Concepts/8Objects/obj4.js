@@ -11,4 +11,5 @@
 		city  : "Bangalore",
 		hobbies: "coding"
 };
+console.log(user1);
 console.log(user2);
