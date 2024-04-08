@@ -23,7 +23,7 @@ function mapCharAgain(N) {
     let obj = {};
     let alphabets = "abcdefghijklmnopqrstuvwxyz";
     for (let i = 0; i < alphabets.length; i++) {
-        obj[alphabets[i]] = i + N;
+        obj[alphabets[i]] = i + N ;
         // console.log(obj[alphabets[i]]);
     }
     // console.log(obj); 
@@ -35,4 +35,4 @@ function mapCharAgain(N) {
     }
 }
 
-mapCharAgain(50); 
+mapCharAgain(10); 

@@ -26,5 +26,5 @@ function mapChar(N) {
     for (let key in obj) {
         console.log(key + "-" + obj[key])
     }
-}
+};
 mapChar(5);

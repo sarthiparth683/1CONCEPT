@@ -21,7 +21,7 @@ function mapNumbers(N, K) {
         obj[i] = i + K - 1 ;
     }
     for (let anyKeyName in obj) {
-        console.log(anyKeyName + "-" + obj[anyKeyName])
+        console.log(anyKeyName + "-" + obj[anyKeyName]);
     }
 }
 mapNumbers(5, 10);

@@ -35,9 +35,14 @@ function mapCharAndSum(N, K, str) {
     for (let i = 0; i < K; i++) {
         obj[str[i]] = i + N;
     }
-    console.log(obj)
-    for (let j = 0; j < K; j++) {
-        sum = sum + obj[str[j]];
+    console.log(obj); 
+    // for (let j = 0; j < K; j++) {
+    //     sum = sum + obj[str[j]];
+    // }
+    // console.log(sum);
+    for (key in obj) {
+        console.log(key + "-" + obj[key]);
+        sum = sum + obj[key];
     }
     console.log(sum);
 }
