@@ -4,5 +4,6 @@
 // For example, let's say you have an array of numbers and want to pass each number as separate arguments to a function. You can use the spread operator to achieve this.
 
 let numbers = [1, 2, 3, 4, 5];
-console.log(...numbers);
+console.log({...numbers});
+console.log([...numbers]);
 // Output: 1 2 3 4 5

@@ -6,8 +6,8 @@
 export function sum(a, b) {
     return a + b;
 }
-
+ 
 // app.js
 import { sum } from './math.js';
-
+ 
 console.log(sum(5, 3)); // Output: 8`

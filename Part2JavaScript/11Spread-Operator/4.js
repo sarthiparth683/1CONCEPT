@@ -1,7 +1,7 @@
 // Spread operator
 const parts = ['shoulders', 'knees'];
 const body = ['head', ...parts, 'toes'];
-// ['head', 'shoulders', 'knees', 'toes']
+// console.log(body);
 
 // Rest parameters
 function sum(...theArgs) {
@@ -9,4 +9,5 @@ function sum(...theArgs) {
     return previous + current;
   });
 }
-console.log(sum(1, 2, 3)); // 6
+console.log(sum(1, 2, 3));
+// 6

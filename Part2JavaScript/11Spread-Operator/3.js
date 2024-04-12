@@ -3,10 +3,10 @@
 var abc = ['a', 'b', 'c'];
 var def = ['d', 'e', 'f'];
 var alpha1 = [...abc, ...def];
-var alpha2 = {...abc, ...def};
-// console.log(...abc);
-// console.log(...def);
-// console.log(alpha1);
+var alpha2 = { ...abc, ...def };
+console.log(...abc);
+console.log(...def);
+console.log(alpha1);
 console.log(alpha2);
 
 
