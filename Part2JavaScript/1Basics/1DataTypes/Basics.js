@@ -6,5 +6,3 @@ console.log(typeof(x));
 // x = 11;  (variable assigned)
 // console.log(x);  (variable Printed)
 
-// concatination:- 
-// console.log(variable x + variable y );
