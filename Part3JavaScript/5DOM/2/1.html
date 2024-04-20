@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      What is the difference between document.createElement() and innerHTML for
+      adding new elements to the DOM? When would you prefer one over the other?
+    </p>
+  </body>
+  <script>
+    // Difference between document.createElement() and innerHTML:
+
+    // document.createElement(): This method creates a new element node in memory but does not add it to the DOM tree until you explicitly append it to an existing element using methods like appendChild() or insertBefore().
+    const newDiv = document.createElement("div");
+    newDiv.textContent = "New div content";
+    // document.body.appendChild(newDiv); // Appending the new div to the body
+    // innerHTML: This property sets or returns the HTML content (including child elements) of an element. It can be used to create and insert multiple elements at once but involves parsing HTML strings and is generally less efficient than creating elements programmatically.
+    document.getElementById("container").innerHTML =
+      "<div>New div content</div>";
+  </script>
+</html>

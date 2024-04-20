@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #login {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 50%;
+        margin: auto;
+        background-color: lightcyan;
+        padding: 30px;
+        justify-content: center;
+        align-items: center;
+      }
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="login">
+      <h4>Signup Here.....</h4>
+      <input id="email" type="text" placeholder="Enter Email" />
+      <input id="password" type="password" placeholder="Enter Pasword" />
+      <button id="signup">Signup</button>
+    </div>
+  </body>
+  <script>
+    /// catch the htmls tags already written in body
+    // you can inject/put the html tags in the body
+    // by using DOM
+    // styling using DOM
+    // JS=> some funtions, create, to catch a element
+    // to style, they have written
+    // console.log(document.body)
+
+    // we have some functions which catches the html elements
+    // getElementByID
+    // getElementsByClass
+    // querySelector
+    // get Elements By
+
+    //1. catching the (signup button) element by its id name
+    let signup = document.getElementById("signup");
+    //console.log(signup) // entire button is printed
+    //2. attach the event listner
+    signup.addEventListener("click", function () {
+      // 3. the following is the function which calls when button is clicked
+      console.log("clicked");
+
+      //4. catch the input tags
+      let email = document.getElementById("email");
+      let password = document.getElementById("password");
+      // the data present in the input tags, are present under key called value that is email.value,password.value
+      // creating a object, assigning the input data of email and password, then sending message as "Signup Sucessfulll"
+      let user = {};
+      user.email = email.value;
+      user.password = password.value;
+
+      // let userArr = []
+      // here data is being stored in array, but this is not appropriate dataStructure to store, the ideal one is use object
+      // userArr[0] = email.value;
+      // userArr[1] =  password.value;
+      //console.log("userArr", userArr)
+      // console.log(email.value, password.value)
+
+      // it alerts the user with message given in that
+      alert("Signup Sucessfulll");
+      // we are creating the new tag, and assigning some text for that tag
+      let p = document.createElement("h5");
+      p.textContent = "Signup Sucessfulll....";
+      // catching the div whose id is "login"
+      let login = document.getElementById("login");
+      //console.log(login)
+      /// injecting the created tag ino the div  (displaying in UI)
+      login.append(p);
+    });
+
+    // Steps for DOM Assignment-2 (Basic Creating Product Card)
+
+    // declare a div in body, whose id name is container
+    // we have to catch the container
+    // then we have to create a div, (card)
+    // then we have to create img, p,
+    // put that img , p tags in the div(card)
+    // put that card in the container
+    // repeat above four lines for all the elements present in the array(products)
+    // the above one can be rewritten in code as
+
+    let cont = document.getElementById("container");
+    let card = document.createElement("div");
+    let img = document.createElement("img");
+    img.src = products[0].image;
+    let p = document.createElement("p");
+    p.textContent = `Name:- ${products[0].title} `;
+    card.append(img, p);
+    cont.append(card);
+    // need to run the above 20 times (use a loop, for the prodcuts array)
+  </script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Student Activities Problem 1.</h1>
+    <div id="colorBox"></div>
+    <button id="btn--red">RED</button>
+    <button id="btn--yellow">YELLOW</button>
+    <button id="btn--green">GREEN</button>
+    <button id="btn--reset">RESET</button>
+  </body>
+  <style>
+    #colorBox {
+      width: 200px;
+      height: 200px;
+      background-color: black;
+      margin: 20px;
+    }
+    .button {
+      margin: 5px;
+    }
+  </style>
+  <script>
+    // change the color of the box using js upon clicking on buttons. https://codepen.io/drupalastic/pen/rNPdjZq?editors=1010
+    // Solution 1.
+    // selecting in all the variables
+    let colorBox = document.getElementById("colorBox");
+    let btnRed = document.getElementById("btn--red");
+    let btnYellow = document.getElementById("btn--yellow");
+    let btnGreen = document.getElementById("btn--green");
+    let btnReset = document.getElementById("btn--reset");
+
+    // adding eventListeners on the selected elements
+    btnRed.addEventListener("click", function () {
+      colorBox.style.backgroundColor = "red";
+    });
+
+    btnYellow.addEventListener("click", function () {
+      colorBox.style.backgroundColor = "yellow";
+    });
+
+    btnGreen.addEventListener("click", function () {
+      colorBox.style.backgroundColor = "green";
+    });
+
+    btnReset.addEventListener("click", function () {
+      colorBox.style.backgroundColor = "black";
+    });
+  </script>
+</html>

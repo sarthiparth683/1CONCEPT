@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h4 id="firstHeading">First Heading</h4>
+  </body>
+  <script>
+    var firstHeading = document.getElementById("firstHeading");
+// will remove foo if it is a class of firstHeading
+    firstHeading.classList.remove("foo");
+// will add the class 'anotherClass' if one does not already exist
+    firstHeading.classList.add("anotherclass");
+// add or remove multiple classes
+    firstHeading.classList.add("foo", "bar");
+    firstHeading.classList.remove("foo", "bar");
+// if visible class is set remove it, otherwise add it
+    firstHeading.classList.toggle("visible");
+
+    // will return true if it has class of 'foo' or false if it does not
+    firstHeading.classList.contains("foo");
+  </script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1>Looping over list of elements</h1>
+    <div class="item" data-id="1">Item 1</div>
+    <div class="item" data-id="2">Item 2</div>
+    <div class="item" data-id="3">Item 3</div>
+    <div class="item" data-id="4">Item 4</div>
+    <div class="item" data-id="5">Item 4</div>
+    <div class="item" data-id="6">Item 6</div>
+    <div class="item" data-id="7">Item 7</div>
+    <div class="item" data-id="8">Item 8</div>
+  </body>
+  <script>
+    let allItems = document.querySelectorAll(".item");
+    console.log(allItems);
+
+    allItems.forEach(function (element) {
+      console.log(element.getAttribute("data-id"));
+    });
+
+    let allItemsArray = Array.from(allItems);
+    console.log(allItemsArray);
+
+    let allItemsArray2 = [...allItems];
+    console.log(allItemsArray2);
+
+    for (let item of allItems) {
+      console.log(item.innerHTML);
+    };
+    
+    for (let itemKey of allItems.keys()) {
+      console.log(itemKey);
+    };
+
+    for (let itemValue of allItems.values()) {
+      console.log(itemValue);
+    };
+
+    for (let itemEntry of allItems.entries()) {
+      console.log(itemEntry);
+    };
+  </script>
+</html>

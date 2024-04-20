@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demoPara">
+      This element has extra spacing and contains <span>a span element</span>.
+      Also, the second span is hidden:
+      <span style="display: none">I am hidden</span>
+    </p>
+  </body>
+  <script>
+    console.log(document.getElementById("demoPara").innerText);
+    //-> This element has extra spacing and  second span is hidden:
+    console.log(document.getElementById("demoPara").textContent);
+    console.log(document.getElementById("demoPara").innerHTML);
+  </script>
+</html>

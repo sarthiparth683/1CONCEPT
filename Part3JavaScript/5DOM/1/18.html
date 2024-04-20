@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="card-list"></div>
+
+</body>
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Space between cards */
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+</style>
+<script>
+function createCard(title, content) {
+  const card = document.createElement('div');
+  const cardTitle = document.createElement('h3');
+  const cardContent = document.createElement('p');
+
+  card.className = 'card';
+  cardTitle.textContent = title;
+  cardContent.textContent = content;
+
+  card.appendChild(cardTitle);
+  card.appendChild(cardContent);
+
+  return card;
+}
+
+function createCardList(cardsData) {
+  const cardList = document.createElement('div');
+  cardList.className = 'card-list';
+
+  cardsData.forEach(cardData => {
+    const card = createCard(cardData.title, cardData.content);
+    cardList.appendChild(card);
+  });
+
+  document.getElementById('card-list').appendChild(cardList);
+}
+
+// Example usage
+const cards = [
+  { title: 'Card 1', content: 'Content for card 1' },
+  { title: 'Card 2', content: 'Content for card 2' },
+  // Add more cards as needed
+];
+
+createCardList(cards);
+
+</script>
+</html>

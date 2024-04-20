@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Explain the purpose of the querySelector() and querySelectorAll() methods.
+      How do they differ from getElementById() and getElementsByClassName()?
+    </p>
+  </body>
+  <script>
+    // querySelector() and querySelectorAll() vs getElementById() and getElementsByClassName():
+
+    // querySelector() and querySelectorAll() allow you to select elements using CSS selectors, offering more flexibility in element selection compared to getElementById() and getElementsByClassName(), which only select elements by ID or class name, respectively.
+    // querySelector() returns the first matching element, while querySelectorAll() returns a NodeList of all matching elements.
+    const elementById = document.getElementById("myId");
+    const elementByClass = document.getElementsByClassName("myClass");
+    const elementByQuery = document.querySelector(".myClass");
+    const elementsByQueryAll = document.querySelectorAll(".myClass");
+  </script>
+</html>

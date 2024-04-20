@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      When we clicked on the child, technically we also clicked on the parent
+      and grandparent as the child is inside them. This process of event
+      handling, going from the child out to its ancestors is called event
+      bubbling. When an event occurs on an element, it can propagate through the
+      DOM tree in two phases: the capturing phase and the bubbling phase.
+      Capturing Phase: During this phase, the event is captured from the root of
+      the DOM tree down to the target element. Bubbling Phase: After the
+      capturing phase, the event bubbles up from the target element back up to
+      the root of the DOM tree. By default, event listeners are set to listen in
+      the bubbling phase, meaning that the innermost element's event listener is
+      executed first, and then the event bubbles up to the outer elements,
+      triggering their event listeners in order. However, when you specify
+      {capture: true} in an event listener, it changes the phase in which the
+      event listener is triggered to the capturing phase. We can prevent further
+      bubbling or capturing of events using e.stopPropagation() We can prevent
+      further bubbling or capturing of events if there is more than one event
+      present using e.stopImmediatePropagation() As a third argument of the
+      event listener, we can pass {once: true}, to immediately remove the
+      listener after the first event. .removeEventListener() can be used to
+      remove a listener from an event.
+    </p>
+  </body>
+  <script>
+    el.addEventListner("click", someFunction);
+    el.removeEventListener("click", someFunction);
+    document.addEventListener("click", function (e) {
+      if (e.target.matches(".box")) {
+        console.log(e.target, "I am clicked");
+      }
+    });
+    // difference between e.stopPropagation() and e.preventDefault()
+    // Listening to documents on load event
+    window.onload = function () {
+      console.log("Im loaded");
+    };
+  </script>
+</html>
