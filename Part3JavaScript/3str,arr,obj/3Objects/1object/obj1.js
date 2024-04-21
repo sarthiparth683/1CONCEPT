@@ -23,3 +23,43 @@ console.log(student);
 
 
 
+
+ /// Objects
+    // Data is stored in key value
+    //   let obj = {}
+    //   obj.name = "John";
+    //   obj.age = 25;
+    //   obj.isMarried = false;
+    //   obj.subjects = ["HTML", "CSS", "JS"];
+    //   obj.address = {
+    //     state:"UP",
+    //     district:"Varnasi",
+    //     colony:"Kailash Nagar"
+    //   }
+    //   obj.getDeatils = function(){
+    //     // Hello My Name is John, my age is 25
+    //     return `Hello My Name is ${obj.name}, my age is ${obj.age}`;
+    //     console.log("Hi")
+    //   }
+    /// The function written in the object is called as Object Method <<<<===== IMP IMP IMP IMP
+    //   console.log(obj.name)
+    //   console.log(obj.getDeatils())
+    // let rect = {
+    //     length:200,
+    //     width:300,
+    // }
+    // // create an obj method, that calucalates area
+    // rect.printArea = function(){
+    //     console.log("The area is", rect.length*rect.width)
+    // }
+    // rect.printArea()
+    //   function assign(name, age){
+    //     let obj = {};
+    //     obj[name] = age;
+    //     console.log(obj)
+    //     // {Raj:25}
+    //   }
+    //   assign("Raj", 25)
+
+
+

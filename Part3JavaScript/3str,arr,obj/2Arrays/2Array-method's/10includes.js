@@ -3,8 +3,8 @@
 
 let fruits = ['apple', 'banana', 'orange'];
 let includesBanana = fruits.includes('banana');
-let includesBanana1 = fruits.includes('banana1');
-console.log(includesBanana);
-console.log(includesBanana1);
+let includesBanana1 = fruits.includes('cars');
+console.log(includesBanana);  // true - pesent
+console.log(includesBanana1);  // false - not present
 
- 
+  
