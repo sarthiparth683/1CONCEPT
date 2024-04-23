@@ -1,18 +1,18 @@
 // filter => el, i => returns cut length array, because it is filtering
-//     write a normal funtion thats takes an array of numbers and returns an array, where it contains only even numbers
+// write a normal funtion thats takes an array of numbers and returns an array, where it contains only even numbers
 function fileteredArr(arr) {
     let ans = [];
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] % 2 == 0) {
             ans.push(arr[i])
-        }
+        };
     }
     return ans
 }
 let arr = [9, 7, 8, 1, 2, 4, 3, 0]
 console.log(fileteredArr(arr))
 ///////////////////////////////////////////////////////
-// This code can be cut short by using inbuilt HOF, filter
+// This code can be cut short by using inbuilt HOF, filter:-
 let ans = arr.filter((el, i) => { return el % 2 == 0 })
 // ans is the array returned by map, which consists of squares of elements
 
