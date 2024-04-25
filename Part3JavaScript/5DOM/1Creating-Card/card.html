@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1-card</title>
+  </head>
+  <body>
+    <div id="box1"></div>
+  </body>
+  <style>
+    #box1 {
+     
+      display: grid;
+      grid-template-rows: repeat(2,1fr);
+      grid-template-columns: repeat(5,1fr);
+      gap: 10px;
+    }
+    #box1 > div {
+    
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      padding: 10px;
+      font-weight: bold;
+    }
+  </style>
+  <script src="card.js"></script>
+</html>

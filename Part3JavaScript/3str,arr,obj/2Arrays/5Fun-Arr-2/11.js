@@ -1,5 +1,5 @@
 // #### ImplementationPS9
-// - input
+ // - input
 const voters = [
     { name: "Bob", age: 30, voted: true },
     { name: "Jake", age: 32, voted: true },
@@ -12,18 +12,28 @@ const voters = [
     { name: "Becky", age: 43, voted: false },
     { name: "Joey", age: 41, voted: true },
     { name: "Jeff", age: 30, voted: true },
-    { name: "Zack", age: 19, voted: false }, 
-  ]; 
-  // - ImplementationPS9 function takes voters array as a input and returns the sample output .
-  // - the values are the count of object meet the condition.
-  
-  // - numYoungVotes: voters age <= 20 and given the vote,
-  // - numYoungPeople: voters age <= 20,
-  // - numMidVotesPeople: voters age >20 and age<=45 and given the vote,
-  // - numMidsPeople: voters age >20 and age<=45,
-  // - numOldVotesPeople: voters age >45 and given the vote,
-  // - numOldsPeople: voters age >45,
-  function ImplementationPS9(voters) {
+    { name: "Zack", age: 19, voted: false },
+];
+// - sample output
+// {
+//   numYoungVotes: 0,
+//   numYoungPeople: 2,
+//   numMidVotesPeople: 5,
+//   numMidsPeople: 8,
+//   numOldVotesPeople: 2,
+//   numOldsPeople: 2,
+// }
+
+// - ImplementationPS9 function takes voters array as a input and returns the sample output .
+// - the values are the count of object meet the condition.
+
+// - numYoungVotes: voters age <= 20 and given the vote,
+// - numYoungPeople: voters age <= 20,
+// - numMidVotesPeople: voters age >20 and age<=45 and given the vote,
+// - numMidsPeople: voters age >20 and age<=45,
+// - numOldVotesPeople: voters age >45 and given the vote,
+// - numOldsPeople: voters age >45,
+function ImplementationPS9(voters) {
     const result = {
         numYoungVotes: 0,
         numYoungPeople: 0,
@@ -45,35 +55,26 @@ const voters = [
         }
     });
     return result;
-  }
-  console.log(ImplementationPS9(voters)); 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  // - sample output
-  // {
-  //   numYoungVotes: 0,
-  //   numYoungPeople: 2,
-  //   numMidVotesPeople: 5,
-  //   numMidsPeople: 8,
-  //   numOldVotesPeople: 2,
-  //   numOldsPeople: 2,
-  // }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+}
+console.log(ImplementationPS9(voters));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,11 +1,11 @@
 // combination method Qn:1
-// - input
-// const numbers = [1, 2, 3, 4, 5, 7];
-
 // - Given an array of numbers, write a function sumOfSquaresOfOddNumbers that returns the sum of the squares of all odd numbers using .map(), .filter(), and .reduce().
 
+// - input
+const numbers1 = [1, 2, 3, 4, 5, 7];
+// - output 
+// 84; 
 
-const numbers = [1, 2, 3, 4, 5, 7];
 
 function sumOfSquaresOfOddNumbers(numbers) {
     return numbers
@@ -13,6 +13,4 @@ function sumOfSquaresOfOddNumbers(numbers) {
         .map(number => number ** 2)
         .reduce((acc, val) => acc + val, 0);
 }
-console.log(sumOfSquaresOfOddNumbers(numbers));
-// - output 
-// 84; 
+console.log(sumOfSquaresOfOddNumbers(numbers1));

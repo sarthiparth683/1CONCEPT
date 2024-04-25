@@ -25,22 +25,6 @@ let nrupulMarksData = {
     marks4: null,
     marks5: null,
 };
-// - `ImplementationPS7` function takes the `allStudentsMarksData` to get a new array called `massagedData`.
-// - Instead of separate entities for 5 subjects and their marks,
-//   in the new array, we just have one entry called `marks`.
-//   marks is an array of objects. the objects of `marks`
-//   contains `subject` and `score` to therre crosponding values.
-
-let allStudentsMarksData = [prateekMarksData, nrupulMarksData];
-function ImplementationPS7(allStudentsMarksData) {
-    return allStudentsMarksData.map(student => ({
-        name: student.name,
-        marks: Object.entries(student)
-            .filter(([key, value]) => key.startsWith("subject") && value !== null)
-            .map(([key, value]) => ({ subject: value, score: student[key.replace("subject", "marks")] }))
-    }));  
-}
-console.log(ImplementationPS7(allStudentsMarksData));
 // - output
 // [
 //   {
@@ -59,6 +43,23 @@ console.log(ImplementationPS7(allStudentsMarksData));
 //     ],
 //   },
 // ];
+
+// - `ImplementationPS7` function takes the `allStudentsMarksData` to get a new array called `massagedData`.
+// - Instead of separate entities for 5 subjects and their marks,
+//   in the new array, we just have one entry called `marks`.
+//   marks is an array of objects. the objects of `marks`
+//   contains `subject` and `score` to therre crosponding values.
+
+let allStudentsMarksData = [prateekMarksData, nrupulMarksData];
+function ImplementationPS7(allStudentsMarksData) {
+    return allStudentsMarksData.map(student => ({
+        name: student.name,
+        marks: Object.entries(student)
+            .filter(([key, value]) => key.startsWith("subject") && value !== null)
+            .map(([key, value]) => ({ subject: value, score: student[key.replace("subject", "marks")]}))
+    }));
+}
+console.log(ImplementationPS7(allStudentsMarksData));
 
 
 

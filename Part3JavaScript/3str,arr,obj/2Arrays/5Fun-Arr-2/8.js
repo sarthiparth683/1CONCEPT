@@ -1,3 +1,12 @@
+// - The function massageArray() is expected to return an array of objects.
+// - it takes array `exampleInputArray` as a input and return array `eo1` as a output.
+// - If techTools and techdetails values are `null` or `""` avoid them in the output array.
+// - *`courseName`* maps to courseName
+// - *`courseDuration`* maps to Category, but the id turns into the name
+// - *`type`* maps to typeOfCourse, but the id turns into the name
+// - *`Category`* maps to CourseDurationDirectory, but the id turns into the name
+// - finally, 20 key-value pair techTools object & 20 key-value pair techdetails object turns into a single entry of `techTools` which is an array of object. Each object of techTools contains a key called `language` and another key called `details`.
+
 // - input
 let typeOfCourse = [
     { id: 1, name: "Developer" },
@@ -182,15 +191,6 @@ console.log(massageArray(exampleInputArray));
 
 
 
-
-// - The function massageArray() is expected to return an array of objects.
-// - it takes array `exampleInputArray` as a input and return array `eo1` as a output.
-// - If techTools and techdetails values are `null` or `""` avoid them in the output array.
-// - *`courseName`* maps to courseName
-// - *`courseDuration`* maps to Category, but the id turns into the name
-// - *`type`* maps to typeOfCourse, but the id turns into the name
-// - *`Category`* maps to CourseDurationDirectory, but the id turns into the name
-// - finally, 20 key-value pair techTools object & 20 key-value pair techdetails object turns into a single entry of `techTools` which is an array of object. Each object of techTools contains a key called `language` and another key called `details`.
 
 // output
 // let eo1 = [

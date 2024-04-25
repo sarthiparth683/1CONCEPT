@@ -1,7 +1,6 @@
-
 // map method Qn:1
-// input
 // Given an array of strings, write a function that returns a new array where each string has its first and last letters swapped using .map().
+// input
 const stringss = [
     "Hello",
     "world",
@@ -10,9 +9,11 @@ const stringss = [
     "an",
     "example",
     "array",
-    "of", 
+    "of",
     "strings",
 ];
+// output
+// ["oellH", "dorlw", "shit", "si", "na", "example", "yrraa", "fo", "strings"];
 
 function swapStrings(stringss) {
     return stringss.map(string => {
@@ -21,5 +22,5 @@ function swapStrings(stringss) {
     });
 }
 console.log(swapStrings(stringss));
-// output
-// ["oellH", "dorlw", "shit", "si", "na", "example", "yrraa", "fo", "strings"];
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
