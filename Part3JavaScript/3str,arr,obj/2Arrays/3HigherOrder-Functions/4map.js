@@ -1,18 +1,21 @@
-//  map   => el, i => returns entire array for filtering we need (filter inbuilt function
-//     write a normal funtion thats takes an array of numbers and returns array of square of numbers
+//  map   => el, i 
+let arr = [3, 7, 8, 9, 5];
 function squareArr(arr) {
-    let ans = [];
+    let arr2 = [];
     for (let i = 0; i < arr.length; i++) {
-        ans.push(arr[i] * arr[i])
+        arr2.push(arr[i] * arr[i])
     }
-    return ans
-}
-let arr = [10, 20, 30, 40, 50]
-console.log(squareArr(arr))
-////////////////////////////////////////////////////////////////////
-// but this code can be cut short by using inbuilt HOF, map
-let ans = arr.map((el, i) => { return el * el })
-// ans is the array returned by map, which consists of squares of elements
+    return arr2;
+};
+// console.log(squareArr(arr))
+// Now using HOF - map 
+let map1 = arr.map((el, i) => { return el * el });
+// console.log(map1);
+let map2 = arr.map((el, i) => { return el  });
+// console.log(map2);
+let map3 = arr.map((el, i) => { return i  });
+console.log(map3);
+
 
 
 

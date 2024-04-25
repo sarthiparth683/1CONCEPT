@@ -2,32 +2,29 @@
 // Rows is the outer loop
 // column is the inner loop
 function sumOfRows(N, M, arr) {
-
     for (let i = 0; i < N; i++) {     
         let sum = 0;
         for (let j = 0; j < M; j++) {   
-            sum = sum + arr[i][j] ;   // for row sum it first add's all the[i]index in row that is one row at a time then it moves to another row. 
+            sum = sum + arr[i][j] ;   
+            // for row sum it first add's all the[i]index in row that is one row at a time then it moves to another row. 
 
-            // sum = sum + arr[j][i];   //for column sum it first add's all the[j] index that is one column at a time then it moves to another column.
-
-            // FIRST INDEX [] VALUE IS COMPLETED FIRST 
+            // sum = sum + arr[j][i];  
+            // for columns first [replace => N,M ]
+             //for column sum it first add's all the[j] index that is one column at a time then it moves to another column. 
         }
        console.log(sum); 
     }
-  
- 
-
 }
 
-// sumOfRows(3, 2,
-//     // sumOfcolumns(2, 3,  // for columns
-//     [[1, 2],
-//     [3, 4],
-//     [5, 6]]);
+sumOfRows(3, 2,
+   // 3 rows 2 columns
+    [[1, 2],
+    [3, 4],
+    [5, 6]]);
 
 
 
-
+    // FIRST INDEX [] VALUE IS COMPLETED FIRST 
     // how it is adding in backend
     // arr[i][j]  - This is for Rows sum  
 

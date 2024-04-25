@@ -2,11 +2,8 @@
 function evenSumColumns(N, M, arr) {
 
     for (let i = 0; i < N; i++) {  // outer loop N is for Rows
-        let sum = 0;                // sum declared
-        // let sum = "";
+        let sum = 0;              
         for (let j = 0; j < M; j++) {   // Inner loop M is for Columns
-            // console.log(arr[i][j]);
-            // console.log(arr[j][i]);
             // sum = sum + arr[i][j] ;  //this is sum of rows
             // sum = sum + arr[j][i] ;   // this is sum of columns
             // if (arr[j][i] % 2 == 0) {     // Even sum of columns
@@ -14,7 +11,8 @@ function evenSumColumns(N, M, arr) {
                 sum = sum + arr[j][i];
             }
         }
-        // console.log(sum);
+        console.log(sum);
+        // since N and M is same here so loop is not affected
     }
 
 }

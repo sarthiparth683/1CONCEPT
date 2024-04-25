@@ -5,9 +5,8 @@ let student = {
     city: "Bangalore",
     hobbies: "coding"
 };
-console.log(student);
-
 // Accesing object data:-
+
 // METHOD 1:- Bracaket Notation also helps in assigning value
 console.log(student["name"]);
 console.log(student["age"]);
@@ -16,9 +15,13 @@ console.log(student["age"]);
 console.log(student.name);
 console.log(student.age);
 
-// Updating Object:-
-student["age"] = 27;
-student.city = "Hyderabad";
+// METHOD 3:- Destructuring
+let {name,age,gender,city,hobbies} = student;
+console.log(gender);
+
+// Adding data in obj Object:-
+student["6location"] = "Mumbai";
+student["7data"]= "7added";
 console.log(student); 
 
 
@@ -60,6 +63,6 @@ console.log(student);
     //     // {Raj:25}
     //   }
     //   assign("Raj", 25)
-
+ 
 
 
