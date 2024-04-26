@@ -1,4 +1,4 @@
-//  map   => el, i 
+//  map   => el, i = returns array
 let arr = [3, 7, 8, 9, 5];
 function squareArr(arr) {
     let arr2 = [];
@@ -11,36 +11,40 @@ function squareArr(arr) {
 // Now using HOF - map 
 let map1 = arr.map((el, i) => { return el * el });
 // console.log(map1);
-let map2 = arr.map((el, i) => { return el  });
+let map2 = arr.map((el, i) => { return el });
 // console.log(map2);
-let map3 = arr.map((el, i) => { return i  });
-console.log(map3);
+let map3 = arr.map((el, i) => { return i });
+// console.log(map3);
+let map4 = arr.map((el, i) => {
+    return el
+});
+// console.log(map4);
 
-
-
-
-////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////
-
-let arr1 = [10, 20, 30, 40, 50];
-let ans1 = arr.map(function (el, i) {
-    return el * i;
-    // return el*el;
-    // return el*5;    
+var sweets = ["kova", "gulabjamun", "laddu", "mysorepak", "badshaw"]
+var output = sweets.map(function (elem, index) {
+    return elem
 })
+// console.log(output);
+
+const numbers = [1, 2, 3, 4, 5];
+
+// const a = numbers.map(number => number * 2);
+const a = numbers.map((e, i) => {
+    return e * 2
+});
+// console.log(a); 
 
 
+const users = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 30 },
+    { name: "Charlie", age: 28 },
+];
 
-// var sweets = ["kova","gulabjamun","laddu","mysorepak","badshaw"]
-// var output= sweets.map(function (elem,index) {
-//     return elem
-// })
+let a1 = users.map((e, i) =>
+    e.name
+);
+console.log(a1);
+console.log(a1[1]);
 
-// console.log(output)// [ 'kova', 'gulabjamun', 'laddu', 'mysorepak', 'badshaw' ]
 
-// // Map Practice:
-// const numbers = [1, 2, 3, 4, 5];
-// function doubleNumbers(arr) {
-//     return arr.map(num => num * 2);
-// }
-// console.log(doubleNumbers(numbers)); // Expected output: [2, 4, 6, 8, 10]
