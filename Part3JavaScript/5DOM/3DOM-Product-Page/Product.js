@@ -271,15 +271,25 @@ let products = [
         },
     },
 ];
-// to get container div
-let cont = document.getElementById("container");
 
-// for each loop
-products.map(function (el, i) {
-    // console.log(el,i)
+
+
+
+
+
+
+
+
+
+
+
+
+products.map((el, i) => {
+    let cont = document.getElementById("container");
     let card = document.createElement("div");
+
     let img = document.createElement("img");
-    img.src = el.image;  //each element el.
+    img.src = el.image;
     let p = document.createElement("p");
     p.style.fontWeight = "bold";
     p.textContent = `${el.title}`;
@@ -291,10 +301,8 @@ products.map(function (el, i) {
     let count = document.createElement("p");
     count.textContent = `count | ${el.rating.count}k`
     let description = document.createElement("p");
-    description.textContent = `${el.description}`
-
-    card.append(img,rating,count, p, p2,);
+    description.textContent = `${el.description}`;
+    
+    card.append(img, rating, count, p, p2,);
     cont.append(card);
 });
-
-// console.log(cont); // to check inside div what is appended

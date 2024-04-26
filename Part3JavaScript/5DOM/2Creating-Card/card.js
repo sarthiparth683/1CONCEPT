@@ -60,15 +60,12 @@ let user = [
         email: "Rey.Padberg@karina.biz",
     },
 ];
-// select main div
-let box1 = document.getElementById("box1");
-// for each loop is used "user" is selected for looping
 user.map(function (el, i) {
-    console.log(el, i)   // to check right variable is selectd or not
+    let box1 = document.getElementById("box1");
+    // console.log(el, i)   // to check right variable is selectd or not
     let card = document.createElement("div");
-
     let Name = document.createElement("p");
-    Name.textContent = `Name: ${el.name}`;              //each element el.
+    Name.textContent = `Name: ${el.name}`;
     let userName = document.createElement("p");
     userName.textContent = `Username: ${el.username}`;
     let email = document.createElement("p");
@@ -78,13 +75,3 @@ user.map(function (el, i) {
     box1.append(card);
 });
 
-// let Name2 = document.createElement("input");
-// Name1.textContent = `Name:  ${Name2}`
-// let Username1 = document.createElement("input");
-// let email1 = document.createElement("input");
-// let submission = document.createElement("button");
-
-// let card1 = document.createElement("div");
-
-// card1.append(Name1,Username1,email1,submission);
-// box1.append(card1);

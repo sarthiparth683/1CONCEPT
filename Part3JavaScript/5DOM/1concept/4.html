@@ -6,14 +6,14 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Problem 2.</h1>
+    <h1>Student Activities Problem 1.</h1>
     <div id="colorBox"></div>
-    <button class="btn--red">RED</button>
-    <button class="btn--yellow">YELLOW</button>
-    <button class="btn--green">GREEN</button>
-    <button class="btn--reset">RESET</button>
+    <button id="btn--red">RED</button>
+    <button id="btn--yellow">YELLOW</button>
+    <button id="btn--green">GREEN</button>
+    <button id="btn--reset">RESET</button>
   </body>
-  <style>
+  <style> 
     #colorBox {
       width: 200px;
       height: 200px;
@@ -26,10 +26,10 @@
   </style>
   <script>
     let colorBox = document.getElementById("colorBox");
-    let btnRed = document.getElementsByClassName("btn--red")[1];
-    let btnYellow = document.getElementsByClassName("btn--yellow")[0];
-    let btnGreen = document.getElementsByClassName("btn--green")[0];
-    let btnReset = document.getElementsByClassName("btn--reset")[0];
+    let btnRed = document.getElementById("btn--red");
+    let btnYellow = document.getElementById("btn--yellow");
+    let btnGreen = document.getElementById("btn--green");
+    let btnReset = document.getElementById("btn--reset");
 
     btnRed.addEventListener("click", function () {
       colorBox.style.backgroundColor = "red";
