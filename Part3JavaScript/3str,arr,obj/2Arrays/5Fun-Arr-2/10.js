@@ -10,7 +10,7 @@ let prateekMarksData = {
     marks2: 81,
     marks3: 80,
     marks4: null,
-    marks5: null,
+    marks5: null, 
 };
 let nrupulMarksData = {
     name: "Nrupul",

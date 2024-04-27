@@ -1,7 +1,5 @@
 // #### ImplementationPS6
-// - create a new object called `newObj` using the `students` array &  
-//   the `subjectsHash` object.
-// - `newObj` contains unique students as key and an array of subjects as value.
+// - create a new object called `newObj`  `newObj` contains unique students as key and an array of subjects as value.
 // - input
 let subjectsHash = {
   1: "Javascript",
@@ -10,7 +8,6 @@ let subjectsHash = {
   4: "Java",
   5: "Rust",
 };
-
 
 let students = [
   { id: 1, name: "Prateek", subjectID: 5 },
@@ -25,7 +22,7 @@ let students = [
 //       Nrupul: ["Java"],
 // }
 
-
+//-----------------------------------------------------------
 function ImplementationPS6(students, subject) {
   let obj = {};
   obj[students[0].name] = [subjectsHash[5], subjectsHash[1]];
@@ -35,5 +32,5 @@ function ImplementationPS6(students, subject) {
 };
 console.log(ImplementationPS6(students, subjectsHash));
 
-
+//-----------------------------------------------------------
 

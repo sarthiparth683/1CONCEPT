@@ -8,9 +8,6 @@ const numbers1 = [1, 2, 3, 4, 5, 7];
 
 
 function sumOfSquaresOfOddNumbers(numbers) {
-    return numbers
-        .filter(number => number % 2 !== 0)
-        .map(number => number ** 2)
-        .reduce((acc, val) => acc + val, 0);
+    return numbers.filter(number => number % 2 !== 0).map(number => number ** 2).reduce((acc, val) => acc + val, 0);
 }
 console.log(sumOfSquaresOfOddNumbers(numbers1));

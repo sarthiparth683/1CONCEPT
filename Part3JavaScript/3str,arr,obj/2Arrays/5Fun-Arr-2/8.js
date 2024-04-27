@@ -9,7 +9,7 @@
 
 // - input
 let typeOfCourse = [
-    { id: 1, name: "Developer" },
+    { id: 1, name: "Developer" },  
     { id: 2, name: "Tester" },
 ];
 let CourseDurationDirectory = {
@@ -174,6 +174,7 @@ let exampleInputArray = [
         },
     },
 ];
+//---------------------------------------------------------------------------------------------------------------------
 
 function massageArray(inputArray) {
     return inputArray.map(item => ({

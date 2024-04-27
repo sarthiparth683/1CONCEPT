@@ -1,5 +1,5 @@
 // filter method Qn:1
-// - Given an array of strings, write a function that returns a new array containing only the strings that are palindromes (i.e., read the same backwards as forwards) using .filter().
+//  palindromes (i.e., read the same backwards as forwards) using .filter().
 // input
 const words = [
     "racecar",
@@ -35,7 +35,7 @@ function palindromesString(words) {
             output.push(revstr);
         }
     })
-   return output;
+    return output;
 }
 console.log(palindromesString(words));
 

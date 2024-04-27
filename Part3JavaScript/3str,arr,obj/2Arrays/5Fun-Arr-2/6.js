@@ -8,20 +8,19 @@ const sentences = [
     "In the beginning, God created the heavens and the earth.",
 ];
 // output
-// output should look like this.
 // "sentence 1 contains 9 words."
 
+///////////////////////////////////////////////////////////////////////////////////////
 // function countWords(sentences) {
-//     sentences.forEach((sentence, index) => {
-//         const words = sentence.split(' ').filter(Boolean).length;
+//     sentences.forEach((el, index) => {
+//         const words = el.split(' ').filter(Boolean).length;
 //         let output = (`sentence ${index + 1} contains ${words} words.`);
 //         console.log(output)
 //     });
-// }
+// };
 // countWords(sentences);
 
 //////////////////////////////////////////////////////////////////////////////////////
-
 function countWords(sentences) {
     sentences.forEach((e, i) => {
         let str = e.trim();
@@ -33,5 +32,5 @@ function countWords(sentences) {
     });
 }
 countWords(sentences);
-
+///////////////////////////////////////////////////////////////////////////////////////////
 
