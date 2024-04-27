@@ -1,9 +1,8 @@
 // 1. Operation on Numbers
-
 function solve(number) {
-    let m = number * 3;
-    let  a = m + 7;
-    let s = a - 10;
-    console.log(s);
-    
-}
+    let multiplication = number * 3;
+    let addition = multiplication + 7;
+    let subtraction = addition - 10;
+    console.log(subtraction);
+};
+solve(5);

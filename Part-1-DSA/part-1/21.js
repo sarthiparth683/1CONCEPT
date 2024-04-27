@@ -1,7 +1,7 @@
 // 21. From A to B
-function fromAtoB(max,min){
-    for (let i = min; i < max; i++){
-        console.log(i)
+function fromAtoB(min, max) {
+    for (let i = min; i <= max; i++) {
+        console.log(i);
     }
-    
-}
+};
+fromAtoB(3, 8);

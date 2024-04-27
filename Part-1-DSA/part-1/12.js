@@ -1,9 +1,7 @@
- // 12. Print Masai School II
- function printMasaiSchool(num) {
-    for (let i = 1; i <= num ;  i++){
-       console.log("Masai School");
-    
+// 12. Print name num times
+function printMasaiSchool(num) {
+   for (let i = 1; i <= num; i++) {
+      console.log("Parth Sarthi");
    }
-   
-   
- }
+};
+printMasaiSchool(10);

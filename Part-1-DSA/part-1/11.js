@@ -1,30 +1,26 @@
 // 11. Mod of 10
-
 function modeof10(num) {
-    // Write code here
     let x = num % 10;
-    // console.log(x);
-    if(x == 0){
+    if (x == 0) {
         console.log("zero");
-    }else if(x == 1){
+    } else if (x == 1) {
         console.log("one");
-    }else if(x == 2){
+    } else if (x == 2) {
         console.log("two");
-    }else if(x == 3){
-        console.log("three");  
-    }else if(x == 4){
+    } else if (x == 3) {
+        console.log("three");
+    } else if (x == 4) {
         console.log("four");
-    }else if(x == 5){
+    } else if (x == 5) {
         console.log("five");
-    }else if(x == 6){
+    } else if (x == 6) {
         console.log("six");
-    }else if(x == 7){
+    } else if (x == 7) {
         console.log("seven");
-    }else if(x == 8){
+    } else if (x == 8) {
         console.log("eight");
-    }else if(x == 9){
+    } else if (x == 9) {
         console.log("nine");
     }
-    
-    
-}
+};
+modeof10(19);

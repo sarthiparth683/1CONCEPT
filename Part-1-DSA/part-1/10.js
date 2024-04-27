@@ -1,16 +1,11 @@
- // 10. Logical Evens
-
- function logicalEvens(one, two) {
-    
+// 10. Logical Evens
+function logicalEvens(one, two) {
     let x = (one % 2 == 0);
     let y = (two % 2 == 0);
-   if( x && y){
+    if (x && y) {
         console.log("Both")
-    }else{
+    } else {
         console.log("No")
     }
-    
-    
-    
-    
-}
+};
+logicalEvens(8, 2);
