@@ -302,7 +302,15 @@ products.map((el, i) => {
     count.textContent = `count | ${el.rating.count}k`
     let description = document.createElement("p");
     description.textContent = `${el.description}`;
-    
+
     card.append(img, rating, count, p, p2,);
     cont.append(card);
+});
+
+// add Event listeners
+let signup = document.getElementById("signup");
+signup.addEventListener("click", function () {
+    console.log("clicked");
+    // alert();
+    // prompt(); 
 });

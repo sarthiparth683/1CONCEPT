@@ -1,36 +1,12 @@
 let arr1 = [1,2,3];
 for (let i = 0; i <=10; i++) {
     arr1.push(i);
+    console.log(arr1[i])
 }
 console.log(arr1)
+console.log(arr1[2])
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//------------------------------------------------------
 let table = [4, 8, 12, 16, 20, 24, 28, 32, 36, 40];
 for (let i = 0; i < table.length; i++) {
     // console.log(table[i] / 2);
