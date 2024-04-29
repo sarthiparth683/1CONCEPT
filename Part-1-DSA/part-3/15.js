@@ -8,8 +8,8 @@ function square(N) {
 
     for (let j = 0; j < N - 2; j++) {
         let bag2 = "";
-        for (let k = 0; k <= N - 1; k++) {
-            if (k == 0 || k == N - 1) {
+        for (let k = 0; k < N; k++) {
+            if (k == 0 || k == N - 1 || k==2) {
                 bag2 = bag2 + "*" + " ";
             } else {
                 bag2 = bag2 + " " + " ";
@@ -17,15 +17,7 @@ function square(N) {
         }
         console.log(bag2);
     }
-
-
-
-
-    if (N != 1) {
-        console.log(bag1);
-    }
-
-
-
+   
+    if (N != 1) { console.log(bag1) }
 }
 square(5);
