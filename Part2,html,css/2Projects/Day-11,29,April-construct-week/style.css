@@ -1,7 +1,7 @@
 header {
   background-color: rgb(2, 2, 34);
   color: aliceblue;
-  margin: -6px;
+  margin: -9px;
   padding: 0px;
 }
 .search-input {
@@ -16,6 +16,7 @@ nav {
   flex-direction: row;
   justify-content: flex-end;
   margin-right: 150px;
+  padding-top: 15px;
 }
 nav a {
   color: aliceblue;
@@ -36,9 +37,16 @@ nav span {
 }
 #two {
   margin-right: 150px;
+  margin-top: 10px;
 }
 #logo p {
   font-size: 21px;
+}
+.fa-cart-shopping {
+  font-size: 30px;
+}
+.fa-bell {
+  font-size: 30px;
 }
 #groupon {
   margin-left: 15px;
@@ -91,21 +99,20 @@ nav span {
 }
 /* header ends */
 /* main starts  */
-#main{
+#main {
   display: grid;
-  grid-template-rows: repeat(8,1fr);
-  grid-template-columns: repeat(4,1fr);
- 
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+
   width: 950px;
   margin-left: 100px;
 }
-#main div{
+#main div {
   border-radius: 10px;
   padding: 10px;
   /* box-shadow: ; */
-  
 }
-img{
+img {
   width: 250px;
   height: 250px;
   border-radius: 10px;
@@ -113,18 +120,20 @@ img{
 /* main ends  */
 /* footer starts */
 
-footer{
+footer {
   background-color: rgb(2, 2, 34);
+  margin: -9px;
 }
-#footer1{
+#footer1 {
   width: 800px;
   color: aliceblue;
   margin-left: 200px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
 }
-/* #footer1 div{
-  margin-left: 21px;
-} */
+.foot1 {
+  text-decoration: underline;
+  font-size: 21px;
+  color: chartreuse;
+}

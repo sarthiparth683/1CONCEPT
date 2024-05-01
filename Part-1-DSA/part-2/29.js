@@ -3,7 +3,7 @@ function patternPrintingII(N) {
     for (let i = 1; i <= N; i++) {
         let bag = "";
         for (let j = 1; j <= N; j++) {
-            if (j == 1 || j == 3 || j == N) {
+            if (j == 1 || j == N) {
                 bag = bag + "*" + " ";
             } else {
                 bag = bag + " " + " ";

@@ -8,6 +8,7 @@ function patternOfN(N) {
             bag = bag + count + " ";
         }
         console.log(bag);
+        // console.log(typeof(bag));
     }
 };
 patternOfN(5);

@@ -1,6 +1,5 @@
- // Binary Search - Iterative
- function solve(N, arr, K) 
-{
+// Binary Search - Iterative
+function solve(N, arr, K) {
     arr.sort((a, b) => {
         return a - b;
     });

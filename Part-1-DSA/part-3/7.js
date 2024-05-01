@@ -1,5 +1,5 @@
 // Odd Sum in Rows
-function oddSumRows(N, M, arr) {  // N=rows M = columns
+function oddSumRows(N, M, arr) {  // N=row, M=columns
    for (let i = 0; i < N; i++) {
       let sum = 0;
       for (let j = 0; j < M; j++) {

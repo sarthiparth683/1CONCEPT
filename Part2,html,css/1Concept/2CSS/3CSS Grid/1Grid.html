@@ -7,7 +7,6 @@
   </head>
   <body>
     <div class="mainbox">
-
       <div class="box2">
         <div>
           <ol>
@@ -49,55 +48,14 @@
         <div>24</div>
         <div>25</div>
       </div>
-
-      
-
-
-
     </div>
   </body>
   <style>
     .mainbox {
       display: flex;
     }
-    .box1 {
-      border: 4px solid blue;
-      padding: 10px;
-      width:800px;
-      margin-top: 10px;
-      margin-left: 50px;
-      text-align: center;
-      font-size: 25px;
-      font-weight: 999;
-
-      display: grid;
-      grid-template-rows: repeat(4, 50px);
-      grid-template-columns: repeat(7, 50px);
-      gap: 10px 10px;
-    }
-    .box1 div {
-      border: 4px solid black;
-    }
-    .box1 div:nth-child(3n + 3) {
-      background-color: lawngreen;
-    }
-    .box1 div:nth-child(5n + 4) {
-      /*starts from 4 and  every 5th elements.  */
-      background-color: chocolate;
-    }
-    .box1 div:nth-child(25) {
-      background-color: magenta;
-      /* display: none;  */
-      /* margin: 10px; */
-      /* margin-left: 100px; */
-      /* padding: 20px; */
-      /* height: 100px; */
-      /* width: 100px; */
-      /* z-index: 1; */
-    }
-
     .box2 {
-      width:300px;
+      width: 300px;
       border: 4px solid green;
       padding: 5px;
       margin-left: 10px;
@@ -110,6 +68,46 @@
       border: 2px solid black;
       margin: 5px;
       padding: 10px;
+    }
+
+    .box1 {
+      border: 4px solid blue;
+      padding: 10px;
+      width: fit-content;
+      height: fit-content;
+      margin-top: 10px;
+      margin-left: 50px;
+      text-align: center;
+      font-size: 25px;
+      font-weight: 999;
+
+      display: grid;
+      grid-template-rows: repeat(4, 50px);
+      grid-template-columns: repeat(7, 50px);
+      gap: 10px;
+    }
+    .box1 div {
+      border: 4px solid black;
+    }
+    /* --------------------------------------------------------- */
+    .box1 div:nth-child(5n + 2) {
+      /* stars at 2 and after every 5th element */
+      background-color:rgb(143, 245, 143);
+    }
+   
+    /* ------------------------------------------------------- */
+    /* higher order at last*/
+    .box1 div:nth-child(17) {
+      background-color: rgb(41, 27, 229);
+      order: 1;
+    }
+    .box1 div:nth-child(15) {
+      background-color: green;
+      order: 5;
+    }
+    .box1 div:nth-child(4) {
+      background-color:red;
+      order: 3;
     }
   </style>
 </html>

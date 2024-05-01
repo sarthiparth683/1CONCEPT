@@ -16,7 +16,7 @@ function patternPrinting3(N) {
             }
         }
         console.log(bag);
-    }
+    } 
 
     if (N != 1) {
         console.log(bag2);

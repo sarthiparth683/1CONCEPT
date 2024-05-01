@@ -6,12 +6,10 @@ function patternPrintingI(N) {
     }
     console.log(str1);
 
-
     for (let j = 1; j <= N - 2; j++) {
         console.log("*");
     }
-
-    if (N != 1) {
+    if (N != 1) {  // because (i=1) has already executed
         console.log(str1);
     }
 };

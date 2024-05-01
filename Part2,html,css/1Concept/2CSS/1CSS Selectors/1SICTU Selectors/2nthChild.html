@@ -35,56 +35,48 @@
       <div>26</div>
       <div>27</div>
       <div>28</div>
+      <div>29</div>
+      <div>30</div>
     </div>
   </body>
-
   <style>
     .box {
       display: grid;
       grid-template-columns: repeat(8, 100px);
-      grid-template-rows: repeat(8, 100px);
-      border: 5px solid black;
+      grid-template-rows: repeat(4, 100px);
       gap: 10px 10px;
-      /* width: 950px; */
+      border: 5px solid black;
       width: fit-content;
-      /* height: fit-content; */
+      height: fit-content;
       padding: 10px;
-      
-      height: 450px;
       margin-left: 200px;
       margin-top: 80px;
       text-align: center;
-      
-     
     }
     .box div {
       border: 5px solid blue;
-      /* margin-left: px; */
-      /* display: flex;
-      justify-content: space-around; */
     }
-    .box > div:nth-child(5) {
+    /* ------------------------------------------------------------- */
+    /* n'th child concept  */
+    .box > div:nth-child(3) {
       background-color: aqua;
     }
-
-    /* starts form 2 and [(5n)means after 5 box]  */
-    .box > div:nth-child(5n + 5) {
+    .box > div:nth-child(5n + 7) {
+      /* starts form 7 and [(5n)means after 5 box]  */
       background-color: chartreuse;
     }
-
-    /* order:1,2,3...any number comes to end; */
+    /* higher order number 1,2,3... comes to end; */
     .box > div:nth-child(8) {
-      background-color: orangered;
-      order: 5;
+      background-color:coral;
+      order: 7;
     }
     .box > div:nth-child(11) {
-      background-color: chocolate;
+      background-color:cyan;
       order: 8;
-      /* padding-left: 10px; */
-      /* border-radius: 15px; */
-      /* margin-left: 20px; */
-      /* margin-top: -25px; */
-      /* z-index: 1; */
+    }
+    .box > div:nth-child(22) {
+      background-color:darkcyan;
+      order: 9;
     }
   </style>
 </html>

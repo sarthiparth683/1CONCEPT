@@ -5,14 +5,12 @@ function vowelsInRows(N, M, arr) {
     for (let j = 0; j < M; j++) {
       if (arr[i][j] === "a" || arr[i][j] === "e" || arr[i][j] === "i" || arr[i][j] === "o" || arr[i][j] === "u") {
         count = count + 1;
-
       }
     };
-
     if (count > 0) {
-      console.log(`vowel count = ${count}`)
-    } else {
       console.log(`vowel count = ${count}`);
+    } else {
+      console.log(`consonant count = ${5 - count}`);
     }
   }
 };
