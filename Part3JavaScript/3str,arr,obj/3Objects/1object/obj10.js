@@ -8,15 +8,12 @@ var details = {
         key3: "3"
     },
     gender: "Male",
-    city: "Bangalore",
-    array: ["Singing", "Dancing"]
+    array: ["Singing", "Dancing"],
+    city: "Bangalore"
 };
 
 for (var key in details) {
-    console.log(key, ' ', details[key]);
-    // console.log(key);
-    // console.log(details[key]);
-
+    console.log(key, '-', details[key]);
 }
-console.log(details.name);
-console.log(details["age"]);
+// console.log(details.name);
+// console.log(details["age"]);

@@ -1,6 +1,4 @@
 // Accessing information in Arrays vs Objects
-// Code 2 : Accessing the information gender in arrays vs objects
-
 // Objects
 var user2 = {
     name: "Rahul",
@@ -12,14 +10,11 @@ var user2 = {
 };
 
 // 1. Bracket Notation
-console.log("gender " + user2["gender"]);
-console.log("marks " + user2["marks"]);
-console.log("marks2 " + user2["marks"][2]);
-console.log(user2["marks"].length);
+// console.log("gender " + user2["gender"]);
 
 // 2. Dot Notation
-console.log("gender " + user2.gender);
-console.log("marks " + user2.marks);
-console.log("marks1 " + user2.marks[1]);
-console.log(user2.marks.length);
+// console.log("age " + user2.age);
 
+for (let key in user2) {
+    console.log(key + " - " + user2[key]);
+};

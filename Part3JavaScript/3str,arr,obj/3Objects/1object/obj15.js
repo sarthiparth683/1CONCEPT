@@ -1,9 +1,5 @@
-// Problem 8 : Storing Student Information with Marks in different exams.  
-// To access the value of maths, we need to start from outside i.e data and then marks then subject
-// eg : To access maths marks
-// data.marks[0].maths
-
-var data = {
+// Problem 8:-
+let data = {
     name: "Rajesh",
     grade: "X",
     section: "A",
@@ -13,9 +9,7 @@ var data = {
     ],
     hobbies: ["Dancing", "Singing"]
 };
-console.log(data.marks[0].maths);
-console.log(data.marks[1].maths);
-console.log(data.marks[0].english);
-console.log(data.marks[1].english);
-console.log(data.marks[0].science);
-console.log(data.marks[1].science);
+// console.log(data.marks[0].maths); // getting induvidually 
+for (let key in data) {
+    console.log(key, " - ", data[key]);
+};

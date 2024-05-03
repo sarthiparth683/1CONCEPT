@@ -9,4 +9,4 @@ function mapChar(N) {
         console.log(key + "-" + obj[key])
     }
 };
-mapChar(5);
+mapChar(5); 
