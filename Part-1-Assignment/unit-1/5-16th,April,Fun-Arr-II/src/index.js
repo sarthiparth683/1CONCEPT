@@ -17,12 +17,12 @@ const strings = [
 // { apple: 3, banana: 2, orange: 1, pear: 1 }
 function UniqueString(strings) {
   let output = strings.reduce((a, e, i) => {
-      if (a[e] == undefined) {
-          a[e] = 1;
-      } else {
-          a[e]++;
-      }
-      return a
+    if (a[e] == undefined) {
+      a[e] = 1;
+    } else {
+      a[e]++;
+    }
+    return a
   }, {})
   return output;
 }
@@ -37,10 +37,10 @@ const numbers = [7, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597];
 // 1817;
 function ProductOfMultipleOfThreeOrFive() {
   let sum = numbers.reduce((a, el, i) => {
-      if (el % 3 == 0 || el % 5 == 0) {
-          a = a + el
-      }
-      return a
+    if (el % 3 == 0 || el % 5 == 0) {
+      a = a + el
+    }
+    return a
   }, 0)
   return sum
 }
@@ -65,14 +65,14 @@ const words = [
 function palindromesString(words) {
   let output = [];
   words.filter((e, i) => {
-      let str = e;
-      let revstr = str.split('').reverse().join('');
+    let str = e;
+    let revstr = str.split('').reverse().join('');
 
-      if (str == revstr) {
-          output.push(revstr);
-      }
+    if (str == revstr) {
+      output.push(revstr);
+    }
   })
- return output;
+  return output;
 }
 console.log(palindromesString(words));
 
@@ -102,11 +102,11 @@ const filePaths = [
 function findImage(filepaths) {
   let arr = [];
   filepaths.filter((e, i) => {
-      let jpg = e.includes(".jpg")
-      let png = e.includes(".png")
-      if (jpg || png) {
-          arr.push(e);
-      }
+    let jpg = e.includes(".jpg")
+    let png = e.includes(".png")
+    if (jpg || png) {
+      arr.push(e);
+    }
   })
   return arr;
 }
@@ -129,13 +129,29 @@ const stringss = [
 ];
 // output
 // ["oellH", "dorlw", "shit", "si", "na", "example", "yrraa", "fo", "strings"];
-function swapStrings(stringss) {
-  return stringss.map(string => {
-      if (string.length <= 1) return string;
-      return string.charAt(string.length - 1) + string.slice(1, -1) + string.charAt(0);
-  });
-}
-console.log(swapStrings(stringss));
+// function swapStrings(stringss) {
+//   return stringss.map(string => {
+//       if (string.length <= 1) return string;
+//       return string.charAt(string.length - 1) + string.slice(1, -1) + string.charAt(0);
+//   });
+// }
+// console.log(swapStrings(stringss));
+
+// or method - 2
+
+// function swapStrings(strings) {
+//   let ans = strings.map((el, i) => {
+//     el = el.split("")
+//     let temp = el[0]
+//     el[0] = el[el.length - 1]
+//     el[el.length - 1] = temp
+//     return el.join("")
+//   })
+//   return ans
+// }
+// console.log(swapStrings(stringss));
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // foreach method Qn:1
@@ -156,12 +172,12 @@ const sentences = [
 // "sentence 1 contains 9 words."
 function countWords(sentences) {
   sentences.forEach((e, i) => {
-      let str = e.trim();
-      const words = str.split(' ');
-      const filteredWords = words.filter(word => word.length > 0);
-      let number = filteredWords.length;
-      let output = `sentence ${i + 1} contains ${number} words.`
-      console.log(output)
+    let str = e.trim();
+    const words = str.split(' ');
+    const filteredWords = words.filter(word => word.length > 0);
+    let number = filteredWords.length;
+    let output = `sentence ${i + 1} contains ${number} words.`
+    console.log(output)
   });
 }
 countWords(sentences);
@@ -175,9 +191,9 @@ const numbers1 = [1, 2, 3, 4, 5, 7];
 // 84; 
 function sumOfSquaresOfOddNumbers(numbers) {
   return numbers
-      .filter(number => number % 2 !== 0)
-      .map(number => number ** 2)
-      .reduce((acc, val) => acc + val, 0);
+    .filter(number => number % 2 !== 0)
+    .map(number => number ** 2)
+    .reduce((acc, val) => acc + val, 0);
 }
 console.log(sumOfSquaresOfOddNumbers(numbers1));
 
@@ -203,170 +219,313 @@ let Category = {
 };
 let exampleInputArray = [
   {
-      courseName: "masai frontend web26",
-      courseDuration: 2,
-      Category: 3,
-      type: 1,
-      techTools: {
-          1: "HTML",
-          2: "CSS",
-          3: "javaScript",
-          4: "React",
-          5: "Redux",
-          6: "Node.js",
-          7: "Express",
-          8: "MongoDB",
-          9: "Bootstrap",
-          10: "",
-          11: "",
-          12: "",
-          13: "",
-          14: "",
-          15: "",
-          16: null,
-          17: null,
-          18: null,
-          19: null,
-          20: null,
-      },
-      techdetails: {
-          1: "HTML is the standard markup language for Web pages.",
-          2: "CSS is the language we use to style an HTML document. ",
-          3: "JavaScript is the programming language of the Web. JavaScript is easy to learn.",
-          4: "React is a JavaScript library for building user interfaces.",
-          5: "Redux is an open-source JavaScript library for managing and centralizing application state.",
-          6: "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
-          7: "Express is a minimal and flexible Node.js web application framework .",
-          8: "MongoDB is a document database. It stores data in a type of JSON format called BSON.",
-          9: "Bootstrap utilizes Sass for a modular and customizable architecture. ",
-          10: "",
-          11: "",
-          12: "",
-          13: "",
-          14: "",
-          15: "",
-          16: null,
-          17: null,
-          18: null,
-          19: null,
-          20: null,
-      },
+    courseName: "masai frontend web26",
+    courseDuration: 2,
+    Category: 3,
+    type: 1,
+    techTools: {
+      1: "HTML",
+      2: "CSS",
+      3: "javaScript",
+      4: "React",
+      5: "Redux",
+      6: "Node.js",
+      7: "Express",
+      8: "MongoDB",
+      9: "Bootstrap",
+      10: "",
+      11: "",
+      12: "",
+      13: "",
+      14: "",
+      15: "",
+      16: null,
+      17: null,
+      18: null,
+      19: null,
+      20: null,
+    },
+    techdetails: {
+      1: "HTML is the standard markup language for Web pages.",
+      2: "CSS is the language we use to style an HTML document. ",
+      3: "JavaScript is the programming language of the Web. JavaScript is easy to learn.",
+      4: "React is a JavaScript library for building user interfaces.",
+      5: "Redux is an open-source JavaScript library for managing and centralizing application state.",
+      6: "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
+      7: "Express is a minimal and flexible Node.js web application framework .",
+      8: "MongoDB is a document database. It stores data in a type of JSON format called BSON.",
+      9: "Bootstrap utilizes Sass for a modular and customizable architecture. ",
+      10: "",
+      11: "",
+      12: "",
+      13: "",
+      14: "",
+      15: "",
+      16: null,
+      17: null,
+      18: null,
+      19: null,
+      20: null,
+    },
   },
   {
-      courseName: "foundation batch",
-      courseDuration: 2,
-      Category: 4,
-      type: 2,
-      techTools: {
-          1: "aptitude",
-          2: "GitHub",
-          3: "C",
-          4: "",
-          5: "",
-          6: "",
-          7: "",
-          8: "",
-          9: "",
-          10: "",
-          11: "",
-          12: "",
-          13: "",
-          14: "",
-          15: "",
-          16: null,
-          17: null,
-          18: null,
-          19: null,
-          20: null,
-      },
-      techdetails: {
-          1: "1. a natural ability or skill: 2. a natural ability or skill:",
-          2: "The open source community is the heart of GitHub and fundamental to how we build software today.",
-          3: "C is a general-purpose programming language, developed in 1972",
-          4: "",
-          5: "",
-          6: "",
-          7: "",
-          8: "",
-          9: "",
-          10: "",
-          11: "",
-          12: "",
-          13: "",
-          14: "",
-          15: "",
-          16: null,
-          17: null,
-          18: null,
-          19: null,
-          20: null,
-      },
+    courseName: "foundation batch",
+    courseDuration: 2,
+    Category: 4,
+    type: 2,
+    techTools: {
+      1: "aptitude",
+      2: "GitHub",
+      3: "C",
+      4: "",
+      5: "",
+      6: "",
+      7: "",
+      8: "",
+      9: "",
+      10: "",
+      11: "",
+      12: "",
+      13: "",
+      14: "",
+      15: "",
+      16: null,
+      17: null,
+      18: null,
+      19: null,
+      20: null,
+    },
+    techdetails: {
+      1: "1. a natural ability or skill: 2. a natural ability or skill:",
+      2: "The open source community is the heart of GitHub and fundamental to how we build software today.",
+      3: "C is a general-purpose programming language, developed in 1972",
+      4: "",
+      5: "",
+      6: "",
+      7: "",
+      8: "",
+      9: "",
+      10: "",
+      11: "",
+      12: "",
+      13: "",
+      14: "",
+      15: "",
+      16: null,
+      17: null,
+      18: null,
+      19: null,
+      20: null,
+    },
   },
   {
-      courseName: "Java batch",
-      courseDuration: 1,
-      Category: 5,
-      type: 1,
-      techTools: {
-          1: "ETL",
-          2: "Perl",
-          3: "C#",
-          4: "Python",
-          5: "PHP",
-          6: "",
-          7: "",
-          8: "",
-          9: "",
-          10: "",
-          11: "",
-          12: "",
-          13: "",
-          14: "",
-          15: "",
-          16: null,
-          17: null,
-          18: null,
-          19: null,
-          20: null,
-      },
-      techdetails: {
-          1: "ETL is used to replicate and auto sync data from various source databases to a cloud data warehouse",
-          2: "Perl is a high-level scripting language",
-          3: "C# was originally designed to be easy to learn and use",
-          4: "Python is one of the most beginner-friendly programming languages out there.",
-          5: "PHP is a scripting language running on the server side",
-          6: "",
-          7: "",
-          8: "",
-          9: "",
-          10: "",
-          11: "",
-          12: "",
-          13: "",
-          14: "",
-          15: "",
-          16: null,
-          17: null,
-          18: null,
-          19: null,
-          20: null,
-      },
+    courseName: "Java batch",
+    courseDuration: 1,
+    Category: 5,
+    type: 1,
+    techTools: {
+      1: "ETL",
+      2: "Perl",
+      3: "C#",
+      4: "Python",
+      5: "PHP",
+      6: "",
+      7: "",
+      8: "",
+      9: "",
+      10: "",
+      11: "",
+      12: "",
+      13: "",
+      14: "",
+      15: "",
+      16: null,
+      17: null,
+      18: null,
+      19: null,
+      20: null,
+    },
+    techdetails: {
+      1: "ETL is used to replicate and auto sync data from various source databases to a cloud data warehouse",
+      2: "Perl is a high-level scripting language",
+      3: "C# was originally designed to be easy to learn and use",
+      4: "Python is one of the most beginner-friendly programming languages out there.",
+      5: "PHP is a scripting language running on the server side",
+      6: "",
+      7: "",
+      8: "",
+      9: "",
+      10: "",
+      11: "",
+      12: "",
+      13: "",
+      14: "",
+      15: "",
+      16: null,
+      17: null,
+      18: null,
+      19: null,
+      20: null,
+    },
   },
 ];
 
-function massageArray(inputArray) {
-  return inputArray.map(item => ({
-      courseName: item.courseName,
-      courseDuration: CourseDurationDirectory[item.courseDuration],
-      Category: Category[item.Category],
-      type: typeOfCourse.find(type => type.id === item.type).name,
-      techTools: Object.entries(item.techTools)
-          .filter(([_, value]) => value !== null && value !== "")
-          .map(([key, value]) => ({ language: value, details: item.techdetails[key] })),
-  }));
-}
-console.log(massageArray(exampleInputArray));
+// method - 1
+function messageArray() {
+  let eo1 = exampleInputArray.map((el, i) => {
+    // el is big object
+    let ans = {};
+    
+    ans.courseName = el.courseName;
+    ans.courseDuration = CourseDurationDirectory[el.courseDuration];
+    ans.type = typeOfCourse[el.type - 1].name;
+    ans.techTools = [];
+    for (const key in el.techTools) {
+      if (el.techTools[key] != "" && el.techTools[key] != null) {
+        ans.techTools.push({
+          language: techTools[key],
+          details: el.techdetails[key],
+        });
+      }
+    };
+    return ans;
+    // return ans.techTools;  // for checking
+  });
+  return eo1;
 
+}
+console.log(messageArray(exampleInputArray));
+
+
+
+
+
+
+
+
+
+
+//method - 2
+// function massageArray(inputArray) {
+//   return inputArray.map(item => ({
+//     courseName: item.courseName,
+//     courseDuration: CourseDurationDirectory[item.courseDuration],
+//     Category: Category[item.Category],
+//     type: typeOfCourse.find(type => type.id === item.type).name,
+//     techTools: Object.entries(item.techTools)
+//       .filter(([_, value]) => value !== null && value !== "")
+//       .map(([key, value]) => ({ language: value, details: item.techdetails[key] })),
+//   }));
+// }
+// console.log(massageArray(exampleInputArray));
+
+
+// - output
+let eo1 = [
+  {
+    courseName: "masai frontend web26",
+    courseDuration: "1 year",
+    Category: "Fullstack",
+    type: "Developer",
+    techTools: [
+      {
+        language: "HTML",
+        details: "HTML is the standard markup language for Web pages.",
+      },
+      {
+        language: "CSS",
+        details: "CSS is the language we use to style an HTML document. ",
+      },
+      {
+        language: "javaScript",
+        details:
+          "JavaScript is the programming language of the Web. JavaScript is easy to learn.",
+      },
+      {
+        language: "React",
+        details: "React is a JavaScript library for building user interfaces.",
+      },
+      {
+        language: "Redux",
+        details:
+          "Redux is an open-source JavaScript library for managing and centralizing application state.",
+      },
+      {
+        language: "Node.js",
+        details:
+          "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
+      },
+      {
+        language: "Express",
+        details:
+          "Express is a minimal and flexible Node.js web application framework .",
+      },
+      {
+        language: "MongoDB",
+        details:
+          "MongoDB is a document database. It stores data in a type of JSON format called BSON.",
+      },
+      {
+        language: "Bootstrap",
+        details:
+          "Bootstrap utilizes Sass for a modular and customizable architecture. ",
+      },
+    ],
+  },
+  {
+    courseName: "foundation batch",
+    courseDuration: "1 year",
+    Category: "manual tester",
+    type: "Tester",
+    techTools: [
+      {
+        language: "aptitude",
+        details:
+          "1. a natural ability or skill: 2. a natural ability or skill:",
+      },
+      {
+        language: "GitHub",
+        details:
+          "The open source community is the heart of GitHub and fundamental to how we build software today.",
+      },
+      {
+        language: "C",
+        details:
+          "C is a general-purpose programming language, developed in 1972",
+      },
+    ],
+  },
+  {
+    courseName: "Java batch",
+    courseDuration: "6 month",
+    Category: "automation tester",
+    type: "Developer",
+    techTools: [
+      {
+        language: "ETL",
+        details:
+          "ETL is used to replicate and auto sync data from various source databases to a cloud data warehouse",
+      },
+      {
+        language: "Perl",
+        details: "Perl is a high-level scripting language",
+      },
+      {
+        language: "C#",
+        details: "C# was originally designed to be easy to learn and use",
+      },
+      {
+        language: "Python",
+        details:
+          "Python is one of the most beginner-friendly programming languages out there.",
+      },
+      {
+        language: "PHP",
+        details: "PHP is a scripting language running on the server side",
+      },
+    ],
+  },
+];
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -461,19 +620,19 @@ let nrupulMarksData = {
 // ];
 let allStudentsMarksData = [prateekMarksData, nrupulMarksData];
 function ImplementationPS7(allStudentsMarksData) {
-    return allStudentsMarksData.map(student => ({
-        name: student.name,
-        marks: Object.entries(student)
-            .filter(([key, value]) => key.startsWith("subject") && value !== null)
-            .map(([key, value]) => ({ subject: value, score: student[key.replace("subject", "marks")]}))
-    }));
+  return allStudentsMarksData.map(student => ({
+    name: student.name,
+    marks: Object.entries(student)
+      .filter(([key, value]) => key.startsWith("subject") && value !== null)
+      .map(([key, value]) => ({ subject: value, score: student[key.replace("subject", "marks")] }))
+  }));
 }
 console.log(ImplementationPS7(allStudentsMarksData));
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // Implementation methods ps Qn:9
- // - input
- const voters = [
+// - input
+const voters = [
   { name: "Bob", age: 30, voted: true },
   { name: "Jake", age: 32, voted: true },
   { name: "Kate", age: 25, voted: false },
@@ -498,24 +657,24 @@ console.log(ImplementationPS7(allStudentsMarksData));
 // }
 function ImplementationPS9(voters) {
   const result = {
-      numYoungVotes: 0,
-      numYoungPeople: 0,
-      numMidVotesPeople: 0,
-      numMidsPeople: 0,
-      numOldVotesPeople: 0,
-      numOldsPeople: 0,
+    numYoungVotes: 0,
+    numYoungPeople: 0,
+    numMidVotesPeople: 0,
+    numMidsPeople: 0,
+    numOldVotesPeople: 0,
+    numOldsPeople: 0,
   };
   voters.forEach(voter => {
-      if (voter.age <= 20) {
-          result.numYoungPeople++;
-          if (voter.voted) result.numYoungVotes++;
-      } else if (voter.age <= 45) {
-          result.numMidsPeople++;
-          if (voter.voted) result.numMidVotesPeople++;
-      } else {
-          result.numOldsPeople++;
-          if (voter.voted) result.numOldVotesPeople++;
-      }
+    if (voter.age <= 20) {
+      result.numYoungPeople++;
+      if (voter.voted) result.numYoungVotes++;
+    } else if (voter.age <= 45) {
+      result.numMidsPeople++;
+      if (voter.voted) result.numMidVotesPeople++;
+    } else {
+      result.numOldsPeople++;
+      if (voter.voted) result.numOldVotesPeople++;
+    }
   });
   return result;
 }
@@ -533,43 +692,43 @@ console.log(ImplementationPS9(voters));
 // input
 const data = [
   {
-      name: "Superman",
-      favoriteIceCreams: [
-          "Strawberry",
-          "Vanilla",
-          "Chocolate",
-          "Cookies & Cream",
-      ],
+    name: "Superman",
+    favoriteIceCreams: [
+      "Strawberry",
+      "Vanilla",
+      "Chocolate",
+      "Cookies & Cream",
+    ],
   },
   {
-      name: "Batman",
-      favoriteIceCreams: [
-          "Cookies & Cream",
-          "Mint Chocolate Chip",
-          "Chocolate",
-          "Vanilla",
-      ],
+    name: "Batman",
+    favoriteIceCreams: [
+      "Cookies & Cream",
+      "Mint Chocolate Chip",
+      "Chocolate",
+      "Vanilla",
+    ],
   },
   {
-      name: "Flash",
-      favoriteIceCreams: ["Chocolate", "Rocky Road", "Pistachio", "Banana"],
+    name: "Flash",
+    favoriteIceCreams: ["Chocolate", "Rocky Road", "Pistachio", "Banana"],
   },
   {
-      name: "Aquaman",
-      favoriteIceCreams: ["Vanilla", "Chocolate", "Mint Chocolate Chip"],
+    name: "Aquaman",
+    favoriteIceCreams: ["Vanilla", "Chocolate", "Mint Chocolate Chip"],
   },
   {
-      name: "Green Lantern",
-      favoriteIceCreams: [
-          "Vanilla",
-          "French Vanilla",
-          "Vanilla Bean",
-          "Strawberry",
-      ],
+    name: "Green Lantern",
+    favoriteIceCreams: [
+      "Vanilla",
+      "French Vanilla",
+      "Vanilla Bean",
+      "Strawberry",
+    ],
   },
   {
-      name: "Robin",
-      favoriteIceCreams: ["Strawberry", "Chocolate", "Mint Chocolate Chip"],
+    name: "Robin",
+    favoriteIceCreams: ["Strawberry", "Chocolate", "Mint Chocolate Chip"],
   },
 ];
 
@@ -595,9 +754,9 @@ const data = [
 function ImplementationPS10(data) {
   const iceCreamCounts = {};
   data.forEach(person => {
-      person.favoriteIceCreams.forEach(iceCream => {
-          iceCreamCounts[iceCream] = (iceCreamCounts[iceCream] || 0) + 1;
-      });
+    person.favoriteIceCreams.forEach(iceCream => {
+      iceCreamCounts[iceCream] = (iceCreamCounts[iceCream] || 0) + 1;
+    });
   });
   return iceCreamCounts;
 }
