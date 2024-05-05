@@ -1,4 +1,34 @@
  // Painter's Partition Problem
+ // input:-
+ // t = 2 (no of test case)
+// n= 2 , p=2
+// n=1 , p=10
+// n=4, p=10
+//
+//  output:-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  function solve(N, arr, P) 
 {
     let left = Math.max(...arr);

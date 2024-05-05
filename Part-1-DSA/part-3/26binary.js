@@ -1,4 +1,6 @@
-// Binary Search - Iterative
+// 11751 Binary Search - Iterative
+// input :- N=5, arr= [2,-2,0,3,4], K=9
+// output :- if (k) is  present in arr print (1) if not present (-1)
 function solve(N, arr, K) {
     arr.sort((a, b) => {
         return a - b;
@@ -27,3 +29,4 @@ function solve(N, arr, K) {
         console.log(-1);
     }
 }
+solve(5, [2, -2, 0, 3, 4], 9);
