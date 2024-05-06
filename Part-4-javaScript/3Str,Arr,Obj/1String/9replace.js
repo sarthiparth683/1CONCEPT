@@ -1,13 +1,11 @@
 
 // Replacing a single substring:
-const sentence = "JavaScript is a powerful language.";
-const newSentence = sentence.replace("JavaScript", "Python");
-console.log(newSentence);
-// Output: "Python is a powerful language."
-
+let a = "JavaScript is a powerful language.";
+let b = a.replace("JavaScript", "Python");
+// console.log(b);
 
 // Replacing all occurrences with a regular expression (global flag): 
-const text = "The quick brown fox jumps over the lazy dog.";
-const newText = text.replace(/dog/g, "cat");
-console.log(newText);
+const text = " dog The quick dog  brown fox jumps over the lazy dog.";
+const text2 = text.replace(/dog/g, "cat"); // (g for global)
+console.log(text2);
 // Output: "The quick brown fox jumps over the lazy cat."

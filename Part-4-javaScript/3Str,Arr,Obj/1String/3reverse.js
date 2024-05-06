@@ -5,7 +5,7 @@ let str4 = "ParthSarthi";
 // console.log(str4.reverse()); // works only for Arry  not for string 
 let reversedStr = str4.split("").reverse().join("");
 console.log(reversedStr);
- 
+
 //--------------------------------------------------------
 
 function reverseString(str) {

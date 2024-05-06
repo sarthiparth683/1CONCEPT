@@ -2,5 +2,6 @@
 let arr1 = ['apple', 'banana', 'orange', 'grape',"mango","kiwi","melon","Berry"];
 let arr2 = arr1.slice(1, 3);
 console.log(arr2);
+console.log(arr1);
 
- 
+  
