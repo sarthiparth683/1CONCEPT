@@ -1,61 +1,29 @@
 // one value output
-// reduce = accumulator, element and index = final one answer. it works on three parameters
-let arr = [10, 20, 30, 40, 50];
-function sumArr(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum = sum + arr[i];
-  }
-  return sum;
-};
-// console.log(sumArr(arr));
-// -------------------------------------------------------
-// This code can be cut short by using inbuilt HOF, reduce
-let ans1 = arr.reduce((a, cv, i) => {
-  return a + cv
-}, 5)
-// console.log(ans1);
-//----------------------------------------------------------------------
-
-let arr3 = [24, 45, 56, 67, 78]
-function objArr(arr) {
-  let obj = {};
-  for (let i = 0; i < arr3.length; i++) {
-    obj[i] = arr[i];
-  }
-  return obj;
-}
-// console.log(objArr(arr3));
+// reduce = (accumulator, element and index) = final one answer. it works on three parameters
 //-----------------------------------------------------------------------
-// This code can be cut short by using inbuilt HOF, reduce
+let arr13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+let arr14 = arr13.reduce((a, el, i) => {
+  return a + el;
+}, 500)
+// console.log(arr14);
+//----------------------------------------------------------------------
+let arr3 = [24, 45, 56, 67, 78, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 let obj = arr3.reduce((a, cv, i) => {
   a[i] = cv;
-  return a
+  return a;
 }, {});
 // console.log(obj);
 //---------------------------------------------------------------------------
-
 const numbers = [1, 2, 3, 4];
 const sum = numbers.reduce((accumulator, current) => accumulator + current);
 // console.log(sum); 
-// Output: 10
-
-// Sum all elements (with initial value)
-const sumWithInitial = numbers.reduce((accumulator, current) => {
-  return accumulator + current;
-}, 10);
-// console.log(sumWithInitial); 
-// Output: 20
-
-//-------------------------------------------------------------------------------------
-
+//----------------------------------------------------------------------------
 // 1. Sum of all elements:
 const arr1 = [1, 2, 3, 4, 5];
 const sum1 = arr1.reduce((a, cv) => a + cv, 0);
 // console.log(sum1);
 // Output: 15
-//----------------------------------------------------------------------------------------
-
+//----------------------------------------------------------------------------
 //2. Product of all elements:
 const arr2 = [2, 3, 4];
 const product = arr2.reduce((a, cv) => a * cv, 1);
@@ -114,5 +82,5 @@ const flatArray = arr10.reduce((acc, cv) => acc.concat(cv), []);
 // 10.Convert an array to a string (join):
 const arr11 = ["Hello", "World"];
 const joinedString = arr11.reduce((sentence, word) => sentence + " " + word);
-console.log(joinedString);
+// console.log(joinedString);
 // Output: Hello World

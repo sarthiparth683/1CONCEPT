@@ -1,6 +1,5 @@
 let numbers = [3, 8, 5, 12, 7, 14, 11];
 
-
 function calculateOddSum(numbers) {
     let sum = 0;
     for (let el of numbers) {
@@ -11,9 +10,8 @@ function calculateOddSum(numbers) {
     return sum;
 };
 // console.log("Sum of odd numbers:", calculateOddSum(numbers));
+// 26
 // ---------------------------------------------------------------------------
-
-
 function containsPrime(numbers) {
     for (let num of numbers) {
         if (num <= 1) {
@@ -33,6 +31,7 @@ function containsPrime(numbers) {
     return false;
 };
 // console.log("Contains prime numbers:", containsPrime(numbers));
+//  console.log(Math.sqrt(64))
 
 
 let primeNumbers = numbers.filter(num => {

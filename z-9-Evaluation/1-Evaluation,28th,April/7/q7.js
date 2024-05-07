@@ -240,29 +240,28 @@ let products = [
         }
     }
 ];
+products.map((el, i) => {
+    // getting container
+    let container = document.getElementById("container");
+    let card = document.createElement("div");
 
-products.map((el,i)=>{
-// getting container
-let container = document.getElementById("container");
-let card = document.createElement("div");
+    // inside div img,prodName, price, rating
+    let image = document.createElement("img");
+    image.style.width = "1fr";
+    image.src = el.image;
+    let pdname = document.createElement("p");
+    pdname.style.fontWeight = "bold";
+    pdname.textContent = `Product Name:- ${el.title}`;
+    let price = document.createElement("p");
+    price.style.fontWeight = "bold";
+    price.textContent = `Price:- ${el.price}`;
+    let rating = document.createElement("p");
+    rating.style.fontWeight = "bold";
+    rating.textContent = `Rating Name:- ${el.rating.rate}`;
 
-// inside div img,prodName, price, rating
-let image = document.createElement("img");
-image.style.width = "1fr";
-image.src = el.image;
-let pdname = document.createElement("p");
-pdname.style.fontWeight = "bold";
-pdname.textContent = `Product Name:- ${el.title}`;
-let price = document.createElement("p");
-price.style.fontWeight = "bold";
-price.textContent = `Price:- ${el.price}`;
-let rating = document.createElement("p");
-rating.style.fontWeight = "bold";
-rating.textContent = `Rating Name:- ${el.rating.rate}`;
-
-card.append(image,pdname,price,rating);
-container.append(card);
-})
+    card.append(image, pdname, price, rating);
+    container.append(card);
+});
 
 
 

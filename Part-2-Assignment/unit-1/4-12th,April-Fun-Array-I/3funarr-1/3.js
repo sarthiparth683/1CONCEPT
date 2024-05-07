@@ -7,10 +7,8 @@
 // Reversed array: [6, 5, 4, 3]
 //  ascending order - sort() method.
 
-
 let array1 = [1, 2, 3, 4];
 let array2 = [5, 6, 7];
-
 let concatenatedArray = array1.concat(array2);
 // console.log(concatenatedArray);
 
@@ -31,9 +29,9 @@ if (array1.includes(10)) {
     // console.log("Number 10 is not present in array1.");
 };
 
-// let joinedString1 = extractedArray.join('-');
+let joinedString1 = extractedArray.join('-');
 // console.log(joinedString1);
-// let joinedString2 = array1.join(' - ');
+let joinedString2 = array1.join(' - ');
 // console.log(joinedString2);
 
 let rev = array1.reverse();
@@ -47,7 +45,7 @@ for (let i = 0; i < array2.length; i++) {
 
 // sort method is for assending and descending
 array1.sort((a, b) => a - b);
-console.log(array1);
+// console.log(array1);
 array1.sort((a, b) => b - a);
-console.log(array1);
+// console.log(array1);
 

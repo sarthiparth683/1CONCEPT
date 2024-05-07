@@ -1,8 +1,5 @@
-// Problem Statement:
-// You are tasked with implementing a basic library management system. The system should support the following operations:
-
+// Problem Statement: library management
 let book = [];
-
 function addBook(Title, Author, ISBN) {
     let obj = {};                               // important
     obj["Title"] = Title;
@@ -15,8 +12,6 @@ addBook("BookName", "Writer Name", "ISBN Number");
 addBook("To Kill a Mockingbird", "by Harper Lee", "9780061120084");
 console.log(book);
 //------------------------------------------------------------------------------------------
-
-
 function displayBooks(ISBN) {
     for (let i = 0; i < book.length; i++)
         // if (book[i].ISBN == ISBN); // or      // important for getting this is good
