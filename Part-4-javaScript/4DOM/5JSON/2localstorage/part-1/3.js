@@ -1,25 +1,20 @@
 // ote : Local storage stores only strings, booleans and numbers.
 // What are the other data types we have ?
-
 // Arrays, Objects cannot be stored.
 
 // Set Item
 // Syntax
-
-setItem("keyName",value)
+// setItem("keyName", value);
 // value can be a string, boolean or a number
 
 // ***Write only one first and then write others to show that same key values
 // 		will get replaced.***
-//     localStorage.setItem("studentName1","Cherry")
-// 		localStorage.setItem("studentName2","Superman")
-// 		localStorage.setItem("studentName2","Spiderman")
-// 		localStorage.setItem("studentId",1)
-// 		localStorage.setItem("studentPresent", true);
-
+localStorage.setItem("studentName1", "Cherry")
+localStorage.setItem("studentName2", "Superman")
+localStorage.setItem("studentName3", "Spiderman")
+localStorage.setItem("studentId", 1)
+localStorage.setItem("studentPresent", true);
 // studentName1 is key and Cherry is value.
-
-
 
 // Get Item
 // In objects, if we want to get the value of any field, how will we do it?
@@ -29,16 +24,17 @@ setItem("keyName",value)
 var student = {
   name: "Cherry",
 };
-
-// console.log(student.name);
+console.log(student.name);
+//------------------------------------------------------
 // So, if we want to access the values in an object, we write the key only. Similarly, for local storage also, we’ll write getItem(”keyName”).
-
 // Syntax
 // getItem("keyName");
 
-//   var name = localStorage.getItem("studentName1") console.log(name) var p =
-//   document.createElement("p") p.innerText = name
-//   document.querySelector("body").append(p)
+  var name1 = localStorage.getItem("studentName3");
+   console.log(name1);
+  //  var p =
+  // document.createElement("p"); p.innerText = name
+  // document.querySelector("body").append(p)
 
 // Whenever we try to access a key which is not present in local storage, it’ll return null.
 
