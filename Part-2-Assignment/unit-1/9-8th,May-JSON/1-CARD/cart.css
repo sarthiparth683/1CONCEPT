@@ -1,0 +1,28 @@
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(233, 207, 56);
+    padding: 15px;
+    margin-bottom: 50px;
+  }
+  #navbar > a {
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  #container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 90%;
+    margin: auto;
+  }
+  
+  #container > div {
+    border: 2px solid rgb(20, 147, 220);
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  

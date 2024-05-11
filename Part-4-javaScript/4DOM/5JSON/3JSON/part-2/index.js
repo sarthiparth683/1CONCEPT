@@ -1,17 +1,19 @@
 // Code Implementation | Examples:
 // Demonstration: The instructor will demonstrate how to parse JSON data received from a server and display it on a web page using JavaScript. Explanation: The instructor will explain each step of the code, including fetching JSON data using AJAX, parsing it using JSON.parse(), and dynamically updating the HTML content with the parsed data.
 // Fetch JSON data from a server
-fetch("https://example.com/data.json")
-  .then((response) => response.json())
-  .then((data) => {
-    // Parse JSON data and display it on the web page
-    document.getElementById("output").textContent = JSON.stringify(
-      data,
-      null,
-      2
-    );
-  })
-  .catch((error) => console.error("Error fetching data:", error));
+
+// fetch("https://example.com/data.json")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     // Parse JSON data and display it on the web page
+//     document.getElementById("output").textContent = JSON.stringify(
+//       data,
+//       null,
+//       2
+//     );
+//   })
+//   .catch((error) => console.error("Error fetching data:", error));
+
 //-----------------------------------------------------------------------------
 // Problem
 // creating a web application that displays user cards based on the provided array of user objects. along with add to cart and Delete functionality.(Use localstorage)
@@ -115,5 +117,5 @@ function addToCart(ele) {
 }; 
 //********************************************************************** */
 // localStorage.removeItem(key); // To delete specific data by key.
-localStorage.clear(); // To clear all local storage data.
+// localStorage.clear(); // To clear all local storage data.
 //********************************************************************** */  

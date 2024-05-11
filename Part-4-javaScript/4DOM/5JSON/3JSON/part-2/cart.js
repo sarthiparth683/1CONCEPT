@@ -33,10 +33,10 @@ function removeFromCart(ele, i) {
   cartArr.splice(i, 1);
   localStorage.setItem("cart", JSON.stringify(cartArr));
   displaydata(cartArr);
-}; 
+};
 
 
 //********************************************************************** */
 // localStorage.removeItem(key); // To delete specific data by key.
-localStorage.clear(); // To clear all local storage data.
+// localStorage.clear(); // To clear all local storage data.
 //********************************************************************** */ 
