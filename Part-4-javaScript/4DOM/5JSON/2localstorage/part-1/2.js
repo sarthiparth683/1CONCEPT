@@ -1,4 +1,9 @@
 
+// TO CLEAR LOCAL STORAGE:-CLICK CLEAR BUTTON ON LOCAL STORAGE INSIDE APPLICATION
+
+
+
+
 // localStorage is a property that allows JavaScript sites and apps to save key-value pairs in a web browser with no expiration date.
 //-----------------------------------------------------------------------------------------------
 // Where to see the local storage ?
