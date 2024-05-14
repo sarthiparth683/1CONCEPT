@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="name" type="text" placeholder="Enter UserName" />
+    <input id="password" type="text" placeholder="Enter Password" />
+    <button onClick="signupfn()">Signup</button>
+    <button onClick="getUser()">Get User</button>
+    <h3 id="welcome"></h3>
+  </body>
+  <script>
+    let users = JSON.parse(localStorage.getItem("UserDetail")) || [];
+
+    function signupfn() {
+      let name = document.getElementById("name");
+      let password = document.getElementById("password");
+      let obj = {};
+      obj.name = name.value;
+      obj.password = password.value;
+      users.push(obj);
+      let stringifiedData = JSON.stringify(users);
+      console.log("without stringified", users);
+      // console.log("with stringified", stringifiedData)
+      localStorage.setItem("UserDetail", stringifiedData);
+    }
+
+    function getUser() {
+      // get the data from the localStorage
+      let data = localStorage.getItem("UserDetail");
+      console.log("before pasring", data);
+      console.log("Hello world");
+      // the data obtained here is in senseless form
+      // we need to Parse the data
+      //let data = JSON.parse(localStorage.getItem("UserDetail"));
+      let senseFulData = JSON.parse(data);
+      console.log("after parsing", senseFulData);
+      let text = document.getElementById("welcome");
+      text.textContent = `welcome ${senseFulData[2].name}`;
+    }
+  </script>
+</html>
