@@ -1,3 +1,5 @@
+// you have stringified the data before stiring in ls, 
+// so you need to remove from data after getting from ls, removing stringfy is Parse
 var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
 console.log(cartArr);
 displaydata(cartArr);
@@ -30,8 +32,15 @@ function displaydata(products) {
 
 function removeFromCart(ele, i) {
   console.log("remove");
-  cartArr.splice(i, 1);
-  localStorage.setItem("cart", JSON.stringify(cartArr));
+  // you have removed the particular clicked element from cartArr using splice or filter
+  //cartArr.splice(i, 1); spliec or filtred data
+  let filteredData = cartArr.filter((el,index)=>{
+    if(i!= index){
+      return el
+    }
+  })
+  // again updating the filtered/removed/newArr in LS 
+  localStorage.setItem("cart", JSON.stringify(filteredData));
   displaydata(cartArr);
 };
 

@@ -53,4 +53,4 @@
 // When the time is over, the code is moved to the callback queue or microtask queue based on the priority of that task.
 // Microtask Queue: Holds microtasks, such as Promise callbacks and Mutation Observer callbacks. These tasks have higher priority than regular tasks and are executed before regular tasks.
 // Callback Queue: Holds tasks like timers, network responses, and user interaction events. These tasks are executed after microtasks.
-//----------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------- 

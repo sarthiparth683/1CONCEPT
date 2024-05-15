@@ -11,7 +11,7 @@ Promise.resolve().then(() => {
 Promise.resolve().then(() => {
   console.log("promise resolve 2");
   setTimeout(() => {
-    console.log("Inside timeout");
+    console.log("Inside timeout"); 
   }, 0);
 });
 Promise.resolve().then(() => {

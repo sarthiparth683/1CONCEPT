@@ -11,7 +11,8 @@
 //   })
 //   .catch((error) => console.error("Error fetching data:", error));
 //-------------------------------------------------------------------------
-
+// alert("Old wesbite is closed, you will redirect to new website")
+// window.location.href = "cart.html";  // redirection 
 // Problem
 var products = [
   {
@@ -95,13 +96,20 @@ products.forEach(function (ele) {
 });
 //--------------------------------------------------------------------------------
 //*********************************************************************************
-var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
-function addToCart(ele) {
-  console.log(ele);
-  cartArr.push(ele);
 
-  console.log(cartArr);
+function addToCart(ele) {
+ console.log(ele); 
+ // the below line is geeting data from LS
+  var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
+  // the below is updating LS
+  cartArr.push(ele);
+  //the below line is again storing the updated Data in LS
   localStorage.setItem("cart", JSON.stringify(cartArr));
-  window.location.href = "cart.html"
+  // after stroing, just to make customer feel,alert tag is used
+  alert("Product added to cart...")
+  // console.log(cartArr);
+  // localStorage.setItem("cart", JSON.stringify(cartArr));
+  // the bewlo line takes customer to cart
+  //window.location.href = "cart.html";
 };
 //*********************************************************************************** 

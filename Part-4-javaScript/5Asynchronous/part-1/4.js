@@ -14,7 +14,7 @@ async function fetchData() {
         setTimeout(() => resolve('Data fetched'), 3000);
     });
     let result = await promise;
-    console.log(result);
+    console.log(result); 
 }
 fetchData();
 // Logs 'Data fetched' after 3 seconds  
