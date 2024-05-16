@@ -13,4 +13,4 @@ var price = document.createElement("p");
 price.innerText = ele.price;
 
 card.append(image, h4, price);
-container.append(card);
+container.append(card);  

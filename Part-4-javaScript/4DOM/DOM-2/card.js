@@ -60,9 +60,8 @@ let user = [
         email: "Rey.Padberg@karina.biz",
     },
 ];
-user.map(function (el, i) {
+user.forEach(function (el, i) {
     let box1 = document.getElementById("box1");
-    // console.log("index:-",i, el)   // to check right variable is selectd or not
     let card = document.createElement("div");
     let Name = document.createElement("p");
     Name.textContent = `Name: ${el.name}`;
@@ -70,7 +69,6 @@ user.map(function (el, i) {
     userName.textContent = `Username: ${el.username}`;
     let email = document.createElement("p");
     email.textContent = `email: ${el.email}`;
-
     card.append(Name, userName, email);
     box1.append(card);
 });

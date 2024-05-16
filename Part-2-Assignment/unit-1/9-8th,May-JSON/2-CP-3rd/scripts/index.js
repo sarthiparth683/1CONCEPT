@@ -5,8 +5,7 @@ let prioritySelect = document.getElementById("priority");
 
 addTodoButton.addEventListener("click", function (e) {
     // e.preventDefault()
-
-    let todos = JSON.parse(localStorage.getItem("todos")) || []
+    let todos = JSON.parse(localStorage.getItem("todos")) || [];
 
     if (inputTitle.value == "") {
         alert("Todo cannot be empty!");
@@ -21,6 +20,7 @@ addTodoButton.addEventListener("click", function (e) {
         displayTodo(todos)
     }
 });
+//----------------------------------------------------------------------------------------
 
 function displayTodo(arr) {
     let todos = JSON.parse(localStorage.getItem("todos")) || [];

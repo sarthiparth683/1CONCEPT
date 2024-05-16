@@ -8,4 +8,4 @@ localStorage.clear(); // To clear all local storage data.
 // JSON and Data Handling:-
 // Solution:
 JSON.stringify(); // convert (obj) into (JSON strings).
-JSON.parse(); // convert (JSON strings) into (obj ).
+JSON.parse(); // convert (JSON strings) into (obj ). 

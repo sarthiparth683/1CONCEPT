@@ -98,8 +98,8 @@ products.forEach(function (ele) {
 //*********************************************************************************
 
 function addToCart(ele) {
- console.log(ele); 
- // the below line is geeting data from LS
+  // console.log(ele);
+  // the below line is geeting data from LS
   var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
   // the below is updating LS
   cartArr.push(ele);

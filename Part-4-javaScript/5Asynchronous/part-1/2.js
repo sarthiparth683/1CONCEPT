@@ -1,6 +1,6 @@
-// Synchronous Execution
+// ** Synchronous Execution and Asynchronous Execution - Event loop seprates them first and send them to webApi then in promises and fetch APi according to priority and time they are executed
+//----------------------------------------------------------------------------------------
 // JavaScript processes code in a synchronous, single-threaded manner, executing one line at a time.
-// ******************************************************************************
 // Asynchronous Execution
 // Asynchronous execution allows JavaScript to handle tasks in a non-blocking manner, enabling other code to run while waiting for an earlier task to complete.
 // ******************************************************************************

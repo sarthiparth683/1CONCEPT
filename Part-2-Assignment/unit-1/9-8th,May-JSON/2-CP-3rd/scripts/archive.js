@@ -57,7 +57,8 @@ function displayTodo(arr) {
         tableBody.append(tr)
     })
 
-}
+};
+//--------------------------------------------------------------------------------
 let archive = JSON.parse(localStorage.getItem("archive"))
 displayTodo(archive);
 
@@ -80,3 +81,4 @@ prioritySelect.addEventListener("change", function () {
     })
     displayTodo(filteredData)
 })
+ 
