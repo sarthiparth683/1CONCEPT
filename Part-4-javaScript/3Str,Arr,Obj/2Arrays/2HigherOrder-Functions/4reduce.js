@@ -1,3 +1,17 @@
+
+// ### Reduce 
+
+```javascript
+let arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+let sum = arr.reduce((acc, ele) => {
+  return acc + ele;
+}, 0);
+
+console.log(sum); // Output: 45
+```
+
+
+
 // one value output
 // reduce = (accumulator, element and index) = final one answer. it works on three parameters
 //-----------------------------------------------------------------------
@@ -11,7 +25,7 @@ let arr3 = [24, 45, 56, 67, 78, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 let obj = arr3.reduce((a, cv, i) => {
   a[i] = cv;
   return a;
-}, {});
+}, {}); 
 // console.log(obj);
 //---------------------------------------------------------------------------
 const numbers = [1, 2, 3, 4];

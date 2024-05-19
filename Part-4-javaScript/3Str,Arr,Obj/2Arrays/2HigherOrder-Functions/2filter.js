@@ -1,3 +1,15 @@
+
+// ### Filter
+
+```javascript
+let arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+let res = arr.filter((ele) => {
+  return ele % 2 === 0;
+});
+
+console.log(res); // Output: [8, 6, 4, 2]
+```
+//---------------------------------------------------------------------------------------------
 // filter return (TRUE VALUE).
 let arr1 = [9, 7, 8, 1, 2, 4, 3, 0]
 let fl1 = arr1.filter((el, i) => { return el / 2 });
@@ -14,7 +26,7 @@ const fl3 = numbers1.map((el, i) => el % 2 == 0);
 // 2. Filtering Strings with a Certain Length:
 const words = ['hello', 'world', 'JavaScript', 'filter'];
 const fl4 = words.filter((el, i) => el.length > 5);
-const fl5 = words.map((el, i) => el.length);
+const fl5 = words.map((el, i) => el.length); 
 // console.log(fl4);
 // console.log(fl5);
 // Output: ['JavaScript', 'filter']
@@ -111,3 +123,4 @@ const evenNumbers = arr5.filter(number => typeof number === 'number' && number %
 console.log(evenNumbers);
 // Output: [2, 4]
 //---------------------------------------------------------------------------------------------
+

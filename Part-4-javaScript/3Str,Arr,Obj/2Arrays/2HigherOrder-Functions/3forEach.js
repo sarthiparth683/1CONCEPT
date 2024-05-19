@@ -11,7 +11,7 @@ const arr2 = [];
 arr1.forEach((el, i) => {
     arr2.push(el);
 });
-// console.log(arr2);
+// console.log(arr2); 
 //--------------------------------------------------------------------------
 const numbers1 = [65, 44, 12, 4];
 numbers1.forEach(myFunction)
@@ -24,4 +24,17 @@ function myFunction(item, index, arr) {
 ['a', 'b', 'c'].forEach(v => {
     // console.log(v);
 });
+//--------------------------------------------------------------------------
+// ### forEach
+
+```javascript
+let arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+let sum = 0;
+
+arr.forEach((ele) => {
+  sum += ele;
+});
+
+console.log(sum); // Output: 45
+``` 
 //--------------------------------------------------------------------------

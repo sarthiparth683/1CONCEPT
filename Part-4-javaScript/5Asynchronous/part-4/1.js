@@ -1,43 +1,37 @@
 // Async function
-// any movies??
-// games from 
-// game download should happen 
-// you should use your simultaneously
-
 // //Hoisting 
+// with var:-
 // console.log("before declaration", a)
 // var a = 100  // var is global scoped
 // console.log("after declaration", a)
-
+//--------------------------------------------
+// with let:-
 // console.log("before declaration", b)
-// let b = 200
+// let b = 200;
 // console.log("after declaration", b)
-
+//-----------------------------------------------
 // Global Scoped/block scoped/function scoped
 // global scoped
-
 // var is global scoped
 // let and const is block scoped
-// var a = 100  // a is global scoped
-// let b  = 200
-// const c = 300
+// var a = 100; 
+// let b  = 200;
+// const c = 300;
 // console.log(a,b,c)
-
-// if(true)
-// {
+// if (true) {
 //     let d = false;
 //     var e = true;
-//     // console.log(a,b,c)
-//     console.log("inside block", d, e)
+//     console.log(a,b,c);
+//     console.log("inside block", d, e);
 // }
-//  console.log("outside block", e)
-// console.log("outside block", d)
-// function hello(){
-//     console.log(a,b,c)
+// console.log("outside block", e);
+// console.log("outside block", d);
+//--------------------------------------------------------
+// function hello() {
+//     console.log(a, b, c)
 // }
-
-// hello()
-
+// hello();
+//-----------------------------------------------
 // function scoped
 // function print()
 // {
@@ -45,21 +39,14 @@
 //     return z
 //     // console.log(a)
 // }
-
 // z = print()
-//  console.log(z)
-
-
-
-
-
-
-
+//  console.log(z);
+//-----------------------------------------------
 // can redeclare and reassign
 // var a = 10;
 // function sum(){
 //     // Ma
-//     /// 1000 lines of code, a is a number 
+//     /// 1000 lines of code, a is a number
 //     let sp = 1000
 //     console.log(`Discounted Price is ${sp-(sp*a/100)}`)
 // }
@@ -82,7 +69,7 @@
 // let a = 10;
 // function sum(){
 //     // Ma
-//     /// 1000 lines of code, a is a number 
+//     /// 1000 lines of code, a is a number
 //     let sp = 1000
 //     console.log(`Discounted Price is ${sp-(sp*a/100)}`)
 // }
@@ -97,12 +84,12 @@
 // sum()
 // check()
 
-// const 
+// const
 // can't redeclare and can't reassign
 // const a = 10;
 // function sum(){
 //     // Ma
-//     /// 1000 lines of code, a is a number 
+//     /// 1000 lines of code, a is a number
 //     let sp = 1000
 //     console.log(`Discounted Price is ${sp-(sp*a/100)}`)
 // }
@@ -116,3 +103,4 @@
 // }
 // sum()
 // check()
+  

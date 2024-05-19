@@ -1,9 +1,9 @@
-// 1. the varaibles declared using the let keyword,
-// can not be accessed before the place they are declared.
+// 1. the varaibles declared using the let keyword,can not be accessed before the place they are declared.
 // guess the output
 // console.log(x); // undefined
 // var x = 5;
 // console.log(x); // 5
+
 // console.log(x); // ReferenceError: x is not defined
 // let x = 5;
 // console.log(x); // 5
@@ -12,7 +12,7 @@
 // var x = 1;
 // var x = 2;
 // console.log(x); // 2
-// let y = 1;
+// let y = 1;  
 // let y = 2; // SyntaxError: Identifier 'y' has already been declared
 // console.log(y);
 //-----------------------------------------------------------------------------
@@ -24,8 +24,7 @@ function fun() {
   }
 
   console.log("x inside fun function", x); // 2
-}
-
-fun();
-console.log("x outside fun function", x); // ReferenceError: x is not defined
+};
+// fun();
+// console.log("x outside fun function", x); // ReferenceError: x is not defined
 //-----------------------------------------------------------------------------

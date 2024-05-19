@@ -1,10 +1,7 @@
 // Callback
 // Introduction
 // What is a CallBack Function?
-// a callback function is a function that is passed as an argument to another function and is intended to be executed or "called back" at a certain point in the execution of that function.
-
-// The primary purpose of using callback functions is to ensure that certain code is executed only after the completion of a specific operation or task.
-
+// a callback function is a function that is passed as an argument to another function and is intended to be executed or "called back" at a certain point in the execution of that function.The primary purpose of using callback functions is to ensure that certain code is executed only after the completion of a specific operation or task.
 // Example:
 function doSomething(callback) {
     // Perform some operation or task
@@ -19,7 +16,7 @@ function doSomething(callback) {
   
   // Pass the callback function as an argument to doSomething()
   doSomething(callbackFunction);
-//------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
 // Detailed Explanation
 // Asynchronous Operations JavaScript is often used for asynchronous programming, where certain operations take time to complete, such as making API calls, fetching data from a database, or reading files. Callback functions allow you to define what should happen after the asynchronous operation is finished.
 function fetchData(callback) {
@@ -103,7 +100,7 @@ try {
   } catch (error) {
     console.error("An error occurred:", error);
   }
-  
+  //---------------------------------------------------------------------------
   asyncOperation(function (error, result) {
     if (error) {
       console.error("An error occurred:", error);
@@ -118,4 +115,4 @@ try {
 //   There are limitations and challenges associated with handling asynchronous operations using callbacks. Promises were introduced in JavaScript to address this issue.
 
    //-----------------------------------------------------------------
-  
+   

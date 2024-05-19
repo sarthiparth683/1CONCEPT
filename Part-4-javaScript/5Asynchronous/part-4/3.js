@@ -1,32 +1,53 @@
-// Student Activities:
-// Coding Challenges:
+  // Interview based questions:
+// 1.Explain the difference between synchronous and asynchronous code execution in JavaScript. Provide examples of each.
+// Difference between synchronous and asynchronous code execution:
+// Synchronous code executes line by line, blocking further execution until each operation is complete. Example:
+
+
+console.log("Start");
+console.log("Middle");
+console.log("End");
+
+// Asynchronous code allows operations to be executed in parallel without blocking the main thread. Example:
+
+
+console.log("Start");
+setTimeout(() => console.log("Middle"), 0);
+console.log("End");  
 
 //-----------------------------------------------------------------------------
-// Challenge 1:
-// Write a function using the 'let' keyword to calculate the sum of two numbers.
-// The function should take two parameters (num1 and num2) and return the sum.
 
-function calculateSum(num1, num2) {
-    // Your code here
-  }
-  
 //-----------------------------------------------------------------------------
-// Challenge 2:
-// Create a function that uses the 'const' keyword to reverse a string.
-// The function should take a string as a parameter and return the reversed string.
-
-function reverseString(str) {
-    // Your code here
-  }
-  
+// 2.What is the event loop in JavaScript, and how does it contribute to handling asynchronous operations?
+// Event loop in JavaScript:
+// The event loop is a mechanism that handles asynchronous operations in JavaScript.
+// It continuously checks the call stack and task queue, moving tasks from the queue to the stack when the stack is empty.
+// This ensures that asynchronous operations like setTimeout, AJAX requests, and event listeners are executed in the appropriate order.
 //-----------------------------------------------------------------------------
+// 3.Describe the purpose of callback functions in asynchronous JavaScript code. How do they help manage asynchronous tasks?
+// Purpose of callback functions:
+// Callback functions are used to handle asynchronous tasks by providing a function to be executed once the task is complete.
 
-// Challenge 3:
+// They help manage asynchronous code flow by specifying what should happen after the task finishes.
 
-// Implement a function using the 'var' keyword to check if a given number is even or odd.
-// The function should take a number as a parameter and return 'Even' if the number is even, 'Odd' otherwise.
+// Example:
 
-function checkEvenOdd(num) {
-    // Your code here
-  }
-  
+function fetchData(callback) {
+    // Simulating fetching data asynchronously
+    setTimeout(() => {
+        const data = { name: "John", age: 30 };
+        callback(data);
+    }, 1000);
+}
+fetchData((data) => {
+    console.log(data);
+});
+
+
+//-----------------------------------------------------------------------------
+// 4.Explain the concept of blocking and non-blocking code execution in the context of JavaScript. How can you ensure that your JavaScript code is non-blocking?
+// Blocking vs non-blocking code execution:
+// Blocking code execution stops further execution until the current operation is complete, potentially causing delays.
+// Non-blocking code allows multiple operations to be executed concurrently, ensuring that the main thread remains responsive.
+// To ensure non-blocking code, use asynchronous APIs like Promises, async/await, setTimeout, and event listeners.
+//-----------------------------------------------------------------------------

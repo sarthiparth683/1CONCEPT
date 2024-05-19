@@ -1,3 +1,18 @@
+// ### Sort
+
+```javascript
+let arr = [9, 8, 7, 6, 5, 4, 3, 29, 10];
+arr.sort((a, b) => {
+  return a - b;
+});
+
+console.log(arr); // Output: [3, 4, 5, 6, 7, 8, 9, 10, 29]
+```
+
+// // These higher-order functions are powerful tools in JavaScript for working with arrays in a functional and declarative manner.
+ 
+
+// ------------------------------------------------------------------------------
 // sort(a, b) :-
 // used for asscending and descending order
 // both numbers and alphabets
@@ -52,4 +67,20 @@ products.sort((a, b) => a.price - b.price); // Sort by price (ascending)
 const words = ["hello", "world", "h", "ar345", "you"];
 words.sort((a, b) => a.length - b.length); // Sort by string length
 // console.log(words);
+//------------------------------------------------------------------------------------
+// ### Chaining
+
+```javascript
+let arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+let res = arr.map((ele) => {
+  return ele * 3;
+}).filter((ele) => {
+  return ele % 2 === 0;
+}).reduce((acc, ele) => {
+  return acc + ele;
+}, 0);
+
+console.log(res); // Output: 72
+```
+
 //------------------------------------------------------------------------------------

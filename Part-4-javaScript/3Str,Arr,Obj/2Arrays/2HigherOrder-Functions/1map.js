@@ -1,3 +1,24 @@
+
+// ## Callback Functions
+
+// Callback functions are functions passed as arguments to another function to be executed later. For instance:
+
+// javascript
+function abc() {
+    setInterval(() => {
+        console.log("Hello");
+    }, 1000);
+}
+
+abc(); // Calls abc function, which prints "Hello" every second
+
+
+// ## Higher-Order Functions (HOF)
+
+// Higher-order functions are functions that can accept other functions as arguments or return functions as output. Some common examples are `forEach`, `map`, `filter`, `reduce`, and `sort`.
+
+
+//-------------------------------------------------------------------------------------------
 // map(el, i) => 
 let arr = [3, 7, 8, 9, 5];
 let map1 = arr.map((el, i) => { return el * el });
@@ -5,7 +26,7 @@ let map1 = arr.map((el, i) => { return el * el });
 let map12 = arr.map((el, i) => { return el / 2 });
 // console.log(map12);
 let map13 = arr.map((el, i) => { return el + 1 });
-// console.log(map13);
+// console.log(map13); 
 let map14 = arr.map((el, i) => { return el - 1 });
 // console.log(map14);
 let map2 = arr.map((el, i) => { return el });
@@ -36,5 +57,18 @@ const users = [
     { name: "Bob", age: 30 },
     { name: "Charlie", age: 28 },
 ];
-let user1 = users.map((el,i)=>{return el})
+let user1 = users.map((el, i) => { return el })
 // console.log(user1);
+//-------------------------------------------------------------------------------------------
+// ### Map
+
+```javascript
+let arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+let res = arr.map((ele) => {
+  return ele * 3;
+});
+
+console.log(res); // Output: [27, 24, 21, 18, 15, 12, 9, 6, 3]
+```
+
+//-------------------------------------------------------------------------------------------
