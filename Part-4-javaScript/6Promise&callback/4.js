@@ -73,16 +73,16 @@ function fatherPromise(marks) {
       } else {
         reject("Sorry marks are not as expected , no bikes!");
       }
-    }, 2000);
+    }, 1000);
   });
 };
 //consume the promise
 let marks = [70, 70, 75];
 fatherPromise(marks)
   .then((item) => {
-    console.log(item);
+    console.log("test-.then-83",item);
   })
   .catch((error) => {
-    console.log(error);
+    console.log("test-.catch-86",error);
   });
 //------------------------------------------------------------------------------------
