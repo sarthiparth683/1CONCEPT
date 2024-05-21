@@ -3,7 +3,7 @@
 // Async/await is a syntactic feature introduced in JavaScript to simplify asynchronous programming. It provides a more synchronous-style coding approach while still allowing the non-blocking execution of asynchronous operations.
 // Detailed Explanation
 // Async/await was introduced in JavaScript to make asynchronous code easier to read and write, especially when dealing with promises.
-// Before async/await, chaining promises using .then() could make the code harder to understand. It required nesting multiple callbacks, which could become confusing and messy.
+// Before async/await, chaining promises using .then() could make the code harder to  understand. It required nesting multiple callbacks, which could become confusing and messy.
 // Async/await simplifies this by allowing us to write asynchronous code in a more straightforward and sequential way, similar to regular synchronous code.
 // Benefits of async/await:
 // Easier to understand: Async/await makes the code easier to read and follow. It removes the need for complex .then() chains, so the code looks more like a step-by-step sequence.

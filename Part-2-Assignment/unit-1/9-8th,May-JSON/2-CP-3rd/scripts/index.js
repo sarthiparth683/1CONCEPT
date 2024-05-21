@@ -11,9 +11,9 @@ addTodoButton.addEventListener("click", function (e) {
         alert("Todo cannot be empty!");
     } else {
         let todo = {
-            title: inputTitle.value,
+            title: inputTitle.value,  
             priority: prioritySelect.value,
-            status: "Pending🔃"
+            status: "Pending🔃" 
         };
         todos.push(todo);
         localStorage.setItem("todos", JSON.stringify(todos));
@@ -24,7 +24,6 @@ addTodoButton.addEventListener("click", function (e) {
 
 function displayTodo(arr) {
     let todos = JSON.parse(localStorage.getItem("todos")) || [];
-
     tableBody.innerHTML = ""
     arr.map((el, i) => {
         let td1 = document.createElement("td");
