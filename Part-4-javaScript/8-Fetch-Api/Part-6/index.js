@@ -1,16 +1,13 @@
 // Example :
 // fetch the data using fakestoreapi api
-// Arrow Functions used
-// Async Await
-//-------------------------------------------------------------
-// index.js
+//------------------------------------------------------------------------------------
 let main = document.getElementById("main");
 let URL = `https://fakestoreapi.com/products`;
-
 const init = async () => {
   try {
     let res = await fetch(URL);
     let data = await res.json();
+    console.log(data);
     displayData(data);
   } catch (error) {
     console.log(error);
@@ -19,7 +16,7 @@ const init = async () => {
 init();
 //---------------------
 const displayData = (data) => {
-  data.forEach(function (product) {
+  data.forEach((product) => {
     let productCard = document.createElement("div")
     productCard.className = "product-card"
 

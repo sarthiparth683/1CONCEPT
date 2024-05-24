@@ -20,13 +20,29 @@
 //--------------------------------------------------------------------------------------
 // Question: Can you describe the basic structure of a fetch operation using async/await?
 // In async/await, a fetch operation involves the following structure:
-// async function fetchData(url) {
-//     try {
-//         let response = await fetch(url);
-//         let data = await response.json();
-//         // Process and use the data as needed
-//     } catch (error) {
-//         console.error("Error fetching data:", error);
-//     }
-// }
+// Product is fetched:-
+async function fetchData(url) {
+    try {
+        let response = await fetch(url);
+        let data = await response.json();
+        console.log(data)
+        // Process and use the data as needed
+    } catch (error) {
+        console.error("Error fetching data:789", error);
+    }
+};
+fetchData("https://fakestoreapi.com/products");
 //---------------------------------------------------------------------------------------
+// cart data is fetched:- from:- https://fakestoreapi.com/ 
+async function fetchData(url) {
+    try {
+        let response = await fetch(url);
+        let data = await response.json();
+        console.log(data)
+        // Process and use the data as needed
+    } catch (error) {
+        console.error("Error fetching data:789", error);
+    }
+};
+fetchData("https://fakestoreapi.com/carts");
+//----------------------------------------------------------------------------------
