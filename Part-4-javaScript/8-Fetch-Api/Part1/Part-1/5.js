@@ -10,7 +10,7 @@ function processUserInput(callback) {
   callback(name);
 };
 // processUserInput(greeting);  //1st-alert, then 2nd-prompt
-//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
 // Promises
 // expand_less
 // Promises are objects that represent the eventual completion (or failure) of an asynchronous operation, and its resulting value. They offer a more powerful and flexible way to handle asynchronous code compared to callbacks.
@@ -43,18 +43,16 @@ async function fetchData1() {
   }
 };
 // fetchData1();
-//--------------------------------------------------------------
+//--------------------------------------------------------------------------------
 // Fetching Data from APIs
-// expand_less
 // To fetch data from a web API, the fetch function is used. It makes a network request to the URL provided and returns a promise that resolves into the response of that request. This is an essential part of modern web development for interacting with external services and APIs.
 // Example
 fetch('https://api.example.com/data')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:984', error));
-//--------------------------------------------------------------
+//--------------------------------------------------------------------------------------
 // Error Handling in Asynchronous JavaScript
-// expand_less
 // Error handling in asynchronous JavaScript, especially when using Promises and Async/Await, is done using try-catch blocks to catch errors that may occur during the execution of asynchronous code.
 // Example
 async function fetchData2() {
@@ -68,20 +66,18 @@ async function fetchData2() {
   } catch (error) {
     console.error('Error:', error);
   }
-}
+};
 // fetchData2();
 //----------------------------------------------------------------------------------
-//  DOM Manipulation and Local Storage
-// expand_less
+// DOM Manipulation and Local Storage
 // DOM manipulation is the process of dynamically changing the document's structure, style, and content. Local Storage provides a way to store data on the client-side browser without expiration time, making it a useful tool for saving state or preferences across sessions.
-//----------------------------------------------------------------------------------
 // Example:-
 // Setting an item to Local Storage
 document.querySelector('#save')
-.addEventListener('click', () => {
-  const value = document.querySelector('#input').value;
-  localStorage.setItem('myKey', value);
-});
+  .addEventListener('click', () => {
+    const value = document.querySelector('#input').value;
+    localStorage.setItem('myKey', value);
+  });
 // Getting the item from Local Storage and displaying it
 document.addEventListener('DOMContentLoaded', () => {
   const value = localStorage.getItem('myKey');
