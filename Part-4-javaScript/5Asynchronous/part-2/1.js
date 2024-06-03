@@ -4,33 +4,22 @@
 // Scope	             function	       block	            block
 // re-declaration	     allowed ✅	   not-allowed❌	     not-allowed❌
 // accessibility       accessible ✅	 not accessible ❌	 not accessible ❌
-//before declaration	
-//--------------------------------------------------------------
+//-----------------------------------------------------------------------------
 // let vs const vs var
 function scopeTest() {
   var outerVar = "outer var";
   let outerLet = "outer let";
-
   if (true) {
     var innerVar = "inner var"; // function scoped
     let innerLet = "inner let"; // block scoped
   }
-
+  console.log(outerVar);
+  console.log(outerLet);
   console.log(innerVar); // inner var
-  console.log(innerLet); // Uncaught ReferenceError: innerLet is not defined so, let and const are not a function scope.
+  // console.log(innerLet); // Uncaught ReferenceError: innerLet is not defined so, let and const are not a function scope.
 };
-// scopeTest();
-//---------------------------------------------------------------------------
-// Code Implementation | Examples
-function forWithVar() {
-  for (var i = 0; i <= 5; i++) {
-    setTimeout(() => {
-      console.log(i); // by the time this runs, i = 5 & there is just one i
-    }, 1000);
-  }
-};
-// forWithVar();
-//---------------------------------------------------------------------------
+scopeTest();
+//----------------------------------------------------------------------------------
 function forWithLet() {
   for (let i = 0; i < 5; i++) {
     setTimeout(() => {
@@ -42,21 +31,18 @@ function forWithLet() {
     }, 1000);
   }
 };
-// forWithLet();
-//---------------------------------------------------------------------------
+forWithLet();
+//-----------------------------------------------------------------------------------
 const name = "Vivek";
-// name = "Akash"; // this throws an error because of const variable
-// Uncaught TypeError: Assignment to constant variable.
-// const cannot be reassigned or redealared
 // ** But const can be used to redeclare ((obj key's)).
 const user1 = {
   name: "Vivek",
 };
 user1.name = "Akash";
-// console.log(user1);
-//---------------------------------------------------------------------------
+console.log("user-1", user1);
+//-----------------------------------------------------------------------------------
 // ** const can be used to push value into arrays
 const user2 = ["a", "b", "c"];
 user2.push("78");
-// console.log(user2);
-//--------------------------------------------------------------
+console.log("user-2", user2);
+//-----------------------------------------------------------------------------------

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10.Document</title>
+  </head>
+  <body>
+    <h1>10.DOM</h1>
+    <h1>Adding Class and id in DOM.</h1>
+    <div id="myElement1">1</div>
+    <div id="myElement2">2</div>
+    <div id="myElement3">3</div>
+  </body>
+  <style>
+    .Class1 {
+      background-color: aqua;
+    }
+    .Class2 {
+      background-color: blue;
+    }
+    #ID1 {
+      background-color: brown;
+    }
+  </style>
+  <script>
+    //Adding Classes: method 1 -  classList.add():
+    let element1 = document.getElementById("myElement1");
+    element1.classList.add("Class1"); // Setting the Class Name
+
+    //Adding Classes: method 2 - className property:
+    const element2 = document.getElementById("myElement2");
+    element2.className = "Class2"; // Setting the Class Name
+    //------------------------------------------------------------------------------
+    // Adding IDs:
+    const element3 = document.getElementById("myElement3");
+    element3.id = "ID1"; // Setting the ID Name
+  </script>
+</html>

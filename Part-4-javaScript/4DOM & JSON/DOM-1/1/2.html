@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>This is a paragraph with a <b>bold</b> word.</p>
+  </body>
+  <script>
+    // let content = element.innerHTML;
+    // console.log(content);
+    // Output: "<p>This is a paragraph with a <b>bold</b> word.</p>"
+
+    // let content = element.innerText;
+    // console.log(content);
+    // Output: "This is a paragraph with a bold word."
+
+    const div1 = document.createElement("div");
+    const div2 = document.createElement("div");
+    const div3 = document.createElement("div");
+    div1.innerText = `Hello World`;
+    div2.textContent = `Bye World`;
+    div3.innerHTML = `Whatsup World`;
+    document.body.append(div1, div2, div3);
+  </script>
+</html>
