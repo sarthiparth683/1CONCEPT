@@ -1,11 +1,7 @@
-// JS execution and Asynchronous JS:
-// Detailed Explanation
-// Synchronous execution refers to the default behavior of JavaScript where code is executed sequentially, one after the other.
-// Asynchronous execution, on the other hand, allows certain operations to be deferred, enabling non-blocking behavior.
-//-------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
 // How JS executes code:execution context, execution stack
 // Resources: Tutorial link pdf:-  https://docs.google.com/presentation/d/15S6aj3Jn5N8dlWRHscc3w3fASUCoCf7FxP18g6tX8Wg/edit?usp=sharing
-//------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------
 // In a lexically scoped language (which Javascript is), all of the identifiers & scopes that we dealing with, are determined in the first pass (compile-time).
 // Another, important thing about lexical scopes is that if the compiler cannot find a variable's declaration within the scope, it looks up to its parent's and ancestor's scope.
 //------------------------------------------------------------------------------------
