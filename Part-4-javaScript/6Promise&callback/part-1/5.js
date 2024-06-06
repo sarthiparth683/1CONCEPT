@@ -33,19 +33,30 @@ asynchronous1(input, function (result1) {
 });
 //------------------------------------------------------------------------------------
 function multiplyer(arr, value, cb) {
-  if (!Array.isArray(arr)) {
-    cb("the first argument has to be an array of numbers only.", null);
-  } else if (typeof value !== "number") {
-    cb(
-      `the second argument has to be a number but received ${typeof value}`,
-      null
-    );
-  } else {
-    let ans = arr.map((item) => item * value);
-    cb(null, ans);
-  }
+  return new Promise((resolve,reject)=>{
+    if (!Array.isArray(arr)) {
+      reject({message:"The first argument should always be an array"});
+    } else if (typeof value !== "number") {
+      reject({messsage:  `the second argument has to be a number but received ${typeof value}`})
+      
+    } else {
+      let ans = arr.map((item) => item * value);
+      resolve({message:"Everything worked fine", data:cb(ans)});
+    }
+  })
 };
 
+function sqaure(arr){
+  let newArr = arr.map((el,i)=> el*el)
+  return {newArr: newArr}
+}
+async function name() {
+  let a =   await multiplyer([2,3,4],3,sqaure);
+ // a.then((res)=> console.log(res))
+  //console.log(a)
+ 
+};
+name()
 function findOdd(arr, cb) {
   //filter all the odd elements and create a new array
   if (!Array.isArray(arr)) {
@@ -67,21 +78,33 @@ function findSum(arr, cb) {
     cb(null, sum);
   }
 };
-// Calling function
-multiplyer(arr2, 5, (error1, value1) => {
-  if (error1) {
-    throw new Error(error1);
+
+
+
+
+function print(first,second){
+  if(first){
+    console.log(first)
+  }else{
+console.log(second)
   }
-  findOdd(value1, (error2, value2) => {
-    if (error2) {
-      throw new Error(error2);
-    }
-    findSum(value2, (error3, value3) => {
-      if (error3) {
-        throw new Error(error3);
-      }
-      console.log(value3);
-    });
-  });
-});
+}
+name();
+// Calling function
+// multiplyer(arr2, 5, (error1, value1) => {
+//   if (error1) {
+//     throw new Error(error1);
+//   }
+//   findOdd(value1, (error2, value2) => {
+//     if (error2) {
+//       throw new Error(error2);
+//     }
+//     findSum(value2, (error3, value3) => {
+//       if (error3) {
+//         throw new Error(error3);
+//       }
+//       console.log(value3);
+//     });
+//   });
+// });
 //-------------------------------------------------------------------------------------------

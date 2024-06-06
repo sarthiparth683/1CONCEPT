@@ -11,26 +11,26 @@
 //-----------------------------------------------------------------------------------------
 // Producing a Promise:-
 // Example:1
-// function getReleaseDate() {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       const data = { date: "31st October", Location: "Bangalore" };
-//       if (data) {
-//         resolve(data);
-//       } else {
-//         reject(new Error("Albul release date postponed for time being.")); // Reject the promise with an error
-//       }
-//     }, 1000);
-//   });
-// };
-// // Consuming a Promise: -
-// getReleaseDate()
-//   .then((data) => {
-//     console.log("Greetings! this is the release information:", data);
-//   })
-//   .catch((error) => {
-//     console.log("Error:", error.message);
-//   });
+function getReleaseDate() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const data = { date: "31st October", Location: "Bangalore" };
+      if (data) {
+        resolve(data);
+      } else {
+        reject(new Error("Albul release date postponed for time being.")); // Reject the promise with an error
+      }
+    }, 1000);
+  });
+};
+// Consuming a Promise: -
+getReleaseDate()
+  .then((data) => {
+    console.log("Greetings! this is the release information:", data);
+  })
+  .catch((error) => {
+    console.log("Error:", error.message);
+  });
 //------------------------------------------------------------------------------------------
 // Example 2:-
 //create a function called fatherPromise that take one marks array and will return a promise

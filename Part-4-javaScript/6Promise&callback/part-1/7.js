@@ -1,52 +1,6 @@
-// Student Activities
-//your father promised to gift you bike if you score 85 in average in physics,chemistry and math.
-//now create a function called fatherPromise that takes an array of marks and returns a promise which will either resolve or reject after 2 seconds based on the average score.
-//if the average score is greater or equal to 85 than resolve the promise with "Congratulation you will get the bike!"
-//or reject with  "Sorry! No bike".
 
-function fatherPromise(arr) {
-  //write your code here...
-}
-//create a function that will take an array as parameter and return promise which will be either resolve or reject after 2 sec
-//if the sum of the array is greater than or equal to 100 it will resolve the promise with "the sum is Big"
-//else it will reject with "the sum is Small"
 
-function SumPromise(arr) {
-  //write your code here...
-  let myPro = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      let sum = arr.reduce(function (acc, item) {
-        return acc + item;
-      }, 0);
-      sum >= 100 ? resolve("the sum is Big") : reject("the sum is Small");
-    }, 2000);
-  });
 
-  return myPro;
-}
-
-let ans = SumPromise([10, 50, 8]).then((data) => {
-  console.log(data);
-});
-//create one function called SingerPromise
-//that will either resolve or reject after 2 sec
-//if the releaseConfirmed than it will resolve with "release date is 29th Jan"
-//or reject with "Sorry Release date postponed for time being..."
-
-function SingerPromise(releaseConfirmed) {
-  //write your code here...
-  //return one promise...
-}
-//convert all the 3 function into promises
-
-//adding 1 to each element
-// function asynchronous1(data, callback) {
-//     console.log("Task 1 started");
-//     setTimeout(() => {
-//         let ans = data.map(item=>item+1);
-//       callback(ans);
-//     }, 2000);
-//   }
 
 function asynchronous1(data) {
   let newPromise = new Promise(function (resolve, reject) {
