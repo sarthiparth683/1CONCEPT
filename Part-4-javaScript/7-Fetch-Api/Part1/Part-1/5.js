@@ -47,9 +47,9 @@ async function fetchData1() {
 // Fetching Data from APIs
 // To fetch data from a web API, the fetch function is used. It makes a network request to the URL provided and returns a promise that resolves into the response of that request. This is an essential part of modern web development for interacting with external services and APIs.
 // Example
-fetch('https://api.example.com/data')
+fetch('https://fakestoreapi.com/users')
   .then(response => response.json())
-  .then(data => console.log(data))
+  .then(data => console.log("data-52", data))
   .catch(error => console.error('Error:984', error));
 //--------------------------------------------------------------------------------------
 // Error Handling in Asynchronous JavaScript
@@ -64,7 +64,7 @@ async function fetchData2() {
     const data = await response.json();
     console.log(data);
   } catch (error) {
-    console.error('Error:', error);
+    console.error(error);
   }
 };
 // fetchData2();
@@ -83,4 +83,4 @@ document.addEventListener('DOMContentLoaded', () => {
   const value = localStorage.getItem('myKey');
   document.querySelector('#display').innerText = value || 'Default';
 });
-//----------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------

@@ -1,17 +1,3 @@
-// Fetch:
-// Introduction
-// fetch() is a modern way in JavaScript to make network requests, like fetching data from a server or sending data to one.
-// Detailed Explanation
-// Client / Server model - Quick refresher
-// Explore the network tab of the dev tools by browsing
-
-// https://www.google.com/
-// https://jsonplaceholder.typicode.com/users
-// https://reqres.in/api/users?page=2
-// Fetch analogy: https://www.canva.com/design/DAFnskZ65Jc/-mM86FytMXZHEGEVFnHjFQ/edit?utm_content=DAFnskZ65Jc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-
-// Self study
-//------------------------------------------------------------------------
 // What is fetch()?
 // fetch() is a JavaScript function for making network requests.
 // Basic Structure:
@@ -25,7 +11,7 @@ fetch("<https://api.example.com/user-details>")// This is the URL you're "callin
   .catch((error) => {
     console.error("Error:", error) // If something goes wrong, this block will run.
   })
-//------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 // Breaking it Down:
 // URL: The URL inside fetch('<https://api.example.com/data>') is the web address we want to get data from or send data to.
 // .then() Method: Think of .then() as the next step in a sequence. It's used because network operations can take time, so JavaScript doesn't want to just sit around waiting. Instead, it says, (("When you're done getting that data, then do this next thing."))

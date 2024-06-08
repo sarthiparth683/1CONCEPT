@@ -1,22 +1,21 @@
-// Example :
-// fetch the data using fakestoreapi api
-//------------------------------------------------------------------------------------
-let main = document.getElementById("main");
-let URL = `https://fakestoreapi.com/products`;
+//------------------------------------------------------------------------------------------
 const init = async () => {
   try {
-    let res = await fetch(URL);
+    let res = await fetch(`https://fakestoreapi.com/products`);
+    console.log("Data-1", res);
     let data = await res.json();
-    console.log(data);
+    console.log("Data-2", data);
     displayData(data);
   } catch (error) {
     console.log(error);
   }
 };
 init();
-//---------------------
+//-------------------------------------------------------------------------------------------
 const displayData = (data) => {
   data.forEach((product) => {
+    let main = document.getElementById("main");
+
     let productCard = document.createElement("div")
     productCard.className = "product-card"
 
