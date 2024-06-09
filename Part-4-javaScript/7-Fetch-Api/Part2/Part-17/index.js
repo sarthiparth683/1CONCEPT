@@ -47,7 +47,7 @@ const displayData = (data) => {
             completed: !completed,
           }),
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json", 
           },
         })
         console.log(res)
@@ -74,3 +74,4 @@ async function init() {
 }
 
 init()
+ 
