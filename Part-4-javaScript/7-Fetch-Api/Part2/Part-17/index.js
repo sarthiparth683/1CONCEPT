@@ -1,7 +1,7 @@
-const root = document.getElementById("root")
 
 const displayData = (data) => {
-  root.innerHTML = ""
+  root.innerHTML = "" // why it is empty?
+  const root = document.getElementById("root");
   let todoContainer = document.createElement("div")
   todoContainer.className = "todo-container"
 
@@ -23,8 +23,8 @@ const displayData = (data) => {
     todoCompleted.textContent = `Completed : ${completed.toString()}`
 
     // Delete button which will delete the todo
-    let deleteButton = document.createElement("button")
-    deleteButton.textContent = `DELETE`
+    let deleteButton = document.createElement("button");
+    deleteButton.textContent = `DELETE`;
     deleteButton.onclick = async function () {
       try {
         let res = await fetch(`http://localhost:3000/todos/${id}`, {

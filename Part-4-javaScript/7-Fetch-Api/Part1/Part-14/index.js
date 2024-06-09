@@ -1,22 +1,20 @@
-// index.js
-let main = document.getElementById("main")
-let URL = `https://fakestoreapi.com/products`
 
 const init = async () => {
   try {
-    let res = await fetch(URL)
+    let res = await fetch(`https://fakestoreapi.com/products`)
     let data = await res.json()
-    displayData(data)
+    displayData(data);
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-}
-init()
-
+};
+init();
+//-----------------------------------------------------------------------------
 const displayData = (data) => {
-  data.forEach(function (product) {
+  data.forEach((product) => {
+    let main = document.getElementById("main");
     let productCard = document.createElement("div")
-    productCard.className = "product-card"
+    productCard.className = "product-card";
 
     let productImg = document.createElement("img")
     productImg.src = product.image
@@ -27,8 +25,7 @@ const displayData = (data) => {
     let price = document.createElement("p")
     price.innerText = "INR : " + product.price
 
-    productCard.append(productImg, title, price)
-
-    main.append(productCard)
+    productCard.append(productImg, title, price);
+    main.append(productCard);
   })
 }

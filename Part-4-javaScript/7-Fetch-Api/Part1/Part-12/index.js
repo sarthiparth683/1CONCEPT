@@ -1,9 +1,6 @@
 
 let container = document.getElementById("container");
-
 let data = [];
-
-// get the data
 fetch("https://fakestoreapi.com/products")
   .then(function (res) {
     return res.json();
@@ -11,7 +8,6 @@ fetch("https://fakestoreapi.com/products")
   .then(function (res) {
     displayData(res);
   });
-
 function displayData(data) {
   data.forEach(function (product) {
     let div = document.createElement("div");

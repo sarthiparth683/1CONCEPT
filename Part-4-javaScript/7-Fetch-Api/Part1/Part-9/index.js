@@ -11,7 +11,7 @@ const displayData = (data) => {
     let todoCard = document.createElement("div")
     todoCard.className = "todo-card"
 
-    // Displays todo ID
+    // Displays todo ID  
     let todoId = document.createElement("p")
     todoId.textContent = `ID : ${id}`
 
@@ -74,4 +74,5 @@ async function init() {
   }
 }
 
-init()
+init();
+ 
