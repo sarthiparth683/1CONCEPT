@@ -1,21 +1,17 @@
-
 // json server url
 // run your server on port 8080
 const baseServerURL = `http://localhost:8080`;
-
 
 // ***** Constants / Variables ***** //
 const artURL = `${baseServerURL}/arts`;
 let mainSection = document.getElementById("data-list-wrapper");
 let paginationWrapper = document.getElementById("pagination-wrapper");
 
-
 //sort and filter
 let sortAtoZBtn = document.getElementById("sort-low-to-high");
 let sortZtoABtn = document.getElementById("sort-high-to-low");
 let filterTemperaOnCanvas = document.getElementById("filter-Tempera-on-Canvas");
 let filterOilOnCanvas = document.getElementById("filter-Oil-on-Canvas");
-
 
 //Arts Data
 let artsData = [];
@@ -108,7 +104,7 @@ let displayData = (data) => {
       paintbrushes,
       price,
       medium
-      
+
     );
     box.append(cartImg, cartBody);
     outerBox.append(box);

@@ -1,24 +1,96 @@
+//---------------------------------------------------------------------------------------
 // Lecture Summary
 
-// Overview of the Lecture
-// The lecture focused on a comprehensive doubt session covering a range of topics in web development, including the Document Object Model (DOM), asynchronous operations, promises, fetch API, local storage, form data handling, and how these concepts apply in real-world applications. The instructor provided extensive insights into each topic, demonstrating code examples and best practices for efficient web development.
+// Introduction to Mock Server and JWT Authentication
+// The lecture explored various aspects of web development, focusing on CRUD operations, JSON server for creating APIs, HTTP methods, and particularly JWT (JSON Web Tokens) for authentication. It provided insights on how to create a mock server using JSON server, utilize different HTTP methods for managing data, and implement JWT for securing API endpoints.
 
-// Document Object Model (DOM), Local Storage, and Asynchronous Operations
-// DOM manipulation and its significance in web development were discussed, emphasizing the interaction between JavaScript and the webpage structure.
-// Local storage was outlined as a method for storing and retrieving data in the browser, distinguishing it from session storage and highlighting its independence from asynchronous operations.
-// Asynchronous operations, including setTimeout, setInterval, promises, fetch, async/await, and try/catch constructs were explained, focusing on handling asynchronous data fetching and manipulation.
-// Promises, Fetch API, and Async/Await
-// Promises were described as objects representing the eventual completion or failure of an asynchronous operation, with examples of creating, resolving, and rejecting promises.
-// The fetch API was detailed as a modern approach to perform network requests, including GET and POST requests, and handling responses with .then() chaining or async/await syntax.
-// Async/await syntax was introduced as a syntactic sugar over promises, simplifying the structure of asynchronous code by making it more readable and easier to debug.
-// Form Data Handling and Validation
-// Handling form data using the HTML <form> element and collecting user input were discussed, including the use of various input types, placeholders, and the importance of labels for accessibility.
-// The process of submitting form data, preventing default form submission behavior, and validating form input on the client-side were emphasized, employing JavaScript for dynamic data processing.
-// Local Storage and Data Persistence
-// The use of local storage for persisting data across browser sessions was further elaborated upon, with practical examples on adding, retrieving, and deleting data.
-// Techniques for storing complex data structures in local storage through serialization (using JSON.stringify) and deserialization (using JSON.parse) were demonstrated.
-// A real-world application scenario was introduced, showing how to manage user data (creation, storage, retrieval, and deletion) effectively using local storage and form handling techniques.
-// Real-World Application Examples
-// Throughout the lecture, real-world application scenarios, including TODO list management and user sign-up forms, were used to illustrate the practical application of the discussed concepts.
-// Challenges related to data persistence, form validation, and managing asynchronous operations in real-world applications were addressed, with suggestions on best practices and efficient coding techniques.
-// The session was interactive, with opportunities for students to ask questions and clarifications on complex topics. The instructor also provided a live demonstration of code along with detailed explanations, making the concepts easier to grasp and apply in real-world projects.
+// CRUD Operations and JSON Server
+// CRUD stands for Create, Read, Update, Delete, which are the four basic operations for managing data on a server.
+// Create: Implemented using the post HTTP method to add new data.
+// Read: Utilizes the get method to fetch data.
+// Update: Can be done using put or patch, where put replaces an entire object and patch updates parts of the object.
+// Delete: Employed to remove data using the delete method.
+// The JSON server provides a quick setup for a mock server, allowing the simulation of a backend server by creating a db.json file to serve CRUD operations.
+
+// HTTP Methods
+// HTTP methods, or verbs, are used to perform actions on resources.
+// Get: Fetches data from the server.
+// Post: Creates new data on the server.
+// Put: Replaces existing data on the server.
+// Patch: Partially updates data on the server.
+// Delete: Removes data from the server.
+// These methods facilitate interaction with the backend server, allowing for data manipulation through API calls.
+
+// JWT for Authentication
+// JWTs are used for secure communication between the client and the server.
+// Provides a secure way to authenticate users and authorize access to certain resources based on tokens.
+// Tokens are generated upon successful login and must be included in the HTTP headers for subsequent requests requiring authentication.
+// JWT authentication ensures that only authorized users can access certain functionalities, enhancing the security of web applications.
+
+// Summary
+// The lecture provided a comprehensive overview of how to use JSON server for creating mock APIs, perform CRUD operations, utilize HTTP methods for data management, and implement JWT authentication for securing API endpoints. Understanding these concepts is crucial for developing secure and functional web applications.
+//-------------------------------------------------------------------------------------------
+// Fetching Data with Async/Await and Try-Catch
+// expand_less
+// Fetching data in JavaScript can be done using the Fetch API along with async and await for asynchronous code management. The try-catch statement is used to handle errors that may occur during the fetching process. This approach makes the code cleaner and easier to read. Example
+
+async function fetchData(url) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+//---------------------------------------------------------------
+// CRUD Operations
+
+// expand_less
+// CRUD stands for Create, Read, Update, and Delete. These are the four basic operations that can be performed on any data storage. In web development, CRUD operations are often implemented with APIs to manage data on a server.
+
+// Create operation adds new data.
+// Read operation retrieves data.
+// Update operation modifies existing data.
+// Delete operation removes data. Example
+// Given a JSON server endpoint '/products'
+// CREATE (POST)
+fetch('/products', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({name: 'New Product', price: 100}),
+  })
+  
+  // READ (GET)
+  fetch('/products')
+  
+  // UPDATE (PUT or PATCH)
+  fetch('/products/1', {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({price: 150}),
+  })
+  
+  // DELETE
+  fetch('/products/1', { method: 'DELETE' })
+  
+//---------------------------------------------------------------
+// JWT Authentication
+
+// expand_less
+// JWT (JSON Web Tokens) is a compact, URL-safe means of representing claims to be transferred between two parties. In web development, JWTs are used for authentication; when a user logs in, the server generates a token that certifies the user's identity. The client sends this token back with each request to access protected routes or resources. Example
+// After successful login, assuming the server response includes a JWT
+cost token = response.token;
+
+// Include the JWT in the Authorization header with each request
+fetch('/api/protected', {
+  headers: {
+    'Authorization': `Bearer ${token}`
+  }
+})
+
+//---------------------------------------------------------------

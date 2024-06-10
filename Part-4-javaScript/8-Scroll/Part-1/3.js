@@ -1,4 +1,4 @@
-//---------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
 // Infinite scrolling
 // Introduction
 // Infinity scrolling, also known as endless scrolling, is a user interface design pattern that allows content to continuously load as the user scrolls down a webpage or application. This technique is commonly used in websites and mobile apps to provide a seamless browsing experience without the need for pagination. Understanding how infinity scrolling works and its implementation is crucial for developers working on modern web and mobile applications.

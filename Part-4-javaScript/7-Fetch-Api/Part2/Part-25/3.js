@@ -1,97 +1,85 @@
-//---------------------------------------------------------------
-// Lecture Summary
-
-// Introduction to Mock Server and JWT Authentication
-// The lecture explored various aspects of web development, focusing on CRUD operations, JSON server for creating APIs, HTTP methods, and particularly JWT (JSON Web Tokens) for authentication. It provided insights on how to create a mock server using JSON server, utilize different HTTP methods for managing data, and implement JWT for securing API endpoints.
-
-// CRUD Operations and JSON Server
-// CRUD stands for Create, Read, Update, Delete, which are the four basic operations for managing data on a server.
-// Create: Implemented using the post HTTP method to add new data.
-// Read: Utilizes the get method to fetch data.
-// Update: Can be done using put or patch, where put replaces an entire object and patch updates parts of the object.
-// Delete: Employed to remove data using the delete method.
-// The JSON server provides a quick setup for a mock server, allowing the simulation of a backend server by creating a db.json file to serve CRUD operations.
-
-// HTTP Methods
-// HTTP methods, or verbs, are used to perform actions on resources.
-// Get: Fetches data from the server.
-// Post: Creates new data on the server.
-// Put: Replaces existing data on the server.
-// Patch: Partially updates data on the server.
-// Delete: Removes data from the server.
-// These methods facilitate interaction with the backend server, allowing for data manipulation through API calls.
-
-// JWT for Authentication
-// JWTs are used for secure communication between the client and the server.
-// Provides a secure way to authenticate users and authorize access to certain resources based on tokens.
-// Tokens are generated upon successful login and must be included in the HTTP headers for subsequent requests requiring authentication.
-// JWT authentication ensures that only authorized users can access certain functionalities, enhancing the security of web applications.
-
-// Summary
-// The lecture provided a comprehensive overview of how to use JSON server for creating mock APIs, perform CRUD operations, utilize HTTP methods for data management, and implement JWT authentication for securing API endpoints. Understanding these concepts is crucial for developing secure and functional web applications.
-//---------------------------------------------------------------
-// Fetching Data with Async/Await and Try-Catch
-
-// expand_less
-// Fetching data in JavaScript can be done using the Fetch API along with async and await for asynchronous code management. The try-catch statement is used to handle errors that may occur during the fetching process. This approach makes the code cleaner and easier to read. Example
-
-async function fetchData(url) {
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.error('Error:', error);
-  }
-}
-//---------------------------------------------------------------
-// CRUD Operations
-
-// expand_less
-// CRUD stands for Create, Read, Update, and Delete. These are the four basic operations that can be performed on any data storage. In web development, CRUD operations are often implemented with APIs to manage data on a server.
-
-// Create operation adds new data.
-// Read operation retrieves data.
-// Update operation modifies existing data.
-// Delete operation removes data. Example
-// Given a JSON server endpoint '/products'
-// CREATE (POST)
-fetch('/products', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({name: 'New Product', price: 100}),
-  })
-  
-  // READ (GET)
-  fetch('/products')
-  
-  // UPDATE (PUT or PATCH)
-  fetch('/products/1', {
-    method: 'PATCH',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({price: 150}),
-  })
-  
-  // DELETE
-  fetch('/products/1', { method: 'DELETE' })
-  
-//---------------------------------------------------------------
-// JWT Authentication
-
-// expand_less
-// JWT (JSON Web Tokens) is a compact, URL-safe means of representing claims to be transferred between two parties. In web development, JWTs are used for authentication; when a user logs in, the server generates a token that certifies the user's identity. The client sends this token back with each request to access protected routes or resources. Example
-// After successful login, assuming the server response includes a JWT
-cost token = response.token;
-
-// Include the JWT in the Authorization header with each request
-fetch('/api/protected', {
-  headers: {
-    'Authorization': `Bearer ${token}`
-  }
-})
 
 //---------------------------------------------------------------
+// Node:
+// Introduction
+// Node.js is a runtime environment that enables the execution of JavaScript outside of web browsers. It allows developers to run JavaScript on the server-side, extending its capabilities beyond client-side scripting.
+//---------------------------------------------------------------
+// Detailed Explanation
+// A tool that lets you use JavaScript outside of web browsers. So basically NodeJS is a runtime environment that allows you to run JavaScript on the server-side. Before Node.js, JavaScript could only be run in the browser, which is client-side.
+
+// Server-side: This is where your website's data is stored, and it's where things happen behind the scenes, on the servers that host your website.
+// Client-side: This is what happens locally on your own computer, in your web browser.
+// So, Node.js extended the capabilities of JavaScript to be used outside of the browser, allowing developers to use JavaScript to write server-side code.
+//---------------------------------------------------------------
+// Node Environment & ( NPM ) Node Package Manager
+// The Node environment refers to the ecosystem or the set of tools and libraries that Node.js provides to developers. If you are using Node.js and its tools to develop your application. It means you are working in node environment.
+
+// Here are some key concepts related to the Node environment:
+
+// Core Modules
+// NPM ( Node Package Manager )
+// Event Loop
+// Command Line Interface
+// Core Modules: Built-in tools and functions that Node provides. For example, tools to read and write files, manage paths, or make network requests.
+
+// NPM ( Node Package Manager ): This is a tool that comes with Node.js when you install it. It allows you to easily use external libraries and packages in your Node.js applications, which can save you a lot of time and effort.
+
+// package.json
+// The package.json file is like a manifest or a list of details about your project. It contains metadata like the project's name, version, and description. Most importantly, it lists the packages (and their specific versions) that your project depends on.
+
+// Key Points:
+
+// Dependencies: When you install a package and save it, the package name and its version are added to the dependencies section.
+// Dev Dependencies: If you install a package that's only needed during development (like a testing library), it's added to the devDependencies section using npm install <package-name> --save-dev
+// node_modules :
+// When you install packages using npm, they are downloaded and stored in a directory called node_modules. This directory contains all the code for the packages you've installed, as well as their dependencies (other packages that they rely on to work).
+
+// Local vs Global : Packages can be installed locally (specific to a project) or globally (available to all projects on your computer). Local packages go into the node_modules folder inside your project directory.
+
+// Avoid Versioning : Typically, you don't include the node_modules directory in version control (like git). Instead, you use the package.json to keep track of which packages your project needs.
+
+// Event Loop: Node.js is designed to be non-blocking and asynchronous. This means that it can perform many operations at the same time without having to wait for one to finish before starting another. The event loop is a mechanism that enables this behavior, allowing Node.js to be very efficient.
+
+// Command Line Interface (CLI): Using the command line, you can start, stop, or manage your Node applications.
+//---------------------------------------------------------------
+// Code Implementation | Examples
+// Showcase the use of core modules for file operations or network requests.
+// Introduce NPM and its role in managing external libraries and packages.
+// Generate mock data :
+// Mockaroo - Random Data Generator and API Mocking Tool | JSON / CSV / SQL / Excel
+
+// Json server :
+// GitHub - typicode/json-server: Get a full fake REST API with zero coding in less than 30 seconds (seriously)
+
+// Setup a server for all kinds of requests easily
+// mkdir api-mocker
+
+// cd api-mocker
+
+// npm init ( press enter for everything )
+// the above command will create a package.json file
+// you are creating a new project here
+// npm means node package manager
+
+// npm install json-server
+// this will add json-server as a package into your project
+
+// open package.json file and the following to the scripts key
+// db.json is the file that you need to add your json for
+// "start" : "json-server --watch db.json"
+
+// npm run start
+// run this for starting the server
+
+// alternatively
+// json-server --watch db.json
+
+//---------------------------------------------------------------
+// Student Activities
+// Create a mock-server by follwing the documentation.
+// Add your person detalis like name, age, gender, city etc in form of arry of object.
+// Run mock server using npm command and check it with help of postman or thunder client.
+// Conclusion
+// Node.js is like a superhero for JavaScript, letting it do powerful things outside of web browsers. We explored its core features, like modules and NPM (Node Package Manager), which help manage tools and libraries.
+//---------------------------------------------------------------
+
