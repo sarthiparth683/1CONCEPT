@@ -1,99 +1,74 @@
-//------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------
 // ES6 Class in JavaScript
 // Introduction
 // ES6 introduced the class syntax in JavaScript, providing a more structured and familiar way to define object blueprints compared to traditional constructor functions. Classes serve as templates for creating objects with shared properties and methods.
-
 // Detailed Explanation
 // What is the concept?
-
 // ES6 classes offer a syntactic sugar over the prototype-based inheritance system in JavaScript. They provide a clearer and more intuitive way to create objects and implement inheritance.
 // Why is it useful?
-
 // Classes streamline the process of creating objects and defining their behavior. They offer a more organized approach to object-oriented programming, enhancing code readability and maintainability.
 // Real-world examples or analogies:
-
 // Think of an ES6 class as a blueprint for constructing various instances of an object, similar to how a template in a manufacturing plant guides the creation of multiple products with consistent features.
-//------------------------------------------------------------------------
-// Instructor Activity | Code Implementation | Examples
+//---------------------------------------------------------------------------------
 // Class Example 1:
 // Develop a user management system using User class that efficiently creates user instances with associated attributes such as name and age. Additionally, implement a method to retrieve the full name of each user instance.
 class User {
     constructor(name, age) {
         this.name = name;
         this.age = age;
-        this.fullName = function() {
-        console.log(this.name);
-       }
+        this.fullName = function () {
+            console.log(this.name);
+        }
     }
-}
+};
 
 let User1 = new User("Alice", 20);
 let User2 = new User("Bob", 22);
 
-console.log(student1);
-student1.fullName();
-console.log(student2);
-
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
+console.log("User-1", User1);
+User1.fullName();
+console.log("User-2", User2);
+//--------------------------------------------------------------------------------------
 // Class Example 2 (New way of adding methods):
 // Develop a user management system that efficiently creates user instances with associated attributes such as name and age. Additionally, implement a method to retrieve the full name of each user instance.
-class User {
+class UM {
     constructor(name, age) {
         this.name = name;
         this.age = age;
     }
     fullName() {
-    console.log(this.name);
+        console.log(this.name);
     }
-}
-
-let User1 = new User("Alice", 20);
-let User2 = new User("Bob", 22);
-
-console.log(student1);
-student1.fullName();
-console.log(student2);
-
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
+};
+let User3 = new UM("Williamson", 20);
+let User4 = new UM("Jane-Austen", 22);
+console.log("User-3", User3);
+User3.fullName();
+console.log("User-4", User4);
+//-----------------------------------------------------------------------------------------
 // Student Activities
 // Task 1:
 // Create a class called Animal representing different animals. The Animal class should have properties to store the number of legs (noOfLegs) and whether it is vegetarian or not (vegetarian). Additionally, each Animal object should have a method called eat which outputs a message indicating that the animal is eating and displays the number of legs it has. Note: use New way of adding methods.
-
-// Solution:
-
 class Animal {
-    constructor(noOfLegs, vegetarian) {
+    constructor(name, noOfLegs, vegetarian) {
+        this.name = name;
         this.noOfLegs = noOfLegs;
         this.vegetarian = vegetarian;
-      
     }
     eat() {
         console.log("Eating...", this.noOfLegs);
     }
- 
-}
-
-// Example usage:
-let animal1 = new Animal(4, true);
+};
+let animal1 = new Animal("Lion",4, true);
 console.log(animal1);
-
-let animal2 = new Animal(6, false);
+animal1.eat();
+let animal2 = new Animal("Wolf",6, false);
 console.log(animal2);
-
-animal2.eat(); // Output: Eating... 6
-
-
-//------------------------------------------------------------------------
+animal2.eat();
+//------------------------------------------------------------------------------------
 // Conclusion
 // The concept of ES6 classes in JavaScript provides a more structured and intuitive way to implement object-oriented programming. By creating classes and defining inheritance, properties, and methods, developers can build complex applications with greater ease and clarity.
-
-// Resources
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
 // Interview based questions:
 // Question 1
 // Question
@@ -134,32 +109,4 @@ animal2.eat(); // Output: Eating... 6
 // Prototype Inheritance: Constructor functions are ideal for creating object types that need to share properties and methods through prototype inheritance.
 // Traditional OOP: Constructor functions follow the traditional object-oriented programming paradigm and are familiar to developers coming from languages like Java or C++.
 // Instance Initialization: Constructor functions allow you to initialize object instances with specific properties and behaviors using the new keyword.
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
-//------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------
