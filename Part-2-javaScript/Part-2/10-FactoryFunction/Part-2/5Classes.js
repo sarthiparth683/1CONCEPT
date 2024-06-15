@@ -21,13 +21,12 @@ class User {
         }
     }
 };
-
 let User1 = new User("Alice", 20);
-let User2 = new User("Bob", 22);
-
+let User2 = new User("Hulk", 22);
 console.log("User-1", User1);
 User1.fullName();
 console.log("User-2", User2);
+User2.fullName();
 //--------------------------------------------------------------------------------------
 // Class Example 2 (New way of adding methods):
 // Develop a user management system that efficiently creates user instances with associated attributes such as name and age. Additionally, implement a method to retrieve the full name of each user instance.
@@ -45,6 +44,7 @@ let User4 = new UM("Jane-Austen", 22);
 console.log("User-3", User3);
 User3.fullName();
 console.log("User-4", User4);
+User4.fullName();
 //-----------------------------------------------------------------------------------------
 // Student Activities
 // Task 1:
@@ -59,54 +59,46 @@ class Animal {
         console.log("Eating...", this.noOfLegs);
     }
 };
-let animal1 = new Animal("Lion",4, true);
-console.log(animal1);
+let animal1 = new Animal("Lion", 4, true);
+console.log("Animal-1",animal1);
 animal1.eat();
-let animal2 = new Animal("Wolf",6, false);
-console.log(animal2);
+let animal2 = new Animal("Wolf", 4, false);
+console.log("Animal-2",animal2);
 animal2.eat();
-//------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------
 // Conclusion
 // The concept of ES6 classes in JavaScript provides a more structured and intuitive way to implement object-oriented programming. By creating classes and defining inheritance, properties, and methods, developers can build complex applications with greater ease and clarity.
-//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------
 // Interview based questions:
 // Question 1
-// Question
 // Explain the difference between a factory function and a constructor function in JavaScript.
 
 // Answer
 // A factory function is a function that returns a new object. It creates and returns object instances without using the new keyword. Factory functions provide a way to encapsulate object creation logic and can return different types of objects based on input parameters or conditions.
 
 // A constructor function, on the other hand, is invoked with the new keyword to create a new instance of an object. Constructor functions use the this keyword to define properties and methods for the newly created object. They typically start with a capital letter to distinguish them from regular functions.
-//------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
 // Question 2
-// Question
 // Discuss the advantages and disadvantages of using factory functions compared to constructor functions.
-
-// Answer
 // Advantages of Factory Functions:
-
 // Encapsulation: Factory functions encapsulate object creation logic, allowing you to create and return new instances of objects without exposing the internal implementation details.
 // Flexibility: Factory functions can return different types of objects based on input parameters or conditions, providing greater flexibility in object creation.
 // No this Binding: Factory functions do not rely on the this keyword, reducing the risk of unexpected behavior caused by incorrect this binding.
-// Disadvantages of Factory Functions:
 
+// Disadvantages of Factory Functions:
 // No Prototype Inheritance: Factory functions do not support prototype inheritance out of the box, making it more challenging to implement inheritance hierarchies.
 // Cannot Use instanceof: Objects created by factory functions cannot be identified using the instanceof operator, which may impact code readability and debugging.
-//------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------
 // Question 3
-// Question
 // Discuss the use cases for factory functions and constructor functions in JavaScript.
-
 // Answer
 // Factory Functions:
-
 // Object Creation: Factory functions are useful for creating object instances with specific configurations or properties.
 // Encapsulation: Factory functions encapsulate object creation logic, providing a clean interface for creating objects without exposing implementation details.
 // Conditional Object Creation: Factory functions can return different types of objects based on input parameters or conditions.
-// Constructor Functions:
 
+// Constructor Functions:
 // Prototype Inheritance: Constructor functions are ideal for creating object types that need to share properties and methods through prototype inheritance.
 // Traditional OOP: Constructor functions follow the traditional object-oriented programming paradigm and are familiar to developers coming from languages like Java or C++.
 // Instance Initialization: Constructor functions allow you to initialize object instances with specific properties and behaviors using the new keyword.
-//--------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------

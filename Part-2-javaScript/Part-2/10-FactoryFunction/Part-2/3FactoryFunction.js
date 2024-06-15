@@ -1,5 +1,5 @@
 // Student Activities
-// Task 1:
+// Task 1:Factory Function
 // You are tasked with creating a factory function called animal that generates objects representing various animals. Each animal object should have properties to store the number of legs it has (noOfLegs) and whether it is vegetarian or not (vegetarian). Additionally, each animal object should have a method called eat and greet which, when called, outputs a message indicating that the animal is eating... and greetings...
 // Your task is to implement the animal factory function according to the given specifications and demonstrate its usage by creating two animal objects. Ensure that the eat and greet method behaves as described.
 function animal(noOfLegs, vegetarian) {
@@ -15,15 +15,16 @@ function animal(noOfLegs, vegetarian) {
   return obj;
 };
 let animal1 = animal(4, true);
-console.log("Animal-1", animal1)
+console.log("Animal-1", animal1);
+animal1.eat();
 animal1.greet();
 
 let animal2 = animal(6, false);
 console.log("Animal-2", animal2)
-animal2.eat() // eating...
+animal2.eat();
 animal2.greet();
 //-----------------------------------------------------------------------------------------
-// Task 2:
+// Task 2:Factory Function
 // You are tasked with creating a factory function called Bird that represents birds. The Bird factory function should copy properties and methods from the Animal factory function. Additionally, it should have a property called canFly to indicate whether the bird can fly or not.
 // Your task is to implement the Bird factory function according to the given specifications and demonstrate its usage by creating a bird object. Ensure that the Bird object inherits properties and methods from the Animal factory function and contains the canFly property.
 function Bird(name, noOfLegs, vegetarian, canFly, beak) {
