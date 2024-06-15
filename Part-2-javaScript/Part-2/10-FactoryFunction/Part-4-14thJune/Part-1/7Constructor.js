@@ -6,7 +6,7 @@
 // Why is it useful? - Constructor functions provide a convenient way to create multiple instances of objects with consistent properties and behaviors. They encapsulate object creation logic and promote code reusability.
 // Real-world examples or analogies - Think of a constructor function as a mold in a factory that is used to create multiple copies of a product with the same design.
 // Code Implementation | Examples
-//------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
 // Constructor Function Example 1
 function User(name, age) {
     this.name = name;
@@ -124,6 +124,6 @@ function Animal(noOfLegs, vegetarian) {
   let b1 = new Bird(2, true, false);
   console.log(b1);
  
- //----------------------------------------------------------------------
+ //----------------------------------------------------------------------------------
 //  Conclusion
 // The concept of constructor functions in JavaScript, which are functions used to create and initialize objects. We saw how to create a constructor function called Animal to generate objects representing animals with specific properties and methods. This approach simplifies object instantiation and promotes code maintainability. Constructor functions are an essential aspect of object-oriented programming in JavaScript.

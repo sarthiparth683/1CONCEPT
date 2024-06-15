@@ -1,19 +1,19 @@
 // Concept: Objects in JavaScript
 // Introduction
 // Objects in JavaScript are a complex data type that allows developers to store and organize related data and functions. They consist of properties (key-value pairs) and play a crucial role in structuring and organizing code.
-//------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
 // Detailed Explanation
 // What is the concept? - An object is a composite data type that enables the grouping of related data and functions. It is characterized by properties, each having a key-value pair, allowing flexibility in data representation and manipulation.
 // Why is it useful? - Objects are useful for organizing and managing code more effectively. They provide a way to encapsulate related data and functions, enhancing modularity, reusability, and code readability.
 // Real-world examples or analogies - Think of an object like a real-world entity such as a car, where properties represent attributes (color, model, etc.), and methods represent actions (start, stop, etc.).
-//------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
 // Code Implementation | Examples
 // What is object and Why do we use objects ?
 
 // Contain properties (key-value pairs). Value can be of any type including primitives, objects, functions and arrays.
 // Grouping Related Variables
 
-  let account = {
+  let account1 = {
     accountNumber: 12092903490,
     name: 'Vivek',
     type: 'Simple Saving',
@@ -129,9 +129,4 @@ test();
 // this is a pointer that we use in javascript to represent owner object.
 // this is flexible; value of this changes
 // this can point to different owner objects through few methods that we are going to learn ( call, apply, bind ).
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//------------------------------------------------------------------
 //------------------------------------------------------------------

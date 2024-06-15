@@ -1,16 +1,12 @@
 // ES6 Class in JavaScript
 // Introduction
 // ES6 introduced the class syntax in JavaScript, providing a more structured and familiar way to define object blueprints compared to traditional constructor functions. Classes serve as templates for creating objects with shared properties and methods.
-
 // Detailed Explanation
 // What is the concept?
-
 // ES6 classes offer a syntactic sugar over the prototype-based inheritance system in JavaScript. They provide a clearer and more intuitive way to create objects and implement inheritance.
 // Why is it useful?
-
 // Classes streamline the process of creating objects and defining their behavior. They offer a more organized approach to object-oriented programming, enhancing code readability and maintainability.
 // Real-world examples or analogies:
-
 // Think of an ES6 class as a blueprint for constructing various instances of an object, similar to how a template in a manufacturing plant guides the creation of multiple products with consistent features.
 // Instructor Activity | Code Implementation | Examples
 // Class Example 1:
@@ -123,16 +119,4 @@ animal2.eat(); // Output: Eating... 6
 // Prototype Inheritance: Constructor functions are ideal for creating object types that need to share properties and methods through prototype inheritance.
 // Traditional OOP: Constructor functions follow the traditional object-oriented programming paradigm and are familiar to developers coming from languages like Java or C++.
 // Instance Initialization: Constructor functions allow you to initialize object instances with specific properties and behaviors using the new keyword.
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//------------------------------------------------------------------
-//------------------------------------------------------------------
 //------------------------------------------------------------------

@@ -3,19 +3,19 @@
 // Code Implementation | Examples
 // Exporting: The export statement allows sharing variables, functions, or classes from one file (module) to another.
 // Importing: The import statement helps bring functionalities from other modules into the current module.
-const defaultExportValue = "This is the default export value";
-export default defaultExportValue;
-//-------------------------------------------------------------------------------
-// Importing a Default Value (with .js extension):
-import defaultValue from "moduleA.js";
-console.log(defaultValue); // Output: "This is the default export value"
-//------------------------------------------------------------------------------
-// Named Exports:
-export const namedExport1 = "Named Export 1";
-export const namedExport2 = "Named Export 2";
-import { namedExport1, namedExport2 } from "./moduleC.js";
-console.log(namedExport1); // Output: "Named Export 1"
-console.log(namedExport2); // Output: "Named Export 2"
+// const defaultExportValue = "This is the default export value";
+// export default defaultExportValue;
+// //-------------------------------------------------------------------------------
+// // Importing a Default Value (with .js extension):
+// import defaultValue from "moduleA.js";
+// console.log(defaultValue); // Output: "This is the default export value"
+// //------------------------------------------------------------------------------
+// // Named Exports:
+// export const namedExport1 = "Named Export 1";
+// export const namedExport2 = "Named Export 2";
+// import { namedExport1, namedExport2 } from "./moduleC.js";
+// console.log(namedExport1); // Output: "Named Export 1"
+// console.log(namedExport2); // Output: "Named Export 2"
 //-------------------------------------------------------------------------------
 // Combining Default and Named Exports:
 // Exporting Default and Named Exports Together:

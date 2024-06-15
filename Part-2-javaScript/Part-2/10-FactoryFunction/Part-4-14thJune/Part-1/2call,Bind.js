@@ -1,5 +1,4 @@
 // Call, Apply & Bind Methods :
-
 // All JavaScript functions has access to some very special methods which we can use to control where ‘this’ should refer. Such methods are call(), bind() & apply().
 // .call & .apply are used to invoke a function & set the value of the this keyword
 // inside of the function

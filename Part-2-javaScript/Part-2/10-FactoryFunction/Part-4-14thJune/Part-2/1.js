@@ -7,44 +7,37 @@
 // Real-world examples or analogies - Think of an object like a real-world entity such as a car, where properties represent attributes (color, model, etc.), and methods represent actions (start, stop, etc.).
 // Code Implementation | Examples
 // What is object and Why do we use objects ?
-
 // Contain properties (key-value pairs). Value can be of any type including primitives, objects, functions and arrays.
-
 // Grouping Related Variables
 // Grouping Related Variables
 
-  let account = {
-    accountNumber: 12092903490,
-    name: 'Vivek',
-    type: 'Simple Saving',
-    balance: 100000,
-    active: true,
-  };
+let account = {
+  accountNumber: 12092903490,
+  name: 'Vivek',
+  type: 'Simple Saving',
+  balance: 100000,
+  active: true,
+};
 // Passing into a Function as an Argument
+function printAccountDetails(obj) {
+  console.log('Name: ', obj.name, 'Type: ', obj.type, 'Active: ', obj.active, 'Bal: ', obj.balance);
+};
+printAccountDetails(account);
+//---------------------------------------------------------------------------------------
 
- 
-      function printAccountDetails(obj) {
-        console.log('Name: ', obj.name, 'Type: ', obj.type, 'Active: ', obj.active, 'Bal: ', obj.balance);
-      }
-      
-      printAccountDetails(account);
-  
-// Related Functions as Object Methods
-
-  
-  let account = {
-    name: 'Vivek',
-    accountNumber: 12092903490,
-    type: 'Preferred Savings',
-    balance: 100000,
-    active: true,
-    printAccountDetails: function () {
-      console.log('Name: ', this.name, 'Type: ', this.type, 'Active: ', this.active, 'Bal: ', this.balance);
-    }
-  };
-  
-  account.printAccountDetails();
-//   Student Activities
+let account1 = {
+  name: 'Zedd',
+  accountNumber: 12092903490,
+  type: 'Preferred Savings',
+  balance: 100000,
+  active: true,
+  printAccountDetails: function () {
+    console.log('Name: ', this.name, 'Type: ', this.type, 'Active: ', this.active, 'Bal: ', this.balance);
+  }
+};
+account1.printAccountDetails();
+//----------------------------------------------------------------------------------------------
+// Student Activities
 // Activity 1: Modify Object Properties
 // Modify the properties of the account object and observe how it affects the behavior of related functions.
 // Conclusion

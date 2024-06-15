@@ -19,12 +19,12 @@ window.addEventListener('scroll', () => {
 // Examples Exporting a variable
 
 // In file1.js
-export const myVar = 'Hello World';
-Importing the exported variable
+// export const myVar = 'Hello World';
+// Importing the exported variable
 
-// In file2.js
-import { myVar } from './file1.js';
-console.log(myVar); // Output: Hello World
+// // In file2.js
+// import { myVar } from './file1.js';
+// console.log(myVar); // Output: Hello World
 //--------------------------------------------------------------------------
 // Using Template Literals for HTML Templates
 
@@ -77,26 +77,16 @@ window.addEventListener('scroll', () => {
 // Examples Export Default
 
 // In myModule.js
-export default function() { console.log('Hello!'); }
-Named Export
+// export default function() { console.log('Hello!'); }
+// Named Export
 
-// In myModule.js
-export const myFunction = () => { console.log('Hello!'); };
-Importing
+// // In myModule.js
+// export const myFunction = () => { console.log('Hello!'); };
+// Importing
 
-// Default import
-import anyName from './myModule.js';
+// // Default import
+// import anyName from './myModule.js';
 
-// Named import
-import { myFunction } from './myModule.js';
-//--------------------------------------------------------------------------
-//--------------------------------------------------------------------------
-//--------------------------------------------------------------------------
-//--------------------------------------------------------------------------
-//--------------------------------------------------------------------------
-//--------------------------------------------------------------------------
-//--------------------------------------------------------------------------
-//--------------------------------------------------------------------------
-//--------------------------------------------------------------------------
-//--------------------------------------------------------------------------
+// // Named import
+// import { myFunction } from './myModule.js';
 //--------------------------------------------------------------------------
