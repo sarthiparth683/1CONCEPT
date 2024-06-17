@@ -1,23 +1,52 @@
 
 // CRUD Operations on JSON Server,Critical operations such as Create, Read, Update, and Delete (CRUD) are demonstrated using JSON Server. The students are shown how to manipulate data using different HTTP methods like GET, POST, PATCH, and DELETE.
 // Create (POST)
-fetch('http://localhost:3000/posts', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ title: 'json-server', author: 'typicode' })
-})
-// Read (GET)
-fetch('http://localhost:3000/posts')
-//--------------------------------------------------------------------------------------
-// Update (PATCH)
-fetch('http://localhost:3000/posts/1', {
-  method: 'PATCH',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ title: 'updated title' })
-})
+async function crud1() {
+  fetch('http://localhost:3000/posts', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      title: 'json-server-1',
+      author: 'typicode-1',
+    })
+  });
+};
+// crud1();
 
-// Delete (DELETE)
-fetch('http://localhost:3000/posts/1', { method: 'DELETE' })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------------------------------------------------------------------
+// // Update (PATCH)
+// fetch('http://localhost:3000/posts/1', {
+//   method: 'PATCH',
+//   headers: { 'Content-Type': 'application/json' },
+//   body: JSON.stringify({ title: 'updated title' })
+// })
+
+// // Delete (DELETE)
+// fetch('http://localhost:3000/posts/1', { method: 'DELETE' })
 
 //---------------------------------------------------------------------------------
 // Deploying Front-end and Back-end Separately

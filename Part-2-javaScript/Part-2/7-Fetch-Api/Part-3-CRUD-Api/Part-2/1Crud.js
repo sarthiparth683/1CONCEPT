@@ -4,13 +4,13 @@ fetch('https://api.example.com/data', {
 })
   .then(response => response.json())
   .then(data => console.log(data));
-//--------------------------------------------------------------------------------
+//------------------------ --------------------------------------------------------
 // POST is like giving something to the server. It’s like giving a new toy to the toy shelf. This method submits data to a server to create a new resource, such as a new user account or a blog post. It's also commonly used for forms, where users enter data and submit it to a server for processing.
 // POST Method
 // Introduction: Submits data to be processed to a specified resource.
 // Use-Cases: Creating new records, submitting forms.
 fetch('https://api.example.com/data', {
-  method: 'POST',
+  method: 'POST', 
   headers: {
     'Content-Type': 'application/json',
   },
