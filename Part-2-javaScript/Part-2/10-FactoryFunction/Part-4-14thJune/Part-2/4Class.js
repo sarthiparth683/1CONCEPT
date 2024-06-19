@@ -13,7 +13,7 @@
 // Develop a user management system using User class that efficiently creates user instances with associated attributes such as name and age. Additionally, implement a method to retrieve the full name of each user instance.
 // Class Example 1:
 // Develop a user management system using User class that efficiently creates user instances with associated attributes such as name and age. Additionally, implement a method to retrieve the full name of each user instance.
-class User {
+class User11 {
     constructor(name, age) {
         this.name = name;
         this.age = age;
@@ -21,15 +21,13 @@ class User {
         console.log(this.name);
        }
     }
-}
-
-let User1 = new User("Alice", 20);
-let User2 = new User("Bob", 22);
-
-console.log(student1);
-student1.fullName();
-console.log(student2);
-//--------------------------------------------------------------------
+};
+let User1 = new User11("Alice", 20);
+let User2 = new User11("Bob", 22);
+console.log(User1);
+User1.fullName();
+console.log(User2);
+//--------------------------------------------------------------------------------------
 // Class Example 2 (New way of adding methods):
 // Develop a user management system that efficiently creates user instances with associated attributes such as name and age. Additionally, implement a method to retrieve the full name of each user instance.
 class User {
@@ -42,13 +40,13 @@ class User {
     }
 }
 
-let User1 = new User("Alice", 20);
-let User2 = new User("Bob", 22);
+let User3 = new User("Alice", 20);
+let User4 = new User("Bob", 22);
 
 console.log(student1);
 student1.fullName();
 console.log(student2);
-//---------------------------------------------------------------------
+//--------------------------------------------------------------------------------------
 // Student Activities
 // Task 1:
 // Create a class called Animal representing different animals. The Animal class should have properties to store the number of legs (noOfLegs) and whether it is vegetarian or not (vegetarian). Additionally, each Animal object should have a method called eat which outputs a message indicating that the animal is eating and displays the number of legs it has. Note: use New way of adding methods.

@@ -1,8 +1,6 @@
 
-// CRUD Operations on JSON Server,Critical operations such as Create, Read, Update, and Delete (CRUD) are demonstrated using JSON Server. The students are shown how to manipulate data using different HTTP methods like GET, POST, PATCH, and DELETE.
-// Create (POST)
 async function crud1() {
-  fetch('http://localhost:3000/posts', {
+  fetch('http://localhost:3000/products', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -11,7 +9,7 @@ async function crud1() {
     })
   });
 };
-// crud1();
+// crud1();  
 
 
 

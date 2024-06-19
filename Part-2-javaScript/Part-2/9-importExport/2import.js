@@ -2,6 +2,6 @@
 // In another file named main.js
 import add from "./1Export.js";
 
-const result = add(5, 3);
+const result = add(5, 6);
 console.log(result);
- 
+  
