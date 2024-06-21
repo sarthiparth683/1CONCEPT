@@ -1,70 +1,34 @@
-// React and ES6 Syntax
+// // Object.keys, values, and entries
+// // Methods like Object.keys, Object.values, and Object.entries are crucial for object manipulation, as they allow developers to easily iterate over objects and access their keys, values, or both as arrays. These methods enhance the efficiency of handling objects in JavaScript.
+// const obj = {
+//   a: 1,
+//   b: 2,
+//   c: 3
+// };
+// console.log(Object.keys(obj)); // ['a', 'b', 'c']
+// console.log(Object.values(obj)); // [1, 2, 3]
+// console.log(Object.entries(obj)); // [['a', 1], ['b', 2], ['c', 3]]
+// //------------------------------------------------------------------------------
+// // Asynchronous JavaScript
+// // Asynchronous JavaScript operations, such as callbacks, promises, and async/await, are essential for performing tasks without blocking the execution thread, allowing JavaScript to handle long-running tasks like network requests or file operations efficiently.
+// // Example
+// // Using async/await
+// async function fetchData() {
+//   try {
+//     const response = await fetch('https://api.example.com/data');
+//     const data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.error('Error:', error);
+//   };
+// };
 
-// expand_less
-// The lecture begins with a focus on React and the importance of understanding ES6 syntax for efficient React development. ES6 introduces new syntax and features such as let and const for variable declarations, arrow functions, the rest and spread operators, destructuring, etc., which are essential for modern JavaScript development.
+// fetchData();
+// class MyClass { constructor() { this.myProp = 42; } }
 
-// Example
+// const myObj = new MyClass(); console.log(myObj.hasOwnProperty('myProp'));
+class Person { constructor(name) { this.name = name; } }
 
-// Arrow Function
-const add = (a, b) => a + b;
+class Student extends Person { constructor(name, grade) { super(name); this.grade = grade; } }
 
-// Destructuring
-const [first, second] = [1, 2];
-
-// Rest Operator
-const sum = (...numbers) => numbers.reduce((acc, current) => acc + current, 0);
-//-----------------------------------------------------------------------
-// Inheritance and Prototypal Inheritance in JavaScript
-
-// expand_less
-// Inheritance is a core concept discussed, emphasizing how JavaScript objects can inherit properties and methods from other objects. This is achieved through prototypal inheritance, where an object can directly reference another object as its prototype, allowing it to use its properties and methods as if they were its own.
-
-// Example
-
-function Parent(name) {
-  this.name = name;
-}
-
-Parent.prototype.sayName = function() {
-  console.log(this.name);
-};
-
-function Child(name) {
-  Parent.call(this, name);
-}
-
-Child.prototype = Object.create(Parent.prototype);
-Child.prototype.constructor = Child;
-
-const child = new Child('John');
-child.sayName(); // Logs 'John'
-//------------------------------------------------------------------------
-// Classes in JavaScript
-
-// expand_less
-// The concept of classes in JavaScript, introduced in ES6, represents templates for creating objects. Classes encapsulate data for the object and methods to manipulate that data. Utilizing the class keyword simplifies the declaration and instantiation of objects. The lecture explores creating classes, inheritance through the extends keyword, and using super to call the superclass constructor.
-
-// Example
-
-class Animal {
-  constructor(name) {
-    this.name = name;
-  }
-
-  speak() {
-    console.log(`${this.name} makes a noise.`);
-  }
-}
-
-class Dog extends Animal {
-  constructor(name) {
-    super(name); // Call the super class constructor and pass in the name parameter
-  }
-
-  speak() {
-    console.log(`${this.name} barks.`);
-  }
-}
-
-const dog = new Dog('Rex');
-dog.speak(); // Logs 'Rex barks.'
+const details = new Student('Yash', 10); console.log(details.name, details.grade);

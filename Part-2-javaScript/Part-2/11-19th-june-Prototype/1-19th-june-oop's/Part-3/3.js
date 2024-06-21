@@ -33,20 +33,20 @@ class IPhone1 {
   }
 }
 
-let i1 = new IPhone1(
-  1,
-  "B09X67JBQV",
-  7.8,
-  "IOS",
-  "128mb",
-  "Gray",
-  "90mm",
-  "2.0 MP"
-);
+// let i1 = new IPhone1(
+//   1,
+//   "B09X67JBQV",
+//   7.8,
+//   "IOS",
+//   "128mb",
+//   "Gray",
+//   "90mm",
+//   "2.0 MP"
+// );
 
-i1.dial(); // "tring.. tring..."
-i1.sendMessage(); // "Sending message..."
-i1.cameraClick(); // "Camera clicked"
+// i1.dial(); // "tring.. tring..."
+// i1.sendMessage(); // "Sending message..."
+// i1.cameraClick(); // "Camera clicked"
 //----------------------------------------------------------------------------
 // solution  
 // write a ES6 Class IPhone1 to create iPhone objects in bulk quantiy

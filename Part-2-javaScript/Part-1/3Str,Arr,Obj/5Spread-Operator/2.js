@@ -12,7 +12,7 @@ function sum(...numbers) {
   }
   return total;
 }
-console.log(sum(1, 2, 3, 4));
+console.log(sum(1, 2, 3, 4, 5, 7, 8, 9));
 // Output: 10
 
 
