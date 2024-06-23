@@ -1,6 +1,7 @@
 // Note: These days, even some browsers represents __proto__ as [[Prototype]].
 // We can verify this relationship by logging these :
 let arr = [1,2,3];
+console.log(arr);
 console.log(arr.__proto__ === Array.prototype); // true
 console.log(Array.prototype.__proto__ === Object.prototype); // true
 console.log(Object.prototype.__proto__ === null); // true
