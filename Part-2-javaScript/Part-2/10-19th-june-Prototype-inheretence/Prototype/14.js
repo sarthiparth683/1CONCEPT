@@ -1,7 +1,5 @@
-// Code Implementation | Examples
-// Creating our own Prototype chains
-// using Object.setPrototypeOf()
 
+// using Object.setPrototypeOf()
 let obj = {
     name: "vivek",
     sayHello: function () {
@@ -15,11 +13,8 @@ let obj = {
       console.log("Working");
     },
   };
-  
   Object.setPrototypeOf(obj2, obj);
-  
   obj2.sayHello();
-  
   console.log(obj2);
   //-------------------------------------------------------------
 //   The Object.setPrototypeOf() method sets the prototype (i.e., the internal __proto__ property) of a specified object to another object

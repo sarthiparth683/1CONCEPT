@@ -1,4 +1,4 @@
-// Student Activities
+
 // Task 1
 function iPhoneGen1(ASIN, color, display, camera) {
   let obj = {};
@@ -22,7 +22,4 @@ console.log(iphone1)
 iphone1.dial(); // "tring.. tring..."
 iphone1.sendMessage(); // "Sending message..."
 iphone1.cameraClick(); // "Camera clicked"
-//------------------------------------------------------------------------
-// Task 2
-
-//-------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------

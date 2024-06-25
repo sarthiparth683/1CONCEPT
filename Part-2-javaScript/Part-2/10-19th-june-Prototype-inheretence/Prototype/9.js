@@ -12,4 +12,5 @@ let employee = {
   manager.manageTeam = function () {
     console.log("Managing team");
   };
+  console.log(employee);
   console.log(manager);
