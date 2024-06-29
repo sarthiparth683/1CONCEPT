@@ -1,6 +1,7 @@
 function iPhoneGen2(ASIN, color, display, camera) {
   let obj = {};
-  Object.setPrototypeOf(obj, iPhoneGen2.prototype); // set the prototype of the object that we are returning here to iPhoneGen2 prototype;
+  Object.setPrototypeOf(obj, iPhoneGen2.prototype);
+  // set the prototype of the object that we are returning here to iPhoneGen2 prototype;
   obj.ASIN = ASIN;
   obj.color = color;
   obj.display = display;
@@ -18,6 +19,6 @@ iPhoneGen2.prototype.cameraClick = function () {
 };
 let iphone2 = iPhoneGen2("B09X67JBQV", "Gray", "90mm", "2.0 MP");
 console.log(iphone2);
-iphone2.dial(); // "tring.. tring..."
-iphone2.sendMessage(); // "Sending message..."
-iphone2.cameraClick(); // "Camera clicked"
+iphone2.dial();
+iphone2.sendMessage();
+iphone2.cameraClick(); 

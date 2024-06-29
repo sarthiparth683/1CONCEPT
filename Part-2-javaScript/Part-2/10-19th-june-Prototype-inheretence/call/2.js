@@ -1,7 +1,4 @@
-// Call, Apply & Bind Methods:
-// .call & .apply are used to invoke a function & set the value of the this keyword
-// inside of the function
-// Example with call
+
 function greet() {
   console.log('Hello, ' + this.name);
 };
@@ -21,7 +18,7 @@ function myName() {
 };
 myName.call(person1);
 myName.call(person2);
-
+//----------------------------------------------------------------
 // In case there are multiple arguments to function
 let person3 = {
   name: "jacob",
@@ -34,6 +31,5 @@ function printDetails(age, city) {
     this.name + " is " + age + " years old" + " and lives in " + city
   );
 };
-printDetails.call(person3, 28, "New york"); // John is 28 years old and lives in New york
-printDetails.call(person4, 32, "Bengaluru"); // Jill is 32 years old and lives in Bengaluru
-//
+printDetails.call(person3, 28, "New york"); 
+printDetails.call(person4, 32, "Bengaluru"); 

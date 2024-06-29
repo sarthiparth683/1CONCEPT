@@ -18,3 +18,4 @@ Person.prototype.increaseAge = function () {
   };
   let person1 = new Person("Bruce", "Wayne", 26);
   console.log(person1);
+//----------------------------------------------------------

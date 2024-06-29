@@ -1,5 +1,4 @@
 
-//-------------------------------------------------------------------------
 // Factory Function Example 2
 // create a factory function Student that copy properties and methods from the User factory function and adds an additional property batchno.
 function User(name, age) {
@@ -10,7 +9,7 @@ function User(name, age) {
     console.log("Hello...");
   };
   return userObj;
-}
+};
 function Student(name, age, batchno) {
   let studentObj = User(name, age); // get properties and methods from User
   studentObj.batchno = batchno; // Add additional property batchno

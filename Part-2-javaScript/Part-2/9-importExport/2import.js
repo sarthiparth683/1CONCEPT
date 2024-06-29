@@ -1,7 +1,5 @@
-// Importing a Default Value (with .js extension):
-// In another file named main.js
-import add from "./1Export.js";
-
-const result = add(5, 6);
-console.log(result);
-  
+import { add, sub, mul, div } from "./1Export.js"
+console.log(add(3, 2));
+console.log(sub(5, 1));
+console.log(mul(3, 5));
+console.log(div(15, 3));

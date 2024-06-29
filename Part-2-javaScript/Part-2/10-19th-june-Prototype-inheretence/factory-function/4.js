@@ -6,7 +6,7 @@ function Person(firstName, lastName, age) {
   obj.lastName = lastName;
   obj.age = age;
   return obj;
-}
+};
 Person.prototype.increaseAge = function () {
   this.age = this.age + 1;
   console.log(this.age);
