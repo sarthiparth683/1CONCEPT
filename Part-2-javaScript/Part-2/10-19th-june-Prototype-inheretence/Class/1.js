@@ -1,66 +1,82 @@
 
 class Person {
-  constructor(name, age, gender) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-    this.fun = function () {
-      return `Testing Function:-`
-    }
-  };
-  increaseAge() {
-    this.age++;
-  };
-  sayName() {
-    return `my name is ${this.name} & age is ${this.age}`;
-  };
-  consol() {
-    return `Testing Console:-`;
-  };
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    };
+    canSleep() {
+        return `${this.name} is sleeping.`;
+    };
+    static greet() {
+        return "Hello there!";
+    };
 };
-// console.log(Person);  // console whole class-useless
-// let p1 = new Person("Achilies", 23);
+// let p1 = new Person("John", 12);
 // console.log(p1);
-// console.log(p1.name);
-// console.log(p1.fun());
-// console.log(p1.consol());
-// p1.consol(); // won't work
-// console.log(`===X===0===X===0===X===0===X===0`);
-//--------------------------------------
+// console.log(p1.canSleep()); 
+// console.log(Person.greet()); 
+//--------------------------------------------------------------
 class Employee extends Person {
-  constructor(name, age,gender, salary) {  // all-old+new-key-in-constructor
-    super(name, age,gender);// only-old-key-values-in-super
-    this.salary = salary;
-    
-  };
-  increaseSalary(amt1) {
-   return this.salary += amt1;
-  };
-  decreaseSalary(amt2) {
-    return this.salary -= amt2;
-  };
-  introduce() {
-    return `my name is ${this.name}, I am ${this.age} years old & my salary is ${this.salary}`;
-  };
+    #salary
+    constructor(name, age, salary = 0) {
+        super(name, age);
+        this.#salary = salary;
+    };
+    get salary() {
+        return this.#salary;
+    };
+    set salary(value) {
+        if (value > 0) {
+            this.#salary = value
+        } else {
+            console.log("Salary must be a positive number.")
+        }
+    };
+    working() {
+        return `${this.name} is working.`;
+    };
 };
-let e1 = new Employee("Achilies", 25,"female", 700); //???? dynamic is not working - console.log(e1.increaseSalary());?
-let e2 = new Employee("william", 42,"male", 750);
-console.log(e2);
-function increment(person){
-  //person is an object where expected keys are age, salary,if anyone not found, it throws NAN
-  let bonus = 0;
-  if(person.gender == "female"){
-     bonus = 300
-  }
-  let i = 0.1;
-  if(person.age>40){
-     i=0.2
-  }
- return Math.floor(person.salary+ person.salary*0.25+i*person.age)
-}
+// let e1 = new Employee("Achiles", 25, 300);
+// console.log(e1);
+// e1.salary = 44000;
+// console.log(e1.salary); 
+// console.log(e1.working());
+//--------------------------------------------------------------------
+class Manager extends Employee {
+    constructor(name, age, salary) {
+        super(name, age, salary);
+    };
+    managing() {
+        return ` ${this.name}  is managing`;
+    };
+    static getRole() {
+        return "Manager";
+    };
 
-console.log(e1.increaseSalary(increment(e1))); 
-console.log(e2.increaseSalary(increment(e2))); 
-console.log(e1.decreaseSalary());
-console.log(e1.introduce());
-// console.log(`===X===0===X===0===X===0===X===0`);
+};
+// let m1 = new Manager("Rocky", 24, 9878);
+// console.log(m1);
+// console.log(m1.managing()); // inside prototype
+// console.log(Manager.getRole()) // getRole is inside constructor 
+// console.log(m1.getRole());// throws error because static need Name Manager
+//---------------------------------------------------------------------------
+class Executive extends Manager {
+    #bonus
+    constructor(name, age, salary = 0, bonus = 0) {
+        super(name, age, salary);
+        this.#bonus = bonus;
+    };
+    get bonus() {
+        return this.#bonus;
+    };
+    set bonus(value) {
+        if (value > 0) {
+            return this.#bonus = value;
+        }
+    };
+};
+let e2 = new Executive("Aman", 24, 987111, 101);
+console.log(e2); // get and set is inside prototype
+console.log("initital value in get -", e2.bonus);//get
+e2.bonus = 5000; //set  update
+console.log("upsdated value in set -", e2.bonus); // conclusion get and set is used for updating value

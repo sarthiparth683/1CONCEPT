@@ -16,7 +16,8 @@ function Person(firstName, lastName, age) {
   Person.prototype.introduceSelf = function () {
     console.log(this.firstName, this.lastName, this.age);
   };
-  //-----------------
+  //-----------------------------------------------------------
+  
   function Employee(firstName, lastName, age, department, salary) {
     Person.call(this, firstName, lastName, age);
     this.department = department;

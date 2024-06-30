@@ -10,4 +10,4 @@ function printDetails(age, city) {
     this.name + " is " + age + " years old" + " and lives in " + city
   );
 };
-myName.apply(person1, [28, "bangalore"]); // takes in the value of this keyword as the first argument; rest of the arguments to the function can be sent a an array of values
+printDetails.apply(person1, [28, "bangalore"]); // takes in the value of this keyword as the first argument; rest of the arguments to the function can be sent a an array of values

@@ -5,7 +5,7 @@
 // Closures:
 // Answer: Closures are important in JavaScript because they allow functions to retain access to variables from their enclosing scope even after the parent function has finished executing. This is crucial in asynchronous programming because it enables functions to maintain references to variables that may be needed later, even if the surrounding context has changed.
 // Follow-up: An example scenario where closures are useful in asynchronous code is when dealing with callbacks or promises. For instance, consider an AJAX request where the response handler needs access to variables defined in the outer scope. Using closures, we can ensure that the response handler has access to those variables when the AJAX request completes, even if the surrounding function has already finished executing.
-//-----------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------
 // Debouncing:
 // Question: Discuss a real-world scenario where debouncing can enhance user experience in a web application. How would you implement debouncing in that scenario?
 // Follow-up: What factors would you consider when determining the optimal debounce delay for a specific event?

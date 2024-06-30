@@ -1,41 +1,24 @@
-// Task 2:    
-function Person(firstName, lastName, age) {
-  let obj = {};
-  Object.setPrototypeOf(obj, Person.prototype);
-  obj.firstName = firstName;
-  obj.lastName = lastName;
-  obj.age = age;
-  return obj;
-};
-Person.prototype.increaseAge = function () {
-  this.age = this.age + 1;
-  console.log(this.age);
-};
-Person.prototype.sleep = function () {
-  console.log(`${this.firstName} is sleeping.`);
-};
-Person.prototype.eat = function () {
-  console.log(`${this.firstName} is eating.`);
-};
-Person.prototype.introduceSelf = function () {
-  console.log(this.firstName, this.lastName, this.age);
-};
 
-function Employee(firstName, lastName, age, department, salary) {
-  let obj = Person(firstName, lastName, age);
-  Object.setPrototypeOf(obj, Employee.prototype);
-  obj.department = department;
-  obj.salary = salary;
+// Task 1
+function iPhoneGen1(ASIN, color, display, camera) {
+  let obj = {};
+  obj.ASIN = ASIN;
+  obj.color = color;
+  obj.display = display;
+  obj.camera = camera;
+  obj.dial = function () {
+    console.log("tring.. tring...");
+  };
+  obj.sendMessage = function () {
+    console.log("Sending message...");
+  };
+  obj.cameraClick = function () {
+    console.log("Camera clicked");
+  };
   return obj;
-}
-Object.setPrototypeOf(Employee.prototype, Person.prototype);
-Employee.prototype.work = function () {
-  console.log(`${this.firstName} is working.`);
 };
-Employee.prototype.getSalary = function () {
-  console.log(`${this.firstName} is getting Salary.`);
-};
-let e1 = Employee("John", "Doe", 25, "engineering", 200000);
-console.log(e1);
-e1.work();
-//-----------------------------------------------------------------
+let iphone1 = iPhoneGen1("B09X67JBQV", "Gray", "90mm", "2.0 MP");
+console.log(iphone1)
+iphone1.dial();
+iphone1.sendMessage();
+iphone1.cameraClick();
