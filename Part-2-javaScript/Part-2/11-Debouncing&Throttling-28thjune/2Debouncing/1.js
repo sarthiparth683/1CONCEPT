@@ -1,46 +1,71 @@
-let contanier = document.getElementById("contanier");
-let url = `https://www.omdbapi.com/?i=tt3896198&apikey=eaaac603&`;
 
-let inputTag = document.getElementById("search");
-inputTag.addEventListener("input", function () {
-  debounce(fetchData, 1000);
-});
-
-let time;
-function debounce(fun, dely) {
-  if (time) {
-    clearTimeout(time);
-  }
-  time = setTimeout(function () {
-    fun();
-  }, dely);
-}
-
-//fetchData();
-async function fetchData() {
-  try {
-    let res = await fetch(`${url}s=${inputTag.value}`);
-    let data = await res.json();
-    //console.log(data);
-    disPlayData(data.Search);
-  } catch (error) {
-    //console.log(error);
-  }
-}
-
-function disPlayData(product) {
-  contanier.innerHTML = "";
-  product.forEach((ele) => {
-    let div = document.createElement("div");
-    let Poster = document.createElement("img");
-    Poster.src = ele.Poster;
-    let Title = document.createElement("h5");
-    Title.textContent = `Title:${ele.Title}`;
-    let Type = document.createElement("h5");
-    Type.textContent = `Type:${ele.Type}`;
-    let Year = document.createElement("p");
-    Year.textContent = `Year:${ele.Year}`;
-    div.append(Poster, Title, Type, Year);
-    contanier.append(div);
+let container = document.getElementById("container");
+function appendCard(data) {
+  container.innerHTML = "";
+  data.forEach((item) => {
+    let card = createCard(item);
+    container.append(card);
   });
-}
+};
+
+function createCard(item) {
+  let card = document.createElement("div");
+  let img = document.createElement("img");
+  let p = document.createElement("p");
+  let h3 = document.createElement("h3");
+  img.src = item.Poster;
+  h3.innerText = item.Title;
+  p.innerText = item.Type;
+  card.append(h3, p, img);
+  return card;
+};
+let input = document.getElementById("input");
+input.addEventListener("input", () => {
+  // deBounce(fetchData,1500);
+  let value1 = input.value
+  fetchData(value1)
+});
+async function fetchData(order) {
+  try {
+    let res = await fetch(`https://www.omdbapi.com/?apikey=a4ed1e08&s=${order}`);
+    let data = await res.json();
+    console.log(data);
+    appendCard(data.Search);
+  } catch (err) {
+    console.log(err);
+  };
+};
+
+let timer;
+function deBounce(fun, delay) {
+  if (timer) {
+    clearTimeout(timer);
+  }
+  timer = setTimeout(function () {
+    fun();
+  }, delay);
+};
+//--------------------------------------------
+//refactor debouncing
+// function deBounce(fun, delay) {
+//   let timer;
+//   return function () {
+//     if (timer) {
+//       clearTimeout(timer);
+//     }
+//     timer = setTimeout(function () {
+//       fetchData()
+//       fun();
+//     }, delay);
+//   };
+// }
+// let deBounce1 = deBounce(fetchData, 1000);
+//-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
