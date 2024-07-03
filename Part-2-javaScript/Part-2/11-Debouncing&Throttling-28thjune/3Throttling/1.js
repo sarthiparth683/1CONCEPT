@@ -15,8 +15,8 @@
 // Debouncing vs Throttling - Visualized:- https://redd.one/blog/debounce-vs-throttle
 // Conclusion:-
 // In conclusion, throttling is a valuable optimization technique in web development, particularly for scenarios involving frequent user-triggered actions. It ensures controlled execution rates, optimizing responsiveness and delivering a smoother user experience.
-//-----------------------------------------------------------------------------------------------------
-//-----------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------
 let input = document.getElementById("inputtag");
 let container = document.getElementById('container');
 
@@ -65,59 +65,10 @@ function throttling(fun, delay) {
     fun()
     flag = true;//timer is starting
     setTimeout(function () {
-        flag = false; 
+        flag = false;
         //timer is end
     }, delay)
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -142,52 +93,3 @@ function throttling(fun, delay) {
 //     };
 // };
 // let throttling1 = throttling(fetchData, 1000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

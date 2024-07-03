@@ -7,6 +7,6 @@ function calculateAverageGrades(students) {
       grades.length > 0 ? grades.reduce((a, b) => a + b) / grades.length : 0;
     return { name: student.name, averageGrade };
   });
-}
+};
 
 // Explanation: The function takes an array of students objects and uses optional chaining to safely access the grades property of each student. If the grades property is missing, an empty array is used. The function then calculates the average grade for each student, considering a default value of 0 if they have no grades.
