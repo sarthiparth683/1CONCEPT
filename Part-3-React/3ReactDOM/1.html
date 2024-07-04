@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS and DOM Vs React and ReactDOM (Let's Talk Syntax)</title>
+</head>
+<body>
+    <h1>JS and DOM Vs React and ReactDOM (Let's Talk Syntax)</h1>
+    <p>Introduction
+        Understanding the difference between manipulating the DOM with vanilla JavaScript and using React with ReactDOM is pivotal for modern web development. This lesson delves into the syntax and conceptual differences between these approaches, providing clarity on why React has become a go-to solution for building dynamic user interfaces.
+        
+        Detailed Explanation
+        JS and DOM
+        When working directly with the Document Object Model (DOM), developers rely on the document API, a standard browser interface that allows for the dynamic manipulation of web pages. This approach involves creating, modifying, and interacting with HTML elements through JavaScript.</p>
+</body>
+<script>
+//     Creating Elements with React
+
+// expand_less
+// React elements are the smallest building blocks of React apps. An element describes what you want to see on the screen. React elements are immutable.
+
+// Example
+
+const element = React.createElement(
+  'h1',
+  {className: 'greeting'},
+  'Hello, world!'
+);
+
+// Rendering Elements with ReactDOM
+
+// expand_less
+// Elements are React’s smallest building blocks but to get them on the screen, you need to render them using ReactDOM. It updates the DOM to match the React elements.
+
+// Example
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(element);
+</script>
+</html>
