@@ -3,11 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Create UI with React API</title>
   </head>
   <body>
-    <div id="container"></div>
-    <p id="name">My name is Masai</p>
+    <div id="root">
+      <div id="container">
+        <p >Hello i am learning react(not showing on window)</p>
+      </div>
+    </div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script>
+      const element = React.createElement(
+        "p",
+        { className: "quote" },
+        "My Name is Masai"
+      );
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(element);
+    </script>
   </body>
-  <script src="1.js"></script>
 </html>
