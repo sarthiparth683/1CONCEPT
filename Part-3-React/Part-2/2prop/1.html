@@ -1,0 +1,50 @@
+<!-- Props
+Props are how components receive data from their parent, enabling them to be dynamic and reusable. They are passed to components in a manner similar to function arguments and can include various data types, such as strings, numbers, arrays, objects, and functions. Notably, props are read-only, ensuring a unidirectional data flow that enhances predictability and debugging ease.
+
+Passing Data: Demonstrated by passing different greetings and names to a Greet component.
+Read-Only Nature: Props cannot be modified by the component that receives them.
+One-Way Data Flow: Props allow data to flow from parent to child components, simplifying data management and component hierarchy. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create UI with React API</title>
+  </head>
+  <body>
+    <h1>Props</h1>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function Greet({ text, name }) {
+        return (
+          <p>
+            {text}, {name}
+          </p>
+        );
+      }
+
+      const element = (
+        <div className="container">
+          <h3>
+            Consider a simple Greet component that displays a greeting message
+            based on props:
+          </h3>
+          <Greet text="Happy Birthday" name="Bruce" />
+          <Greet text="Good Morning" name="Rachel" />
+          <Greet text="Testing" name="Name-1" />
+          <Greet
+            text="Conclusion
+          React's component-based architecture, coupled with the props mechanism, offers a powerful paradigm for building dynamic and reusable UI elements. Components encapsulate UI logic and presentation, while props facilitate the passing of data and functions between components, enabling complex applications to be built from simple, maintainable, and reusable pieces."
+          />
+        </div>
+      );
+
+      // Rendering the element in a React application
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(element);
+    </script>
+  </body>
+</html>
