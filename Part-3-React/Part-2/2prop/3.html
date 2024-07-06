@@ -6,7 +6,7 @@
     <title>Create UI with React API</title>
   </head>
   <body>
-    <h1>Children Props in React Component</h1>
+    <h1>Children Props in React Component-3</h1>
     <div id="root"></div>
     <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
@@ -15,22 +15,25 @@
       function Gallery({ children }) {
         return <div className="gallery-grid">{children}</div>;
       }
-
-      const element = (
-        <div className="container">
-          <Gallery>
-            <Image src="image1.jpg" />
-            <Image src="image2.jpg" />
-          </Gallery>
-        </div>
-      );
+      function App() {
+        return (
+          <>
+          <Gallery children="Children" />
+          </>
+        );
+       
+      }
+      // const element = (
+      //     <Gallery>
+      //       <Image src="image1.jpg" />
+      //       <Image src="image2.jpg" />
+      //     </Gallery>
+      // );
       const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
-      reactRoot.render(element);
+      reactRoot.render(<App/>);
     </script>
   </body>
 </html>
-
-
 
 <!-- Conclusion
 The children prop is a cornerstone in React, facilitating a compositional approach to building UIs. By enabling components to accept and render arbitrary children, React developers can create highly reusable and flexible UI components that adhere to DRY principles and promote a modular architecture. -->

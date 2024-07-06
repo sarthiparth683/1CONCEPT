@@ -26,24 +26,24 @@ The following code snippets demonstrate the implementation of the digital clock 
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clock with JS / DOM</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="root"></div>
     <script>
-        let rootElement = document.getElementById("root")
-        function tick() {
-            const time = new Date().toLocaleTimeString()
-            rootElement.innerHTML = `
+      let rootElement = document.getElementById("root");
+      function tick() {
+        const time = new Date().toLocaleTimeString();
+        rootElement.innerHTML = `
                 <h1>Digital Clock With vanilla javascript</h1>
                 <input type="text" value="focus on this input" />
                 <h2>${time}</h2>
-            `
-        }
-        setInterval(tick, 1000)
+            `;
+      }
+      setInterval(tick, 1000);
     </script>
-</body>
+  </body>
 </html>

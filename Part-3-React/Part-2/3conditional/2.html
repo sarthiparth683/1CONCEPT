@@ -1,68 +1,57 @@
+<!-- <b>Problem: Displaying Superhero Details with Conditional Rendering and
+      Styling Create a SuperheroDetails component that uses conditional
+      rendering to display hobbies only if they exist and applies conditional
+      styling to indicate whether the superhero has superpowers. Solution:-</b
+    > -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conditional Rendering and Conditional Styling in React</title>
+    <title>SuperHero</title>
   </head>
   <body>
-    <b
-      >Problem: Displaying Superhero Details with Conditional Rendering and
-      Styling Create a SuperheroDetails component that uses conditional
-      rendering to display hobbies only if they exist and applies conditional
-      styling to indicate whether the superhero has superpowers. Solution:-</b
-    >
+    <h1>Conditional Rendering and Conditional Styling in React</h1>
     <div id="root"></div>
     <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-      const SuperheroDetails = ({
-        name,
-        hobbies,
-        hasSuperPowers,
-        address,
-        age,
-      }) => {
+
+      // function SuperheroDetails( name,
+      //   hobbies,
+      //   hasSuperPowers,
+      //   address,
+      //   age) {
+      //     return (
+      //     <div className="card">
+      //       <p>Name: {name}</p>
+      //       {hobbies.length > 0 ? (
+      //         <p>Hobbies: {hobbies.join(", ")}</p>
+      //       ) : (
+      //         <p>No hobbies</p>
+      //       )}
+      //       <p>
+      //         Has Super Powers:
+      //         <span style={{ color: hasSuperPowers ? "green" : "red" }}>
+      //           {hasSuperPowers ? "Yes" : "No"}
+      //         </span>
+      //       </p>
+      //     </div>
+      //   );
+      // }
+      
+      function App() {
         return (
-          <div className="card">
-            <p>Name: {name}</p>
-            {hobbies.length > 0 ? (
-              <p>Hobbies: {hobbies.join(", ")}</p>
-            ) : (
-              <p>No hobbies</p>
-            )}
-            <p>
-              Has Super Powers:
-              <span style={{ color: hasSuperPowers ? "green" : "red" }}>
-                {hasSuperPowers ? "Yes" : "No"}
-              </span>
-            </p>
-          </div>
+          <>
+         <p>klklkk</p>
+          </>
         );
-      };
-      const element = (
-        <div className="container">
-          <SuperheroDetails  name="hulk" 
-        hobbies = "fight"
-        hasSuperPowers = "yes"
-        address = "zx"
-        age="47" />
-        </div>
-      );
+      }
       const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
-      reactRoot.render(element);
+      reactRoot.render(<App />);
     </script>
   </body>
 </html>
-
 <!-- Conclusion
 Conditional Rendering and Conditional Styling in React are essential for creating dynamic and responsive user interfaces. They allow developers to control not only what is rendered but also how it's styled based on the application's state or user interactions, making the UI more interactive and engaging. -->
-
-
-
-
-
-
-
-
