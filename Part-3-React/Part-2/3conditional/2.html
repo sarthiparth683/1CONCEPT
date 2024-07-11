@@ -1,8 +1,3 @@
-<!-- <b>Problem: Displaying Superhero Details with Conditional Rendering and
-      Styling Create a SuperheroDetails component that uses conditional
-      rendering to display hobbies only if they exist and applies conditional
-      styling to indicate whether the superhero has superpowers. Solution:-</b
-    > -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,34 +12,33 @@
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
+      function SuperheroDetails({name, hobbies, hasSuperPowers, address, age}) {
+        return (
+          <>
+            <h1>Test</h1>
+             {name}
+             {hobbies, name}
+          </>
+        );
+      }
 
-      // function SuperheroDetails( name,
-      //   hobbies,
-      //   hasSuperPowers,
-      //   address,
-      //   age) {
-      //     return (
-      //     <div className="card">
-      //       <p>Name: {name}</p>
-      //       {hobbies.length > 0 ? (
-      //         <p>Hobbies: {hobbies.join(", ")}</p>
-      //       ) : (
-      //         <p>No hobbies</p>
-      //       )}
-      //       <p>
-      //         Has Super Powers:
-      //         <span style={{ color: hasSuperPowers ? "green" : "red" }}>
-      //           {hasSuperPowers ? "Yes" : "No"}
-      //         </span>
-      //       </p>
-      //     </div>
-      //   );
-      // }
-      
       function App() {
         return (
           <>
-         <p>klklkk</p>
+            <b>
+              Problem: Displaying Superhero Details with Conditional Rendering
+              and Styling Create a SuperheroDetails component that uses
+              conditional rendering to display hobbies only if they exist and
+              applies conditional styling to indicate whether the superhero has
+              superpowers. Solution:-
+            </b>
+            <SuperheroDetails
+              name="Hulk"
+              hobbies="Fight"
+              hasSuperPowers="Yes"
+              address="Newyork"
+              age="25"
+            />
           </>
         );
       }

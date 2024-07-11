@@ -1,0 +1,59 @@
+<!-- State Management :
+Introduction :
+State: In React, state refers to data or properties that need to be tracked across re-renders. It is an value that represents the current state of the component.
+
+Detailed Explanation
+To understand why we need to understand state management, let's consider the following scenario:
+
+The Challenge
+Consider a counter application where clicking a button increments a count displayed on the UI. We are trying to maintain a variable called count which will be displayed onto UI. Clicking on the button should increase the value of count and this updated value should be reflected onto DOM
+
+Code Implementation | Examples
+Approach 1 and the problem with this :
+
+When the App component first renders, count is set to 0. The UI shows "You clicked 0 times".
+When you click the button, handleClick is called. It increments count and logs the new value. However, the UI still shows "You clicked 0 times".
+Expectation vs. Reality :
+As a developer, you might expect that changing count would update the UI. However, these changes are not being reflected.
+
+Why Doesn't the UI Update ?
+
+A simple answer - REACT doesn’t know. React has no way of knowing that count has changed and that it needs to update the UI. -->
+<!--  -->
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>State Management :</title>
+  </head>
+  <body>
+    <h1>State Management :</h1>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function App() {
+        let count = 0;
+
+        function handleClick() {
+          count += 1;
+          console.log(`Clicked ${count} times`);
+        }
+
+        return (
+          <div>
+            <p>You clicked {count} times</p>
+            <button onClick={handleClick}>Click me</button>
+          </div>
+        );
+      }
+
+      // Render the App component into the root div
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(<App />);
+    </script>
+  </body>
+</html>

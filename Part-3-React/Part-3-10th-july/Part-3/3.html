@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="root">
+      <p>
+        Handling events with React elements is very similar to handling events
+        on DOM elements. However, there are some syntax differences. React
+        events are named using camelCase, rather than lowercase. With JSX you
+        pass a function as the event handler, rather than a string.
+      </p>
+    </div>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="main.js">
+      function handleClick() {
+  console.log('The link was clicked.');
+}
+
+function Link() {
+  return (
+    <a href="#" onClick={handleClick}>
+      Click me
+    </a>
+  );
+}
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+              root.render(<App />);
+    </script>
+  </body>
+</html>
