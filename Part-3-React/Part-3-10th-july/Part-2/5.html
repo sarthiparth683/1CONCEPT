@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React Developer Tools</title>
+    <title>5-React Developer Tools</title>
   </head>
   <body>
     <h1>React Developer Tools</h1>
@@ -12,46 +12,94 @@
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-<div>React Developer Tools
-Introduction
-React Developer Tools is a browser extension available for Chrome and Firefox that serves as a powerful ally for developers working with React applications. It provides a deep insight into the component trees, allowing developers to navigate through their hierarchy with ease. This tool is instrumental in debugging and optimizing React components by offering a real-time view into the props, state, and hooks used within the application. Its relevance and importance in the development workflow cannot be overstated, as it significantly enhances productivity and efficiency.
-
-Detailed Explanation
-What is React Developer Tools?
-React Developer Tools is an extension for web browsers that allows developers to inspect the React component hierarchies in their applications. It adds an additional tab to the browser's developer tools, where the React component tree is displayed, and developers can interact with it.
-
-Principles and Use-Cases
-Inspecting Components: Developers can select any component in the rendered page and inspect its current props, state, and hooks.
-Debugging: It simplifies the debugging process by providing a clear view of the components' data and their updates in real-time.
-Performance Optimization: React Developer Tools includes a profiler that helps identify performance bottlenecks by recording and reviewing how components render and re-render.
-Code Maintenance: It facilitates understanding and maintaining the codebase by allowing developers to see the component hierarchies and data flow.
-Benefits
-Enhanced Debugging: Immediate access to component props and state speeds up the debugging process.
-Performance Insights: The profiling tool provides insights into component performance, helping developers optimize their applications.
-Improved Productivity: It streamlines the development process by making information readily available, thus reducing the time spent on troubleshooting and debugging.
-Real-World Examples
-Imagine working on a complex React application with numerous components. You notice that some components are rendering slowly or updating unexpectedly. With React Developer Tools, you can:
-
-Navigate to the problematic component.
-Inspect its props and state to understand why it's behaving a certain way.
-Use the profiler to measure its performance and identify bottlenecks.
-Code Implementation | Examples
-Installing React Developer Tools
-For Chrome, visit Chrome Web Store and add the extension.
-For Firefox, add the extension from the Firefox Add-ons store.
-Using React Developer Tools
-Open Developer Tools in your browser.
-Navigate to the React tab. You'll see the component tree of your application.
-Select a component. Inspect its props, state, and hooks in the right-hand panel.
-Profile Component Performance: Switch to the Profiler tab and start recording. Perform the actions in your app that you wish to analyze, then stop recording to view performance metrics.
-Student Activities
-Explore an Existing React Application: Use React Developer Tools to inspect the component structure of a React application. Identify a component and list its props and state.
-Debugging Practice: Find a component that updates frequently and investigate why it's re-rendering. Is it receiving new props? Is its state changing unnecessarily?
-Performance Analysis: Use the profiler to record an application session. Identify any components that take a long time to render and think about potential optimizations.
-Conclusion
-React Developer Tools is an indispensable tool for anyone working with React applications. It not only simplifies debugging and performance analysis but also enhances the overall development workflow. By providing deep insights into component structures, states, and behaviors, it empowers developers to build efficient and optimized applications.</div>
-const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
-reactRoot.render(<App />);
+      function App() {
+        return (
+          <div>
+            <ul>
+              <li>React Developer Tools</li>
+              <li>
+                Introduction React Developer Tools is a browser extension
+                available for Chrome and Firefox that serves as a powerful ally
+                for developers working with React applications. It provides a
+                deep insight into the component trees, allowing developers to
+                navigate through their hierarchy with ease. This tool is
+                instrumental in debugging and optimizing React components by
+                offering a real-time view into the props, state, and hooks used
+                within the application. Its relevance and importance in the
+                development workflow cannot be overstated, as it significantly
+                enhances productivity and efficiency.
+              </li>
+              <li>
+                Detailed Explanation What is React Developer Tools? React
+                Developer Tools is an extension for web browsers that allows
+                developers to inspect the React component hierarchies in their
+                applications. It adds an additional tab to the browser's
+                developer tools, where the React component tree is displayed,
+                and developers can interact with it.
+              </li>
+              <li>
+                Principles and Use-Cases Inspecting Components: Developers can
+                select any component in the rendered page and inspect its
+                current props, state, and hooks. Debugging: It simplifies the
+                debugging process by providing a clear view of the components'
+                data and their updates in real-time. Performance Optimization:
+                React Developer Tools includes a profiler that helps identify
+                performance bottlenecks by recording and reviewing how
+                components render and re-render.
+              </li>
+              <li>
+                Code Maintenance: It facilitates understanding and maintaining
+                the codebase by allowing developers to see the component
+                hierarchies and data flow. Benefits Enhanced Debugging:
+                Immediate access to component props and state speeds up the
+                debugging process. Performance Insights: The profiling tool
+                provides insights into component performance, helping developers
+                optimize their applications. Improved Productivity: It
+                streamlines the development process by making information
+                readily available, thus reducing the time spent on
+                troubleshooting and debugging.
+              </li>
+              <li>
+                Real-World Examples Imagine working on a complex React
+                application with numerous components. You notice that some
+                components are rendering slowly or updating unexpectedly. With
+                React Developer Tools, you can: Navigate to the problematic
+                component. Inspect its props and state to understand why it's
+                behaving a certain way. Use the profiler to measure its
+                performance and identify bottlenecks. Code Implementation |
+                Examples Installing React Developer Tools For Chrome, visit
+                Chrome Web Store and add the extension. For Firefox, add the
+                extension from the Firefox Add-ons store. Using React Developer
+                Tools Open Developer Tools in your browser. Navigate to the
+                React tab. You'll see the component tree of your application.
+                Select a component. Inspect its props, state, and hooks in the
+                right-hand panel. Profile Component Performance: Switch to the
+                Profiler tab and start recording. Perform the actions in your
+                app that you wish to analyze, then stop recording to view
+                performance metrics. Student Activities Explore an Existing
+                React Application: Use React Developer Tools to inspect the
+                component structure of a React application. Identify a component
+                and list its props and state. Debugging Practice: Find a
+                component that updates frequently and investigate why it's
+                re-rendering. Is it receiving new props? Is its state changing
+                unnecessarily? Performance Analysis: Use the profiler to record
+                an application session. Identify any components that take a long
+                time to render and think about potential optimizations.
+              </li>
+              <li>
+                Conclusion:- React Developer Tools is an indispensable tool for
+                anyone working with React applications. It not only simplifies
+                debugging and performance analysis but also enhances the overall
+                development workflow. By providing deep insights into component
+                structures, states, and behaviors, it empowers developers to
+                build efficient and optimized applications.
+              </li>
+            </ul>
+          </div>
+        );
+      }
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(<App />);
     </script>
   </body>
 </html>

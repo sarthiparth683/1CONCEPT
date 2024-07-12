@@ -1,35 +1,28 @@
 <!-- Data sharing between components - Broad Picture
 Introduction
 In React applications, efficient data sharing between components is essential for creating cohesive and interactive user interfaces. Whether passing data from parent to child components or sharing data between sibling components, establishing effective communication mechanisms is crucial. Through props, context, or state upliftment, React provides various methods for seamlessly sharing data across components. In this introduction, we'll explore these techniques and their respective advantages, enabling developers to implement robust data sharing strategies in their React applications.
-
 Detailed explanation
 Let us try and understand how data can be shared between components in React Application.
-
 Data / Info can be passed from
-
 Parent to Child
 Child to Parent
 Sibling to Sibling
 Code Implementation | Examples
 Parent to Child : Sending some information from parent to child
 03 (2)
-
 The Parent holds some information, like a number, in its personal box called 'state'. Whenever the Parent wants to share this information with the Child, it sends it over as a 'prop' (short for property). The Child can use this prop to display the information, but it can't change what's inside the prop. It's like receiving a letter that you can read but not edit.
-
 Imagine you have a "Parent" component and a "Child" component. The Parent is like a generous giver, and the Child is the receiver.
-
 Example :
-
 You have a Parent that keeps track of a number ( count ). The Parent saves this count and also passes it to the Child. The Child then displays this number.
-
 Here's a code example to visualize this: -->
-
+<!--  -->
+<!--  -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data sharing between components - Broad Picture</title>
+    <title>8-Data sharing between components - Broad Picture</title>
   </head>
   <body>
     <h1>Data sharing between components - Broad Picture</h1>
@@ -38,31 +31,21 @@ Here's a code example to visualize this: -->
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-// The Child component
-function Child(props) {
-  return <h1>{props.count}</h1>; // The Child reads the note
-}
-
-// The Parent component
-function Parent() {
-  const [count, setCount] = React.useState(0); // The Parent has a number
-
-  // This function changes the number when you click a button
-  const increment => setCount(count + 1);;
-
-  return (
-    <div>
-      <Child count={count} /> {/* The Parent passes the number to the Child */}
-      <button onClick={increment}>Click Me</button>
-    </div>
-  );
-}
-
-// Rendering the Parent component
-const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
-reactRoot.render(<Parent />);
-
-
+      function Child(props) {
+        return <h1>Count:-{props.count}</h1>;
+      }
+      function Parent() {
+        const [count, setCount] = React.useState(0);
+        const increment = setCount(count + 1);
+        return (
+          <div>
+            <Child count={count} />
+            <button onClick={increment}>Click Me</button>
+          </div>
+        );
+      }
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(<Parent />);
     </script>
   </body>
 </html>

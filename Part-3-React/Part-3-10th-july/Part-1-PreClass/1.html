@@ -1,11 +1,9 @@
 <!-- Event Handling in react
 Introduction
 This lesson covers one of the essential concepts in React development: event handling. Understanding these concepts is crucial for creating interactive and dynamic web applications with React.
-
 Detailed Explanation
 Event Handling in React
 Event handling in React allows components to respond to user inputs and actions, such as clicks, typing, or mouse movements. React abstracts the process of handling events to offer a seamless way to react to user interactions within the virtual DOM using JSX syntax.
-
 How It Works
 Events in React are named using camelCase rather than lowercase.
 Event handlers are passed as functions rather than strings.
@@ -18,7 +16,7 @@ Consider a simple application with a button and an input field. The button has a
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SuperHero</title>
+    <title>1-SuperHero</title>
   </head>
   <body>
     <h1>Event Handling in react</h1>
@@ -30,24 +28,21 @@ Consider a simple application with a button and an input field. The button has a
       function App() {
         function handleClick() {
           alert("Button clicked!");
-        }
-
+        };
         function handleInputChange(event) {
           console.log("Input value is being changed", event.target.value);
         }
-
         return (
           <>
             <button onClick={handleClick}>Click me</button>
             <input
               type="text"
-              placeholder="Type here"
+              placeholder="Type here "
               onChange={handleInputChange}
             />
           </>
         );
       }
-
       const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
       reactRoot.render(<App />);
     </script>

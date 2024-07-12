@@ -1,20 +1,16 @@
 <!-- Controlled and Uncontrolled Components in React
 Introduction
 In React, managing form input elements such as <input>, <textarea>, and <select> is crucial for handling user input. React offers two strategies for handling these form elements: controlled and uncontrolled components. Understanding the difference between these approaches is essential for effective state management and form handling in React applications.
-
 Detailed Explanation
 Controlled Components
 Controlled components are React components that control the values of input form elements. The form data is managed by the React component's state rather than the DOM. Any changes to the input value are handled by a function that updates the component's state, making the React state the "single source of truth."
-
 Benefits:
 Synchronization: The input value is always in sync with the component state.
 State Management: Easier to integrate with other UI elements or complex state logic.
 Validation: Can easily validate user input on-the-fly.
 Uncontrolled Components
 Uncontrolled components, on the other hand, maintain their own state in the DOM. React does not have direct control over them, and their values are retrieved through a ref directly from the DOM when needed.
-
 Side Note : We will talk about ref and useRef later in upcoming sessions. For now having knowledge of controlled component and understanding the difference between controlled and uncontrolled component should suffice.
-
 Benefits:
 Simplicity: Less code is required to set up, as React does not manage the input state.
 Integration: Easier to integrate with non-React code that relies on direct DOM manipulation.
@@ -22,14 +18,12 @@ Code Implementation | Examples
 Example of a Controlled Component -->
 <!--  -->
 <!--  -->
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Controlled and Uncontrolled Components in React</title>
+    <title>3-Controlled and Uncontrolled Components in React</title>
   </head>
   <body>
     <h1>Controlled and Uncontrolled Components in React</h1>
@@ -38,27 +32,22 @@ Example of a Controlled Component -->
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-        function App() {
-  const [message, setMessage] = React.useState(""); // State for input value
-
-  const handleChange = (event) => {
-    setMessage(event.target.value); // Update state based on input
-  };
-
-  return (
-    <div>
-      <input
-        value={message}
-        onChange={handleChange}
-        placeholder="Type a message"
-      />
-      <p>Your message: {message}</p>
-    </div>
-  );
-}
-
-const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
-reactRoot.render(<App />);
+      function App() {
+        const [message, setMessage] = React.useState("");
+        setMessage(event.target.value);
+        return (
+          <div>
+            <input
+              value={message}
+              onChange={handleChange}
+              placeholder="Type a message" 
+            />
+            <p>Your message: {message}</p>
+          </div>
+        );
+      }
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(<App />);
     </script>
   </body>
 </html>

@@ -1,13 +1,10 @@
 <!-- Code Implementation | Examples
 To achieve this, you "lift the state up" to a common parent component. Here's how you do it :
-
 Step 1 : Move the state to the parent component, App
-
 Step 2 : Modify the MyButton component to accept props
-
 Solution: -->
-
-
+<!--  -->
+<!--  -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,30 +19,22 @@ Solution: -->
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-
-function MyButton({ count, onClick }) {
-  return <button onClick={onClick}>Clicked {count} times</button>;
-}
-
-function App() {
-  const [count, setCount] = React.useState(0); // Shared state
-
-  function handleClick() {
-    setCount(count + 1); // Update shared state
-  }
-
-  // Pass state and handler to children
-  return (
-    <div>
-      <h1>Counters that update together</h1>
-      <MyButton count={count} onClick={handleClick} />
-      <MyButton count={count} onClick={handleClick} />
-    </div>
-  );
-}
-
-
-
+      function MyButton({ count, onClick }) {
+        return <button onClick={onClick}>Clicked {count} times</button>;
+      }
+      function App() {
+        const [count, setCount] = React.useState(0);
+        function handleClick() {
+          setCount(count + 1);
+        }
+        return (
+          <div>
+            <h1>Counters that update together</h1>
+            <MyButton count={count} onClick={handleClick} />
+            <MyButton count={count} onClick={handleClick} />
+          </div>
+        );
+      }
       const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
       reactRoot.render(<App />);
     </script>
