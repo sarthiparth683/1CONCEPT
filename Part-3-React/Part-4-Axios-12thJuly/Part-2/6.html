@@ -1,23 +1,17 @@
 <!-- Forms in React
 Introduction
 Forms in React are powerful tools for collecting user input and handling form submissions. React's approach to form management emphasizes the power of the state to control the input elements, making it easier to manage complex form data and validations. This lesson explores how to create and manage forms in React, using controlled components to handle form data.
-
 Detailed Explanation
 What are Forms in React?
 In React, forms are used to gather input from the user. A form can include text fields, checkboxes, radio buttons, and more. React handles form data through the component state, allowing for an interactive and controlled form experience.
-
 Controlled Components
 A controlled component in React is an input that gets its value from the component's state and updates the state on every change. This means React controls the form's data at any given time, enabling the form to react instantaneously to user input.
-
 Handling Form Submission
 Form submission in React is typically handled by a function that is triggered when the form is submitted. This function can prevent the default form submission behavior, process form data, and perform actions like sending the data to a server or updating the local state.
-
 Example Overview
 The provided example demonstrates a simple task management application where users can add new tasks, mark tasks as completed, and assign tasks to individuals. It showcases the use of controlled components for text inputs, checkboxes, and select elements, as well as handling form submissions to update the state.
-
 Code Implementation | Examples
 The following example illustrates the concepts discussed: -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -103,16 +97,12 @@ The following example illustrates the concepts discussed: -->
           </>
         );
       }
-
       ReactDOM.createRoot(document.getElementById("root")).render(<App />);
     </script>
   </body>
 </html>
 
-
-
 <!-- This example demonstrates:
-
 The use of useState to manage form and tasks state.
 Handling input changes through handleChange to update the state based on input name and value.
 Form submission with handleSubmit, adding a new task to the state and resetting the form fields.

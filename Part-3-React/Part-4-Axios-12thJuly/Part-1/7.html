@@ -1,9 +1,5 @@
 <!-- Introduction to React Forms
-
-expand_less
 React forms are a way to collect inputs from the user. Typically, forms in React are handled using state to keep track of input values and functions to manage form submissions. This concept is crucial for creating interactive and dynamic web applications. -->
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,29 +15,33 @@ React forms are a way to collect inputs from the user. Typically, forms in React
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
       class FormComponent extends React.Component {
-  state = { value: '' };
+        state = { value: "" };
 
-  handleChange = (event) => {
-    this.setState({value: event.target.value});
-  }
+        handleChange = (event) => {
+          this.setState({ value: event.target.value });
+        };
 
-  handleSubmit = (event) => {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
+        handleSubmit = (event) => {
+          alert("A name was submitted: " + this.state.value);
+          event.preventDefault();
+        };
 
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-    );
-  }
-}
+        render() {
+          return (
+            <form onSubmit={this.handleSubmit}>
+              <label>
+                Name:
+                <input
+                  type="text"
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                />
+              </label>
+              <input type="submit" value="Submit" />
+            </form>
+          );
+        }
+      }
 
       const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
       reactRoot.render(<Parent />);

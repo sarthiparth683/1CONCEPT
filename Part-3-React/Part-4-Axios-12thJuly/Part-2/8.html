@@ -3,21 +3,16 @@ Fetch Tasks on Button click: Add a button called Get Tasks. Modify the applicati
 Update and Delete Tasks: Implement functionality to update the completion status and delete tasks using PUT and DELETE requests.
 Error Handling: Improve error handling in network requests to provide feedback to the user in case of failures.
 Fetching Tasks: The "Get Tasks" button triggers the fetchTasks function, fetching the latest tasks list from the server. This allows users to manually refresh the tasks list.
-
 Update and Delete Operations: For each task, a checkbox allows toggling the completion status, calling updateTask with the new status. A "Delete" button for each task calls deleteTask, removing the task from the server.
-
 Error Handling: Network request error handling is improved by setting an error state with a descriptive message upon failures. This message is displayed to the user, providing immediate feedback on operation failures.
-
 Loading State: A loading state is used to provide feedback during asynchronous operations, disabling form controls and showing a loading message as appropriate.
-
  -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forms in React with Server Interaction</title>
+    <title>Fetch Tasks on Button click:</title>
   </head>
   <body>
     <div id="root"></div>
@@ -35,7 +30,6 @@ Loading State: A loading state is used to provide feedback during asynchronous o
         });
         const [loading, setLoading] = React.useState(false);
         const [error, setError] = React.useState(false);
-
         function handleChange(event) {
           const value =
             event.target.type === "checkbox"
@@ -186,7 +180,6 @@ Loading State: A loading state is used to provide feedback during asynchronous o
           </>
         );
       }
-
       ReactDOM.createRoot(document.getElementById("root")).render(<App />);
     </script>
   </body>

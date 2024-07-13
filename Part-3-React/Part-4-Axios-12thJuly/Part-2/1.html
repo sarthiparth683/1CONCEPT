@@ -13,37 +13,42 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
       function App() {
-  let [count, setCount] = useState(0);
+        let [count, setCount] = useState(0);
+        let handleIncrement = () => {
+          setCount(count + 1);
+          setCount(count + 1);
+          setCount(count + 1);
+          setCount(count + 1);
+          console.log(count);
+        };
 
-  let handleIncrement = () => {
-    setCount(count + 1);
-    setCount(count + 1);
-    setCount(count + 1);
-    setCount(count + 1);
-    console.log(count);
-  };
-
-  return (
-    <div>
-      <h2>{count}</h2>
-      <button onClick={handleIncrement}>+</button>
-      <p>
-        Batch Updates in React
-Introduction
-React enhances application performance by batching state updates. This means that when you invoke a state setter function, such as setCount, React doesn't immediately cause the component to re-render. Instead, it schedules the update and later performs all the state updates together in a single batch. This behavior is particularly observable in event handlers or lifecycle methods, contributing significantly to efficiency and performance optimization.
-
-Detailed Explanation
-React's batching of state updates is a mechanism designed to aggregate multiple state changes into a single update cycle. This process allows React to minimize the number of re-renders required, thereby optimizing the performance of React applications. When multiple state setter functions are called, instead of updating the state and re-rendering the component after each call, React waits and updates the component once with all the changes. This approach is not only efficient but also ensures consistency across state updates.
-        </p>
-    </div>
-  );
-}
-
-const root = createRoot(document.getElementById("root"));
-root.render(<App />);
-
+        return (
+          <div>
+            <h2>{count}</h2>
+            <button onClick={handleIncrement}>+</button>
+          </div>
+        );
+      }
       const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
       reactRoot.render(<App />);
     </script>
   </body>
 </html>
+<!-- 
+Batch Updates in React Introduction React enhances application
+performance by batching state updates. This means that when you
+invoke a state setter function, such as setCount, React doesn't
+immediately cause the component to re-render. Instead, it
+schedules the update and later performs all the state updates
+together in a single batch. This behavior is particularly
+observable in event handlers or lifecycle methods, contributing
+significantly to efficiency and performance optimization. Detailed
+Explanation React's batching of state updates is a mechanism
+designed to aggregate multiple state changes into a single update
+cycle. This process allows React to minimize the number of
+re-renders required, thereby optimizing the performance of React
+applications. When multiple state setter functions are called,
+instead of updating the state and re-rendering the component after
+each call, React waits and updates the component once with all the
+changes. This approach is not only efficient but also ensures
+consistency across state updates. -->
