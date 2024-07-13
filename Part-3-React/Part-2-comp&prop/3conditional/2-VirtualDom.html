@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual DOM</title>
+  </head>
+  <body>
+    <h1>Virtual DOM</h1>
+    <div id="root"></div>
+    <script>
+      let rootElement = document.getElementById("root");
+      function tick() {
+        const time1 = new Date().toLocaleTimeString();
+        const time2 = new Date().toLocaleTimeString();
+        const time3 = new Date().toLocaleTimeString();
+        rootElement.innerHTML = `
+                <h1>Digital Clock With vanilla javascript</h1>
+                <input type="text" value="focus on this input" />
+                <h2>${time1}</h2><h2>${time2}</h2><h2>${time3}</h2>
+            `;
+      }
+      setInterval(tick, 1000);
+    </script>
+  </body>
+</html>

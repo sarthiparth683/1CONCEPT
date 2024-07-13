@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>State Management in React: Understanding the useState Hook</title>
+  </head>
+  <body>
+    <h1>State Management in React: Understanding the useState Hook</h1>
+    <p>
+      What is the useState Hook? useState is a built-in hook in React that
+      allows function components to have their own state. It enables the
+      initialization of a state variable and provides a function to update this
+      state. When the state changes, React automatically re-renders the
+      component to reflect the update. This mechanism is fundamental for
+      creating dynamic and interactive applications.
+    </p>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function App() {
+        const [count, setCount] = React.useState(2);
+        const handleClick = () => {
+          setCount(count + 2);
+        };
+        return (
+          <div>
+            <p>Button is clicked = {count} times</p>
+            <button onClick={handleClick}>Click Me</button>
+            <p>
+              You have to use a function like handleClick and then call setCount
+              function inside it otherwise it won't work.
+            </p>
+          </div>
+        );
+      }
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(<App />);
+    </script>
+  </body>
+</html>

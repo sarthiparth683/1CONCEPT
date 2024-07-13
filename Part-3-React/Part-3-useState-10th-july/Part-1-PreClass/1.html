@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event handling in React</title>
+  </head>
+  <body>
+    <h1>
+      Event handling in React allows components to respond to user inputs and
+      actions, such as clicks, typing, or mouse movements.
+    </h1>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function App() {
+        function handleClick() {
+          alert("Button clicked!");
+        }
+        return (
+          <>
+            <button onClick={handleClick}>Click me</button>
+          </>
+        );
+      }
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(<App />);
+    </script>
+  </body>
+</html>

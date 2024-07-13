@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Component Architecture</title>
+  </head>
+  <body>
+    <h1>React Component Architecture</h1>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function Navbar() {
+        return <div>NAVBAR</div>;
+      }
+      function Sidebar() {
+        return <div>SIDEBAR</div>;
+      }
+      function Main() {
+        return (
+          <div>
+            Main:- Component Reusability and Isolation: React components are
+            designed to be reusable across different parts of an application.
+          </div>
+        );
+      }
+      function Footer() {
+        return (
+          <div>
+            Footer:- Understanding and mastering component composition and
+            hierarchy are fundamental to effective React development.
+          </div>
+        );
+      }
+      function App() {
+        return (
+          <>
+            <Navbar />
+            <Sidebar />
+            <Main />
+            <Footer />
+          </>
+        );
+      }
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(<App />);
+    </script>
+  </body>
+</html>

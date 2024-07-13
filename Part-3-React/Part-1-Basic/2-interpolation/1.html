@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interpolation</title>
+  </head>
+  <body>
+    <h1>Interpolation</h1>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function App() {
+        const myText = "interpolation text";
+        const alertFunc = () => {
+          alert("Button Clicked!");
+        };
+        return (
+          <div>
+            <button onClick={alertFunc}>Click Me {myText}</button>
+            How Interpolation Works React uses template literals (introduced in
+            ES6) for interpolation. These are string literals enclosed in
+            backticks () instead of single or double quotes. Within a template
+            literal, you can embed expressions using curly braces{}preceded by a
+            dollar sign$.
+          </div>
+        );
+      }
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(<App />);
+    </script>
+  </body>
+</html>

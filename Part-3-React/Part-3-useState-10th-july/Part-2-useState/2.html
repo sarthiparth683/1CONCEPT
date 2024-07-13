@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2-Handling Multiple States in a Component</title>
+  </head>
+  <body>
+    <h1>Handling Multiple States in a Component</h1>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function App() {
+        const [count1, setCount1] = React.useState(2);
+        const [count2, setCount2] = React.useState(2);
+        const incrementCount1 = () => setCount1(count1 + 1);
+        const incrementCount2 = () => setCount2(count2 + 2);
+        return (
+          <div>
+            <p>Button 1 is clicked {count1} times</p>
+            <button onClick={incrementCount1}>Button 1</button>
+            <p>Button 2 is clicked {count2} times</p>
+            <button onClick={incrementCount2}>Button 2</button>
+            <p>
+              Conclusion:- setCount function need external Parent function to
+              render it's count.
+            </p>
+          </div>
+        );
+      }
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(<App />);
+    </script>
+  </body>
+</html>
