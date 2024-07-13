@@ -20,12 +20,14 @@
     <script type="text/babel">
       function handleClick() {
         console.log("The link was clicked.");
+        return ( <div> <h3>link clicked</h3> </div> )
       }
       function Link() {
-        return (
+        return (  
           <a href="#" onClick={handleClick}>
             Click me
           </a>
+          <button >Button</button>
         );
       };
       const root = ReactDOM.createRoot(document.getElementById("root"));

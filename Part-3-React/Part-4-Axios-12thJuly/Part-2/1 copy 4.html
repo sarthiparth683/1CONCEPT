@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sibling Data transfer</title>
+  </head>
+  <body>
+    <h1>React State Management</h1>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function ToDoList() {
+  const [toDoList, setToDoList] = React.useState([
+    { id: 1, description: "Item 1" },
+    { id: 2, description: "Item 2" },
+    { id: 3, description: "Item 3" },
+    { id: 4, description: "Item 4" },
+  ]);
+
+  return (
+    <div>
+      <ul>
+        {toDoList.map((item) => {
+          return <li key={item.id}>{item.description}</li>;
+        })}
+      </ul>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div className="App">
+      <ToDoList />
+    </div>
+  );
+}
+
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
+
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(<App />);
+    </script>
+  </body>
+</html>

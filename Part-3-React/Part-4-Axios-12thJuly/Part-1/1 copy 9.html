@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sibling Data transfer</title>
+  </head>
+  <body>
+    <h1>Temp</h1>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function name(params) {
+        axios.get('https://api.example.com/data')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  });
+
+        return ( <div>
+          Axios Library for Making HTTP Requests
+
+expand_less
+Axios is a popular JavaScript library used for making HTTP requests. It can be used in the browser and with Node.js. Axios provides a simple to use API for making requests like GET, POST, and others. It also supports Promises, making it easier to handle asynchronous data.
+          </div> )
+      }
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(<Parent />);
+    </script>
+  </body>
+</html>

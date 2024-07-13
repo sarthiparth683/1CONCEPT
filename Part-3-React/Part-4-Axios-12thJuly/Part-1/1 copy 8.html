@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sibling Data transfer</title>
+  </head>
+  <body>
+    <h1>Temp</h1>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const numbers = [1, 2, 3, 4, 5];
+      const listItems = numbers.map((number) => (
+        <li key={number.toString()}>{number}</li>
+      ));
+
+      function NumberList() {
+        return (
+          <div>
+            Using Lists and Keys in React expand_less In React, you can render
+            lists of elements by mapping over an array. Keys are important in
+            lists as they help React identify which items have changed, are
+            added, or are removed. This concept enhances performance and leads
+            to more efficient updates.
+            <ul>{listItems}</ul>;
+          </div>
+        );
+      }
+
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(<Parent />);
+    </script>
+  </body>
+</html>

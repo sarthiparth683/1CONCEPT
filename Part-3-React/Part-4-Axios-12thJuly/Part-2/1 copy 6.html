@@ -1,0 +1,124 @@
+<!-- Forms in React
+Introduction
+Forms in React are powerful tools for collecting user input and handling form submissions. React's approach to form management emphasizes the power of the state to control the input elements, making it easier to manage complex form data and validations. This lesson explores how to create and manage forms in React, using controlled components to handle form data.
+
+Detailed Explanation
+What are Forms in React?
+In React, forms are used to gather input from the user. A form can include text fields, checkboxes, radio buttons, and more. React handles form data through the component state, allowing for an interactive and controlled form experience.
+
+Controlled Components
+A controlled component in React is an input that gets its value from the component's state and updates the state on every change. This means React controls the form's data at any given time, enabling the form to react instantaneously to user input.
+
+Handling Form Submission
+Form submission in React is typically handled by a function that is triggered when the form is submitted. This function can prevent the default form submission behavior, process form data, and perform actions like sending the data to a server or updating the local state.
+
+Example Overview
+The provided example demonstrates a simple task management application where users can add new tasks, mark tasks as completed, and assign tasks to individuals. It showcases the use of controlled components for text inputs, checkboxes, and select elements, as well as handling form submissions to update the state.
+
+Code Implementation | Examples
+The following example illustrates the concepts discussed: -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms in React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function App() {
+        const [tasks, setTasks] = React.useState([]);
+        const [formState, setFormState] = React.useState({
+          title: "",
+          completed: false,
+          assignedTo: "",
+        });
+
+        function handleChange(event) {
+          const { target } = event;
+          const value =
+            target.type === "checkbox" ? target.checked : target.value;
+          setFormState({
+            ...formState,
+            [target.name]: value,
+          });
+        }
+
+        function handleSubmit(event) {
+          event.preventDefault();
+          const newTask = { ...formState, id: Date.now() + Math.random() };
+          setTasks([...tasks, newTask]);
+          setFormState({ title: "", completed: false, assignedTo: "" });
+        }
+
+        return (
+          <>
+            <form onSubmit={handleSubmit}>
+              {/* Text input for task title */}
+              <input
+                name="title"
+                placeholder="Add new task"
+                onChange={handleChange}
+                value={formState.title}
+              />
+              <br />
+              <br />
+              {/* Checkbox for completion status */}
+              <label htmlFor="completed">
+                Completion Status
+                <input
+                  name="completed"
+                  type="checkbox"
+                  id="completed"
+                  checked={formState.completed}
+                  onChange={handleChange}
+                />
+              </label>
+              <br />
+              <br />
+              {/* Select dropdown for assigning task */}
+              <select
+                name="assignedTo"
+                onChange={handleChange}
+                value={formState.assignedTo}
+              >
+                <option value="">Assign Task to</option>
+                <option value="Amar">Amar</option>
+                <option value="Akbar">Akbar</option>
+                <option value="Anthony">Anthony</option>
+              </select>
+              <br />
+              <br />
+              <button type="submit">ADD NEW TASK</button>
+            </form>
+            <br />
+            {tasks.map((taskItem) => (
+              <div key={taskItem.id}>{taskItem.title}</div>
+            ))}
+          </>
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+    </script>
+  </body>
+</html>
+
+
+
+<!-- This example demonstrates:
+
+The use of useState to manage form and tasks state.
+Handling input changes through handleChange to update the state based on input name and value.
+Form submission with handleSubmit, adding a new task to the state and resetting the form fields.
+Student Activities
+Modify the Form: Add a new input field to the form to include a due date for the task. Update the formState and handle the input change accordingly.
+Validation: Implement simple form validation to ensure the task title is not empty before submission.
+Filter Tasks: Add functionality to filter tasks by their completion status or assigned individual.
+Conclusion
+Forms in React are essential for interactive applications, allowing users to input data that can be processed and managed efficiently. The use of controlled components and state management in React forms offers a robust and flexible way to handle user input, making it a cornerstone of React application development. -->
