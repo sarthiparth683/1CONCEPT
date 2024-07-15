@@ -1,37 +1,13 @@
-<!-- Axios Library to make network requests ( JSON Server )
-Introduction
-Building on our previous lesson on forms in React, this tutorial will explore how to maintain the todo list on a server using a fake REST API with the JSON-server package. Instead of storing tasks in the local state array, we'll modify our application to interact with a server. This approach simulates a more realistic scenario where data is persisted and managed server-side. We will use Axios, a promise-based HTTP client, for making requests to our server.
-Detailed Explanation
-Why Move to Server-Side?
-Moving the todo list management to server-side brings us closer to real-world applications, where data is often stored and manipulated on a server. It allows for data persistence, meaning our tasks will remain available even after the application is restarted or accessed from a different client.
-JSON-server
-JSON-server provides a full fake REST API with zero coding in less than 30 seconds. It's great for prototyping and mocking server-side operations like creating, reading, updating, and deleting data (CRUD operations).
-Axios
-Axios is a popular, promise-based HTTP client that works both in the browser and in node.js environments. It's easy to use and handles requests and responses in JSON format, making it a perfect fit for communicating with a JSON-server.
-Updating the Application
-To integrate with a server, we need to modify our form's handleSubmit function to send data to the server using Axios instead of updating the local state directly.
-Code Implementation | Examples
-First, ensure you have JSON-server installed and running:
-npm install -g json-server
-json-server --watch db.json
-Create a db.json file in your project directory with the following content to simulate your database:
-{
-  "tasks": []
-}
-Update your HTML file to include Axios:
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-Now, let's modify the handleSubmit function in our React application to use Axios to post new tasks to the server:
- -->
-
+<!-- How to maintain the todo list on a server using a fake REST API with the JSON-server package. Instead of storing tasks in the local state array, we'll modify our application to interact with a server. This approach simulates a more realistic scenario where data is persisted and managed server-side. We will use Axios, a promise-based HTTP client, for making requests to our server. -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Axios Library to make network requests ( JSON Server )</title>
+    <title>3-Axios Library to make network requests ( JSON Server )</title>
   </head>
   <body>
-    <h1>Axios Library to make network requests ( JSON Server )</h1>
+    <h1>3-Axios Library to make network requests ( JSON Server )</h1>
     <div id="root"></div>
     <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>

@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sibling Data transfer</title>
+    <title>1-Keys in React</title>
   </head>
   <body>
-    <h1>1-Temp</h1>
+    <h1>1-Keys in React</h1>
     <div id="root"></div>
     <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
@@ -14,15 +14,14 @@
     <script type="text/babel">
       function App() {
         let todos = [
-          { text: "asd" },
+          { text: "one" },
           { text: "two" },
-          { text: "three" },
+          { text: "three" }, 
           { text: "four" },
         ];
-        const todoItems = todos.map((el) => (
-          <li key={el.id}>{el.text}</li>
-        ));
-        return <ul>{todoItems}</ul>;
+        const todoItems = todos.map((el) => <li key={el}>{el.text}</li>);
+        // in map function key is compulsary
+        return <ol> {todoItems} </ol>;
       }
       const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
       reactRoot.render(<App />);
