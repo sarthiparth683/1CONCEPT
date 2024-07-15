@@ -3,26 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sibling Data transfer</title>
+    <title>2-React State Management</title>
   </head>
   <body>
-    <h1>Tempelate</h1>
+    <h1>2-React State Management</h1>
     <div id="root"></div>
     <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
       function App() {
-        let [count, setCount] = useState(0);
+        let [count, setCount] = React.useState(0);
         let handleIncrement = () => {
-          setCount(count + 1);
-          setCount(count + 1);
-          setCount(count + 1);
-          setCount(count + 1);
+          setCount((prevCount) => prevCount + 1);
+          setCount((prevCount) => prevCount + 1);
+          setCount((prevCount) => prevCount + 1);
           console.log(count);
         };
         return (
           <div>
+            <h2>{count}</h2>
             <button onClick={handleIncrement}>+</button>
           </div>
         );
@@ -32,3 +32,12 @@
     </script>
   </body>
 </html>
+<!-- Why console.log Shows the Previous Value When you call
+setCount(count + 1), React schedules an update to the state but
+doesn't execute it immediately. The console.log statement right
+after setCount is still part of the current render cycle, and thus,
+it accesses the current value of count, which hasn't been updated
+yet. Understanding Asynchronous Nature This behavior illustrates the
+asynchronous nature of state updates in React. The actual state
+change happens asynchronously outside the current scope of
+execution.  -->

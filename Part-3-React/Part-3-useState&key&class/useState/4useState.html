@@ -6,29 +6,31 @@
     <title>Sibling Data transfer</title>
   </head>
   <body>
-    <h1>Temp</h1>
+    <h1>4-React State Management</h1>
     <div id="root"></div>
     <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-      function App() {
+      function ToDoList() {
+        const [toDoList, setToDoList] = React.useState([
+          { id: 1, description: "Item 1" },
+          { id: 2, description: "Item 2" },
+          { id: 3, description: "Item 3" },
+          { id: 4, description: "Item 4" },
+        ]);
         return (
           <div>
-            Mapping Lists in React expand_less In React, you can display lists
-            of items by mapping over an array to render a component for each
-            item. It's important to provide a unique key prop to each component
-            when mapping over an array to help React identify which items have
-            changed, are added, or are removed, which optimizes rendering
-            performance. Example const todoItems = todos.map((todo) =>
-            <li key={todo.id}>{todo.text}</li>
-            ); return (<ul>{todoItems}</ul>
-            );
+            <ul>
+              {toDoList.map((item) => {
+                return <li key={item.id}>{item.description}</li>;
+              })}
+            </ul>
           </div>
         );
       }
       const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
-      reactRoot.render(<App />);
+      reactRoot.render(<ToDoList />);
     </script>
   </body>
 </html>

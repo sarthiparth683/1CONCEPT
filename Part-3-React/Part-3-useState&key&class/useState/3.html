@@ -3,28 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sibling Data transfer</title>
+    <title>3-Controlled and Uncontrolled Components in React</title>
   </head>
   <body>
-    <h1>Event Handling in React</h1>
+    <h1>3-Controlled and Uncontrolled Components in React</h1>
     <div id="root"></div>
     <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
       function App() {
-        const handleClick = () => {
-          alert("Button clicked");
-        };
-        return <button onClick={handleClick}>Click Me</button>;
+        const [message, setMessage] = React.useState("");
+        function handleChange(event) {
+          setMessage(event.target.value);
+        }
         return (
           <div>
-            This button component uses onClick to handle click events, executing
-            the handleClick function when clicked. expand_less Event handling in
-            React is performed by attaching events to components, similar to
-            handling events on DOM elements. Events are named using camelCase
-            rather than lowercase, and with JSX you pass a function as the event
-            handler rather than a string. Example
+            <input
+              value={message}
+              onChange={handleChange}
+              placeholder="Type a message"
+            />
+            <p>Your message: {message}</p>
           </div>
         );
       }

@@ -3,35 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4-Reset Functionality in Controlled Components</title>
+    <title>2-Handling Multiple States in a Component</title>
   </head>
   <body>
-    <h1>4-Reset Functionality in Controlled Components</h1>
+    <h1>Handling Multiple States in a Component</h1>
     <div id="root"></div>
     <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
       function App() {
-        const [message, setMessage] = React.useState("");
-        const handleChange = (event) => {
-          setMessage(event.target.value);
-        };
-        const handleReset = () => {
-          setMessage("");
-          // Resets the message state, thus clearing the input field
-        };
+        const [count1, setCount1] = React.useState(1);
+        const [count2, setCount2] = React.useState(2);
+        const incrementCount1 = () => setCount1(count1 + 1);
+        const incrementCount2 = () => setCount2(count2 + 2);
         return (
           <div>
-            <input
-              placeholder="Add your message here"
-              onChange={handleChange}
-              value={message}
-            />
-            <button onClick={handleReset}>Reset</button>
-            <p>
-              <strong>Message:- {message}</strong>
-            </p>
+            <p>Button 1 is clicked {count1} times</p>
+            <button onClick={incrementCount1}>Button 1</button>
+            <p>Button 2 is clicked {count2} times</p>
+            <button onClick={incrementCount2}>Button 2</button>
           </div>
         );
       }

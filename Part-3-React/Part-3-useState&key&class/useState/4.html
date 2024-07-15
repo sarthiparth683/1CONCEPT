@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3-Controlled and Uncontrolled Components in React</title>
+    <title>4-Reset Functionality in Controlled Components</title>
   </head>
   <body>
-    <h1>3-Controlled and Uncontrolled Components in React</h1>
+    <h1>4-Reset Functionality in Controlled Components</h1>
     <div id="root"></div>
     <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
@@ -14,17 +14,21 @@
     <script type="text/babel">
       function App() {
         const [message, setMessage] = React.useState("");
-        function handleChange() {
+        const handleChange = (event) => {
           setMessage(event.target.value);
-        }
+        };
+        const handleReset = () => {
+          setMessage(""); // Resets the message state, thus clearing the input field
+        };
         return (
           <div>
             <input
-              value={message}
+              placeholder="Add your message here"
               onChange={handleChange}
-              placeholder="Type a message"
+              value={message}
             />
-            <p>Your message: {message}</p>
+            <strong>Message:- {message}</strong>
+            <button onClick={handleReset}>Reset</button>
           </div>
         );
       }
