@@ -14,6 +14,7 @@
     <script type="text/babel">
       const array = [1, 2, 3, 4, 5];
       const listItems = array.map((el) => <li key={el.toString()}>{el}</li>);
+      // key is for giving uniq id to every element  in map function key is compulsary because it give uniq id for each element in array and helps in virtual dom
       function NumberList() {
         return (
           <div>

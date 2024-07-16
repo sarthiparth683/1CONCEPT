@@ -16,11 +16,11 @@
         let todos = [
           { text: "one" },
           { text: "two" },
-          { text: "three" }, 
+          { text: "three" },
           { text: "four" },
         ];
-        const todoItems = todos.map((el) => <li key={el}>{el.text}</li>);
-        // in map function key is compulsary
+        const todoItems = todos.map((el) => <li>{el.text}</li>);
+        // in map function key is compulsary because it give uniq id for each element in array and helps in virtual dom
         return <ol> {todoItems} </ol>;
       }
       const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
