@@ -1,0 +1,8 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: rgb(20, 33, 153);
+}
+.product-card {
+  background-color: cyan;
+}
