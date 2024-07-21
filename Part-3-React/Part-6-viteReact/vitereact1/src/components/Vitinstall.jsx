@@ -6,7 +6,7 @@ const notes = () => {
       <ol>
         <li>vite installation</li>
         <li>refer documentation because it may change</li>
-        <li>npm create vite@latest vitereact3 -- --template react</li>
+        <li>1. npm create vite@latest vitereact1 -- --template react</li>
         <li>cd folder name</li>
         <li>cd .. to go back</li>
         <li>npm i - for installing node modules</li>
