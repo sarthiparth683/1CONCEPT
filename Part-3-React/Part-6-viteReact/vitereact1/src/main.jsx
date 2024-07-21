@@ -12,6 +12,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <Counter2/> */}
     {/* <Inputbox/> */}
     {/* <Multinput /> */}
-    <Timer/>
+    {/* <Timer/> */}
   </>
 );
