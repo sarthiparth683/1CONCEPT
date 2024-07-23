@@ -11,8 +11,8 @@ const notes = () => {
           computer. You can check your current node and npm version by node - v;
         </li>
         <li>
-          2. npm create vite@latest vitereact1 -- --template react ((npm create
-          vite@latest . -- --template react ------------- This command will set
+          2. npm create vite@latest vitereact1 -- --template react
+           ((npm create vite@latest . -- --template react ------------- This command will set
           up a new Vite React project in the current directory.))
         </li>
         <li>2.cd folder name Navigate to Your Project:</li>
