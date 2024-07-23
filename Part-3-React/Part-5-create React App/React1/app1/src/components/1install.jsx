@@ -7,23 +7,20 @@ const Notes = () => {
         <li>
           <h3>Steps to setup React App:-</h3>
         </li>
-        <li>
-          before installing React - check for latest version of Node and install
-          it
+        <li>1.Node install latest version - then check version - node -v
         </li>
-        <li>1.node -v -to check for latest version of node</li>
         <li>
           2.npm install -g npm - is used to update the globally installed
           version of npm (Node Package Manager) to the latest version.
         </li>
         <li>
-          npx create-react-app . - dot is for same directory or you can use npx
+          3.npx create-react-app . - dot is for same directory or you can use npx
           create-react-app (appName)
         </li>
         <li>** BEFORE STARTING CHECK RIGHT DIRECTORY</li>
         <li>cd (subdirectory_name) - to go to that particular directory.</li>
         <li>cd .. to move back</li>
-        <li>FINAL- npm start - Starts the development server.</li>
+        <li>4.FINAL- npm start - Starts the development server.</li>
       </ol>
       <ol>
         <li>
