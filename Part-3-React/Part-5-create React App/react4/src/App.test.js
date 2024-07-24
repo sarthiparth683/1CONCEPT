@@ -2,27 +2,34 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import CustomButton from './Components/CustomButton';
+import CustomButton from './component/CustomButton';
 
 describe('CustomButton', () => {
-  test('renders with correct label', () => {
-    render(<CustomButton label="Click Me" onClick={() => {}} style={{}} />);
-    const buttonElement = screen.getByText(/Click Me/i);
-    expect(buttonElement).toBeInTheDocument();
+  test('renders with the correct label', () => {
+    const label = 'Click Me';
+    render(<CustomButton label={label} onClick={() => { }} style={{}} />);
+
+    // Check if the button is rendered with the correct label
+    expect(screen.getByText(label)).toBeInTheDocument();
   });
 
-  test('calls onClick function when clicked', () => {
+  test('calls the onClick function when clicked', () => {
     const handleClick = jest.fn();
     render(<CustomButton label="Click Me" onClick={handleClick} style={{}} />);
-    const buttonElement = screen.getByText(/Click Me/i);
-    fireEvent.click(buttonElement);
+
+    // Click the button
+    fireEvent.click(screen.getByText('Click Me'));
+
+    // Check if the handleClick function is called once
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
   test('applies the correct style', () => {
-    const style = { backgroundColor: 'red' };
-    render(<CustomButton label="Click Me" onClick={() => {}} style={style} />);
-    const buttonElement = screen.getByText(/Click Me/i);
-    expect(buttonElement).toHaveStyle('background-color: red');
+    const style = { backgroundColor: 'blue' };
+    render(<CustomButton label="Click Me" onClick={() => { }} style={style} />);
+
+    // Check if the button has the correct style
+    const button = screen.getByText('Click Me');
+    expect(button).toHaveStyle('background-color: blue');
   });
 });
