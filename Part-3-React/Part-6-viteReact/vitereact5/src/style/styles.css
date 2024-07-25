@@ -1,0 +1,30 @@
+* {
+  text-align: center;
+}
+
+.navbar,
+.footer {
+  width: 100%;
+  border: 1px solid red;
+  background-color: aqua;
+  margin: 10px;
+}
+.main {
+  background-color: rgb(199, 209, 188);
+}
+
+.topmain {
+  border: 1px solid black;
+}
+.bottommain {
+  border: 1px solid rgb(224, 70, 32);
+  margin: 10px;
+}
+.bottommanileft {
+  border: 1px solid rgb(22, 37, 2);
+  margin: 10px;
+}
+.bottommainright {
+  border: 1px solid rgb(37, 11, 87);
+  margin: 10px;
+}
