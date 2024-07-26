@@ -15,3 +15,4 @@ export const AuthContextProvider = ({ children }) => {
   const val = { isloggedin, login, logout };
   return <AuthContext.Provider value={val}>{children}</AuthContext.Provider>;
 };
+  
