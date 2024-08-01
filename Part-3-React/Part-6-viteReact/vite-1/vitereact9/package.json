@@ -1,5 +1,5 @@
 {
-  "name": "vitereact8",
+  "name": "vitereact9",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,14 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.8.2",
-    "@emotion/react": "^11.13.0",
-    "@emotion/styled": "^11.13.0",
-    "axios": "^1.7.2",
-    "framer-motion": "^11.3.19",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.25.1"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

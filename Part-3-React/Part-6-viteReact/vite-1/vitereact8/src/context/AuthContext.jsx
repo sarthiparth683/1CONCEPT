@@ -5,7 +5,7 @@ export const AuthContext = createContext();
 const AuthContextProvider = ({ children }) => {
   const initState = { isAuth: false, token: null };
   const [auth, setAuth] = useState(initState);
-const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const login = (token) => {
     setAuth({
@@ -14,13 +14,13 @@ const [loading, setLoading] = useState(false);
       token: token,
     });
   };
-
+  
   const logout = () => {
     setAuth(initState);
   };
 
   return (
-    <AuthContext.Provider value={{ auth, login, logout,setLoading,loading }}>
+    <AuthContext.Provider value={{ auth, login, logout, setLoading, loading }}>
       {children}
     </AuthContext.Provider>
   );

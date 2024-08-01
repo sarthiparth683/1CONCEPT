@@ -12,13 +12,17 @@ const Navbar = () => {
       path: "/employee",
       name: "Employee",
     },
-    {
+    {   
       path: "/test",
       name: "Login",
     },
     {
       path: "/Test",
       name: "Test",
+    },
+    {
+      path: "/chakra",
+      name: "Chakra",
     },
   ];
 
