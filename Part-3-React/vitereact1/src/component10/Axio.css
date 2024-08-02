@@ -1,0 +1,17 @@
+.data {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 16px;
+}
+.box {
+  border: 2px solid blue;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Style for each image item */
+.images {
+  overflow: hidden;
+  width: 230px;
+}
