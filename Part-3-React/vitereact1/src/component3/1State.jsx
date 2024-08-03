@@ -1,6 +1,6 @@
 import React from "react";
 
-function State() {
+function State1() {
   const [count, setCount] = React.useState(0);
 
   function increment() {
@@ -21,4 +21,4 @@ function State() {
   );
 }
 
-export default State;
+export default State1;

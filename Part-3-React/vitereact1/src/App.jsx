@@ -1,15 +1,18 @@
 import React from "react";
-import Counter from "./component1/counter";
-import Timer from "./component1/Timer";
-import Comp10 from "./component10/1Comp10";
 
 const App = () => {
   return (
     <>
-      <h1>Vite + React Components:-</h1>
+      <h1 style={{ textAlign: "center" }}>Vite + React Components:-</h1>
+      {/* <  Comp1/> */}
+      {/* < Comp2 /> */}
+      {/* <Comp3 /> */}
+      {/* <Comp4 /> */}
+      {/* < Comp8 /> */}
+      {/* <Comp9/> */}
+      {/* <Comp10 /> */}
       {/* <Counter /> */}
       {/* < Timer /> */}
-      <Comp10 />
     </>
   );
 };
