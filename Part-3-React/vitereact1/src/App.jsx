@@ -1,4 +1,5 @@
 import React from "react";
+import Comp11 from "./component11/Comp11";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       {/* < Comp8 /> */}
       {/* <Comp9/> */}
       {/* <Comp10 /> */}
+      <Comp11 />
       {/* <Counter /> */}
       {/* < Timer /> */}
     </>
