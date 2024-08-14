@@ -1,9 +1,7 @@
-
 import { combineReducers, createStore, applyMiddleware } from "redux";
 import { useSelector, useDispatch, Provider } from "react-redux";
-import { useReducer, useRef } from "react";
 import logger from "redux-logger";
-import { thunk } from "redux-thunk";
+import thunk from "redux-thunk"; // Correct import
 import { composeWithDevTools } from "@redux-devtools/extension";
 import axios from "axios";
 
@@ -41,7 +39,7 @@ const fetchTodosFailure = (error) => {
   };
 };
 
-// async - action creators: returns functons, not object
+// async - action creators: returns functions, not object
 const fetchTodos = () => {
   return function (dispatch) {
     dispatch(fetchTodosRequest());
@@ -144,15 +142,15 @@ function ThemeSwitch() {
   );
 }
 
-export default function App() {
+export default function Thunk() {
   return (
     <Provider store={store}>
       <div className="App">
         <Sidebar />
-      </div>
-      <div className="main-content">
-        <Todos />
-        <ThemeSwitch />
+        <div className="main-content">
+          <Todos />
+          <ThemeSwitch />
+        </div>
       </div>
     </Provider>
   );
