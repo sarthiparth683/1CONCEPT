@@ -15,7 +15,7 @@ const Notes = () => {
       </ol>
 
       <ol>
-        <li>Hoisting on other devices in vite</li>
+        <li>Hoisting on other devices in vite...</li>
         <li>
           in packaage.json file - need to change -"scripts": "dev": "vite
           --host",
