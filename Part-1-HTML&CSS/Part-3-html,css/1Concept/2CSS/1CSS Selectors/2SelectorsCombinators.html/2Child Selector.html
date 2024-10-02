@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>2Child Selector</title>
-    <style>
-      div > p {
-        background-color: aquamarine;
-      }
-    </style>
-  </head>
-  <body>
-    <div>
-      <p>Paragraph 1 in the div.</p>
-      <p>Paragraph 2 in the div.</p>
-      <span><p>Paragraph 3 in nested div.</p> </span>
-      <span> <p>Paragraph 4 in nested div.</p> </span>
-      <p>Paragraph 5 not nested</p>
-    </div>
+<head>
+<style>
+div > p {
+      /* Selects all p's which are child of div */
+    background-color: teal;
+}
+</style>
+</head>
+<body>
 
-    <p>Paragraph 6. Not in a div, not child of div</p>
-    <p>Paragraph 7. Not in a div, not child of div</p>
-  </body>
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <span><p>Paragraph 3 in the div, but it is not child of div, it is child of span</p></span> 
+</div>
+
+<p>Paragraph 4. Not in a div, not child of div</p>
+<p>Paragraph 5. Not in a div, not child of div</p>
+
+</body>
 </html>

@@ -319,16 +319,12 @@
       display: grid;
       grid-template-columns: repeat(3, 250px);
       column-gap: 30px;
-      /* display: flex; */
-      /* align-items: center; */
       margin-left: 250px;
     }
     #boardImg > img {
       width: 250px;
     }
     #strategic {
-      /* display: flex; */
-      /* align-items: center; */
       margin-left: 550px;
     }
 
@@ -364,6 +360,53 @@
     .round {
       border-start-start-radius: 30px;
       border-start-end-radius: 30px;
+    }
+    /* Responsive */
+
+    @media screen and (min-width: 0px) and (max-width: 400px) {
+      #boardImg {
+        display: grid;
+        grid-template-columns: repeat(1, 250px);
+        column-gap: 30px;
+        margin-left: 250px;
+      }
+      #mainBox {
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px 20px;
+      }
+      #mainBox > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-start-start-radius: 30px;
+        border-start-end-radius: 30px;
+      }
+    }
+
+    @media screen and (min-width: 400px) and (max-width: 800px) {
+      #boardImg {
+        display: grid;
+        grid-template-columns: repeat(2, 250px);
+        column-gap: 30px;
+        margin-left: 250px;
+      }
+      #mainBox {
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 20px;
+      }
+      #mainBox > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-start-start-radius: 30px;
+        border-start-end-radius: 30px;
+      }
     }
   </style>
 </html>
