@@ -59,12 +59,13 @@ const GamePlay = () => {
       </div>
 
       {showRules && <Rules />}
-    </MainContainer>
+    </MainContainer>  
   );
 };
 
 export default GamePlay;
 
+//----Styling------------------------------------
 const MainContainer = styled.main`
   padding-top: 70px;
   .top_section {

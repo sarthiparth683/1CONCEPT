@@ -13,5 +13,5 @@ function App() {
     <>{isGameStarted ? <GamePlay /> : <StartGame toggle={toggleGamePlay} />}</>
   );
 }
-
+  
 export default App;

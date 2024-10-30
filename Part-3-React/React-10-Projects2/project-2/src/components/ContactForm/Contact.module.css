@@ -11,8 +11,8 @@
 }
 
 .contact_form {
-  display: flex;
-  flex-direction: column;
+  display: flex;  
+  flex-direction: column;   
   gap: 24px;
 }
 .contact_form form {

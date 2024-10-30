@@ -10,10 +10,9 @@ const Navigation = () => {
         <li href="#">About</li>
         <li href="#">Contact</li>
       </ul>
-
       <button>login</button>
     </nav>
-  );
+  );  
 };
 
 export default Navigation;

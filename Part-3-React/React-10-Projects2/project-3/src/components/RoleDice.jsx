@@ -10,9 +10,10 @@ const RoleDice = ({ roleDice, currentDice }) => {
     </DiceContainer>
   );
 };
-
 export default RoleDice;
 
+
+//----------------------------------------------------
 const DiceContainer = styled.div`
   margin-top: 48px;
   display: flex;

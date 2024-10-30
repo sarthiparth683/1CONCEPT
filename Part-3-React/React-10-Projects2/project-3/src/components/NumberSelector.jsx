@@ -6,12 +6,10 @@ const NumberSelector = ({
   setSelectedNumber,
 }) => {
   const arrNumber = [1, 2, 3, 4, 5, 6];
-
   const numberSelectorHandler = (value) => {
     setSelectedNumber(value);
     setError("");
   };
-
   return (
     <NumberSelectorContainer>
       <p className="error">{error}</p>
@@ -30,9 +28,9 @@ const NumberSelector = ({
     </NumberSelectorContainer>
   );
 };
-
 export default NumberSelector;
 
+//--Styling---------------------------------------------------
 const NumberSelectorContainer = styled.div`
   display: flex;
   flex-direction: column;

@@ -17,6 +17,7 @@ const StartGame = ({ toggle }) => {
 
 export default StartGame;
 
+// whole container is styled here
 const Container = styled.div`
   max-width: 1180px;
   height: 100vh;
