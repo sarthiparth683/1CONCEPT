@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { BASE_URL, Button, Container } from "../../App";
-
 const SearchResult = ({ data }) => {
   return (
     <FoodCardContainer>
@@ -26,8 +25,8 @@ const SearchResult = ({ data }) => {
   );
 };
 export default SearchResult;
+//---------------------------------------------------------------------
 
-//---------------------------------------------------
 const FoodCardContainer = styled.section`
   min-height: calc(100vh - 210px);
   background-image: url("/bg.png");

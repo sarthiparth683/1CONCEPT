@@ -11,7 +11,7 @@ const App = () => {
   const [error, setError] = useState(null);
   const [selectedBtn, setSelectedBtn] = useState("all");
 
-  useEffect(() => {
+  useEffect(() => {  
     const fetchFoodData = async () => {
       setLoading(true);
 
@@ -110,9 +110,9 @@ const App = () => {
     </>
   );
 };
+
 export default App;
 
-//----------------------------------------------------------------------------
 export const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
