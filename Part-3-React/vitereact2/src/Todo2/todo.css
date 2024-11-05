@@ -1,0 +1,118 @@
+/* todo.css */
+.bodi {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .todo-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin-top: -400px; 
+  }
+  
+  header h1 {
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0;
+    color: #333; 
+    margin: 0;
+    border-bottom: 2px solid #ddd;
+    background-color: chartreuse;
+
+  }
+  
+  .form {
+    margin: 20px 0;
+  }
+  
+  .todo-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  .todo-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .todo-btn:hover {
+    background-color: #218838;
+  }
+  
+  .myUnorderedList {
+    margin: 20px 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .todo-item span {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .check-btn, .delete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px; 
+    transition: color 0.3s;
+  }
+  
+  .check-btn {
+    color: #28a745;
+  }
+  
+  .check-btn:hover {
+    color: #218838;
+  }
+  
+  .delete-btn {
+    color: #dc3545;
+  }
+  
+  .delete-btn:hover {
+    color: #c82333;
+  }
+  .checkList {
+    text-decoration: line-through;
+  }
+  .notCheckList {
+    text-decoration: none; 
+  }

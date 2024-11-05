@@ -18,7 +18,7 @@ const Notes = () => {
         <li>
           in packaage.json file - need to change -"scripts": "dev": "vite
           --host",
-        </li>
+        </li>  
       </ol>
 
       <ul>
