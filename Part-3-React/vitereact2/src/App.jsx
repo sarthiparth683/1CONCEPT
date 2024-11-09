@@ -1,4 +1,4 @@
-import Page from "./Pagination/Page";
+import Page from "./Pagination/MainPage";
 
 const App = () => {
   return (

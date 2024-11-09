@@ -7,8 +7,6 @@ import Pagination from "./Pagination";
 const Fetch = () => {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -17,19 +15,12 @@ const Fetch = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setLoading(true);
-        setError(null);
         const response = await fetch("https://fakestoreapi.com/products");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
         const result = await response.json();
         setData(result);
         setFilteredData(result);
       } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
+        console.log(err);
       }
     };
     fetchData();
@@ -50,9 +41,6 @@ const Fetch = () => {
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
 
   const categories = [...new Set(data.map((item) => item.category))];
 
