@@ -1,10 +1,18 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import Search from "./Search";
+import Filter from "./Filter";
+import Pagination from "./Pagination";
 
 const Fetch = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,6 +25,7 @@ const Fetch = () => {
         }
         const result = await response.json();
         setData(result);
+        setFilteredData(result);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -25,34 +34,65 @@ const Fetch = () => {
     };
     fetchData();
   }, []);
+
+  useEffect(() => {
+    const filtered = data.filter(
+      (item) =>
+        item.title.toLowerCase().includes(query.toLowerCase()) &&
+        (category ? item.category === category : true)
+    );
+    setFilteredData(filtered);
+    setCurrentPage(1); // Reset to first page on filter change
+  }, [query, category, data]);
+
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  const paginatedData = filteredData.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
+
+  const categories = [...new Set(data.map((item) => item.category))];
+
   return (
     <>
+      <Search query={query} setQuery={setQuery} />
+      <Filter
+        category={category}
+        setCategory={setCategory}
+        categories={categories}
+      />
+      <Pagination
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        totalPages={totalPages}
+      />
       <Box>
-        {data &&
-          data.map((item) => (
-            <div key={item.id}>
-              <div className="box1">
-                <Image>
-                  <img src={item.image} alt="error" />
-                </Image>
-                <Title>
-                  <span>Title:-</span> {item.title}
-                </Title>
-                <Price>
-                  <span>Price:-</span> {item.price}
-                </Price>
-                <Category>
-                  <span>Category:-</span> {item.category}
-                </Category>
-              </div>
+        {paginatedData.map((item) => (
+          <div key={item.id}>
+            <div className="box1">
+              <Image>
+                <img src={item.image} alt="error" />
+              </Image>
+              <Title>
+                <span>Title:-</span> {item.title}
+              </Title>
+              <Price>
+                <span>Price:-</span> {item.price}
+              </Price>
+              <Category>
+                <span>Category:-</span> {item.category}
+              </Category>
             </div>
-          ))}
+          </div>
+        ))}
       </Box>
     </>
   );
 };
+
 export default Fetch;
 
 const Box = styled.div`
