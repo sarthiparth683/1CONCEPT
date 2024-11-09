@@ -1,4 +1,4 @@
-import React from "react";
+import Page from "./Pagination/Page";
 import Todo2 from "./Todo2/Todo";
 
 const App = () => {
@@ -8,12 +8,13 @@ const App = () => {
         style={{
           backgroundColor: "blue",
           textAlign: "center",
-          marginTop: "40px",
+          marginTop: "0px",
         }}
       >
         App
       </h1>
-      <Todo2 />
+      {/* <Todo2 /> */}
+      <Page />
     </>
   );
 };

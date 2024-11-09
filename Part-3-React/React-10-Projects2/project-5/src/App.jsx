@@ -66,13 +66,13 @@ const App = () => {
       <div className="mx-auto max-w-[370px] px-4">
         <Navbar />
         <div className="flex gap-2">
-          <div className="relative flex flex-grow items-center">
+          <div className="relative flex flex-grow   items-center ">
             <FiSearch className="absolute ml-1 text-3xl text-white" />
             <input
               onChange={filterContacts}
               type="text"
               className=" h-10 flex-grow rounded-md border border-white bg-transparent pl-9 text-white"
-            />  
+            />
           </div>
 
           <AiFillPlusCircle
