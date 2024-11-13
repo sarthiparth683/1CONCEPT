@@ -1,22 +1,31 @@
-import React from "react";
-import Comp11 from "./component11/Comp11";
-import Comp12 from "./component12/comp12";
+// import LiftStateUp from "./1-LiftStatUp/LiftStateUp";
+// import Rout2 from "./8-Routes/2eg/Rout2";
+// import Counter from "./8-useReducer/Counter";
+
+import RoutesComponent from "./9-Routes/1eg/components";
 
 const App = () => {
   return (
     <>
-      <h1 style={{ textAlign: "center" }}>Vite + React Components:-</h1>
-      {/* <Comp1/> */}
-      {/* <Comp2 /> */}
-      {/* <Comp3 /> */}
-      {/* <Comp4 /> */}
-      {/* <Comp8 /> */}
-      {/* <Comp9/> */}
-      {/* <Comp10 /> */}
-      {/* <Comp11 /> */}
-      <Comp12 />
+      <h1
+        style={{
+          backgroundColor: "lightgreen",
+          textAlign: "center",
+          marginTop: "0px",
+        }}
+      >
+        App
+      </h1>
+      {/* <LiftStateUp />  */}
+      {/* <ToggleComponent />  */}
+      {/* <ToggleSwitch />  */}
+      {/* < JsonFetch /> */}
+      {/* <Todo />   */}
+      {/* <Todo2 />    */}
+      {/* <Fetch /> */}
+      {/* <Rout2 /> */}
       {/* <Counter /> */}
-      {/* < Timer /> */}
+      <RoutesComponent />
     </>
   );
 };
