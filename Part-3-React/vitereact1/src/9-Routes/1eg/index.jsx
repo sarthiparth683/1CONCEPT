@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
 import About from "./About";
 import Contact from "./Contact";
 import Home from "./Home";
@@ -22,9 +21,8 @@ function RoutesComponent() {
             </li>
           </ul>
         </nav>
-
         <Routes>
-          <Route path="/" element={<Home  />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
