@@ -1,7 +1,11 @@
 // import LiftStateUp from "./1-LiftStatUp/LiftStateUp";
 // import Rout2 from "./8-Routes/2eg/Rout2";
 // import Counter from "./8-useReducer/Counter";
-import RoutesComponent from "./9-Routes/1eg";
+// import RoutesComponent from "./9-Routes/1eg";
+import Chakra1 from "./10-Chakraui/main";
+import Context1 from "./11-useContext/main";
+import Main from "./9-Routes/4eg/Main";
+import Exg5 from "./9-Routes/5eg/Main/Exg5";
 
 const App = () => {
   return (
@@ -13,7 +17,7 @@ const App = () => {
           marginTop: "0px",
         }}
       >
-        App
+        App <br />
       </h1>
       {/* <LiftStateUp />  */}
       {/* <ToggleComponent />  */}
@@ -25,6 +29,10 @@ const App = () => {
       {/* <Rout2 /> */}
       {/* <Counter /> */}
       {/* <RoutesComponent /> */}
+      {/* <Main /> */}
+      {/* <Exg5 /> */}
+      <Chakra1 />
+      {/* <Context1 />  */}
     </>
   );
 };
