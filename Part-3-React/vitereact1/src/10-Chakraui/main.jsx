@@ -13,4 +13,3 @@ const Chakra1 = () => {
 };
 
 export default Chakra1;
- 

@@ -1,7 +1,5 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 
-import React from "react";
-
 const Test1 = () => {
   return (
     <Grid templateColumns="repeat(5, 1fr)" gap={6}>
@@ -15,4 +13,3 @@ const Test1 = () => {
 };
 
 export default Test1;
- 

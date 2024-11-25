@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Stack } from "@chakra-ui/react";
 const Test2 = () => {
   return (
@@ -11,7 +10,7 @@ const Test2 = () => {
         </Button>
       </Stack>
     </>
-  ); 
+  );
 };
 
 export default Test2;
