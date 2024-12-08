@@ -22,22 +22,13 @@ const Counter = () => {
   return (
     <div className={styles.counterContainer}>
       <p className={styles.countDisplay}>Count: {state.count}</p>
-      <button
-        className={`${styles.button} ${styles.increment}`}
-        onClick={() => dispatch({ type: "increment" })}
-      >
+      <button className={`${styles.button} ${styles.increment}`} onClick={() => dispatch({ type: "increment" })}>
         +
       </button>
-      <button
-        className={`${styles.button} ${styles.decrement}`}
-        onClick={() => dispatch({ type: "decrement" })}
-      >
+      <button className={`${styles.button} ${styles.decrement}`} onClick={() => dispatch({ type: "decrement" })}>
         -
       </button>
-      <button
-        className={`${styles.button} ${styles.reset}`}
-        onClick={() => dispatch({ type: "reset" })}
-      >
+      <button className={`${styles.button} ${styles.reset}`} onClick={() => dispatch({ type: "reset" })}>
         Reset
       </button>
     </div>

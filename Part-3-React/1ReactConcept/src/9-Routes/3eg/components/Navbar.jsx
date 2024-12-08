@@ -12,7 +12,7 @@ const Navbar = () => {
       path: "/employee",
       name: "Employee",
     },
-    {   
+    {
       path: "/test",
       name: "Login",
     },
@@ -50,11 +50,7 @@ const Navbar = () => {
       <div style={{ display: "flex", gap: "50px" }}>
         {Links.map((el) => {
           return (
-            <NavLink
-              key={el.path}
-              to={el.path}
-              style={({ isActive }) => (isActive ? activeStyle : defaultStyle)}
-            >
+            <NavLink key={el.path} to={el.path} style={({ isActive }) => (isActive ? activeStyle : defaultStyle)}>
               {el.name}
             </NavLink>
           );

@@ -27,36 +27,21 @@ const Fetch = () => {
   }, []);
 
   useEffect(() => {
-    const filtered = data.filter(
-      (item) =>
-        item.title.toLowerCase().includes(query.toLowerCase()) &&
-        (category ? item.category === category : true)
-    );
+    const filtered = data.filter((item) => item.title.toLowerCase().includes(query.toLowerCase()) && (category ? item.category === category : true));
     setFilteredData(filtered);
     setCurrentPage(1);
   }, [query, category, data]);
 
   const totalPages = Math.ceil(filteredData.length / itemsPerPage);
-  const paginatedData = filteredData.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
+  const paginatedData = filteredData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   const categories = [...new Set(data.map((item) => item.category))];
 
   return (
     <>
       <Search query={query} setQuery={setQuery} />
-      <Filter
-        category={category}
-        setCategory={setCategory}
-        categories={categories}
-      />
-      <Pagination
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        totalPages={totalPages}
-      />
+      <Filter category={category} setCategory={setCategory} categories={categories} />
+      <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} totalPages={totalPages} />
       <Box>
         {paginatedData.map((item) => (
           <div key={item.id}>

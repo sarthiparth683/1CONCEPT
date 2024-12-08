@@ -12,9 +12,7 @@ const Todo2 = () => {
     // to check if the input field is empty or not
     if (!content) return;
 
-    const ifTodoContentMatched = task.find(
-      (curTask) => curTask.content === content
-    );
+    const ifTodoContentMatched = task.find((curTask) => curTask.content === content);
     if (ifTodoContentMatched) return;
 
     setTask((prevTask) => [...prevTask, { id, content, checked }]);

@@ -1,5 +1,3 @@
-// Sleepwear.js
-import React from "react";
 import { useOutletContext } from "react-router-dom";
 
 function Sleepwear() {
@@ -7,13 +5,8 @@ function Sleepwear() {
   return (
     <div>
       <h3>Baby Sleepwear</h3>
-
       <p>{value}</p>
-
-      <p>
-        Explore our range of baby sleepwear, designed to keep your little one
-        cozy and comfortable all night long.
-      </p>
+      <p>Explore our range of baby sleepwear, designed to keep your little one cozy and comfortable all night long.</p>
     </div>
   );
 }

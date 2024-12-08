@@ -1,14 +1,10 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 const InputComponent = ({ inputValue, setInputValue }) => {
   return (
     <>
-      <input
-        type="text"
-        placeholder="enter your name"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
+      <input type="text" placeholder="enter your name" value={inputValue} onChange={(e) => setInputValue(e.target.value)} /> <br /> <br />
+      <input type="text" placeholder="enter your name" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
     </>
   );
 };
@@ -21,7 +17,9 @@ const DisplayComponent = ({ inputValue }) => {
   );
 };
 
-const LiftStateUp = () => {
+//-------------------------------------------------------------
+
+export const LiftStateUp = () => {
   const [inputValue, setInputValue] = useState("");
   return (
     <>
@@ -30,4 +28,5 @@ const LiftStateUp = () => {
     </>
   );
 };
-export default LiftStateUp;
+// export default LiftStateUp; 
+// if exported directly then {} needed while importing in App component

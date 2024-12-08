@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
 import { AuthContext } from "../context/AuthContext";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [text, setText] = useState({ email: "", password: "" });
@@ -16,7 +16,7 @@ const Login = () => {
       .then((res) => {
         setLoading(false);
         Login(res.data.token);
-        navigate("/employee")
+        navigate("/employee");
       })
       .catch((err) => {
         setLoading(false);
@@ -30,49 +30,18 @@ const Login = () => {
       [e.target.name]: e.target.value,
     });
   };
-console.log(auth);
+  console.log(auth);
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-      }}
-    >
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
       <h1>Login</h1>
-      <form
-        onSubmit={handleSubmit}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "20px",
-          width: "300px",
-        }}
-      >
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          onChange={handleChange}
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          onChange={handleChange}
-        />
+      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "20px", width: "300px" }}>
+        <input type="email" name="email" placeholder="Email" onChange={handleChange} />
+        <input type="password" name="password" placeholder="Password" onChange={handleChange} />
         <button
           type="submit"
           disabled={loading}
           className="button"
-          style={{ background: "red",
-             border: "none",
-              color: "white", 
-              cursor:"pointer",
-              borderRadius:"6px",
-              padding:"4px"
-             }}
+          style={{ background: "red", border: "none", color: "white", cursor: "pointer", borderRadius: "6px", padding: "4px" }}
         >
           Login
         </button>

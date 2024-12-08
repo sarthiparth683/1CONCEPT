@@ -1,8 +1,7 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import About from "./About";
 import Contact from "./Contact";
 import Home from "./Home";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function RoutesComponent() {
   return (
