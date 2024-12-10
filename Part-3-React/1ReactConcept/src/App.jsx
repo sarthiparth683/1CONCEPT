@@ -7,14 +7,11 @@ import Todo from "./5-Todo/Todo";
 import Todo2 from "./6-Todo2/Todo";
 import Fetch from "./7-Pagination/Fetch";
 import Counter from "./8-useReducer/Counter";
-import RoutesComponent from "./9-Routes/1eg";
-import Rout2 from "./9-Routes/2eg/Rout2";
+import RoutesComponent from "./9-Routes/1eg/RoutesComponent.jsx";
 import Chakra1 from "./10-Chakraui/main";
 import Context1 from "./11-useContext/main";
-import Main from "./9-Routes/4eg/Main";
-import Exg5 from "./9-Routes/5eg/Main/Exg5";
 import Redux from "./12-Redux/main";
-import AllRoutes from "./9-Routes/3eg/AllRoutes";
+import Route3 from "./9-Routes/2eg/output/output.jsx";
 
 const App = () => {
   return (
@@ -28,9 +25,10 @@ const App = () => {
       {/* <Todo2 /> */}
       {/* <Fetch /> */}
       {/* <Counter /> */}
-      <RoutesComponent />
+      {/* <RoutesComponent /> */}
       {/* <Rout2 /> */}
-      {/* < AllRoutes /> */}
+      <Route3 />
+      {/* <Home /> */}
       {/* <Main /> */}
       {/* <Exg5 /> */}
       {/* <Chakra1 /> */}

@@ -1,0 +1,7 @@
+.photo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.photo img {
+  width: 330px;
+}

@@ -1,0 +1,51 @@
+.box1 {
+  background-color: black;
+  color: whitesmoke;
+}
+.img1 {
+  margin: 10px;
+  margin-left: 100px;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.box2 span {
+  color: yellow;
+}
+.box2 div {
+  margin: 10px;
+}
+.box3 img {
+  width: 21px;
+  border-radius: 5px;
+}
+.connect1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.connect1 img {
+  width: 21px;
+  height: 21px;
+}
+.connect2 {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+}
+.connect2 img {
+  margin-left: 5px;
+  width: 31px;
+}
+.box4 input {
+  background-color: black;
+  border: 1px solid yellow;
+}
+.box4 button {
+  background-color: yellow;
+  font-size: small;
+  height: 35px;
+}
