@@ -10,14 +10,6 @@ const vresion3 = () => {
         <li>after changing version again npm install</li>
         <li></li>
         <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li> 
-        <li></li>
       </ul>
     </>
   );

@@ -36,7 +36,7 @@ function Route3() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
-  );
+  );  
 }
 
 export default Route3;    
