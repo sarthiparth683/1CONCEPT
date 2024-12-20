@@ -1,10 +1,6 @@
 import { Button, HStack, Icon, Stack, Tag, Text } from "@chakra-ui/react";
 import React from "react";
-import {
-  AiOutlineInfoCircle,
-  AiOutlineArrowDown,
-  AiOutlineArrowUp,
-} from "react-icons/ai";
+import { AiOutlineInfoCircle, AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 const PortfolioSection = () => {
   return (
     <HStack
@@ -18,7 +14,6 @@ const PortfolioSection = () => {
       }}
       flexDir={{
         base: "column",
-        xl: "row",
       }}
       spacing={{
         base: 4,

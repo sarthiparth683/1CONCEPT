@@ -19,12 +19,14 @@ export const theme = extendTheme(
         80: "#535D66",
       },
     },
+
     fonts: {
       heading: `Ubuntu`,
       body: "Ubuntu",
     },
+
     textStyles: {
-      h1: {
+      h1: {  
         fontSize: {
           base: "30px",
           md: "32px",
@@ -94,6 +96,7 @@ export const theme = extendTheme(
       "3xl": { base: "24px", md: "28px" },
       "4xl": { base: "30px", md: "32px" },
     },
+
     styles: {
       global: {
         // styles for the `body`
@@ -130,6 +133,7 @@ export const theme = extendTheme(
           },
         },
       },
+      
       Textarea: {
         variants: {
           outline: {

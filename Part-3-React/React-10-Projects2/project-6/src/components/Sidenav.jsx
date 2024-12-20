@@ -5,13 +5,10 @@ import { BiSupport } from "react-icons/bi";
 import { Link, useLocation } from "react-router-dom";
 const Sidenav = () => {
   const location = useLocation();
-
   console.log(location);
-
   const isActiveLink = (link) => {
     return location.pathname === link;
   };
-
   const navLinks = [
     {
       icon: RxDashboard,
@@ -24,7 +21,6 @@ const Sidenav = () => {
       link: "/transactions",
     },
   ];
-
   return (
     <Stack
       bg="white"
@@ -56,7 +52,6 @@ const Sidenav = () => {
                   bg: "#F3F3F7",
                   color: "#171717",
                 }}
-                color="#797E82"
               >
                 <Icon as={nav.icon} />
                 <Text fontSize="14px" fontWeight="medium">

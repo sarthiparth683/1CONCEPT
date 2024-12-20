@@ -10,7 +10,7 @@ Project that we are going to build in this complete practice course
 - Project 4 - Foody Zone
 - Project 5 - COMMING SOON
 - Project 6 - COMMING SOON
-- Project 7 - COMMING SOON
+- Project 7 - COMMING SOON -- sarthiparth683 -- AtXpZrWfr6JXojj5  
 - Project 8 - COMMING SOON
 - Project 9 - COMMING SOON
 - Project 10 - COMMING SOON
@@ -18,3 +18,4 @@ Project that we are going to build in this complete practice course
 Figma Design URL - https://www.figma.com/file/rephrU2FVgN8MFz6XhnP51/Learn-React-with-10-Projects?type=design&node-id=0-1&t=orp3GQEAXhmtQcgG-0
 
 Visit Website For More Details - https://dosomecoding.com
+  
