@@ -14,4 +14,5 @@ const fs = require('fs');
 
 b = fs.writeFileSync('file2.txt', "This is a data2")
 console.log(b)
-console.log("Finished reading file")
+console.log("Finished reading file") 
+//------------------------
