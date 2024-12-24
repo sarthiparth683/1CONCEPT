@@ -11,27 +11,28 @@ const server = http.createServer((req, res) => {
     res.end();
   } else if (req.url === "/data") {
     let data = fs.readFileSync("./data.json", "utf-8");
-    // let data = fs.readFileSync("./data.json"); //doesn't change on removing utf-8 ?....
     res.end(data);
   } else if (req.url === "/head") {
-    res.setHeader("Content-Type", "text/html");  //setHeader...
+    res.setHeader("Content-Type", "text/html");
     res.end(" <h1> This is Header Example</h1>  ");
   } else if (req.url === "/test") {
     let test1 = fs.readFileSync("./test.txt", "utf-8");
     res.end(test1);
-  } else if (req.url === "/test2") {
-    res.write("Loading...");
+  } else if (req.url === "/load") {
+    res.write("Loading...\n");
+
     setTimeout(() => {
-      res.write("Still loading...");
+      res.write("Still loading...\n");
+
+      setTimeout(() => {
+        res.end("Done!");
+      }, 1000);
     }, 1000);
-    setTimeout(() => {
-      res.end("Done!");
-    }, 2000); // not taking time.......
   } else {
     res.end("404: Not Found");
   }
 });
 
 server.listen(8080, () => {
-  console.log("Servre is running at http://localhost:8080");
+  console.log("Server is running at http://localhost:8080");
 });

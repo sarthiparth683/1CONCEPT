@@ -1,3 +1,0 @@
-Username: admin, Password: admin
-Username: admin2, Password: admin2
-Username: sarthiparth683@gmail.com, Password: adwe

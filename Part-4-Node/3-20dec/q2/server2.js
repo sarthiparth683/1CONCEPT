@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
     JSON.stringify({
       data: "Hello World!",
     })
-  ); //without req it is running
+  ); 
 });
 
 server.listen(8000, () => {
