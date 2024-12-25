@@ -32,4 +32,4 @@ export const Redux3 = () => {
   );
 };
 
-// export default Redux3;
+export default Redux3;

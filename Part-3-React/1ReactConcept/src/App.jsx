@@ -38,8 +38,8 @@ const App = () => {
       {/* <Exg5 /> */}
       {/* <Chakra1 /> */}
       {/* <Context1 /> */}
-      {/* <Redux1 /> */}
-      {/* <Redux2 /> */}
+      {/* <Redux1 /> */} 
+      {/* <Redux2 />   */}
       {/* <Redux3 /> */}
       {/* <Rtk1 /> */}
       {/* <Rtk2 /> */}

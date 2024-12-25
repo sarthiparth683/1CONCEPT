@@ -13,4 +13,4 @@ const Redux1 = () => {
 };
 
 export default Redux1;
-   
+  
