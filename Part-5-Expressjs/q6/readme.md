@@ -36,9 +36,6 @@
 23. MODELS(code)-------------------------------Collection(db)
 24. schema(code)------------------------------Documents(db)
 
+                       SESSIONS
 
-                       SESSIONS 
-    25.  npm i express-session
-
-
-
+25. npm i express-session

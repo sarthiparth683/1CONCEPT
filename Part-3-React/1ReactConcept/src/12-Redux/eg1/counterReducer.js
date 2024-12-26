@@ -1,4 +1,7 @@
-const initialState = {
+import { increment, decrement } from "./counterActions";
+
+
+const initialState = { 
     count: 0,
   };
   
