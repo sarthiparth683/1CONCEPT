@@ -24,7 +24,7 @@ Express.js is external module so it need to be installed so
 12. use to generate all files and folder structure
 13. npm i express-generator -g -command to generate express globally
 14. express appname --view=ejs OR
-15. express . --view=ejs  - to install in same directory  
+15. express . --view=ejs - to install in same directory
 16. npm install
-17. nodemon - to run the server
-18. console.log(" Server is running at http://localhost:3000 "); - write line in bin/www file - for convinence
+17. console.log(" Server is running at http://localhost:3000 "); - write line in bin/www file - for convinence
+18. nodemon - to run the server
