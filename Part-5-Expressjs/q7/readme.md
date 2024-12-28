@@ -41,3 +41,6 @@
 25. npm i express-session
 26. some changes are done in app.js
  
+     COOKIES
+     27. cookies are already insalled in EXPRESS GENERATOR
+ 

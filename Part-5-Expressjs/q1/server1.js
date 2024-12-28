@@ -14,9 +14,9 @@ app.get("/students", (req, res) => {
     if (err) {
       res.send({ msg: "Error reading the file", err });
     } else {
-      //   res.send(data); // gives you full data
-      let parsedData = JSON.parse(data);
-      res.send(parsedData.students); // gives  students data only
+      res.send(data); // gives you full data
+      // let parsedData = JSON.parse(data);
+      // res.send(parsedData.students); // gives  students data only
       //   let parsedData = JSON.parse(data);
       // res.send(parsedData.teachers); // gives teachers data only
       //   let parsedData = JSON.parse(data);
@@ -25,7 +25,7 @@ app.get("/students", (req, res) => {
   });
 });
 
-// POST Request
+// get Request - get teachers data
 app.get("/teachers", (req, res) => {
   fs.readFile("./db.json", "utf-8", (err, data) => {
     if (err) {
@@ -37,6 +37,7 @@ app.get("/teachers", (req, res) => {
   });
 });
 
+// POST Request - post teachers data
 app.post("/teachers", (req, res) => {
   let data = fs.readFileSync("./db.json", "utf-8");
   let parsedData = JSON.parse(data);

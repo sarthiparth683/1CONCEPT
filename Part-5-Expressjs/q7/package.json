@@ -1,5 +1,5 @@
 {
-  "name": "q6",
+  "name": "q7",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -10,11 +10,7 @@
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
-    "express-session": "^1.18.1",
     "http-errors": "~1.6.3",
-    "mongoose": "^8.9.2",
-    "morgan": "~1.9.1",
-    "nodemon": "^3.1.9"
+    "morgan": "~1.9.1"
   }
 }
-     
