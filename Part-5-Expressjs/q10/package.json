@@ -1,0 +1,17 @@
+{
+  "name": "q9",
+  "version": "1.0.0",
+  "description": "1.  Express.js is external module so it need to be installed so\r 2.  npm init -y - this will install package.json file\r 3.  npm i express -this will install express\r     now, ready to use express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongodb": "^6.12.0",
+    "nodemon": "^3.1.9"
+  }
+}

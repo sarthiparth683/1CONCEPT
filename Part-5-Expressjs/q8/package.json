@@ -1,21 +1,19 @@
 {
-  "name": "q1",
+  "name": "q8",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "1.  Express.js is external module so it need to be installed so\r 2.  npm init -y - this will install package.json file\r 3.  npm i express -this will install express\r     now, ready to use express.js",
+  "main": "server1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server1": "nodemon server1.js",
     "server2": "nodemon server2.js",
     "server3": "nodemon server3.js",
     "server4": "nodemon server4.js",
-    "server5": "nodemon server5.js",
-    "server6": "nodemon server6.js",
-    "server7": "nodemon server7.js"
+    "server5": "nodemon server5.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.2",
