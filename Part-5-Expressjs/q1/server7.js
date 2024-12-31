@@ -1,5 +1,4 @@
-//  Implementation of cors, how to use cors middleware
-// CORS
+// CORS -  Implementation, and how to use cors middleware
 // in testclient/client.html - to test cors
 const express = require("express");
 const fs = require("fs");

@@ -30,10 +30,10 @@
 21. MODELS(code)-------------------------------Collection(db)
 22. schema(code)------------------------------Documents(db)
 23.                 MONGO-DB - INSTALLATION
-24. Mongodb Community server - in website - products - MongoDB Community Server setup Download 
+24. Mongodb Community server - in website - products - MongoDB Community Server setup Download
 25. MongoDB Shell (mongosh) - products - MongoDB Community Server Download - tools - Mongodb Shell - msi version - install in c/drive directly
 26. Environment Variables - Under System Variables - check Path is defined for mongo db or not
-27. npm install mongodb -g  - to connect with expressjs in vs code terminal
+27. npm install mongodb -g - to connect with expressjs in vs code terminal
 
                     MongoDB - Commands
 
