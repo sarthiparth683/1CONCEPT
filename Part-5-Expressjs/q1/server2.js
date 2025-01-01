@@ -1,25 +1,18 @@
-//  MIDDLEWARE..??
+// CORS -  Implementation, and how to use cors middleware
+// in testclient/client.html - to test cors
+// Modified Routing of server1.js
+// students and teachers code is in route folder
 const express = require("express");
+const fs = require("fs");
+const cors = require("cors");
+const { studentsRouter } = require("./routes/students.routes");
+const { teachersRouter } = require("./routes/teachers.routes");
 const app = express();
-// app.use(); // middleware to parse the body of the request - middle ware runs before any router
+app.use(express.json()); // middleware to parse the body of the request
+app.use(cors());
 
-app.use(function (req, res, next) {
-  res.write("<h1>Middleware</h1>");
-  console.log("Middleware is running");
-  next();
-});
-
-app.get("/", (req, res) => {
-  res.send("<h1>Home-1<h1/>");
-});
-
-app.get("/first", (req, res) => {
-  res.send("<h1>First<h1/>");
-});
-
-app.get("/second", (req, res) => {
-  res.send("<h1>Second<h1/>");
-});
+app.use("/students", studentsRouter);
+app.use("/teachers", teachersRouter);
 
 app.listen(8080, () => {
   console.log(" Server is running at http://localhost:8080 ");

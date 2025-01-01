@@ -1,3 +1,4 @@
+ // all routing in same file
 const express = require("express");
 const fs = require("fs");
 const { parse } = require("path");
@@ -22,7 +23,7 @@ app.get("/students", (req, res) => {
       //   let parsedData = JSON.parse(data);
       //   res.send({ "msg": "Teachers data...", teachers: parsedData.teachers });
     }
-  });
+  }); 
 });
 
 // get Request - get teachers data

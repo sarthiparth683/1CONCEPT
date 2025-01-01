@@ -1,1 +1,12 @@
-{"students":[{"id":1,"name":"John Doe","city":"Mexico"},{"id":2,"name":"Max","city":"Hwai"}],"teachers":[{"id":1,"name":"Topuria","city":"Spain"},{"id":2,"name":"volk","city":"Australia"},{"id":3,"name":"three","city":"theajioeja"},{"id":4,"name":"Four","city":"theajioeja"}]}
+{
+  "students": [
+    { "id": 1, "name": "John Doe", "city": "Mexico" },
+    { "id": 2, "name": "Max", "city": "Hwai" }
+  ],
+  "teachers": [
+    { "id": 1, "name": "Topuria", "city": "Spain" },
+    { "id": 2, "name": "volk", "city": "Australia" },
+    { "id": 3, "name": "three", "city": "theajioeja" },
+    { "id": 4, "name": "Four", "city": "theajioeja" }
+  ]
+}
