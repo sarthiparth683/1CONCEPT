@@ -10,7 +10,7 @@
 7.  MODELS(code)-------------------------------Collection(db)(inside dbs) like file
 8.  schema(code)------------------------------Documents(db)(like objects)
 
-9.                                  MONGO-DB - INSTALLATION
+9.                                   MONGO-DB - INSTALLATION
 10. Mongodb Community server - in website - products - MongoDB Community Server setup Download
 11. MongoDB Shell (mongosh) - products - MongoDB Community Server Download - tools - Mongodb Shell - msi version - install in c/drive directly
 12. Environment Variables - Under System Variables - check Path is defined for mongo db or not
@@ -60,3 +60,9 @@
 
 51. db.help() - to check all the commands of db
 52. db.collectionname.help() - collection help
+
+                            MongoDB AGGARATION
+
+53. db.collectionName.aggregate([{$match: {key: "value"}}]) - it will filter the matched data
+54. db.collectionName.aggregate([{$match: {key: "value"}}, {}, {}, {}, {}, {} ]) - multiple query can be used to get one result
+55. db.collectionName.aggregate([{$group: { _id: "$key", totlaspent: {$sum: "$key"}}}]) - to get group criteria with sum 
