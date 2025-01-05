@@ -1,5 +1,5 @@
 Express.js is external module so it need to be installed so
-1.  npm init -y - this will install package.json file
+1.  npm init  -y - this will install package.json file
 2.  npm i express -this will install express
     now, ready to use express.js
 
