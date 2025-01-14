@@ -6,6 +6,17 @@ const app = express();
 
 app.use(express.json());
 
+// users get request to get all data
+app.get("/users", async (req, res) => {
+  try {
+    const users = await UserModel.find(); // Fetch all users
+    res.json(users);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+// users post data to add data in Data Base
 app.post("/users", async (req, res) => {
   try {
     const newUser = new UserModel(req.body);
@@ -16,15 +27,7 @@ app.post("/users", async (req, res) => {
   }
 });
 
-app.get("/users", async (req, res) => {
-    try {
-      const users = await UserModel.find(); // Fetch all users
-      res.json(users);
-    } catch (error) {
-      res.status(500).send(error);
-    }
-  });
-
+// Authentication of user
 app.post("/auth", async (req, res) => {
   const { email, pass } = req.body;
   try {
@@ -39,7 +42,7 @@ app.post("/auth", async (req, res) => {
   }
 });
 
-//Only Authenticated users shouls be able to access these routes
+//Only Authenticated users should be able to access these routes
 // http://localhost:8080/movies?token=mov-ser-access
 app.get("/movies", (req, res) => {
   const { token } = req.query;
