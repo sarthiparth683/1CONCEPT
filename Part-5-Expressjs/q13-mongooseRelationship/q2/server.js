@@ -21,7 +21,7 @@ app.use(cors()); // Enable cross-origin requests
 
 // Routes
 app.use("/attendee", attendeeRoutes);
-app.use("/event", eventRoutes);  
+app.use("/event", eventRoutes);
 app.use("/organizer", organizerRoutes);
 app.use("/registration", registrationRoutes);
 
