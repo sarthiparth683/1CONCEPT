@@ -4,3 +4,8 @@ Method: GET | Url: /blogs/add/:678caa84df8fcfcaaacbb209 | Date: 1737271984962
 Method: GET | Url: /blogs/678caa84df8fcfcaaacbb209 | Date: 1737272125193 
 Method: POST | Url: /blogs/add | Date: 1737272323180 
 Method: GET | Url: /blogs | Date: 1737272338064 
+Method: GET | Url: /users | Date: 1737276063591 
+Method: GET | Url: /users | Date: 1737276149259 
+Method: POST | Url: /users/signup | Date: 1737276479121 
+Method: POST | Url: /users/signup | Date: 1737276487524 
+Method: GET | Url: /users/get | Date: 1737276634864 

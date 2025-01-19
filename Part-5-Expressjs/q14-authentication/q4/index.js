@@ -18,4 +18,3 @@ app.listen(8080, async () => {
   await connectToDb();
   console.log("server started running at http://localhost:8080");
 });
-  
