@@ -3,7 +3,7 @@ import {useState, useEffect} from "react"
 const Notes = () => {
     const [notes,setNotes] = useState([])  
     useEffect(()=>{
-        fetch("http://localhost:8080/notes", {
+        fetch("https://deploymentfullstack.onrender.com/notes", {
             headers:{
                 "Authorization":`Bearer ${localStorage.getItem("accessToken")}`
             }
@@ -15,7 +15,7 @@ const Notes = () => {
     },[])
 
     const handleDelete = (noteId) => {
-        fetch(`http://localhost:8080/notes/${noteId}`, {
+        fetch(`https://deploymentfullstack.onrender.com/notes/${noteId}`, {
             method: "DELETE",
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("accessToken")}`

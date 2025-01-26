@@ -10,7 +10,7 @@ const CreateNote = () =>{
             description
         }
 
-        fetch("http://localhost:8080/notes", {
+        fetch("https://deploymentfullstack.onrender.com/notes", {
             method: "POST",
             headers: {
                 "Content-type": "application/json",

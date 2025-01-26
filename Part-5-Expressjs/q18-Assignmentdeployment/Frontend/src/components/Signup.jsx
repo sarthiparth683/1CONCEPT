@@ -1,16 +1,18 @@
 import { useState } from "react";
 
-const Login = () => {
+const Signup = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
-  const handleLogin = () => {
+  const handleRegister = () => {
     const payload = {
+      name,
       email,
       pass,
     };
 
-    fetch("http://localhost:8080/users/login", {
+    fetch("https://deploymentfullstack.onrender.com/users", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -20,14 +22,21 @@ const Login = () => {
       .then((res) => res.json())
       .then((data) => {
         alert(data.msg);
-        localStorage.setItem("accessToken", data.token);
       })
       .catch((error) => console.log(error));
   };
   return (
     <>
-      <h2>Already a user, please login!</h2>
+      <h2>Please regiter yourself!</h2>
       <input
+        type="text"
+        placeholder="Enter name..."
+        value={name}
+        onChange={(e) => {
+          setName(e.target.value);
+        }}
+      />
+      <input  
         type="text"
         placeholder="Enter email..."
         value={email}
@@ -43,9 +52,10 @@ const Login = () => {
           setPass(e.target.value);
         }}
       />
-      <button onClick={handleLogin}>Login!</button>
+      <button onClick={handleRegister}>Regiter!</button>
     </>
   );
 };
 
-export { Login };
+export { Signup };
+    
