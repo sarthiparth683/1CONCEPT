@@ -20,4 +20,4 @@ console.log(sumOfNaturalNumber(8));
 //   console.log(sum);
 // }
 
-// sumOfNaturalNumber(5);
+// sumOfNaturalNumber(5);  

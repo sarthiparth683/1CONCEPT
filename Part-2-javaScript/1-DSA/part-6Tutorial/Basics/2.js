@@ -3,8 +3,8 @@
 function sumOfDigits(num) {
   let sum = 0;
   while (num > 0) {
-    sum += num % 10;
-    num = Math.floor(num / 10);
+    sum += num % 10; // to get remainder modulas is used
+    num = Math.floor(num / 10); // to get integer value
   }
   return sum;
 }
