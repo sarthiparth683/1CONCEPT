@@ -5,7 +5,7 @@
     <script>
       let data = [9, 45, 2, 8, 45, 23, 7, 78, 0, 11, 41, 77];
       // for (let i = 0; i < data.length; i++) {
-      //   document.write(`Array ${i} is ${data[i]} <br>`); 
+      //   document.write(`Array ${i} is ${data[i]} <br>`);
       //   console.log(data[i])
       // }
       // let x = 10;
@@ -19,6 +19,14 @@
           alert("Please enter valid input");
         }
       }
+      //----------------------------------------------------------------
+      console.log(parseInt("42")); // 42
+      console.log(parseInt("100")); // 100
+      console.log(parseInt("42px")); // 42 (parses only the leading numbers)
+      console.log(parseInt("abc42")); // NaN (not a number)
+      console.log(parseInt("1010", 2)); // 10 (Binary)
+      console.log(parseInt("A", 16)); // 10 (Hexadecimal)
+      console.log(parseInt("11", 8)); // 9 (Octal)
     </script>
   </head>
   <body>
