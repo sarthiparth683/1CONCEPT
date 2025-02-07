@@ -36,7 +36,7 @@ const Signup = () => {
           setName(e.target.value);
         }}
       />
-      <input  
+      <input
         type="text"
         placeholder="Enter email..."
         value={email}
@@ -58,4 +58,3 @@ const Signup = () => {
 };
 
 export { Signup };
-    
