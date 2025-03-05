@@ -19,5 +19,5 @@ let b = 20;
 // method - III - array destructuring
 [a, b] = [b, a];
 // [a, b] = [98, 77];
-console.log(a);
-console.log(b);
+console.log("a = ", a);
+console.log("b = ", b);
