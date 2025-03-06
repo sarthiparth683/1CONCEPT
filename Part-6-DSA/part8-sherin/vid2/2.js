@@ -17,18 +17,18 @@
 // }
 
 //--------------------------------------------------------------------------------------
-//Methodd
-let amount = Number(prompt("What is the Final Amount ?"));
-let discount = 0;
-if (amount > 0 && amount <= 5000) {
-  discount = 0;
-} else if (amount > 5000 && amount <= 7000) {
-  discount = 5;
-} else if (amount > 7000 && amount <= 9000) {
-  discount = 10;
-} else if (amount > 9000) {
-  discount = 20;
-}
+//Method-II
+// let amount = Number(prompt("What is the Final Amount ?"));
+// let discount = 0;
+// if (amount > 0 && amount <= 5000) {
+//   discount = 0;
+// } else if (amount > 5000 && amount <= 7000) {
+//   discount = 5;
+// } else if (amount > 7000 && amount <= 9000) {
+//   discount = 10;
+// } else if (amount > 9000) {
+//   discount = 20;
+// }
 
-let PayableAmount = amount - Math.floor((discount * amount) / 100);
-console.log(PayableAmount);
+// let PayableAmount = amount - Math.floor((discount * amount) / 100);
+// console.log(PayableAmount);

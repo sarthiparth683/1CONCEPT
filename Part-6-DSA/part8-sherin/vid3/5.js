@@ -1,5 +1,5 @@
 // Prime Numbers - Method -II
-var pr = prompt("input any Number  ?");
+var pr = prompt("Find Prime Number - Method-II  ?");
 if (pr === null) {
   console.log("cancelled");
 } else {
@@ -21,7 +21,6 @@ function isPrime(n) {
   if (n % 2 == 0) return false;
   for (let i = 3; i <= Math.floor(Math.sqrt(n)); i += 2) {
     if (n % i == 0) return false;
-   
   }
   return true;
 }

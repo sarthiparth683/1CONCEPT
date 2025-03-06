@@ -1,4 +1,5 @@
 // Factors of n Natural numbers
+// Factors means number which divede the x number without any remainder
 var pr = prompt("find all the facotrs of  ?");
 if (pr === null) {
   console.log("cancelled");

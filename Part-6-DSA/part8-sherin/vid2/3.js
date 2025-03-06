@@ -1,9 +1,9 @@
-// Electric Bill - 100 unit - Rs4, 101-200 - Rs6, 201-400 - Rs8, >400 Rs13
+// Electric Bill - 100-Rs4, 101-200-Rs6, 201-400-Rs8, more than 400-Rs13
 let unit = Number(prompt("Enter Electricity Unit"));
 let amount = 0;
-if (unit > 400) {
+if (unit > 400) {   //
   amount = (unit - 400) * 13;
-  unit = 400;
+  unit = 400;  //if unit is greater than 400 then only it will go inside this and the remaining will go inside next if function
 }
 if (unit > 200 && unit <= 400) {
   amount += (unit - 200) * 8;

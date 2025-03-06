@@ -1,8 +1,8 @@
 // To Check No. of Notes of 500, 100, 50.....
 let amount = Number(prompt("Enter Amount ?"));
 if (amount >= 500) {
-  console.log("500 Notes : ", Math.floor(amount / 500));
-  amount = amount % 500;
+  console.log("500 Notes : ", Math.floor(amount / 500));  // quotient gives number of notes
+  amount = amount % 500;   // to reset amount , Remainder gives remaining money
 }
 if (amount >= 200) {
   console.log("200 Notes : ", Math.floor(amount / 200));

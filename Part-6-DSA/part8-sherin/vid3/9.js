@@ -1,5 +1,5 @@
 // reversing the digits
-var pr = prompt("enter number");
+var pr = prompt("reverse number");
 if (pr === null) {
   console.log("cancelled");
 } else {
@@ -10,9 +10,9 @@ if (pr === null) {
     if (n > 0) {
       var rev = 0;
       while (n > 0) {
-        var rem = n % 10;
-        rev = rev * 10 + rem;
-        n = Math.floor(n / 10);
+        var rem = n % 10; // remainder or to get the last digit
+        rev = rev * 10 + rem;  // after adding first value it is got updated so it will no give 0 next time
+        n = Math.floor(n / 10); // to remove last digit
       }
 
       console.log(rev);

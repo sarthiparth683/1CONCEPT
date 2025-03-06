@@ -1,5 +1,5 @@
 // Prime Numbers
-var pr = prompt("input any Number  ?");
+var pr = prompt("Find Prime Number ?");
 if (pr === null) {
   console.log("cancelled");
 } else {

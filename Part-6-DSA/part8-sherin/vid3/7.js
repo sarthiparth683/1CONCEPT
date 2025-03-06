@@ -8,7 +8,7 @@
 
 // eg
 var i = 1;
-while (i < 23) {
+while (i <= 7) {
   console.log(i);
   i++;
 }

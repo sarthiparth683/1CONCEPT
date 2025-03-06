@@ -1,4 +1,5 @@
 // Factorial of n Natural numbers
+// 5!=5×4×3×2×1=120  -   product of all positive integers
 var pr = prompt("kaha tak add karnan hi ?");
 if (pr === null) {
   console.log("cancelled");
