@@ -17,7 +17,7 @@ const TaskManager = () => {
       dispatch(addTask({ title: newTask, id: tasks.length + 1 }));
       setNewTask('');
     }
-  };
+  };  
 
   return (
     <div>

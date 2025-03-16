@@ -1,0 +1,6 @@
+export const ADD_TASK = "ADD_TASK"
+export const DELETE_TASK = "DELETE_TASK"
+export const TOGGLE_TASK = "TOGGLE_TASK"
+export const REQUEST_TASK = "REQUEST_TASK"
+export const RECEIVE_TASK = "RECEIVE_TASK"
+export const ERROR_TASK = "ERROR_TASK"

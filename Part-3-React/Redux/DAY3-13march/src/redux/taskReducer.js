@@ -27,6 +27,6 @@ const taskReducer = produce((draft, action)=>{
             draft.tasks.push(action.payload)
             break;
     }
-}, initialState)
+}, initialState)  
 
 export default taskReducer

@@ -11,4 +11,4 @@ const middleware = applyMiddleware(thunk, logger)
 
 const store = legacy_createStore(rootReducer, middleware)
 
-export default store
+export default store  
