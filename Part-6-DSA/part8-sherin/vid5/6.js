@@ -3,7 +3,7 @@ let s = prompt("Enter any string or number");
 let arr = new Array(128).fill(0);
 
 for (let i = 0; i < s.length; i++) {
-  let indx = s.charCodeAt(i);
+  let indx = s.charCodeAt(i);  // char code at i index
   arr[indx] = arr[indx] + 1;
 }
 

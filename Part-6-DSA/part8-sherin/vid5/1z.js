@@ -5,8 +5,12 @@
 
 //-----------------------------------------------------------
 // String Method
-let s = "sheriyans";
+let s = "Parth Sarthi ";
 console.log(s.slice(1, 4)); // slice need start and end index
 console.log(s.toUpperCase());
 console.log(s.toLowerCase());
-console.log(s.concat(" str1", " str2", " str3"));
+
+let srt1 = "srting1 ";
+let str2 = "string2 ";
+let str3 = "string3";
+console.log(s.concat(srt1, str2, str3));
