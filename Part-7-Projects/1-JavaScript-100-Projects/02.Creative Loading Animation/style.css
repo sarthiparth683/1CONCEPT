@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #00008bcb;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper .loader {
+  display: flex;
+  justify-content: space-evenly;  
+  padding: 0 20px;
+}
+
+.loader .loading {
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  margin: 0 10px;
+  animation: load 0.8s ease infinite;
+}
+
+.loader .loading.one {
+  animation-delay: 0.3s;
+}
+.loader .loading.two {
+  animation-delay: 0.4s;
+}
+.loader .loading.three {
+  animation-delay: 0.5s;
+}
+
+@keyframes load {
+  0% {
+    width: 30px;
+    height: 30px;
+  }
+  50% {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+
+.test {
+  width: 500px;
+  padding: 20px;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+
+
+/* --------------------------------------------------------- */
+ /* to check box-sizing: border-box; - it fits in the given width doesn't count any extra widht  */
+/* .container {
+  display: flex;
+  gap: 20px;
+}
+
+.box {
+  width: 200px;
+  padding: 20px;
+  border: 10px solid black;
+  background-color: lightblue;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content-box {
+  box-sizing: content-box; 
+}
+
+.border-box {
+  box-sizing: border-box; 
+} */

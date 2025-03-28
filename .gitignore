@@ -23,3 +23,21 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Ignore video files
+video.mp4
+*.mp4
+*.webm
+*.mov
+*.avi
+
+
+# Ignore image files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.bmp
+*.tiff
+*.ico
