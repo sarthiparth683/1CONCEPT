@@ -50,17 +50,18 @@
 
 //Q3 1st and last column
 // function printDiagonals(arr, n) {
-
+//   // let str = "";
 //     for (let i = 0; i < n; i++) {
 //         let str = "";
 //       for (let j = 0; j < n; j++) {
-//         if (j===0 || j === n-1 ) {
+//         // for (let j = n-1; j >=0; j--) { // descending order
+//         if (j===0 || j === n-1  ) {
 //           str += arr[i][j] + " ";
 //         }
 //       }
 //       console.log(str);
 //     }
-
+//     // console.log(str);
 //   }
 
 //   const array = [
@@ -208,33 +209,37 @@
 
 //Q9- coil spiral printing
 
-function circularPrinting(matrix, start, end) {
-  for (let i = start; i < end; i++) {
-    let result = "";
-    for (let j = start; j < end; j++) {
-      if (i == start || j == end - 1 || i == end - 1 || j == start) {
-        result += matrix[i][j];
-      } else {
-        result += " ";
-      }
-    }
-    
-  }
-  console.log(result);
-}
-const spiralMatrix = (matrix) => {
-  start = 0;
-  end = matrix.length;
-  while (start < end) {
-    circularPrinting(matrix, start, end);
-    start++;
-    end--;
-  }
-};
-const matrix = [
-  [1, 2, 3, 4],
-  [5, 6, 7, 8],
-  [9, 10, 11, 12],
-  [13, 14, 15, 16],
-];
-spiralMatrix(matrix);
+// function circularPrinting(matrix, start, end) {
+//     // let result = "";
+//   for (let i = start; i < end; i++) {
+//     let result = "";
+//     for (let j = start; j < end; j++) {
+//       if (i == start || j == end - 1 || i == end - 1 || j == start) {
+//         result += matrix[i][j];
+//       } 
+//     //   else {
+//         result += " ";
+//     //   }
+//     }
+//     console.log(result);
+//   }
+// //   console.log(result);
+ 
+// }
+// const spiralMatrix = (matrix) => {
+//   start = 0;
+//   end = matrix.length;
+//   while (start < end) {
+//     circularPrinting(matrix, start, end);
+//     start++;
+//     end--;
+//     console.log();
+//   }
+// };
+// const matrix = [
+//   [1, 2, 3, 4],
+//   [5, 6, 7, 8],
+//   [9, 10, 11, 12],
+//   [13, 14, 15, 16],
+// ];
+// spiralMatrix(matrix);
