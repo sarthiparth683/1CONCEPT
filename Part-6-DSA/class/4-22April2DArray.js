@@ -216,7 +216,7 @@
 //     for (let j = start; j < end; j++) {
 //       if (i == start || j == end - 1 || i == end - 1 || j == start) {
 //         result += matrix[i][j];
-//       } 
+//       }
 //     //   else {
 //         result += " ";
 //     //   }
@@ -224,7 +224,7 @@
 //     console.log(result);
 //   }
 // //   console.log(result);
- 
+
 // }
 // const spiralMatrix = (matrix) => {
 //   start = 0;
@@ -243,3 +243,24 @@
 //   [13, 14, 15, 16],
 // ];
 // spiralMatrix(matrix);
+//-------------------------------------------------------------------------------------------------
+
+function nTraversal(matrix) {
+  let n = matrix.length;
+  let str = "";
+  for (let i = n - 1; i >= 0; i--) {
+    for (let j = n - 1; j >= 0; j--) {
+      if (j == 0 || i == j) {
+        str += matrix[i][j] + " ";
+      }
+    }
+  }
+  console.log(str);
+}
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+nTraversal(matrix);
+// output should be 7415963 N pattern
