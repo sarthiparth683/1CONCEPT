@@ -8,6 +8,7 @@ const person = {
 for (const key in person) {
     // console.log(key, person[key]);
 }
+//-----------------------------------------
 for (const key of person) {
     // console.log(key, person[key]);    // for of is not for object
 }

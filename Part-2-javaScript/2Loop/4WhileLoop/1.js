@@ -25,6 +25,11 @@ for (let index = 5; index >=0; index--) {
 
 
 
-
+// let count = 0;
+// while (count < 5) {
+//   console.log(count);
+//   console.log("test");
+//   count++;
+// }
 
 
