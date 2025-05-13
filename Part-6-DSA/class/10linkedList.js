@@ -1,0 +1,284 @@
+//  Insertion at Beginning:
+// Algorithm insertAtBeginning(data):
+//     newNode = createNode(data)
+//     if head is null:
+//         head = newNode
+//         tail = newNode
+//     else:
+//         newNode.next = head
+//         head = newNode
+ //-----------------------------------------------------------------------------------------------------
+
+// Insertion at End:
+// Algorithm insertAtEnd(data):
+//     newNode = createNode(data)
+//     if head is null:
+//         head = newNode
+//         tail = newNode
+//     else:
+//         tail.next = newNode
+//         tail = newNode
+ //-----------------------------------------------------------------------------------------------------
+
+// Insertion at Middle (after a given node):
+// Algorithm insertAfterNode(prevNode, data):
+//     if prevNode is null:
+//         return "Previous node cannot be null"
+    
+//     newNode = createNode(data)
+//     newNode.next = prevNode.next
+//     prevNode.next = newNode
+ //-----------------------------------------------------------------------------------------------------
+
+// Deletion at Beginning:
+// Algorithm deleteAtBeginning():
+//     if head is null:
+//         return "List is empty"
+//     else:
+//         temp = head
+//         head = head.next
+//         free temp
+ //-----------------------------------------------------------------------------------------------------
+
+// Deletion at End:
+// Algorithm deleteAtEnd():
+//     if head is null:
+//         return "List is empty"
+//     elif head = tail:
+//         free head
+//         head = null
+//         tail = null
+//     else:
+//         temp = head
+//         while temp.next.next is not null:
+//             temp = temp.next
+//         free temp.next
+//         temp.next = null
+ //-----------------------------------------------------------------------------------------------------
+
+// Deletion of a Node:
+// Algorithm deleteNode(key):
+//     temp = head
+//     if temp is not null and temp.data = key:
+//         head = temp.next
+//         free temp
+//         return
+    
+//     prev = null
+//     while temp is not null and temp.data != key:
+//         prev = temp
+//         temp = temp.next
+    
+//     if temp is null:
+//         return "Key not found"
+    
+//     prev.next = temp.next
+//     free temp
+ 
+ //-----------------------------------------------------------------------------------------------------
+//  Creating a single node example:
+// const singleNode = { value: 10, next: null };
+// console.log(singleNode.value);  // prints 10
+// console.log(singleNode.next);   // prints null
+ //-------------------------------------------------
+// Creating and connecting two nodes:
+// let firstNode = new LinkedListNode(10);
+// let secondNode = new LinkedListNode(20);
+// firstNode.next = secondNode;
+// let head = firstNode;
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+// Inserting a Node at the Head
+// New node inserted becomes the head, and its next pointer references the previous head.
+// Example: Insert 30 at head, then 20 at head, final list: 30 → 20 → 10 → null
+// Code snippet:
+
+// function insertNodeAtHead(head, data) {
+//     let newNode = new LinkedListNode(data);
+//     newNode.next = head;
+//     return newNode;
+// }
+// head = null;
+// head = insertNodeAtHead(head, 10);
+// head = insertNodeAtHead(head, 20);
+// head = insertNodeAtHead(head, 30);
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+// Traversing a Linked List
+
+// function traverseLinkedList(head) {
+//     let current = head;
+//     while (current !== null) {
+//         console.log(current.data);
+//         current = current.next;
+//     }
+// }
+
+//-----------------------------------------------------------------------------------------------------
+// Deleting a Node at the Beginning
+
+// function deleteAtBeginning(head) {
+//     if (!head) {
+//         console.log("List is already empty.");
+//         return null;
+//     }
+//     return head.next;
+// }
+
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+// Problem Name : Find the middle node in a single linked list
+// Approach-1. Counting Nodes and Traversing Again
+// function findMiddle(head) {
+//     let count = 0;
+//     let current = head;
+
+//     // First pass to count nodes
+//     while (current !== null) {
+//         count++;
+//         current = current.next;
+//     }
+
+//     // Reset current for second pass
+//     current = head;
+//     let middleIndex = Math.floor(count / 2);
+
+//     // Second pass to find middle node
+//     for (let i = 0; i < middleIndex; i++) {
+//         current = current.next;
+//     }
+
+//     return current;
+// }
+//------------------------------------------------------------------
+
+// Approach-2. Using Two Pointers (Fast and Slow Pointer Technique)
+// function findMiddle(head) {
+//     let slowPointer = head;
+//     let fastPointer = head;
+
+//     while (fastPointer !== null && fastPointer.next !== null) {
+//         slowPointer = slowPointer.next;
+//         fastPointer = fastPointer.next.next;
+//     }
+
+//     return slowPointer;
+// }
+
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+// Problem Name : Reverse the Single Linked List
+// function reverseLinkedList(head) {
+//     let prev = null;
+//     let current = head;
+
+//     while (current !== null) {
+//         let nextNode = current.next;
+//         current.next = prev;
+//         prev = current;
+//         current = nextNode;
+//     }
+
+//     return prev;
+// }
+
+//-----------------------------------------------------------------------------------------------------
+// Problem Name : Detect Loop / Cycle in a linked list
+// function detectCycle(head) {
+//     let slow = head;
+//     let fast = head;
+
+//     while (fast !== null && fast.next !== null) {
+//         slow = slow.next;
+//         fast = fast.next.next;
+
+//         if (slow === fast) {
+//             return true;
+//         }
+//     }
+
+//     return false;
+// }
+
+//-----------------------------------------------------------------------------------------------------
+// Problem Name : Nth node from end
+
+// function nthNodeFromEnd(head, n) {
+//     let slow = head;
+//     let fast = head;
+
+//     // Move fast pointer n steps ahead
+//     for (let i = 0; i < n - 1; i++) {
+//         if (fast === null) {
+//             // n is greater than the number of nodes
+//             return null;
+//         }
+//         fast = fast.next;
+//     }
+
+//     // Move both pointers until fast reaches the end
+//     while (fast.next !== null) {
+//         slow = slow.next;
+//         fast = fast.next;
+//     }
+
+//     // At this point, slow is at the nth node from the end
+//     return slow;
+// }
+
+//-----------------------------------------------------------------------------------------------------
+// Problem Name : Add 1 to the single linked list 
+// function addOneToLinkedList(head) {
+//     // Reverse the linked list
+//     let reversedHead = reverseLinkedList(head);
+
+//     let current = reversedHead;
+//     let carry = 1;  // We are adding 1
+
+//     while (current !== null && carry > 0) {
+//         let total = current.value + carry;
+//         current.value = total % 10;  // Update the current node value
+//         carry = Math.floor(total / 10);  // Update carry for next iteration
+
+//         if (carry > 0 && current.next === null) {
+//             // If carry remains and we reach the end, add a new node
+//             current.next = new ListNode(carry);
+//             break;
+//         }
+
+//         current = current.next;
+//     }
+
+//     // Reverse the list back to its original order
+//     return reverseLinkedList(reversedHead);
+// }
+
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
