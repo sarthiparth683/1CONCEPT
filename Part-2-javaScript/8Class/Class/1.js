@@ -34,7 +34,7 @@ class Employee extends Person {
 
   get salary() {
     return this.#salary;
-  }
+  } 
 
   set salary(value) {
     if (value > 0) {

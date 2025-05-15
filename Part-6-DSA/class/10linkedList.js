@@ -7,7 +7,7 @@
 //     else:
 //         newNode.next = head
 //         head = newNode
- //-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
 
 // Insertion at End:
 // Algorithm insertAtEnd(data):
@@ -18,17 +18,17 @@
 //     else:
 //         tail.next = newNode
 //         tail = newNode
- //-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
 
 // Insertion at Middle (after a given node):
 // Algorithm insertAfterNode(prevNode, data):
 //     if prevNode is null:
 //         return "Previous node cannot be null"
-    
+
 //     newNode = createNode(data)
 //     newNode.next = prevNode.next
 //     prevNode.next = newNode
- //-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
 
 // Deletion at Beginning:
 // Algorithm deleteAtBeginning():
@@ -38,7 +38,7 @@
 //         temp = head
 //         head = head.next
 //         free temp
- //-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
 
 // Deletion at End:
 // Algorithm deleteAtEnd():
@@ -54,7 +54,7 @@
 //             temp = temp.next
 //         free temp.next
 //         temp.next = null
- //-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
 
 // Deletion of a Node:
 // Algorithm deleteNode(key):
@@ -63,48 +63,76 @@
 //         head = temp.next
 //         free temp
 //         return
-    
+
 //     prev = null
 //     while temp is not null and temp.data != key:
 //         prev = temp
 //         temp = temp.next
-    
+
 //     if temp is null:
 //         return "Key not found"
-    
+
 //     prev.next = temp.next
 //     free temp
- 
- //-----------------------------------------------------------------------------------------------------
-//  Creating a single node example:
-// const singleNode = { value: 10, next: null };
-// console.log(singleNode.value);  // prints 10
-// console.log(singleNode.next);   // prints null
- //-------------------------------------------------
-// Creating and connecting two nodes:
-// let firstNode = new LinkedListNode(10);
-// let secondNode = new LinkedListNode(20);
-// firstNode.next = secondNode;
-// let head = firstNode;
-//-----------------------------------------------------------------------------------------------------
-//-----------------------------------------------------------------------------------------------------
-// Inserting a Node at the Head
-// New node inserted becomes the head, and its next pointer references the previous head.
-// Example: Insert 30 at head, then 20 at head, final list: 30 → 20 → 10 → null
-// Code snippet:
 
+//--------------------------------------------------------------------------------
+//----------------------------------------------------------------------------
+// Creating and connecting two nodes:
+// let head = null;
+// let firstNode = {
+//   value: 10,
+//   next: null,
+// };
+
+// head = firstNode;
+// let secondNode = {
+//   value: 20,
+//   next: null,
+// };
+
+// firstNode.next = secondNode;
+// console.log(firstNode)
+// console.log(head.value);
+// console.log(head.next)
+// console.log(head.next.value)
+// console.log(head.next.next)
+//-------------------------------------------------------------------------------------
+// insert node at head
+// const LinkedListNode = class {
+//   constructor(nodeData) {
+//     this.data = nodeData;
+//     this.next = null;
+//   }
+// };
+// // let firstNode = new LinkedListNode(10);
+// // console.log(firstNode)
+// // console.log(firstNode.data)
 // function insertNodeAtHead(head, data) {
-//     let newNode = new LinkedListNode(data);
-//     newNode.next = head;
-//     return newNode;
+//   let newNode = new LinkedListNode(data);
+//   newNode.next = head;
+//   return newNode;
 // }
-// head = null;
+// let head = null;
 // head = insertNodeAtHead(head, 10);
 // head = insertNodeAtHead(head, 20);
-// head = insertNodeAtHead(head, 30);
+// console.log(head);
+// console.log(head.data);
+// console.log(head.next.data);
 //-----------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------
 // Traversing a Linked List
+// const LinkedListNode = class {
+//   constructor(nodeData) {
+//     this.data = nodeData;
+//     this.next = null;
+//   }
+// };
+// let head = new LinkedListNode(10);
+// head.next = new LinkedListNode(20);
+// head.next.next = new LinkedListNode(30);
+// // console.log(head)
+// // console.log(head.next)
+// // console.log(head.next.data)
 
 // function traverseLinkedList(head) {
 //     let current = head;
@@ -113,9 +141,67 @@
 //         current = current.next;
 //     }
 // }
+// traverseLinkedList(head)
+//-----------------------------------------------------------------------------------
+// inserting node at position
 
-//-----------------------------------------------------------------------------------------------------
+// const LinkedListNode = class {
+//   constructor(nodeData) {
+//     this.data = nodeData;
+//     this.next = null;
+//   }
+// };
+
+// function insertNodeAtPosition(head, data, position) {
+//   const newnode = new LinkedListNode(data);
+//   if (position === 0) {
+//     newnode.next = head;
+//     return newnode;
+//   }
+//   let current = head;
+//   let currIndex = 0;
+//   while (current != null && currIndex < position - 1) {
+//     current = current.next;
+//     currIndex++;
+//   }
+//   if (current == null) {
+//     console.log("Position out of Range");
+//     return head;
+//   }
+//   newnode.next = current.next;
+//   current.next = newnode;
+//   return head;
+// }
+
+// function traverseLinkedList(head) {
+//   let current = head;
+//   while (current !== null) {
+//     console.log(current.data);
+//     current = current.next;
+//   }
+// }
+
+// let head = new LinkedListNode(10);
+// head.next = new LinkedListNode(20);
+// head.next.next = new LinkedListNode(30);
+// head = insertNodeAtPosition(head, 15, 2);
+// traverseLinkedList(head);
+
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------
 // Deleting a Node at the Beginning
+
+// const LinkedListNode = class {
+//   constructor(nodeData) {
+//     this.data = nodeData;
+//     this.next = null;
+//   }
+// };
+
+
 
 // function deleteAtBeginning(head) {
 //     if (!head) {
@@ -124,7 +210,10 @@
 //     }
 //     return head.next;
 // }
-
+// let head = new LinkedListNode(10);
+// head.next = new LinkedListNode(20);
+// head.next.next = new LinkedListNode(30);
+// head = deleteAtBeginning(head);
 //-----------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------
@@ -232,7 +321,7 @@
 // }
 
 //-----------------------------------------------------------------------------------------------------
-// Problem Name : Add 1 to the single linked list 
+// Problem Name : Add 1 to the single linked list
 // function addOneToLinkedList(head) {
 //     // Reverse the linked list
 //     let reversedHead = reverseLinkedList(head);
@@ -415,7 +504,7 @@
  * }
  */
 
-// Solution:- 
+// Solution:-
 // var isPalindrome = function (head) {
 //   let string1 = (string2 = "");
 //   let node = head;
