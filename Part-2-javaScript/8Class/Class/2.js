@@ -49,6 +49,7 @@ class JandhanAccount extends CreateAccount {
   }
 }
 let ch1 = new JandhanAccount("John", 110, "male", "78484", 900, 950);
+// console.log(ch1)
 // console.log(ch1.name);
 // console.log(ch1.incomelimit);
 // console.log(ch1.useCredit(45));
@@ -62,10 +63,10 @@ class LoanAccount extends CreateAccount {
 let c1 = new CreateAccount("james", 24, "male", 12345678); //Parent
 let c2 = new JandhanAccount("Jimmy", 32, "male", 987654321, 250000); //ch-1
 let c3 = new LoanAccount("Achiles", 32, "male", 987654321, 250000, "6");
-console.log("c-1", c1);
-// console.log("c-2", c2);
-// console.log("c-3", c3);
-// console.log(c2.useCredit(50000));
+// console.log(c1);
+// console.log(c2);
+// console.log(c3);
+// console.log(c2.useCredit(50));
 //---------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------
 //---------------------------------------------------------------------------------
@@ -93,7 +94,7 @@ class User {
 
 let user1 = new User("Sarthi", 30);
 // console.log(user1.name);
-// console.log(user1.age); 
+// console.log(user1.age);
 
 // user1.age = 45;  // setting value
 // // user1.age(55) // function calling will not work
@@ -102,22 +103,3 @@ let user1 = new User("Sarthi", 30);
 // user1.age = 200; // Invalid age value.
 // console.log(user1.age); // Output: 40 (unchanged)
 //-----------------------------------------------------------------------
-class Animal {
-  constructor(sound) {
-    this._sound = sound;
-  }
-
-  get sound() {
-    return this._sound;
-  }
-
-  set sound(newSound) {
-    this._sound = newSound;
-  }
-}
-
-let animal1 = new Animal("Woof");
-console.log(animal1.sound); // Output: Woof
-
-animal1.sound = "Meow";
-console.log(animal1.sound); // Output: Meow

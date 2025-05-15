@@ -1,6 +1,6 @@
 // A constructor is a special method in a class that gets called automatically when a new object is created using the new keyword. Its main purpose is to initialize object properties. In JavaScript, the constructor is defined using the constructor keyword inside a class.A class can have only one constructor.
 
-//both canSleep() and greet() are also methods.canSleep() is an instance method, which is called on an object created from the class. greet() is a static method, which is called directly on the class and not on its instances.
+//both canSleep() and greet() are also methods .canSleep() is an instance method, which is called on an object created from the class. greet() is a static method, which is called directly on the class and not on its instances.
 
 class Person {
   constructor(name, age) {
@@ -22,7 +22,7 @@ let p1 = new Person("John", 12);
 // console.log(p1.age);
 // console.log(p1.canSleep());
 // console.log(p1.greet()); // error because of static function
-console.log(Person.greet()); // static are called directly
+// console.log(Person.greet()); // static are called directly
 // console.log(Person.greet());
 //--------------------------------------------------------------
 class Employee extends Person {
@@ -67,7 +67,7 @@ class Manager extends Employee {
     return "Manager";
   }
 }
-// let m1 = new Manager("Rocky", 24, 9878);
+let m1 = new Manager("Rocky", 24, 9878);
 // console.log(m1);
 // console.log(m1.managing()); // inside prototype
 // console.log(Manager.getRole()) // getRole is inside constructor
@@ -88,8 +88,8 @@ class Executive extends Manager {
     }
   }
 }
-// let e2 = new Executive("Aman", 24, 987111, 101);
-// console.log(e2); // get and set is inside prototype
+let e2 = new Executive("Aman", 24, 987111, 101);
+console.log(e2); // get and set is inside prototype
 // console.log("initital value in get -", e2.bonus);//get
 // e2.bonus = 5000; //set  update
 // console.log("upsdated value in set -", e2.bonus); // conclusion get and set is used for updating value

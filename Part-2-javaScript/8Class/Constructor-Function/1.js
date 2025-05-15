@@ -1,14 +1,8 @@
-
-//---------------------------------------------------------
-// Task 2:    
 function Person(firstName, lastName, age) {
-  let obj = {};
-  Object.setPrototypeOf(obj, Person.prototype);
-  obj.firstName = firstName;
-  obj.lastName = lastName;
-  obj.age = age;
-  return obj;
-};
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+}
 Person.prototype.increaseAge = function () {
   this.age = this.age + 1;
   console.log(this.age);
@@ -22,22 +16,25 @@ Person.prototype.eat = function () {
 Person.prototype.introduceSelf = function () {
   console.log(this.firstName, this.lastName, this.age);
 };
+let p = new Person("Parth", "Sarthi", 21);
+// console.log(p)
+// console.log(p.firstName)
+// p.eat()
+//-----------------------------------------------------------
 
 function Employee(firstName, lastName, age, department, salary) {
-  let obj = Person(firstName, lastName, age);
-  Object.setPrototypeOf(obj, Employee.prototype);
-  obj.department = department;
-  obj.salary = salary;
-  return obj;
+  Person.call(this, firstName, lastName, age);
+  this.department = department;
+  this.salary = salary;
 }
-Object.setPrototypeOf(Employee.prototype, Person.prototype);
+Object.setPrototypeOf(Employee.prototype, Person.prototype);// Employee is parent and person is child
 Employee.prototype.work = function () {
   console.log(`${this.firstName} is working.`);
 };
 Employee.prototype.getSalary = function () {
   console.log(`${this.firstName} is getting Salary.`);
 };
-let e1 = Employee("John", "Doe", 25, "engineering", 200000);
+let e1 = new Employee("John", "Doe", 25, "engineering", 200000);
 console.log(e1);
-e1.work();
-//-----------------------------------------------------------------
+// e1.work();
+ 
