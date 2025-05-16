@@ -1,82 +1,3 @@
-//  Insertion at Beginning:
-// Algorithm insertAtBeginning(data):
-//     newNode = createNode(data)
-//     if head is null:
-//         head = newNode
-//         tail = newNode
-//     else:
-//         newNode.next = head
-//         head = newNode
-//-----------------------------------------------------------------------------------------------------
-
-// Insertion at End:
-// Algorithm insertAtEnd(data):
-//     newNode = createNode(data)
-//     if head is null:
-//         head = newNode
-//         tail = newNode
-//     else:
-//         tail.next = newNode
-//         tail = newNode
-//-----------------------------------------------------------------------------------------------------
-
-// Insertion at Middle (after a given node):
-// Algorithm insertAfterNode(prevNode, data):
-//     if prevNode is null:
-//         return "Previous node cannot be null"
-
-//     newNode = createNode(data)
-//     newNode.next = prevNode.next
-//     prevNode.next = newNode
-//-----------------------------------------------------------------------------------------------------
-
-// Deletion at Beginning:
-// Algorithm deleteAtBeginning():
-//     if head is null:
-//         return "List is empty"
-//     else:
-//         temp = head
-//         head = head.next
-//         free temp
-//-----------------------------------------------------------------------------------------------------
-
-// Deletion at End:
-// Algorithm deleteAtEnd():
-//     if head is null:
-//         return "List is empty"
-//     elif head = tail:
-//         free head
-//         head = null
-//         tail = null
-//     else:
-//         temp = head
-//         while temp.next.next is not null:
-//             temp = temp.next
-//         free temp.next
-//         temp.next = null
-//-----------------------------------------------------------------------------------------------------
-
-// Deletion of a Node:
-// Algorithm deleteNode(key):
-//     temp = head
-//     if temp is not null and temp.data = key:
-//         head = temp.next
-//         free temp
-//         return
-
-//     prev = null
-//     while temp is not null and temp.data != key:
-//         prev = temp
-//         temp = temp.next
-
-//     if temp is null:
-//         return "Key not found"
-
-//     prev.next = temp.next
-//     free temp
-
-//--------------------------------------------------------------------------------
-//----------------------------------------------------------------------------
 // Creating and connecting two nodes:
 // let head = null;
 // let firstNode = {
@@ -96,7 +17,7 @@
 // console.log(head.next)
 // console.log(head.next.value)
 // console.log(head.next.next)
-//-------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------
 // insert node at head
 // const LinkedListNode = class {
 //   constructor(nodeData) {
@@ -201,8 +122,6 @@
 //   }
 // };
 
-
-
 // function deleteAtBeginning(head) {
 //     if (!head) {
 //         console.log("List is already empty.");
@@ -215,53 +134,121 @@
 // head.next.next = new LinkedListNode(30);
 // head = deleteAtBeginning(head);
 //-----------------------------------------------------------------------------------------------------
-//-----------------------------------------------------------------------------------------------------
-//-----------------------------------------------------------------------------------------------------
-//-----------------------------------------------------------------------------------------------------
-//-----------------------------------------------------------------------------------------------------
+
+// Deleting a Node at the end
+
+// const LinkedListNode = class {
+//   constructor(nodeData) {
+//     this.data = nodeData;
+//     this.next = null;
+//   }
+// };
+
+// function deleteAtEnd(head) {
+//   if (head == null) {
+//     console.log("List is empty. Nothing to delete");
+//     return null;
+//   }
+//   if (head.next == null) {
+//     return null;
+//   }
+
+//   let current = head;
+//   while (current.next.next != null) {
+//     current = current.next;
+//   }
+//   current.next = null;
+//   return head;
+// }
+
+// function traverseLinkedList(head) {
+//   let current = head;
+//   while (current !== null) {
+//     console.log(current.data);
+//     current = current.next;
+//   }
+// }
+// let head = new LinkedListNode(10);
+// head.next = new LinkedListNode(20);
+// head.next.next = new LinkedListNode(30);
+// traverseLinkedList(head);
+// head = deleteAtEnd(head);
+// console.log("-------------");
+// traverseLinkedList(head);
 //-----------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------
 // Problem Name : Find the middle node in a single linked list
 // Approach-1. Counting Nodes and Traversing Again
+
+// const LinkedListNode = class {
+//   constructor(nodeData) {
+//     this.data = nodeData;
+//     this.next = null;
+//   }
+// };
+
 // function findMiddle(head) {
-//     let count = 0;
-//     let current = head;
-
-//     // First pass to count nodes
-//     while (current !== null) {
-//         count++;
-//         current = current.next;
-//     }
-
-//     // Reset current for second pass
-//     current = head;
-//     let middleIndex = Math.floor(count / 2);
-
-//     // Second pass to find middle node
-//     for (let i = 0; i < middleIndex; i++) {
-//         current = current.next;
-//     }
-
-//     return current;
+//   let count = 0;
+//   let current = head;
+//   // First pass to count nodes
+//   while (current !== null) {
+//     count++;
+//     current = current.next;
+//   }
+//   // Reset current for second pass
+//   current = head;
+//   let middleIndex = Math.floor(count / 2);
+//   // Second pass to find middle node
+//   for (let i = 0; i < middleIndex; i++) {
+//     current = current.next;
+//   }
+//   return current;
 // }
+
+// let head = new LinkedListNode(10);
+// head.next = new LinkedListNode(20);
+// head.next.next = new LinkedListNode(30);
+// head.next.next.next = new LinkedListNode(40);
+// head.next.next.next.next = new LinkedListNode(50);
+// let middle = findMiddle(head);
+// console.log(middle.data);
 //------------------------------------------------------------------
 
 // Approach-2. Using Two Pointers (Fast and Slow Pointer Technique)
+// const LinkedListNode = class {
+//   constructor(nodeData) {
+//     this.data = nodeData;
+//     this.next = null;
+//   }
+// };
 // function findMiddle(head) {
-//     let slowPointer = head;
-//     let fastPointer = head;
+//   let slowPointer = head;
+//   let fastPointer = head;
 
-//     while (fastPointer !== null && fastPointer.next !== null) {
-//         slowPointer = slowPointer.next;
-//         fastPointer = fastPointer.next.next;
-//     }
+//   while (fastPointer !== null && fastPointer.next !== null) {
+//     slowPointer = slowPointer.next;
+//     fastPointer = fastPointer.next.next;
+//   }
 
-//     return slowPointer;
+//   return slowPointer;
 // }
+// let head = new LinkedListNode(10);
+// head.next = new LinkedListNode(20);
+// head.next.next = new LinkedListNode(30);
+// head.next.next.next = new LinkedListNode(40);
+// head.next.next.next.next = new LinkedListNode(50);
+// let middle = findMiddle(head);
+// console.log(middle.data);
+//-------------------------------------------------------------------------------
 
-//-----------------------------------------------------------------------------------------------------
-//-----------------------------------------------------------------------------------------------------
 // Problem Name : Reverse the Single Linked List
+// const LinkedListNode = class {
+//   constructor(nodeData) {
+//     this.data = nodeData;
+//     this.next = null;
+//   }
+// };
+
 // function reverseLinkedList(head) {
 //     let prev = null;
 //     let current = head;
@@ -276,78 +263,163 @@
 //     return prev;
 // }
 
-//-----------------------------------------------------------------------------------------------------
+// function traverseLinkedList(head) {
+//   let current = head;
+//   while (current !== null) {
+//     console.log(current.data);
+//     current = current.next;
+//   }
+// }
+
+// let head = new LinkedListNode(10);
+// head.next = new LinkedListNode(20);
+// head.next.next = new LinkedListNode(30);
+// head.next.next.next = new LinkedListNode(40);
+// head.next.next.next.next = new LinkedListNode(50);
+// traverseLinkedList(head)
+// head = reverseLinkedList(head);
+// console.log("----------------")
+// traverseLinkedList(head)
+//---------------------------------------------------------------------------------
+
 // Problem Name : Detect Loop / Cycle in a linked list
+// const LinkedListNode = class {
+//   constructor(nodeData) {
+//     this.data = nodeData;
+//     this.next = null;
+//   }
+// };
+
 // function detectCycle(head) {
-//     let slow = head;
-//     let fast = head;
+//   if (head == null) {
+//     return null;
+//   }
+//   let slow = head;
+//   let fast = head;
 
-//     while (fast !== null && fast.next !== null) {
-//         slow = slow.next;
-//         fast = fast.next.next;
+//   while (fast !== null && fast.next !== null) {
+//     slow = slow.next;
+//     fast = fast.next.next;
 
-//         if (slow === fast) {
-//             return true;
-//         }
+//     if (slow === fast) {
+//       return true;
 //     }
+//   }
 
-//     return false;
+//   return false;
 // }
+// let head = new LinkedListNode(10);
+// head.next = new LinkedListNode(20);
+// head.next.next = new LinkedListNode(30);
+// head.next.next.next = new LinkedListNode(40);
+// head.next.next.next.next = new LinkedListNode(50);
+// head.next.next.next.next.next = head;
+// console.log(detectCycle(head));
+//------------------------------------------------------------------------------
 
-//-----------------------------------------------------------------------------------------------------
 // Problem Name : Nth node from end
-
+// const LinkedListNode = class {
+//   constructor(nodeData) {
+//     this.data = nodeData;
+//     this.next = null;
+//   }
+// };
 // function nthNodeFromEnd(head, n) {
-//     let slow = head;
-//     let fast = head;
-
-//     // Move fast pointer n steps ahead
-//     for (let i = 0; i < n - 1; i++) {
-//         if (fast === null) {
-//             // n is greater than the number of nodes
-//             return null;
-//         }
-//         fast = fast.next;
+//   if (n <= 0) {
+//     return null;
+//   }
+//   let slow = head;
+//   let fast = head;
+//   // Move fast pointer n steps ahead
+//   for (let i = 0; i < n - 1; i++) {
+//     if (fast === null) {
+//       // n is greater than the number of nodes
+//       return null;
 //     }
-
-//     // Move both pointers until fast reaches the end
-//     while (fast.next !== null) {
-//         slow = slow.next;
-//         fast = fast.next;
-//     }
-
-//     // At this point, slow is at the nth node from the end
-//     return slow;
+//     fast = fast.next;
+//   }
+//   // Move both pointers until fast reaches the end
+//   while (fast.next !== null) {
+//     slow = slow.next;
+//     fast = fast.next;
+//   }
+//   // At this point, slow is at the nth node from the end
+//   return slow;
 // }
-
-//-----------------------------------------------------------------------------------------------------
+// let head = new LinkedListNode(10);
+// head.next = new LinkedListNode(20);
+// head.next.next = new LinkedListNode(30);
+// head.next.next.next = new LinkedListNode(40);
+// head.next.next.next.next = new LinkedListNode(50);
+// let nthNode = nthNodeFromEnd(head, 2);
+// console.log(nthNode.data);
+//---------------------------------------------------------------------------------
 // Problem Name : Add 1 to the single linked list
-// function addOneToLinkedList(head) {
-//     // Reverse the linked list
-//     let reversedHead = reverseLinkedList(head);
+// const LinkedListNode = class {
+//   constructor(nodeData) {
+//     this.data = nodeData;
+//     this.next = null;
+//   }
+// };
 
-//     let current = reversedHead;
-//     let carry = 1;  // We are adding 1
+// function reverseLinkedList(head) {
+//   let prev = null;
+//   let current = head;
 
-//     while (current !== null && carry > 0) {
-//         let total = current.value + carry;
-//         current.value = total % 10;  // Update the current node value
-//         carry = Math.floor(total / 10);  // Update carry for next iteration
+//   while (current !== null) {
+//     let next = current.next;
+//     current.next = prev;
+//     prev = current;
+//     current = next;
+//   }
 
-//         if (carry > 0 && current.next === null) {
-//             // If carry remains and we reach the end, add a new node
-//             current.next = new ListNode(carry);
-//             break;
-//         }
-
-//         current = current.next;
-//     }
-
-//     // Reverse the list back to its original order
-//     return reverseLinkedList(reversedHead);
+//   return prev;
 // }
 
-//-----------------------------------------------------------------------------------------------------
+// function addOne(head) {
+//   let current = head;
+//   let carry = 1;
+//   let prev = null;
+
+//   while (current !== null) {
+//     let sum = current.data + carry;
+//     current.data = sum % 10;
+//     carry = Math.floor(sum / 10);
+//     prev = current;
+//     current = current.next;
+//   }
+
+//   if (carry > 0) {
+//     prev.next = new LinkedListNode(carry);
+//   }
+// }
+
+// function traverseLinkedList(head) {
+//   let current = head;
+//   while (current !== null) {
+//     console.log(current.data);
+//     current = current.next;
+//   }
+// }
+
+// function addOneToLinkedList(head) {
+//   head = reverseLinkedList(head);
+//   addOne(head);
+//   head = reverseLinkedList(head);
+//   return head;
+// }
+
+// // Test case: 9 -> 9 -> 9
+// let head = new LinkedListNode(9);
+// head.next = new LinkedListNode(9);
+// head.next.next = new LinkedListNode(9);
+
+// traverseLinkedList(head);
+// head = addOneToLinkedList(head);
+// console.log("------------");
+// traverseLinkedList(head);
+
+//-----------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------
