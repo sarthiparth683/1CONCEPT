@@ -10,7 +10,7 @@ function equalTo(x, y) {
   console.log(sum);
 }
 equalTo(2, 35);
-
+//-----------------------------------------------
 function logicalEvens(one, two) {
   let x = one % 2 == 0;
   let y = two % 2 == 0;

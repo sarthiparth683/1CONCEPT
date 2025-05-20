@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <style>
+      body {
+        font-size: 16px;
+        background-color: white;
+        color: black;
+      }
+
+      @media all and (min-width: 04px) and (max-width: 767px) {
+        body {
+          background-color: black;
+          color: white;
+        }
+      }
+
+      @media all and (min-width: 768px) and (max-width: 1023px) {
+        body {
+          background-color: red;
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Desktop: (min-width:1024px) <br />
+      Tablet: (min-width:768px) and (max-width:1023px) <br />
+      Smartphone :(min-width:340px) and (max-width:767px) <br />
+    </p>
+  </body>
+</html>
