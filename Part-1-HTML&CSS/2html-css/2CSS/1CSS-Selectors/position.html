@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Relative</title>
+    <style>
+      .parent {
+        background-color: aquamarine;
+        width: 300px;
+        height: 300px;
+        margin: auto;
+      }
+      .child {
+        background-color: brown;
+        width: 30px;
+        height: 30px;
+        /* position: relative;   */
+        /* w.r.t. parent */
+        position: absolute;
+        /* nearest positoned ancestor */
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>

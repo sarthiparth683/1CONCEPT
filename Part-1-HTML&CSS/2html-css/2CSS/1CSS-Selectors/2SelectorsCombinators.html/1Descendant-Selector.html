@@ -3,8 +3,8 @@
   <head>
     <style>
       div p {
-        /* It will select all p's which are descendants of div */
-        background-color: teal;
+        /* Descendant selector - (space):-it will select all the tags , nested one also. */
+        background-color: rgb(173, 226, 226);
       }
     </style>
   </head>
@@ -13,8 +13,9 @@
       <p>Paragraph 1 in the div.</p>
       <p>Paragraph 2 in the div.</p>
       <p>Paragraph 3 in the div.</p>
+      <span><p>Paragraph 4 in the div, but it is not child of div, it is child of span</p></span>
     </div>
-    <p>Paragraph 4. Not in a div, not a descendant</p>
     <p>Paragraph 5. Not in a div, not a descendant</p>
+    <p>Paragraph 6. Not in a div, not a descendant</p>
   </body>
 </html>

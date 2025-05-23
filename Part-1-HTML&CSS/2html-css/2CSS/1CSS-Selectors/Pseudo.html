@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Element</title>
+    <style>
+      div::first-letter {
+        color: red;
+      }
+      div::first-line {
+        color: blue;
+      }
+      h1::before,
+      h1::after {
+        content: "sample";
+        color: chartreuse;
+        font-size: 60%;
+      }
+      .box {
+        height: 300px;
+        width: 300px;
+        border: 2px solid;
+        background-color: chartreuse;
+      }
+      .box:hover {
+        border-radius: 50%;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic modi sed tenetur aspernatur quae saepe?</div>
+    <div class="box">
+      <h3>Hover Effect</h3>
+    </div>
+  </body>
+</html>
