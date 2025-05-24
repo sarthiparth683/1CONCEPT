@@ -1,16 +1,16 @@
 // generate all possible sub strings
 
-const allSubString = (string) => {
-  for (let i = 0; i < string.length; i++) {
-    let Substring = "";
-    for (let j = i; j < string.length; j++) {
-      Substring += string[j];
-      console.log(Substring);
-    }
-  }
-};
+// const allSubString = (string) => {
+//   for (let i = 0; i < string.length; i++) {
+//     let Substring = "";
+//     for (let j = i; j < string.length; j++) {
+//       Substring += string[j];
+//       console.log(Substring);
+//     }
+//   }
+// };
 
-allSubString("abcdef");
+// allSubString("abcdef");
 
 // const allSubString = (string) => {
 //     let maxLength = 0
