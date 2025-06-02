@@ -4,6 +4,7 @@
 //   console.log("Count is:", count);
 //   count++;
 // } while (count <= 5);
+// } while (false);
 //------------------------------------------------
 // let roll;
 
