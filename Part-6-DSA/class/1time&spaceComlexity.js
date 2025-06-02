@@ -1,4 +1,6 @@
-//NOTES:-  https://coding-platform.s3.amazonaws.com/dev/lms/tickets/c8836366-e014-4130-ba3e-577547acc3c4/ZZDuzhrt1klyqBRU.pdf
+//lecture1:-  https://coding-platform.s3.amazonaws.com/dev/lms/tickets/c8836366-e014-4130-ba3e-577547acc3c4/ZZDuzhrt1klyqBRU.pdf
+
+//lecture2:- https://coding-platform.s3.amazonaws.com/dev/lms/tickets/1ea5b9cd-3fa5-4ebd-8a1c-472258a433a1/USeFPULYNDrbYBbp.pdf
 
 // Time Complexity in (increasing order) or (best to worst)- O(1) < O(log n) < O(root under n) < O(n) < O(n log n) < O(n square) < O(n cube) < O(2 power n)
 
