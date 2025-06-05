@@ -1,0 +1,20 @@
+{
+  "name": "3masai-assignment",
+  "version": "1.0.0",
+  "description": "- **Masai will provide you repo with folder template along with maintain access, so that you will be able to push your daily assignments**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masai-course/parth_sarthi_cap11_013.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masai-course/parth_sarthi_cap11_013/issues"
+  },
+  "homepage": "https://github.com/masai-course/parth_sarthi_cap11_013#readme"
+}
