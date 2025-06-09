@@ -1,3 +1,15 @@
+// SetTimeout and SetInterval
+// setTimeout allows you to execute a function once after a specified period.
+// setInterval repeatedly executes a function at every given time-interval until it is stopped.
+
+// setInterval(() => {
+//     console.log("Message")
+// }, 1000);
+// setTimeout(() => {
+//     console.log("SetTimeOut")
+// }, 1000);
+//------------------------------------------------------------------------------------
+
 // Async Await
 // function findSum(arr) {
 //   return new Promise((resolve, reject) => {
@@ -52,3 +64,5 @@
 //-----------------------------------------------------------------------------------------
 //   Conclusion
 // Async/await is a powerful feature that simplifies asynchronous programming in JavaScript. It improves code readability, error handling, and maintainability by providing a synchronous-like syntax for working with promises. Understanding async/await is essential for writing modern and efficient JavaScript applications.
+
+//------------------------------------------------------------------------------------------

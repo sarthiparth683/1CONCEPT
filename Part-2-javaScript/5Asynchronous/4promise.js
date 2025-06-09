@@ -1,9 +1,26 @@
+// let getData = true;
+// let p = new Promise((resolve, reject) => {
+//   resolve("successfull-1");
+//   reject("Data failed");
+// });
+// // console.log(p);
+// p.then((response) => {
+//   let h3 = document.createElement("h3");
+//   h3.textContent = "Data Passed in Promise....";
+//   let body = document.querySelector("body");
+//   body.append(h3);
+//   console.log(response);
+// });
+// p.catch(() => {
+//   console.log("Data Failed");
+// });
+
+//----------------------------------------------------------------------------------------
 // Promises:-
 // Promises have three states:
 // Pending: The initial state when the Promise is created and the asynchronous operation is still in progress.
 // Fulfilled: The state when the asynchronous operation is successfully completed, and the Promise is resolved with a value.
 // Rejected: The state when the asynchronous operation encounters an error or failure, and the Promise is rejected with a reason or error object.
-//------------------------------------------------------------------------------------------
 // Producing a Promise:-
 // Example:1
 // function getReleaseDate() {
@@ -28,7 +45,6 @@
 //   });
 //------------------------------------------------------------------------------------------
 // Example 2:-
-
 // function fatherPromise(marks) {
 //   return new Promise((resolve, reject) => {
 //     let sum = marks.reduce((acc, item) => item + acc);
@@ -52,15 +68,37 @@
 //     console.log("testing- .catch:-", error);
 //   });
 //------------------------------------------------------------------------------------
-// var a = 100;
-// let b = 200;
-// const c = 300;
-// if (true) {
-//   let d = 400;
-//   var e = 500;
-//   console.log(a, b, c);
-//   console.log(d, e);
-// }
-// console.log("outside block", e);
-// console.log("outside block", d);
-//----------------------------------------------------------------------
+
+// Achieving Asynchronous action using Callback VS Promise:
+// Using Callback
+// function asynchronous1(data, callback) {
+//   console.log("Task 1 started");
+//   setTimeout(() => {
+//     callback(data);
+//   }, 1000);
+// };
+
+// function asynchronous2(data, callback) {
+//   console.log("Task 2 started");
+//   data = data.map((i) => i * 2);
+//   setTimeout(() => {
+//     callback(data);
+//   }, 1000);
+// };
+
+// function asynchronous3(data, callback) {
+//   console.log("Task 3 started");
+//   data = data.reduce((ac, i) => ac + i);
+//   setTimeout(() => {
+//     callback(data);
+//   }, 1000);
+// };
+
+// const input = [1, 2, 3, 4, 5];
+// asynchronous1(input, function (result1) {
+//   asynchronous2(result1, function (result2) {
+//     asynchronous3(result2, function (result3) {
+//       console.log("Final result:", result3);
+//     });
+//   });
+// });
