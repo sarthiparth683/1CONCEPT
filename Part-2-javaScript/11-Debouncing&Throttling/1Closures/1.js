@@ -1,5 +1,3 @@
-// Closures in JavaScript:
-// Introduction
 // Closures in JavaScript are a powerful and fundamental concept that involves a function bundled together with references to its surrounding state or lexical environment. They allow a function to retain access to variables from its outer function even after the outer function has executed.
 // Detailed Explanation
 // What is a Closure?
@@ -10,31 +8,62 @@
 // Understanding the Magic:
 // The magic is in the concept of scope and environment. Even though createCounter has finished executing, the increment function still has access to count because it remembers its scope environment.
 // Closures in JavaScript empower functions to retain access to their lexical environments.
-//---------------------------------------------------------------------------------------
-// Basic Example:
-function greet() {
-    let name = "Tom";
-    return function () {
-        console.log(name);
-    };
-};
-let output = greet();
-output();
-//----------------------------------------------------------------------------------
-// Counter Example:
-function createCounter() {
-    let count = 0;  // a variable in the outer scope
-    function increment() {  // a nested function
-        count++;  // accessing outer scope variable
-        console.log(count);
-    };
-    return increment;  // returning the nested function
-};
-let counter = createCounter();
-counter();  // Output: 1
-counter();  // Output: 2
-counter();  // Output: 3
-counter();  // Output: 4
-counter();  // Output: 5
+//------------------------------------------------------------------------------
+// function greet() {
+//   let name = "Tom";
+//   return function () {
+//     console.log(name);
+//   };
+// }
+// let output = greet();
+// output();
+//--------------------------------------------------------------------------------
+// function createCounter() {
+//   let count = 0; // a variable in the outer scope
+//   function increment() {
+//     count++;
+//     console.log(count);
+//   }
+//   return increment;
+// }
+
+// let counter = createCounter();
+// counter();
+// counter();
+// counter();
+// counter();
+// counter();
 // We return increment from createCounter, and every time we call counter(), it remembers the value of count and increments it.
 //---------------------------------------------------------------------------------
+// function outerFunction() {
+//     let x = 10;
+//     function innerFunction() {
+//         return x += 1;
+//     };
+//     return innerFunction;
+// };
+// let f1 = outerFunction();
+// let f2 = outerFunction();
+// console.log(f1());      //11
+// console.log(f1());      //12
+// console.log(f1());      //13
+// console.log(f2());      //11
+// console.log(f2());      //12
+//-------------------------------------------------------------------------------
+// function createCounter() {
+//     let count = 0; // Private variable
+//     return {
+//         increment: function () {
+//             count++;
+//         },
+//         getCount: function () {
+//             return count;
+//         }
+//     };
+// };
+// const counter = createCounter();
+// counter.increment();
+// counter.increment();
+// counter.increment();
+// console.log(counter.getCount()); // Output: 1
+// console.log(counter.count); // Output: undefined (count is private)

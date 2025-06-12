@@ -22,7 +22,7 @@ const App = () => {
   return (
     <>
       <h1 className={styles.header}>React-App</h1> <br />
-      {/* <LiftStateUp />  */}
+      <LiftStateUp />
       {/* <ToggleComponent /> */}
       {/* <ToggleSwitch /> */}
       {/* <JsonFetch /> */}
