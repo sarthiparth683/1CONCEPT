@@ -71,22 +71,22 @@
 
 //----------------------------------------------------------------------------------------
 // uniq character maxumum sub-String
-function longestSubString(str) {
-  let n = str.length;
-  let maxLength = 0;
-  let charIndex = {};
-  let start = 0;
+// function longestSubString(str) {
+//   let n = str.length;
+//   let maxLength = 0;
+//   let charIndex = {};
+//   let start = 0;
 
-  for (let end = 0; end < n; end++) {
-    let current_char = str[end];
+//   for (let end = 0; end < n; end++) {
+//     let current_char = str[end];
 
-    if (charIndex[current_char] != undefined && charIndex[current_char] >= start) {
-      start = charIndex[current_char] + 1;
-    }
-    charIndex[current_char] = end;
-    maxLength = Math.max(maxLength, end - start + 1);
-  }
-  return maxLength;
-}
-let str = "abbcdeabb";
-console.log(longestSubString(str));
+//     if (charIndex[current_char] != undefined && charIndex[current_char] >= start) {
+//       start = charIndex[current_char] + 1;
+//     }
+//     charIndex[current_char] = end;
+//     maxLength = Math.max(maxLength, end - start + 1);
+//   }
+//   return maxLength;
+// }
+// let str = "abbcdeabb";
+// console.log(longestSubString(str));
