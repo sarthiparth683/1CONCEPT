@@ -4,12 +4,20 @@
 // 3. Convert array back to string (join method)
 
 const capitalize = (str) => {
-  return str
-    .toLowerCase()
-    .split(" ")
-    .map((word) => word[0].toUpperCase() + word.slice(1))
-    .join(" ");
+  return (
+    str
+      .toLowerCase()
+      .split(" ")
+      .map((word) => word[0].toUpperCase() + word.slice(1))
+      // .map((word) => word[0].toUpperCase() + word.slice(1))
+      .join(" ")
+  );
 };
 
 console.log(capitalize("hello world"));
 console.log(capitalize("jordan peterson"));
+//---------------------------------------------------------------------
+// let str = "ParthSarthi";
+// // let res = str.split("").reverse().join("").toUpperCase().toLowerCase();
+// let res = str.slice(2);
+// console.log(res);

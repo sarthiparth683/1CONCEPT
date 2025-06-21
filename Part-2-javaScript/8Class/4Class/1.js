@@ -1,6 +1,4 @@
-// A constructor is a special method in a class that gets called automatically when a new object is created using the new keyword. Its main purpose is to initialize object properties. In JavaScript, the constructor is defined using the constructor keyword inside a class.A class can have only one constructor.
-
-//both canSleep() and greet() are also methods .canSleep() is an instance method, which is called on an object created from the class. greet() is a static method, which is called directly on the class and not on its instances.
+//both canSleep() and greet() are  methods .canSleep() is an instance method, which is called on an object created from the class. greet() is a static method, which is called directly on the class and not on its instances.
 
 class Person {
   constructor(name, age) {
@@ -25,6 +23,7 @@ let p1 = new Person("John", 12);
 // console.log(Person.greet()); // static are called directly
 // console.log(Person.greet());
 //--------------------------------------------------------------
+// A constructor is a special method in a class that gets called automatically when a new object is created using the new keyword. Its main purpose is to initialize object properties. In JavaScript, the constructor is defined using the constructor keyword inside a class.A class can have only one constructor.
 class Employee extends Person {
   #salary; // #salary is a private class field
   constructor(name, age, salary = 0) {
@@ -34,7 +33,7 @@ class Employee extends Person {
 
   get salary() {
     return this.#salary;
-  } 
+  }
 
   set salary(value) {
     if (value > 0) {

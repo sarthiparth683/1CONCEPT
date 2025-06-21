@@ -14,3 +14,7 @@ const chunk = (array, size) => {
 
 // console.log(chunk([1, 2, 3, 4, 5], 2));
 console.log(chunk([1, 2, 3, 4, 5, 6, 7, 8], 3));
+//------------------------------------------------------------------------
+// let arr = [0,1,2,3,4,5,6,7,8,9];
+// let slice = arr.slice(1,4)
+// console.log(slice)

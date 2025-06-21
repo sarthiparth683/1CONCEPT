@@ -17,5 +17,4 @@ const fizzBuzz = (n) => {
     }
   }
 };
-
 fizzBuzz(15);

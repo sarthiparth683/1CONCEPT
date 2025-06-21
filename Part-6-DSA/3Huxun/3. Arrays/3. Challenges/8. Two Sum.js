@@ -1,5 +1,3 @@
-// ⚠️ This is not better solution, we'll make it better in the upcoming videos!
-
 function twoSum(nums, target) {
   // Loop through each number in the list
   for (let i = 0; i < nums.length; i++) {
@@ -11,7 +9,6 @@ function twoSum(nums, target) {
       }
     }
   }
-
   // If no matching pair is found, return an empty array
   return [];
 }
@@ -19,4 +16,4 @@ function twoSum(nums, target) {
 const res = twoSum([2, 7, 11, 15], 9);
 const res2 = twoSum([1, 3, 7, 9, 2], 11);
 console.log(res);
-console.log(res2);
+// console.log(res2);
