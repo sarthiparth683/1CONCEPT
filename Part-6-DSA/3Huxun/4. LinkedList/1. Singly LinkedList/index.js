@@ -174,4 +174,15 @@ class LinkedList {
 const myLinkedList = new LinkedList(1);
 myLinkedList.push(2);
 myLinkedList.push(3);
+myLinkedList.push(4);
+// myLinkedList.pop()
+// myLinkedList.unshift("First")
+// myLinkedList.shift()
+// console.log(myLinkedList.getFirst());
+//  console.log(myLinkedList.getLast());
+// console.log(myLinkedList.get(3));
+// console.log(myLinkedList.set(1, "second"));
+// myLinkedList.insert(1, "Second")
+// console.log(myLinkedList.size())
+// myLinkedList.clear();
 console.log(myLinkedList);
