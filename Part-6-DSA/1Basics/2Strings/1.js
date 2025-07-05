@@ -61,27 +61,62 @@
 // isPalindrome("madam");
 // isPalindrome("hello");
 //-----------------------------------------------------
-let str = "hello";
-let freq = {};
-for (let char of str) {
-  if (freq[char]) {
-    freq[char]++;
-  } else {
-    freq[char] = 1;
-  }
-}
-console.log(freq);
+// freq is an object
+
+// let str = "hello";
+// let freq = {};
+// for (let char of str) {
+//   if (freq[char]) {
+//     freq[char]++;
+//   } else {
+//     freq[char] = 1;
+//   }
+// }
+// console.log(freq);
 //-----------------------------------------------------
+// Two Pointers
+
+// function isPalindrome(str) {
+//   let left = 0;
+//   let right = str.length - 1;
+//   while (left < right) {
+//     if (str[left] !== str[right]) {
+//       return false;
+//     }
+//     left++;
+//     right--;
+//   }
+//   return true;
+// }
+// console.log(isPalindrome("racecar"));
+// console.log(isPalindrome("test"));
 //-----------------------------------------------------
-//-----------------------------------------------------
-//-----------------------------------------------------
-//-----------------------------------------------------
-//-----------------------------------------------------
-//-----------------------------------------------------
-//-----------------------------------------------------
-//-----------------------------------------------------
-//-----------------------------------------------------
-//-----------------------------------------------------
+// Sliding Window
+
+// function lengthOfLongestSubstring(s) {
+//   let left = 0;
+//   let right = 0;
+//   let seen = new Set();
+//   let maxLen = 0;
+
+//   while (right < s.length) {
+//     if (!seen.has(s[right])) {
+//       seen.add(s[right]);
+//       maxLen = Math.max(maxLen, right - left + 1);
+//       right++;
+//     } else {
+//       seen.delete(s[left]);
+//       left++;
+//     }
+//   }
+
+//   return maxLen;
+// }
+// console.log(lengthOfLongestSubstring("abcabcbb")); // 3
+// console.log(lengthOfLongestSubstring("bbbbb")); // 1
+// console.log(lengthOfLongestSubstring("pwwkew")); // 3
+
+
 //-----------------------------------------------------
 //-----------------------------------------------------
 //-----------------------------------------------------
