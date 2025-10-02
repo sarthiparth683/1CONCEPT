@@ -6,11 +6,17 @@
 //   }
 // }
 
-// let firstNode = new Node(10);
-// let secondNode = new Node(20);
+// let firstNode = new Node(5);
+// let secondNode = new Node(15);
+// let thirdNode = new Node(25);
 // firstNode.next = secondNode;
+// secondNode.next = thirdNode;
 // console.log(firstNode);
+// console.log(secondNode);
+// console.log(thirdNode);
 // console.log(firstNode.next);
+// console.log(secondNode.next);
+// console.log(thirdNode.next);
 //-----------------------------------------------------
 class Node {
   constructor(value) {
@@ -23,25 +29,26 @@ class LinkedList {
   constructor() {
     this.head = null;
   }
+
   append(value) {
     let newNode = new Node(value);
     if (this.head === null) {
       this.head = newNode;
-    } else {
-      let current = this.head;
-      while (current.next !== null) {
-        current = current.next;
-      }
-      current.next = newNode;
+      return;
     }
+    let current = this.head;  //  value
+    while (current.next !== null) {
+      current = current.next;
+    }
+    current.next = newNode;
   }
 }
-
 let list = new LinkedList();
+list.append(5);
 list.append(10);
-list.append(20);
-list.append(30);
-console.log(list.head);
+list.append(15);
+console.log(list);
+
 //-----------------------------------------------------
 //-----------------------------------------------------
 //-----------------------------------------------------
