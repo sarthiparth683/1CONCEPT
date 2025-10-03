@@ -1,3 +1,14 @@
+// Higher-Order Functions (HOF) - Functions that accept other functions or return functions.
+
+// function createMultiplier(x) {
+//  return function (y) {
+//  return x * y;
+//  };
+// }
+// let double = createMultiplier(2);
+// console.log(double(5)); // 10
+
+// --------------------------------------------------------
 // let numbers = [1, 2, 3, 4, 5];
 // let squared = numbers.map(num => num ** 2);
 // let squared = numbers.map((num) => {

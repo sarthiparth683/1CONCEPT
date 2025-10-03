@@ -1,3 +1,5 @@
+// for-of loop – used in  Arrays & Strings
+
 // for array and strings :- for of loop 
 // for object :- for in loop
 

@@ -1,4 +1,4 @@
-// Use for...in loops :- used for objects
+// Use for...in loops :- used for  Objects (and arrays if needed)
 
 // const person = {
 //     name: "Alexander",

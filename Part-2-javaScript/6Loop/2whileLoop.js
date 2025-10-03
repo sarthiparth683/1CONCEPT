@@ -1,4 +1,5 @@
-// While Loop concept
+// While Loop concept - Condition is checked before running
+
 // let sum = 0;
 // let i = 1;
 // let n = 3;

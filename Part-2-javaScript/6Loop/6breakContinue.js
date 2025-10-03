@@ -1,4 +1,8 @@
-for (let num = 1; num <= 10; num++) {
+// break : Exit loop completely
+// continue : Skip current iteration and move to next
+//--------------------------------------------------------------
+
+// for (let num = 1; num <= 10; num++) {
   // console.log(num);
   // if (num === 5) {
   //   break; // it wont run after 5;
@@ -7,7 +11,7 @@ for (let num = 1; num <= 10; num++) {
 
   // console.log("sarthi");
   // break;
-}
+// }
 //--------------------------------------------------------------
 
 // for (let num = 1; num <= 10; num++) {
