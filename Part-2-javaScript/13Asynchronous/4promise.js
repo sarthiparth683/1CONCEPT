@@ -1,3 +1,19 @@
+// Promises - Promise is for “eventual” completion of task. It is an object in JS. It is a solution to callback hell.
+
+// let promise = new Promise( (resolve, reject) => { .... } )
+// *resolve & reject are callbacks provided by JS
+
+// A JavaScript Promise object can be:
+// Pending : the result is undefined
+// Resolved : the result is a value (fulfilled) - resolve( result )
+// Rejected : the result is an error object - reject( error )
+
+// *Promise has state (pending, fulfilled) & some result (result for resolve & error for reject).
+
+// .then( ) & .catch( )
+// promise.then( ( res ) => { .... }  )
+// promise.catch( ( err ) ) => { .... } )
+// -----------------------------------------------------------------------------------------------
 // let getData = true;
 // let p = new Promise((resolve, reject) => {
 //   resolve("successfull-1");
