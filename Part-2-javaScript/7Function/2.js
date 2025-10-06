@@ -1,3 +1,24 @@
+// ------------------------------------------------------------
+// ## Function declarations vs. function expression
+
+// <!-- Function Declaration -->
+// function greet(){
+//     return "hello";
+// }
+
+// console.log(greet());
+
+// <!-- Function Expression -->
+// const greet = function(){
+//     return "hello";
+// }
+// console.log(greet());
+
+// Difference:
+// - Function declarations are hoisted
+// - Function expressions are not hoisted
+// ------------------------------------------------------------
+// ------------------------------------------------------------
 // Parameters vs Arguments
 
 // function greet(name) {
@@ -14,6 +35,7 @@
 // function sum(a, b) {
 //  return a + b;
 // }
+
 // let total = sum(5, 10); // total is 15
 
 // return sends back a result to wherever the function was called
@@ -25,6 +47,21 @@
 // const greet = () => {
 //  console.log("Hi!");
 // };
+
+// ## Arrow functions dont have their own `this` - They use (or “inherit”) the this value from the surrounding scope where they were created.inside an object don’t use arrow functions for methods that rely on this.
+
+const user = {
+  name: "Alice",
+  showName: () => {
+    console.log(this.name); // ❌ undefined due to arrow function
+  }, 
+  showName2: function () {
+    console.log("Name 2", this.name);
+  },
+};
+
+user.showName();
+user.showName2();
 
 // -----------------------------------------------------
 
@@ -50,12 +87,13 @@
 // Closures = when a function remembers its parent scope, even after the parent has finished.
 
 // function outer() {
-//  let count = 0;
-//  return function () {
-//  count++;
-//  console.log(count);
-//  };
+//   let count = 0;
+//   return function () {
+//     count++;
+//     console.log(count);
+//   };
 // }
+
 // let counter = outer();
 // counter(); // 1
 // counter(); // 2

@@ -14,10 +14,12 @@
 // console.log(typeof undefined); // "undefined"
 // console.log(typeof null); // "object" ← known bug
 // console.log(typeof 4896n); // bigint
+
 // Note: typeof null === "object" is a bug, but has existed since the early days of JS.
 // -------------------------------------------------------------------------
 
-// Non-Primitive (Reference) Data Types – stored as memory references.
+// Non-Primitive or Reference, Data Types – stored as memory references.
+
 // Object → { name: "Harsh", age: 26 }
 // Array → [10, 20, 30]
 // Function → function greet() {}
@@ -26,9 +28,9 @@
 // Any user-defined objects
 
 // console.log(typeof {}); // "object"
-// console.log(typeof []); // array in console as "object"
+// console.log(typeof []); // "object", array in console shows "object"
 // console.log(typeof function () {}); // "function"
-// ----------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
 
 // Type Coercion (Auto-Conversion) - JavaScript auto-converts types in some operations:
 
