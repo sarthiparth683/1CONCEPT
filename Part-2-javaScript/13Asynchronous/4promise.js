@@ -1,3 +1,37 @@
+// ## Promise and callback
+// --------------------------------------------------------------
+
+// ## Callback - A function passed as an argument to another function.
+
+// function greet(name, callback) {
+//   console.log("Hello " + name);
+//   callback();
+// }
+
+// function sayBye() {
+//   console.log("GoodBye!");
+// }
+
+// greet("Sarthi", sayBye);
+
+// --------------------------------------------------------------
+// ## Promise:
+
+// const promise = new Promise((resolve, reject) => {
+//   let succes = false;
+//   if (succes) resolve("Operations successfull!");
+//   else reject("Operation rejected!");
+// });
+
+// promise
+//   .then((res) => console.log(res))
+//   .catch((err) => {
+//     throw new Error("Something went wrong " + err);
+//   });
+
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+
 // Promises - Promise is for “eventual” completion of task. It is an object in JS. It is a solution to callback hell.
 
 // let promise = new Promise( (resolve, reject) => { .... } )
@@ -118,3 +152,7 @@
 //     });
 //   });
 // });
+// ------------------------------------------------------------
+// difference between promise.all and Promise.race?
+// Promise.all() => waits for all promises to resolve or reject
+// Promise.race() => resolves/rejects as soon one of the promises settled.

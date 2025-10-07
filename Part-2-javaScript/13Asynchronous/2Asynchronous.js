@@ -1,8 +1,35 @@
-// Synchronous - Synchronous means the code runs in a particular sequence of instructions given in the program. Each instruction waits for the previous instruction to complete its execution.
+// Synchronous -Code runs line by line, Synchronous means the code runs in a particular sequence of instructions given in the program. Each instruction waits for the previous instruction to complete its execution.
 
-// Asynchronous - Due to synchronous programming, sometimes imp instructions get blocked due to some previous instructions, which causes a delay in the UI Asynchronous code execution allows to execute next instructions immediately and doesn't block the flow.
+// console.log("Start");
 
-// ------------------------------------------------
+// function syncTask() {
+//   console.log("Task is running...");
+// }
+
+// syncTask();
+
+// console.log("End");
+
+// ------------------------------------------------------------------------------------------------------------------------
+// Asynchronous -  code that doesn't block the main thread Due to synchronous programming, sometimes imp instructions get blocked due to some previous instructions, which causes a delay in the UI Asynchronous code execution allows to execute next instructions immediately and doesn't block the flow.
+
+// console.log("A");
+
+// setTimeout(() => {
+//   console.log("B");
+//   Promise.resolve().then(() => {
+//     console.log("C");
+//   });
+// }, 0);
+
+// Promise.resolve().then(() => {
+//   console.log("D");
+// });
+
+// console.log("E");
+//--------------------------------------------------------------
+// JS uses an event loop to handle async operations without blocking the code.
+// -----------------------------------------------------
 // SetTimeout and SetInterval
 // setTimeout allows you to execute a function once after a specified period.
 // setInterval repeatedly executes a function at every given time-interval until it is stopped.
@@ -14,8 +41,37 @@
 //     console.log("SetTimeOut")
 // }, 1000);
 //------------------------------------------------------------------------------------
+// what is a callback function?
+
+// In JavaScript, a callback function is simply a function passed as an argument to another function, which is then executed later — usually after some task is completed.
+
+// function greet(name, callback) {
+//   console.log("Hello " + name);
+//   callback(); // calling the callback function
+// }
+
+// function sayGoodbye() {
+//   console.log("Goodbye!");
+// }
+
+// greet("Parth", sayGoodbye);
+// --------------------------------------------
+
+//  what are drawback of using callback?
+//  harder to manage when we have the nested callback (known as callback hell)
+
+// doSomething(() => {
+//   doSomethingElse(() => {
+//     doMore(() => {
+//       console.log("Done!");
+//     });
+//   });
+// });
+
+// ---------------------------------------------------------------------------------
 
 // Async Await
+
 // function findSum(arr) {
 //   return new Promise((resolve, reject) => {
 //     if (Array.isArray(arr)) {
@@ -66,8 +122,14 @@
 //   }
 // }
 // output();
-//-----------------------------------------------------------------------------------------
-//   Conclusion
-// Async/await is a powerful feature that simplifies asynchronous programming in JavaScript. It improves code readability, error handling, and maintainability by providing a synchronous-like syntax for working with promises. Understanding async/await is essential for writing modern and efficient JavaScript applications.
+//--------------------------------
+// what is the use of async and await ? if you forgot to provide await
 
+// In JavaScript, async and await are used to handle asynchronous operations (like fetching data from an API) in a way that looks and feels synchronous — making the code easier to read and write.
+
+// When you declare a function as async, it automatically returns a Promise.
+// The await keyword can only be used inside an async function.
+// It pauses the execution of the function until the Promise resolves.
+
+// What happens if you forget to use await? If you forget await, the function won’t wait for the Promise to resolve — it will continue running immediately.
 //------------------------------------------------------------------------------------------

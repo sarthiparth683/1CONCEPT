@@ -41,14 +41,14 @@
 // return sends back a result to wherever the function was called
 // After return , function exits
 // --------------------------------------------------------
-
 // Arrow Functions
+// What are arrow function and when should you use them?
 
 // const greet = () => {
 //  console.log("Hi!");
 // };
 
-// ## Arrow functions dont have their own `this` - They use (or “inherit”) the this value from the surrounding scope where they were created.inside an object don’t use arrow functions for methods that rely on this.
+// ## Arrow functions dont have their own `this` - They use (or “inherit”) the this value from the surrounding scope where they were created.inside an object don’t use arrow functions for methods that rely on "this".
 
 const user = {
   name: "Alice",

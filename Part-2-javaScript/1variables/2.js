@@ -1,5 +1,11 @@
+// Difference between var, let and const
+
+// var- Scope-Function,  Re-declare-yes,  Re-assign-yes, Hoisted-yes(initialized as undefined)
+// let- Scope-Block, Re-declare-No, Re-assign-yes, Hoisted-yes(TDZ)
+// const- Scope-Block,Re-declare-No, Re-assign-No, Hoisted-yes(TDZ)
+
 // ------------------------------------------------------------------------------------------------------
-// var – functional scoped/global, - reassignment -> yes - Hoisting -> yes, A global scope variable. Scoped to functions, not a block scope,  Can be redeclared and reassigned, Hoisted to the top with undefined value. 
+// var – functional scoped/global, - reassignment -> yes - Hoisting -> yes, A global scope variable. Scoped to functions, not a block scope,  Can be redeclared and reassigned, Hoisted to the top with undefined value.
 var score = 10;
 var score = 20;
 // ------------------------------------------------------------------------------------------------------
@@ -13,10 +19,10 @@ age = 30; // ✅
 const PI = 3.14;
 // PI = 3.14159; // ❌ Error
 
-// But: If const holds an object/array, you can still change its contents:
+//  But: If const holds an object/array, you can still change its contents: const only prevents reassignment of the variable name — it does not make objects immutable.
 const student = { name: "Riya" };
 student.name = "Priya"; // ✅ OK
-console.log(student)
+console.log(student);
 // ------------------------------------------------------------------------------------------------------
 // let and const follow block scope. var ignores block scope — which leads to bugs.
 
