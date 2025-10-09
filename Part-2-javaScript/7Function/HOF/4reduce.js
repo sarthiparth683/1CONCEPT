@@ -1,3 +1,5 @@
+// Used for reducing an array to a single value (ex.- sum, count, average);
+// ------------------------------------------------------------------------------------------
 // reduce = (accumulator, currnet-element and index) = final one answer. it works on three parameters
 // let arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
 // let sum = arr.reduce((acc, ele) => {

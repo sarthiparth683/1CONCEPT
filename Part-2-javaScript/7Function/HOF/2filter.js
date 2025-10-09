@@ -1,3 +1,5 @@
+// filter - used for Selecting elements that meet a condition
+// ---------------------------------------------------------------------------------------
 // let arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
 // // let res = arr.filter((ele) => {
 // //   return ele % 2 === 0;

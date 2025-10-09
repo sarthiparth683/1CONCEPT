@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country search</title>
+  </head>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: aliceblue;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    #searchBox {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      outline: none;
+    }
+    #dropdown {
+      position: relative;
+    }
+    #suggestions {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      max-height: 200px;
+      overflow-y: auto;
+      z-index: 1000;
+    }
+    #suggestion-item {
+      padding: 10px;
+      cursor: pointer;
+      border-bottom: 1px solid black;
+    }
+
+    #suggestion-item:hover {
+      background: #000;
+    }
+    #countryInfo {
+      margin-top: 25px;
+      text-align: center;
+    }
+    #countryInfo img {
+      width: 120px;
+      border-radius: 12px;
+    }
+
+    
+  </style>
+  <body>
+    <div class="container">
+      <h1>Country search application</h1>
+      <div id="dropdown">
+        <input
+          type="text"
+          id="searchBox"
+          placeholder="Type a country name..."
+          autocomplete="off"
+        />
+        <div id="suggestions"></div>
+      </div>
+      <div id="countryInfo"></div>
+    </div>
+  </body>
+
+  <script>
+    const searchBox = document.getElementById("searchBox");
+    const suggestionsDiv = document.getElementById("suggestions");
+    const countryInfoDiv = document.getElementById("countryInfo");
+
+    function debounce(func, delay) {
+      let timer;
+      return function (...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => func.apply(this, args), delay);
+      };
+    }
+
+    async function fetchCountries(query) {
+      if (!query) {
+        suggestionsDiv.innerHTML = "";
+        return;
+      }
+      try {
+        let res = await fetch(`https://restcountries.com/v3.1/name/${query}`);
+        if (!res.ok) throw new Error(" No result");
+        const data = await res.json();
+        displayData(data);
+      } catch (error) {
+        console.log("Something went wrong");
+        suggestionsDiv.innerHTML = `<div>No results found</div>`;
+      }
+    }
+
+    function displayData(data) {
+      const limited = data.slice(0, 8); // show only top 8 results
+      suggestionsDiv.innerHTML = limited
+        .map(
+          (c) => `
+        <div class="suggestion-item" data-name=${c.name.common}>
+            <img src=${c.flags.svg} alt="flag"/>
+            ${c.name.common}
+            </div>
+        `
+        )
+        .join("");
+
+      document.querySelectorAll(".suggestion-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          const countryName = item.getAttribute("data-name");
+          searchBox.value = countryName;
+          suggestionsDiv.innerHTML = "";
+          showCountryDetails(countryName);
+        });
+      });
+    }
+
+    async function showCountryDetails(name) {
+      try {
+        let res = await fetch(`https://restcountries.com/v3.1/name/${name}`);
+        const [country] = res.json();
+        countryInfoDiv.innerHTML = `
+            <img src=${country.flags.svg} alt="flag"/>
+            <h2>${country.name.common} </h2>
+        `;
+        if (!res.ok) throw new Error(" No result");
+        const data = await res.json();
+        displayData(data);
+      } catch (error) {
+        console.log("Something went wrong");
+        countryInfoDiv.innerHTML = `<div>No results found</div>`;
+      }
+    }
+
+    const debounceSearch = debounce((e) => {
+      const query = e.target.value.trim();
+      fetchCountries(query);
+    }, 600);
+
+    searchBox.addEventListener("input", debounceSearch);
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest("#dropdown")) {
+        suggestionsDiv.innerHTML = "";
+      }
+    });
+  </script>
+</html>

@@ -1,4 +1,4 @@
-// Higher-Order Functions (HOF) - Functions that accept other functions or return functions.
+// # HOF - (Higher Order Function) - Functions that accept other functions or return functions.
 
 // function createMultiplier(x) {
 //   return function (y) {
@@ -10,6 +10,7 @@
 // console.log(double(5)); // 10
 
 // --------------------------------------------------------
+// Map - used for transforming each item in an array and return a new array
 let numbers = [1, 2, 3, 4, 5];
 // let squared = numbers.map(num => num ** 2);
 let squared = numbers.map((num) => {

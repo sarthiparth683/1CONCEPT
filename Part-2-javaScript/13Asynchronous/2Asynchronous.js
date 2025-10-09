@@ -1,4 +1,4 @@
-// Synchronous -Code runs line by line, Synchronous means the code runs in a particular sequence of instructions given in the program. Each instruction waits for the previous instruction to complete its execution.
+// Synchronous - Code runs line by line, Synchronous means the code runs in a particular sequence of instructions given in the program. Each instruction waits for the previous instruction to complete its execution.
 
 // console.log("Start");
 
@@ -11,7 +11,7 @@
 // console.log("End");
 
 // ------------------------------------------------------------------------------------------------------------------------
-// Asynchronous -  code that doesn't block the main thread Due to synchronous programming, sometimes imp instructions get blocked due to some previous instructions, which causes a delay in the UI Asynchronous code execution allows to execute next instructions immediately and doesn't block the flow.
+// Asynchronous -  code that doesn't block the main thread Due to synchronous programming, sometimes important instructions get blocked due to some previous instructions, which causes a delay in the UI Asynchronous code execution allows to execute next instructions immediately and doesn't block the flow.
 
 // console.log("A");
 
@@ -35,8 +35,9 @@
 // setInterval repeatedly executes a function at every given time-interval until it is stopped.
 
 // setInterval(() => {
-//     console.log("Message")
+//     console.log("setInterval")
 // }, 1000);
+
 // setTimeout(() => {
 //     console.log("SetTimeOut")
 // }, 1000);
@@ -50,11 +51,11 @@
 //   callback(); // calling the callback function
 // }
 
-// function sayGoodbye() {
-//   console.log("Goodbye!");
+// function work() {
+//   console.log("Work!");
 // }
 
-// greet("Parth", sayGoodbye);
+// greet("Sarthi", work);
 // --------------------------------------------
 
 //  what are drawback of using callback?
@@ -121,6 +122,7 @@
 //     console.log(err);
 //   }
 // }
+
 // output();
 //--------------------------------
 // what is the use of async and await ? if you forgot to provide await
