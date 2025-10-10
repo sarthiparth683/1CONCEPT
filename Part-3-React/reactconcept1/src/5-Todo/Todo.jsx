@@ -1,7 +1,7 @@
 import "./todo.css";
 import { useEffect, useState } from "react";
 
-const Todo = () => {
+const Todo3 = () => {
   const [inputValue, setInputValue] = useState("");
   const [task, setTask] = useState([]);
   const [dateTime, setDateTime] = useState("");
@@ -87,4 +87,4 @@ const Todo = () => {
   );
 };
 
-export default Todo;
+export default Todo3;

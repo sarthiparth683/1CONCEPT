@@ -1,3 +1,5 @@
+npm create vite@latest . -- --template react ----- to install React-vite
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
