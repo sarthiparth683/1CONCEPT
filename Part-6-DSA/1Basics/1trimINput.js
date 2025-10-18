@@ -11,8 +11,9 @@
 // console.log(arr)
 //---------------------------------------------------------------
 // Array into string - .join("")
-// let arr = [1, 2, 3];
-// let str = arr.join(" ");
-// console.log(str);
-// let revStr = arr.reverse().join(" ");
-// console.log(revStr);
+
+let arr = [1, 2, 3];
+let str = arr.join(" ");
+console.log(str);
+let revStr = arr.reverse().join(" ");
+console.log(revStr);

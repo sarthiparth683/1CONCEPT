@@ -20,6 +20,7 @@
       /* margin-left: 200px;
       margin-top: 40px; */
       text-align: center;
+      padding: 5px;
     }
     .box div {
       border: 5px solid blue;
@@ -27,27 +28,26 @@
     /* ------------------------------------------------------------- */
     /* n'th child concept  */
 
-    .box > div:nth-child(2) {
+    .box > div:nth-child(17) {
       /* only colors one box */
       background-color: aqua;
     }
-    .box > div:nth-child(5n + 3) {
-      /* starts form 7 and [(5n)means after 5 box]  */
+    .box > div:nth-child(2n + 3) {
+      /* starts form 3 and [(2n)means after 2 box, 3,5,7,9...]  */
       background-color: chartreuse;
     }
     /* higher order number 1,2,3... comes to end; */
-    .box > div:nth-child(8) {
+    .box > div:nth-child(7) {
       background-color: red;
       order: 7;
     }
-    .box > div:nth-child(11) {
+    .box > div:nth-child(8) {
       background-color: orange;
       order: 8;
     }
-    .box > div:nth-child(22) {
+    .box > div:nth-child(9) {
       background-color: black;
       order: 9;
-      /* width: 300px; */
     }
   </style>
   <body>
