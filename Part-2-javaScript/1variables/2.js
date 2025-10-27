@@ -6,6 +6,13 @@
 
 // ------------------------------------------------------------------------------------------------------
 // var – functional scoped/global, - reassignment -> yes - Hoisting -> yes, A global scope variable. Scoped to functions, not a block scope,  Can be redeclared and reassigned, Hoisted to the top with undefined value.
+function run() {
+  var num = 87;
+  console.log(num);
+}
+run()
+// console.log(num); // Error: since var is funciton scope 
+// ------------------------
 var score = 10;
 var score = 20;
 // ------------------------------------------------------------------------------------------------------

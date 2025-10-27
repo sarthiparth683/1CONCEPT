@@ -8,7 +8,7 @@
 // Symbol → Unique identifier (rarely used)
 // BigInt → Very large integers 123456789012345678901234567890n
 
-// console.log(typeof "Sheryians"); // "string"
+// console.log(typeof "Sarthi"); // "string"
 // console.log(typeof 99); // "number"
 // console.log(typeof true); // "boolean"
 // console.log(typeof undefined); // "undefined"
@@ -25,11 +25,23 @@
 // Function → function greet() {}
 // Dates
 // Regular Expressions
+// Map & Set
 // Any user-defined objects
 
 // console.log(typeof {}); // "object"
 // console.log(typeof []); // "object", array in console shows "object"
 // console.log(typeof function () {}); // "function"
+// Date
+// const now = new Date();
+// console.log(now.getFullYear()); // Current year
+// Map & Set
+// Map - key-value pairs with any type of key
+const map = new Map();
+map.set("key", "value");
+// Set - unique values only
+const set = new Set([1, 2, 2, 3]);
+console.log(set); // Set { 1, 2, 3 }
+
 // -------------------------------------------------------------------------------
 
 // Type Coercion (Auto-Conversion) - JavaScript auto-converts types in some operations:

@@ -3,5 +3,12 @@
     "terminal.integrated.mouseWheelZoom": true,
     "editor.mouseWheelZoom": true,
     "liveServer.settings.port": 5502,
-    "liveServer.settings.fullReload": true
+    "liveServer.settings.fullReload": true,
+    "diffEditor.experimental.showEmptyDecorations": false,
+    "scm.diffDecorations": "none",
+    "scm.diffDecorationsGutterAction": "none",
+    "scm.diffDecorationsGutterPattern": {
+        "modified": false
+    },
+    "scm.diffDecorationsGutterVisibility": "hover"
 }
