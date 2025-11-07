@@ -10,7 +10,7 @@
 // **  exponentiation (power)
 
 // let a = 10, b = 3;
-// console.log(a % b); // 1 modulas give remainder
+// console.log(a % b); // 1 modulas means remainder
 // console.log(2 ** 3); // 8
 // -----------------------------------------------------------------
 
@@ -59,30 +59,27 @@
 // console.log(+x); // 5 (converted to number)
 // console.log(x--) // 5
 // console.log(x) // 4 ,
-// --------------------------------------------------------------------
-
-// Ternary Operator (Conditional)
-
-// condition ? valueIfTrue : valueIfFalse
-
-// let score = 80;
-// let grade = score > 50 ? "Pass" : "Fail";
-// console.log(grade);
-
-// let age = 17;
-// let msg = age >= 18 ? "Adult" : "Minor";
-// console.log(msg);
-//----------------------------------------------------------------
 
 // console.log("10" + 1); // 101
 // console.log("10" - 1); // 9
 // console.log(true + false); // 1
+// console.log(true + false + true); // 2
+// console.log(!"Sarthi"); // false
 // console.log(!!"Sheryians"); // true
-// console.log(!"Sheryians"); // false
 
 // let str = "42";
 // let num = +str;
 // console.log(num++); // 42
 // console.log(num) // 43
+// --------------------------------------------------------------------
+// Ternary Operator (Conditional)
+// condition ? valueIfTrue : valueIfFalse
+
+// let score = 80;
+// let grade = score > 50 ? "Pass" : "Fail";
+// console.log(grade);
+//----------------------------------------------------------------
+
+
 
 

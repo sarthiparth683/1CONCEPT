@@ -6,10 +6,12 @@ for (let value of array) {
   // console.log(array);
 }
 
+// ----------------------------
 const message = "Hello, world!";
 for (const character of message) {
-  // console.log(character);
+  console.log(character);
   // console.log(message)
 }
 
-//--------------------------------------------------------------------------------
+//--------------------------------------------------------------
+ 

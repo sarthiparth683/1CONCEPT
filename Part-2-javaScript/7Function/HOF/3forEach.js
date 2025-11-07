@@ -1,4 +1,5 @@
 // returns only one value and doesnot return array like  map or filter
+
 // let arr = [10, 20, 30, 40, 50];
 // let sum = 0;
 // arr.forEach((el, i) => (sum = sum + el));

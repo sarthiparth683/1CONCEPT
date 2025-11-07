@@ -1,17 +1,17 @@
-let days = 5;
+let days = 2;
 switch (days) {
   case 0:
     console.log("Sunday");
-    break;
+    // break;
   case 1:
     console.log("Monday");
-    break;
+    // break;
   case 2:
     console.log("Tuesday");
-    break;
+    // break;
   case 3:
     console.log("wednesday");
-    break;
+    // break;
   case 4:
     console.log("thrusday");
     break;
@@ -31,3 +31,4 @@ switch (days) {
     console.log("invalid day");
     break;
 }
+// without break statement unnecessary code execution will continue leading to unexpected results.

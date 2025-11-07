@@ -40,12 +40,13 @@
 // ------------------------------------------
 // Example 2: Track unique visitors
 
-const visitors = new Set();
-visitors.add("John");
-visitors.add("Sarah");
-visitors.add("John"); // Won't be added again
-visitors.add("Mike");
-console.log(visitors.size); // 3 unique visitors
+// const visitors = new Set();
+// visitors.add("John");
+// visitors.add("Sarah");
+// visitors.add("John"); // Won't be added again
+// visitors.add("Mike");
+// console.log(visitors)
+// console.log(visitors.size); // 3 unique visitors
 // --------------------------------------------------------------------------------------
 // --------------------------------------------------------------------------------------
 // ## Map - A Collection of Key-Value Pairs - like a dictionary or phonebook - each key points to a value.Main methods | `set()`, `get()`, `has()`, `delete()`
@@ -56,11 +57,13 @@ console.log(visitors.size); // 3 unique visitors
 // - You frequently add/remove entries
 
 // Creating a Map
+
 // const myMap = new Map();
 // // Adding key-value pairs
 // myMap.set("name", "John");
 // myMap.set("age", 30);
 // myMap.set("city", "New York");
+// console.log(myMap)
 // console.log(myMap.size); // 3
 // // Getting values
 // console.log(myMap.get("name")); // "John"
@@ -70,17 +73,20 @@ console.log(visitors.size); // 3 unique visitors
 // console.log(myMap.has("country")); // false
 // // Delete a key-value pair
 // myMap.delete("age");
-// // Clear all entries
+// // Clear all ent ries
 // myMap.clear();
-// -----------------------------------------
+
+// ----------------------------------------
 
 // Example 1: User profiles (any type as key)
+
 // const userMap = new Map();
 // // Using numbers as keys
 // userMap.set(1, { name: "Alice", role: "admin" });
 // userMap.set(2, { name: "Bob", role: "user" });
 // userMap.set(3, { name: "Charlie", role: "user" });
 // // Getting values
+// console.log(userMap)
 // console.log(userMap.get(1)); // { name: "Alice", role: "admin" }
 // console.log(userMap.get(2).name); // "Bob"
 // ------------------------------------------------------
@@ -92,6 +98,7 @@ console.log(visitors.size); // 3 unique visitors
 // const task2 = { id: 2, name: "Test code" };
 // taskStatus.set(task1, "completed");
 // taskStatus.set(task2, "in progress");
+// console.log(taskStatus)
 // console.log(taskStatus.get(task1)); // "completed"
 // console.log(taskStatus.get(task2)); // "in progress"
 // -----------------------------------------

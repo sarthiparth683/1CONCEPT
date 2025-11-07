@@ -7,8 +7,8 @@
 // });
 // ----------------------------------------------------
 
-const fruits = ["apple", "banana", "cherry"];
+// const fruits = ["apple", "banana", "cherry"];
 
-fruits.forEach((fruit, index) => {
-  console.log(index + ": " + fruit);
-});
+// fruits.forEach((fruit, index) => {
+//   console.log(index + ": " + fruit);
+// });

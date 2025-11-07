@@ -10,5 +10,9 @@
     "scm.diffDecorationsGutterPattern": {
         "modified": false
     },
-    "scm.diffDecorationsGutterVisibility": "hover"
+    "scm.diffDecorationsGutterVisibility": "hover",
+    "editor.renderWhitespace": "none",
+    "editor.lightbulb.enabled": "off",
+    "git.decorations.enabled": false,
+    "editor.minimap.enabled": false
 }
