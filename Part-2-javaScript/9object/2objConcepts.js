@@ -265,7 +265,7 @@ let personData = {
 // ============================================================================
 // 19. COUNTING CHARACTER OCCURRENCES - Using objects as hashmaps
 // ============================================================================
-var str = "masai";
+var str = "ssarthi";
 var charCount = {};
 
 for (let i = 0; i < str.length; i++) {
@@ -276,7 +276,7 @@ for (let i = 0; i < str.length; i++) {
   }
 }
 
-console.log(charCount); // { m: 1, a: 2, s: 1, i: 1 }
+// console.log(charCount);
 // ============================================================================
 // 20. MAPPING CHARACTERS TO NUMBERS
 // ============================================================================
@@ -295,89 +295,92 @@ console.log(charCount); // { m: 1, a: 2, s: 1, i: 1 }
 //   }
 // }
 
-// mapChar(5); // { a: 1, b: 2, c: 3, d: 4, e: 5 }
-
+// mapChar(5);
 // ============================================================================
 // 21. MAPPING SYMBOLS TO NUMBERS
 // ============================================================================
-// function mapSymbols(N) {
-//   let obj = {};
-//   let str = "!@#$%^&*";
+function mapSymbols(N) {
+  let obj = {};
+  let str = "!@#$%^&*";
 
-//   for (let i = 0; i < str.length; i++) {
-//     obj[str[i]] = N++;
-//   }
+  for (let i = 0; i < str.length; i++) {
+    obj[str[i]] = N++;
+  }
 
-//   console.log(obj);
+  console.log(obj);
 
-//   for (let key in obj) {
-//     console.log(key + "-" + obj[key]);
-//   }
-// }
+  for (let key in obj) {
+    console.log(key + "-" + obj[key]);
+  }
+}
 
-// mapSymbols(8); // { !: 8, @: 9, #: 10, ... }
-
+// mapSymbols(5);
 // ============================================================================
 // 22. SHALLOW COPY - Copies only first level
 // ============================================================================
+// Changing shallowCopy.name does NOT affect originalUser.name.
+// Changing shallowCopy.address.city changes originalUser.address.city too—they both refer to the same nested object.
+
 // const originalUser = {
 //   name: "Alice",
 //   address: {
 //     city: "Kolkata",
-//     zip: 91829
-//   }
+//     zip: 91829,
+//   },
 // };
 
 // const shallowCopy = { ...originalUser };
-// shallowCopy.name = "Bob"; // Doesn't affect original
+// shallowCopy.name = "Bob"; // Doesn't affect original obj
 // shallowCopy.address.city = "Bangalore"; // AFFECTS original (nested reference)
 
 // console.log("Original Name:", originalUser.name); // Alice (unchanged)
 // console.log("Original City:", originalUser.address.city); // Bangalore (changed!)
-
+// console.log(originalUser);
+// console.log(shallowCopy);
 // ============================================================================
 // 23. DEEP COPY - Copies all levels independently
 // ============================================================================
-// const user4 = {
-//   name: "Alice",
-//   address: {
-//     city: "Kolkata",
-//     zip: 91829
-//   }
-// };
+// Deep Copy: fully independent objects, safe to mutate without affecting the original.Shallow Copy: only the outer layer is safe to mutate; inner (nested) properties are linked with the original.So, deep copies are the best choice when you need to ensure the original data remains untouched, even after making changes to the copy.
 
-// // Method 1: JSON.parse(JSON.stringify()) - Simple but has limitations
-// // const deepCopy = JSON.parse(JSON.stringify(user4));
+const user4 = {
+  name: "Alice",
+  address: {
+    city: "Kolkata",
+    zip: 91829,
+  },
+};
 
-// // Method 2: structuredClone() - Preferred modern method
-// const deepCopy = structuredClone(user4);
+// Method 1: JSON.parse(JSON.stringify()) - Simple but has limitations
+// const deepCopy = JSON.parse(JSON.stringify(user4));
 
-// deepCopy.name = "Charlie";
-// deepCopy.address.city = "Delhi";
+// Method 2: structuredClone() - Preferred modern method
+const deepCopy = structuredClone(user4);
+deepCopy.name = "Charlie";
+deepCopy.address.city = "Delhi";
 
+// console.log(user4); //unchanged
+// console.log(deepCopy);
 // console.log("Deep Copy Name:", deepCopy.name); // Charlie
 // console.log("Deep Copy City:", deepCopy.address.city); // Delhi
 // console.log("Original City:", user4.address.city); // Kolkata (unchanged)
-
 // ============================================================================
 // 24. ARRAY OF OBJECTS - Working with collections
 // ============================================================================
-// let amazon = [
-//   { name: "Speakers", price: 5400, rating: 4 },
-//   { name: "Headphones", price: 3000, rating: 3 },
-//   { name: "PlayStation", price: 20000, rating: 5 },
-//   { name: "Mixer", price: 2000, rating: 4 }
-// ];
+let amazon = [
+  { name: "Speakers", price: 5400, rating: 4 },
+  { name: "Headphones", price: 3000, rating: 3 },
+  { name: "PlayStation", price: 20000, rating: 5 },
+  { name: "Mixer", price: 2300, rating: 4 },
+];
 
 // // Print all product names and ratings
 // for (let i = 0; i < amazon.length; i++) {
-//   console.log(amazon[i].name, amazon[i].rating, amazon[i].price);
+//   console.log(amazon[i].name, amazon[i].price, amazon[i].rating);
 // }
-
 // ============================================================================
 // 25. FILTERING ARRAY OF OBJECTS - Basic conditions
 // ============================================================================
-// Print products with rating 4
+// // Print products with rating 4
 // for (let i = 0; i < amazon.length; i++) {
 //   if (amazon[i].rating === 4) {
 //     console.log(amazon[i].name);
@@ -394,10 +397,10 @@ console.log(charCount); // { m: 1, a: 2, s: 1, i: 1 }
 // ============================================================================
 // 26. CALCULATING AVERAGE FROM ARRAY OF OBJECTS
 // ============================================================================
-// var sum = 0;
-// for (let i = 0; i < amazon.length; i++) {
-//   sum = sum + amazon[i].rating;
-// }
+var sum = 0;
+for (let i = 0; i < amazon.length; i++) {
+  sum = sum + amazon[i].rating;
+}
 // console.log("Total:", sum);
 // console.log("Average Rating:", sum / amazon.length);
 
@@ -405,152 +408,150 @@ console.log(charCount); // { m: 1, a: 2, s: 1, i: 1 }
 // 27. FINDING MIN/MAX IN ARRAY OF OBJECTS
 // ============================================================================
 // Finding minimum price
-// let minPrice = amazon[0].price;
-// for (let i = 0; i < amazon.length; i++) {
-//   if (minPrice > amazon[i].price) {
-//     minPrice = amazon[i].price;
-//   }
-// }
+let minPrice = amazon[0].price;
+for (let i = 0; i < amazon.length; i++) {
+  if (minPrice > amazon[i].price) {
+    minPrice = amazon[i].price;
+  }
+}
 // console.log("Minimum Price:", minPrice);
 
-// // Finding maximum price
-// let maxPrice = amazon[0].price;
-// for (let i = 0; i < amazon.length; i++) {
-//   if (maxPrice < amazon[i].price) {
-//     maxPrice = amazon[i].price;
-//   }
-// }
+// Finding maximum price
+let maxPrice = amazon[0].price;
+for (let i = 0; i < amazon.length; i++) {
+  if (maxPrice < amazon[i].price) {
+    maxPrice = amazon[i].price;
+  }
+}
 // console.log("Maximum Price:", maxPrice);
 
 // ============================================================================
 // 28. COMPLEX NESTED STRUCTURES - Objects with arrays and nested objects
 // ============================================================================
-// let studentData = {
-//   name: "Rajesh",
-//   grade: "X",
-//   section: "A",
-//   marks: [
-//     { maths: 31, science: 41, english: 51 },
-//     { maths: 62, science: 72, english: 82 }
-//   ],
-//   hobbies: ["Dancing", "Singing"]
-// };
+let studentData = {
+  name: "Rajesh",
+  grade: "A1",
+  section: "A",
+  marks: [
+    { maths: 91, science: 95, english: 85 },
+    { maths: 82, science: 98, english: 88 },
+  ],
+  hobbies: ["Dancing", "Singing"],
+};
 
 // console.log(studentData.marks[0].maths); // 31
-// console.log(studentData.marks[1].science); // 72
+// console.log(studentData.marks[1]["english"]); // 82
+// console.log(studentData["marks"][1].science); // 72
 
 // for (let key in studentData) {
 //   console.log(key, "-", studentData[key]);
 // }
-
 // ============================================================================
 // 29. EMPLOYEE DATA OPERATIONS - Real-world example
 // ============================================================================
-// const employees = [
-//   { name: "John Doe", age: 30, department: "HR", salary: 50000 },
-//   { name: "Jane Smith", age: 28, department: "Finance", salary: 60000 },
-//   { name: "Alex Johnson", age: 35, department: "IT", salary: 70000 }
-// ];
+const employees = [
+  { name: "John Doe", age: 30, department: "HR", salary: 50000 },
+  { name: "Jane Smith", age: 28, department: "Finance", salary: 60000 },
+  { name: "Alex Johnson", age: 35, department: "IT", salary: 70000 },
+];
 
-// // Extract specific employee information
-// function employeeInformation(employees) {
-//   const secondEmployeeName = employees[1].name;
-//   const secondEmployeeDepartment = employees[1].department;
-//   return { secondEmployeeName, secondEmployeeDepartment };
-// }
+// Extract specific employee information
+function employeeInformation(employees) {
+  const secondEmployeeName = employees[1].name;
+  const secondEmployeeDepartment = employees[1].department;
+  return { secondEmployeeName, secondEmployeeDepartment };
+}
 // console.log(employeeInformation(employees));
 
-// // Calculate average salary
-// function averageSalary(employees) {
-//   let sum = 0;
-//   for (let i = 0; i < employees.length; i++) {
-//     sum += employees[i].salary;
-//   }
-//   return sum / employees.length;
-// }
+// Calculate average salary
+function averageSalary(employees) {
+  let sum = 0;
+  for (let i = 0; i < employees.length; i++) {
+    sum += employees[i].salary;
+  }
+  return sum / employees.length;
+}
 // console.log("Average Salary:", averageSalary(employees));
 
-// // Extract third employee info with additional data
-// function thirdEmployeeInfo(employees) {
-//   let thirdEmployeeName = employees[2].name;
-//   let thirdEmployeeAge = employees[2].age;
-//   let thirdEmployeeSalary = employees[2].salary;
-//   let bonus = 7000;
-//   return { thirdEmployeeName, thirdEmployeeAge, thirdEmployeeSalary, bonus };
-// }
+// Extract third employee info with additional data
+function thirdEmployeeInfo(employees) {
+  let thirdEmployeeName = employees[2].name;
+  let thirdEmployeeAge = employees[2].age;
+  let thirdEmployeeSalary = employees[2].salary;
+  let bonus = 7000;
+  return { thirdEmployeeName, thirdEmployeeAge, thirdEmployeeSalary, bonus };
+}
 // console.log(thirdEmployeeInfo(employees));
 
 // ============================================================================
 // 30. FINDING HIGHEST AND LOWEST USING MATH METHODS
 // ============================================================================
-// const employees2 = [
-//   { name: "John Doe", age: 30, department: "HR", salary: 54123 },
-//   { name: "Jane Smith", age: 28, department: "Finance", salary: 65123 },
-//   { name: "Alex Johnson", age: 35, department: "IT", salary: 75123 }
-// ];
+const employees2 = [
+  { name: "John Doe", age: 30, department: "HR", salary: 54123 },
+  { name: "Jane Smith", age: 28, department: "Finance", salary: 65123 },
+  { name: "Alex Johnson", age: 35, department: "IT", salary: 75123 },
+];
 
 // function findSalaryExtremes(employees) {
 //   let salaries = [];
 //   for (let i = 0; i < employees.length; i++) {
 //     salaries.push(employees[i].salary);
 //   }
+//   console.log(salaries);
 //   let max = Math.max(...salaries);
 //   let min = Math.min(...salaries);
 //   console.log("Max Salary:", max);
 //   console.log("Min Salary:", min);
 // }
-// findSalaryExtremes(employees2);
 
+// findSalaryExtremes(employees2);
 // ============================================================================
 // 31. ARRAY DESTRUCTURING WITH OBJECTS - Swapping elements
 // ============================================================================
 // function destructuringToSwap(employees) {
 //   let [first, middle, last] = employees;
+//   // console.log(first,middle)
 //   let swappedArray = [last, middle, first];
 //   console.log(swappedArray);
-//   return swappedArray;
 // }
 // destructuringToSwap(employees2);
-
 // ============================================================================
 // 32. CHECKING PROPERTY EXISTENCE - hasOwnProperty and 'in' operator
 // ============================================================================
-// const testObj = { name: "Test", age: 25 };
+const testObj = { name: "Test", age: 25 };
 
-// console.log(testObj.hasOwnProperty("name")); // true
+// console.log(testObj.hasOwnProperty("name")); // true .hasOwnProperty() is a method that checks property as its own (not inherited from the prototype chain).
 // console.log(testObj.hasOwnProperty("salary")); // false
-// console.log("age" in testObj); // true
+// console.log("age" in testObj); // true :- "in" operator checks if a property exists in the object or its prototype chain.
 // console.log("city" in testObj); // false
 
 // ============================================================================
 // 33. OBJECT.ASSIGN() - Merging objects
 // ============================================================================
-// const target = { a: 1, b: 2 };
-// const source = { b: 3, c: 4 };
-// const merged = Object.assign({}, target, source);
-// console.log(merged); // { a: 1, b: 3, c: 4 }
+const target = { a: 1, b: 2 };
+const source = { c: 4, d: 4 };
+const merged = Object.assign({}, target, source);
+// console.log(merged);
 
-// // Alternative: Using spread operator
-// const mergedSpread = { ...target, ...source };
-// console.log(mergedSpread); // { a: 1, b: 3, c: 4 }
-
+// Alternative: Using spread operator
+const mergedSpread = { ...target, ...source };
+// console.log(mergedSpread);
 // ============================================================================
-// 34. OBJECT.SEAL() - Preventing property addition/deletion
+// 34. OBJECT.SEAL() - addition or deletion not allowed only modifing properties
 // ============================================================================
-// const sealedObj = Object.seal({ name: "Sealed", age: 25 });
-// sealedObj.age = 30; // Can modify existing properties
-// sealedObj.city = "Mumbai"; // Can't add new properties
-// delete sealedObj.name; // Can't delete properties
+const sealedObj = Object.seal({ name: "Sealed", age: 25 });
+sealedObj.age = 30; // Can modify existing properties
+sealedObj.city = "Mumbai"; // Can't add new properties
+delete sealedObj.name; // Can't delete properties
 // console.log(sealedObj); // { name: "Sealed", age: 30 }
-
 // ============================================================================
-// 35. OBJECT.FREEZE() - Making objects completely immutable
+// 35. OBJECT.FREEZE() - completely immutable no deleting, adding or modifing are allowed
 // ============================================================================
-// const frozenObj = Object.freeze({ name: "Frozen", age: 30 });
-// frozenObj.age = 40; // Won't change (silently fails)
-// frozenObj.city = "Delhi"; // Won't add (silently fails)
-// delete frozenObj.name; // Won't delete (silently fails)
-// console.log(frozenObj); // { name: "Frozen", age: 30 }
+const frozenObj = Object.freeze({ name: "Frozen", age: 30 });
+frozenObj.city = "Delhi"; // Won't add (silently fails)
+frozenObj.age = 40; // Won't change (silently fails)
+delete frozenObj.name; // Won't delete (silently fails)
+console.log(frozenObj); // { name: "Frozen", age: 30 }
 
 // ============================================================================
 // END OF JAVASCRIPT OBJECTS GUIDE
