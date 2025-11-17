@@ -3,18 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>DOM Study Guide</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="2domConcept.js" defer></script>
   </head>
   <body>
-    <h1>Problem-1</h1>
-    <div id="navbar">
-      <a href="index.html">Home</a>
-      <a href="product.html">Product</a>
-      <a href="cart.html">cart <span id="cartCount">0</span></a>
+    <h1>Complete DOM Manipulation Study Guide</h1>
+
+    <!-- Section 1: Selecting Elements -->
+    <div class="section">
+      <h2>1. Selecting Elements</h2>
+      <div id="selectDemo" class="demo-box">
+        <p class="text">I have a class "text"</p>
+        <p class="text">Me too!</p>
+        <span>I'm a span tag</span>
+      </div>
+
+      <button onclick="demoSelect()">Run Selection Demo</button>
     </div>
-    <h1>Total No of elements in Page :- <span id="count">0</span></h1>
-    <div id="container"></div>
+
+    <!-- Section 2: Properties (innerText, innerHTML, textContent) -->
+    <div class="section">
+      <h2>2. Properties: innerText, innerHTML, textContent</h2>
+
+      <div id="propDemo" class="demo-box">
+        <p>Original Text <span style="display: none">Hidden Text</span></p>
+      </div>
+
+      <button onclick="demoProperties()">Show Properties</button>
+    </div>
+
+    <!-- Section 3: Attributes -->
+    <div class="section">
+      <h2>3. Attributes (get/set)</h2>
+
+      <div class="demo-box">
+        <img
+          id="demoImg"
+          src="https://via.placeholder.com/150"
+          alt="Demo Image"
+          width="150"
+        />
+        <br />
+        <input type="text" id="newImgUrl" placeholder="Enter image URL" />
+
+        <button onclick="changeAttribute()">Change Image</button>
+        <button onclick="getAttributes()">Get Attributes</button>
+      </div>
+    </div>
+
+    <!-- Section 4: Styling -->
+    <div class="section">
+      <h2>4. Styling with JavaScript</h2>
+      <div id="styleDemo" class="demo-box">
+        <p id="styleText">Style me with JavaScript!</p>
+      </div>
+      <button onclick="applyStyles()">Apply Styles</button>
+      <button onclick="resetStyles()">Reset Styles</button>
+    </div>
+
+    <!-- Section 5: Creating & Inserting Elements -->
+    <div class="section">
+      <h2>5. Creating & Inserting Elements</h2>
+      <div id="insertDemo" class="demo-box">
+        <p id="mainPara">Main Paragraph</p>
+      </div>
+      <button onclick="demoInsert()">Demo Insert Methods</button>
+      <button onclick="clearInserts()">Clear</button>
+    </div>
+
+    <!-- Section 6: Removing Elements -->
+    <div class="section">
+      <h2>6.Removing Elements</h2>
+      <div class="demo-box">
+        <div id="removeDemo">
+          <p>Item 1</p>
+          <p>Item 2</p>
+          <p>Item 3</p>
+        </div>
+      </div>
+
+      <button onclick="removeElements()">Remove All Items</button>
+      <button onclick="restoreItems()">Restore Items</button>
+    </div>
+
+    <!-- Section 7: ClassList Manipulation - adding or removing class Names-->
+    <div class="section">
+      <h2>7.ClassList Methods (add, remove, toggle)</h2>
+
+      <div class="demo-box">
+        <p id="classDemo">This paragraph has dynamic classes</p>
+      </div>
+
+      <button onclick="addClasses()">Add Classes</button>
+      <button onclick="removeClasses()">Remove Classes</button>
+      <button onclick="toggleClass()">Toggle Class</button>
+    </div>
+
+    <!-- Section 8: Events -->
+    <div class="section">
+      <h2>8. Event Handling</h2>
+
+      <div class="demo-box">
+        <button id="clickBtn">Click Me</button>
+        <button id="hoverBtn">Hover Over Me</button>
+        <input type="text" id="inputField" placeholder="Type something..." />
+        <p id="eventOutput">Event info will appear here</p>
+      </div>
+
+    </div>
+
+    <!-- Section 9: Traversing DOM -->
+    <div class="section">
+      <h2>9. DOM Traversing (parent, children, siblings)</h2>
+      <div id="traverseDemo" class="demo-box">
+
+        <div id="parentDiv">
+          <p>First Child</p>
+          <p id="middleChild">Middle Child (Target)</p>
+          <p>Last Child</p>
+
+        </div>
+      </div>
+      <button onclick="demoTraverse()">Demo Traversing</button>
+    </div>
+
+    <!-- Section 10: Practical Example - Product Display -->
+    <div class="section">
+      <h2>10. Practical Example: Dynamic Product Cards</h2>
+      <div id="productContainer"></div>
+    </div>
   </body>
-  <link rel="stylesheet" href="2.css" />
-  <script src="3.js"></script>
 </html>

@@ -1,137 +1,172 @@
-// Synchronous - Code runs line by line, Synchronous means the code runs in a particular sequence of instructions given in the program. Each instruction waits for the previous instruction to complete its execution.
+// ============================================================================
+// Synchronous, Asynchronous, Callbacks, Promises, Event Loop, Async/Await, Scope
+// ============================================================================
 
-// console.log("Start");
 
-// function syncTask() {
-//   console.log("Task is running...");
-// }
+// ============================================================================
+// 1) SYNCHRONOUS CODE
+// ============================================================================
+console.log("[SYNC] Start");
+function syncTask() {
+  console.log("[SYNC] Task is running...");
+}
+syncTask();
+console.log("[SYNC] End");
 
-// syncTask();
 
-// console.log("End");
+// ============================================================================
+// 2) ASYNCHRONOUS CODE (setTimeout + Promise microtasks)
+// ============================================================================
+console.log("A");
+setTimeout(() => {
+  console.log("B");
+  Promise.resolve().then(() => console.log("C"));
+}, 0);
+Promise.resolve().then(() => console.log("D"));
+console.log("E");
 
-// ------------------------------------------------------------------------------------------------------------------------
-// Asynchronous -  code that doesn't block the main thread Due to synchronous programming, sometimes important instructions get blocked due to some previous instructions, which causes a delay in the UI Asynchronous code execution allows to execute next instructions immediately and doesn't block the flow.
 
-// console.log("A");
+// ============================================================================
+// 3) CALLBACK FUNCTIONS
+// ============================================================================
+function greet(name, callback) {
+  console.log("Hello " + name);
+  if (typeof callback === "function") callback();
+}
+function work() {
+  console.log("Work!");
+}
+greet("Sarthi", work);
 
-// setTimeout(() => {
-//   console.log("B");
-//   Promise.resolve().then(() => {
-//     console.log("C");
-//   });
-// }, 0);
 
-// Promise.resolve().then(() => {
-//   console.log("D");
-// });
-
-// console.log("E");
-//--------------------------------------------------------------
-// JS uses an event loop to handle async operations without blocking the code.
-// -----------------------------------------------------
-// SetTimeout and SetInterval
-// setTimeout allows you to execute a function once after a specified period.
-// setInterval repeatedly executes a function at every given time-interval until it is stopped.
-
-// setInterval(() => {
-//     console.log("setInterval")
-// }, 1000);
-
-// setTimeout(() => {
-//     console.log("SetTimeOut")
-// }, 1000);
-//------------------------------------------------------------------------------------
-// what is a callback function?
-
-// In JavaScript, a callback function is simply a function passed as an argument to another function, which is then executed later — usually after some task is completed.
-
-// function greet(name, callback) {
-//   console.log("Hello " + name);
-//   callback(); // calling the callback function
-// }
-
-// function work() {
-//   console.log("Work!");
-// }
-
-// greet("Sarthi", work);
-// --------------------------------------------
-
-//  what are drawback of using callback?
-//  harder to manage when we have the nested callback (known as callback hell)
-
-// doSomething(() => {
-//   doSomethingElse(() => {
-//     doMore(() => {
-//       console.log("Done!");
+// ============================================================================
+// 4) CALLBACK HELL EXAMPLE
+// ============================================================================
+function task1(cb) {
+  setTimeout(() => { console.log("Task 1 done"); cb(10); }, 300);
+}
+function task2(input, cb) {
+  setTimeout(() => { console.log("Task 2 done"); cb(input * 2); }, 300);
+}
+function task3(input, cb) {
+  setTimeout(() => { console.log("Task 3 done"); cb(input + 5); }, 300);
+}
+// Nested callbacks
+// task1(res1 => {
+//   task2(res1, res2 => {
+//     task3(res2, res3 => {
+//       console.log("Final output (callback hell):", res3);
 //     });
 //   });
 // });
 
-// ---------------------------------------------------------------------------------
 
-// Async Await
+// ============================================================================
+// 5) PROMISE BASICS: PRODUCING & CONSUMING PROMISES
+// ============================================================================
+function getReleaseDate() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const data = { date: "31 October", location: "Bangalore" };
+      if (data) resolve(data);
+      else reject(new Error("Release date unavailable"));
+    }, 1000);
+  });
+}
 
-// function findSum(arr) {
-//   return new Promise((resolve, reject) => {
-//     if (Array.isArray(arr)) {
-//       let sum = arr.reduce((acc, item) => {
-//         return acc + item;
-//       }, 0);
-//       resolve(sum);
-//     } else {
-//       reject("Pass an array of numbers only1");
-//     }
-//   });
-// }
+getReleaseDate()
+  .then(data => console.log("Release Info:", data))
+  .catch(err => console.error("Error:", err.message));
 
-// function findOdd(arr) {
-//   return new Promise((res, rej) => {
-//     if (Array.isArray(arr)) {
-//       let oddArr = arr.filter((item) => item % 2);
-//       res(oddArr);
-//     } else {
-//       rej("Pass an array of numbers only2");
-//     }
-//   });
-// }
 
-// function multiply(arr, value) {
-//   return new Promise((res, rej) => {
-//     if (Array.isArray(arr)) {
-//       let ans = arr.map((item) => item * value);
-//       res(ans);
-//     } else {
-//       rej("Pass an array of numbers only3");
-//     }
-//   });
-// }
+// ============================================================================
+// 6) PROMISE EXAMPLE: SIMPLE VALIDATION
+// ============================================================================
+function fatherPromise(marks) {
+  return new Promise((resolve, reject) => {
+    if (!Array.isArray(marks) || marks.length === 0) {
+      return reject(new Error("Marks must be a non-empty array"));
+    }
 
-// // let arr = "Hello World!";
-// let arr = [1, 2, 3, 4, 5];
-// async function output() {
-//   try {
-//     let A1 = await findSum(arr);
-//     let A2 = await findOdd(arr);
-//     let A3 = await multiply(arr, 5);
-//     console.log("sum", A1);
-//     console.log("Odd", A2);
-//     console.log("Multiply", A3);
-//   } catch (err) {
-//     console.log(err);
-//   }
-// }
+    const avg = marks.reduce((a, b) => a + b, 0) / marks.length;
 
-// output();
-//--------------------------------
-// what is the use of async and await ? if you forgot to provide await
+    setTimeout(() => {
+      if (avg >= 75) resolve("CONGRATS! I will gift you a bike");
+      else reject(new Error("SORRY! Marks are not enough, no bike"));
+    }, 1000);
+  });
+}
 
-// In JavaScript, async and await are used to handle asynchronous operations (like fetching data from an API) in a way that looks and feels synchronous — making the code easier to read and write.
+fatherPromise([80, 70, 90])
+  .then(msg => console.log(msg))
+  .catch(err => console.error(err.message));
 
-// When you declare a function as async, it automatically returns a Promise.
-// The await keyword can only be used inside an async function.
-// It pauses the execution of the function until the Promise resolves.
 
-// What happens if you forget to use await? If you forget await, the function won’t wait for the Promise to resolve — it will continue running immediately.
-//------------------------------------------------------------------------------------------
+// ============================================================================
+// 7) PROMISE.ALL & PROMISE.RACE
+// ============================================================================
+const p1 = Promise.resolve(1);
+const p2 = new Promise(res => setTimeout(() => res(2), 200));
+const p3 = Promise.resolve(3);
+
+Promise.all([p1, p2, p3]).then(values => console.log("Promise.all →", values));
+Promise.race([p1, p2, p3]).then(value => console.log("Promise.race →", value));
+
+
+// ============================================================================
+// 8) ASYNC / AWAIT
+// ============================================================================
+function findSum(arr) {
+  return new Promise((resolve, reject) => {
+    if (!Array.isArray(arr)) return reject(new Error("Array required"));
+    const sum = arr.reduce((acc, n) => acc + n, 0);
+    resolve(sum);
+  });
+}
+
+async function output() {
+  try {
+    const arr = [1, 2, 3, 4, 5];
+    const sum = await findSum(arr);
+    console.log("Sum (async/await):", sum);
+  } catch (err) {
+    console.error(err.message);
+  }
+}
+output();
+
+
+// ============================================================================
+// 9) EVENT LOOP DEMO — MICROTASKS vs MACROTASKS
+// ============================================================================
+console.log("[LOOP] Start");
+setTimeout(() => console.log("[LOOP] Timeout (macrotask)"), 0);
+Promise.resolve().then(() => console.log("[LOOP] Promise.then (microtask)"));
+console.log("[LOOP] End");
+
+
+// ============================================================================
+// 10) TIMERS: setTimeout vs setInterval
+// ============================================================================
+setTimeout(() => console.log("Timeout after 1 sec"), 1000);
+const intervalId = setInterval(() => console.log("Interval every 1 sec"), 1000);
+setTimeout(() => clearInterval(intervalId), 3500); // stop interval after 3.5 sec
+
+
+// ============================================================================
+// 11) SCOPE: var vs let vs const
+// ============================================================================
+function scopeTest() {
+  var outerVar = "outer var";
+  let outerLet = "outer let";
+
+  if (true) {
+    var innerVar = "inner var"; // function-scoped
+    let innerLet = "inner let"; // block-scoped
+    console.log("Inside block →", innerLet);
+  }
+
+  console.log(innerVar); // OK
+  // console.log(innerLet); // ERROR: block-scoped
+}
+scopeTest();
