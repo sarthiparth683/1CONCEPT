@@ -2,13 +2,15 @@
 // 1. BASIC PROTOTYPE CHAIN WITH ARRAY & OBJECT
 // ==============================================
 // let arr = [1, 2, 3];
+// console.log(arr)
+// console.log(arr.__proto__)
 // console.log(arr.__proto__ === Array.prototype);
 // console.log(Array.prototype.__proto__ === Object.prototype);
 // console.log(Object.prototype.__proto__ === null); // (end of chain)
 // ==============================================
 // 2. FUNCTION PROTOTYPE CHAIN
 // ==============================================
-// function fun() {}
+// function fun() { return "hello"; }
 // console.log(fun.__proto__ === Function.prototype)
 // console.log(Function.prototype.__proto__ === Object.prototype)
 // ==============================================
@@ -17,7 +19,12 @@
 // let user = {
 //   name: "vivek",
 //   sayHello() {
-//     console.log("Hello");
+//     // A method defined using the short method syntax
+//     console.log("Say Hello!");
+//   },
+//   fun: function () {
+//     // A method defined using the traditional function expression syntax:
+//     console.log("Function in user object");
 //   },
 // };
 
@@ -28,8 +35,13 @@
 //   },
 // };
 
-// Object.setPrototypeOf(emp, user);
-// console.log(user.sayHello());
+// // user.sayHello();
+// // user.fun();
+// Object.setPrototypeOf(emp, user); // Make user is the prototype of emp.So emp can use all methods defined inside user.
+// console.log("emp object", emp);
+// emp.work();
+// emp.sayHello();
+// emp.fun();
 // ==============================================
 // 4. CONSTRUCTOR FUNCTION (WITHOUT 'new')
 // ==============================================
@@ -42,19 +54,21 @@
 //   return obj;
 // }
 
+// PersonFn.prototype.eat = function () {
+//     console.log(`${this.firstName} is eating.`);
+// };
+// PersonFn.prototype.sleep = function () {
+//     console.log(`${this.firstName} is sleeping.`);
+// };
 // PersonFn.prototype.increaseAge = function () {
 //   this.age += 1;
 //   console.log(this.age);
 // };
-// PersonFn.prototype.sleep = function () {
-//   console.log(`${this.firstName} is sleeping.`);
-// };
-// PersonFn.prototype.eat = function () {
-//   console.log(`${this.firstName} is eating.`);
-// };
 // PersonFn.prototype.introduceSelf = function () {
 //   console.log(this.firstName, this.lastName, this.age);
 // };
+
+// // console.log(PersonFn());
 
 // // Child constructor
 // function EmployeeFn(firstName, lastName, age, department, salary) {
@@ -75,12 +89,13 @@
 // };
 
 // const emp1 = EmployeeFn("John", "Doe", 28, "IT", 50000);
+// console.log(emp1);
+// emp1.eat();            // inherited from PersonFn
+// emp1.sleep();          // inherited from PersonFn
+// emp1.increaseAge();    // 29
 // emp1.introduceSelf();  // John Doe 28
 // emp1.work();           // John is working.
-// emp1.sleep();          // inherited from PersonFn
-// emp1.eat();            // inherited from PersonFn
 // emp1.getSalary();      // John is getting Salary.
-// emp1.increaseAge();    // 29
 // ==============================================
 // 5. Object.create() FOR INHERITANCE
 // ==============================================
@@ -91,30 +106,30 @@
 //   },
 // };
 
-// let derivedObj = Object.create(baseObj);
-// // derivedObj now inherits sayHello()
+// let derivedObj = Object.create(baseObj);// derivedObj now inherits sayHello()
 // derivedObj.salary = 100000;
 // derivedObj.work = function () {
 //   console.log("Working");
 // };
 
+// console.log(derivedObj)
 // derivedObj.sayHello();
+// console.log(derivedObj.salary)
+// derivedObj.work();
 // // ==============================================
 // 6. Object.keys / Object.values / Object.entries
 // ==============================================
 // const sample = { a: 1, b: 2, c: 3, d: 4, e: 5 };
-// console.log(Object.keys(sample)); // ['a','b','c','d','e']
-// console.log(Object.values(sample)); // [1,2,3,4,5]
-// console.log(Object.entries(sample)); // [['a',1], ['b',2], ...]
+// // console.log(Object.keys(sample)); // ['a','b','c','d','e']
+// // console.log(Object.values(sample)); // [1,2,3,4,5]
+// // console.log(Object.entries(sample)); // [['a',1], ['b',2], ...]
 
 // for (let key in sample) {
 //   console.log(`${key} : ${sample[key]}`);
 // }
-
 // ==============================================
 // 7. CONSTRUCTOR FUNCTION WITH 'new' KEYWORD
 // ==============================================
-
 // function Person(firstName, lastName, age) {
 //   this.firstName = firstName;
 //   this.lastName = lastName;
@@ -123,20 +138,23 @@
 
 // Person.prototype.increaseAge = function () {
 //   this.age += 1;
-//   console.log(this.age);
+//   return this.age;
 // };
 // Person.prototype.sleep = function () {
-//   console.log(`${this.firstName} is sleeping.`);
+//   return `${this.firstName} is sleeping.`;
 // };
 // Person.prototype.eat = function () {
-//   console.log(`${this.firstName} is eating.`);
+//   return `${this.firstName} is eating.`;
 // };
 // Person.prototype.introduceSelf = function () {
-//   console.log(this.firstName, this.lastName, this.age);
+//   return `Introduction:- ${this.firstName}, ${this.lastName}, ${this.age}`;
 // };
 
-// let p = new Person("Parth", "Sarthi", 21);
-
+// // let p = new Person("Parth", "Sarthi", 21);
+// // console.log(p)
+// // console.log(p.age)
+// // console.log(p.sleep())
+// // console.log(p.introduceSelf())
 // // ===== Employee Inheriting Person (with new) =====
 
 // function Employee(firstName, lastName, age, department, salary) {
@@ -148,15 +166,18 @@
 // Object.setPrototypeOf(Employee.prototype, Person.prototype);
 
 // Employee.prototype.work = function () {
-//   console.log(`${this.firstName} is working.`);
+//   return `${this.firstName} is working.`;
 // };
 // Employee.prototype.getSalary = function () {
-//   console.log(`${this.firstName} is getting Salary.`);
+//   return `${this.firstName} is getting Salary.`;
 // };
 
 // let e1 = new Employee("John", "Doe", 25, "engineering", 200000);
 // console.log(e1);
-
+// // console.log(e1.firstName);
+// // console.log(e1.department);
+// // console.log(e1.introduceSelf());
+// // console.log(e1.getSalary());
 // ==============================================
 // 8. FACTORY FUNCTION
 // ==============================================
@@ -173,11 +194,11 @@
 //   return obj;
 // }
 
-// let animal1 = animal(4, true);
-// console.log(animal1)
+// // let animal1 = animal(4, true);
+// // console.log(animal1);
 // // ===== Inheriting Factory Function =====
 
-// function Bird(name, noOfLegs, vegetarian, canFly, beak) {
+// function Bird(noOfLegs, vegetarian, canFly, beak, name) {
 //   let birdObj = animal(noOfLegs, vegetarian); // inheritance
 //   birdObj.name = name;
 //   birdObj.canFly = canFly;
@@ -185,7 +206,11 @@
 //   return birdObj;
 // }
 
-// let b1 = Bird("Falcon", 2, true, false, "long");
-// let b2 = Bird("Vulture", 8, true, true, "strong");
-// let b3 = Bird("Eagle", 4, false, true, "Fly High");
+// let b1 = Bird(2, true, false, "long", "Falcon");
+// let b2 = Bird(8, true, true, "strong", "Vulture");
+// let b3 = Bird(4, false, true, "Fly High", "Eagle");
+// console.log(b1);
+// console.log(b2);
+// console.log(b3);
 // ==============================================
+
