@@ -15,38 +15,106 @@
     <h1>heading</h1>
     <p>Paragraph</p>
     <i>italic</i> <br />
+    <span>Span tag</span>
     <em>italic</em> <br />
-    <!--  emphasize text.similar to italics -->
-    <u>Undeline</u> <br />
+    <u>Underline</u> <br />
     <b>bold tag</b>
     <p>h<sub>2</sub>o</p>
     <p>x<sup>2</sup></p>
     <mark>Mark tag</mark> <br />
+    <hr />
+    <strong>Strong tag (important text)</strong><br />
+    <small>Small text</small><br />
+    <del>Deleted text</del><br />
+    <ins>Inserted text</ins><br />
+    <abbr title="HyperText Markup Language">HTML</abbr><br />
+    <code>console.log("code tag")</code><br />
+    <pre>
+         Preformatted text
+         Line breaks preserved
+    </pre>
+    <blockquote>This is a blockquote example.</blockquote>
+
+    <details>
+      <summary>Click to expand details</summary>
+      Hidden detail content.
+    </details>
+
+    <audio controls>
+      <source src="../audio/sample.mp3" type="audio/mp3" />
+    </audio>
+
     <video controls width="250">
       <source src="../video/branch.mp4" type="video/mp4" />
     </video>
+
     <ol type="i">
       <li>1</li>
       <li>2</li>
       <li>3</li>
     </ol>
-    <a href="https://www.google.com" target="_blank">anchor tag - for link</a>
+
+    <a href="https://www.adidas.co.in/" target="_blank"
+      >anchor tag - for link</a
+    >
+
     <!-------------------------------------------->
+
     <form action="">
-      <label for="name">Name</label>
-      <input type="text" />
-      <div><label for="email">Email</label> <input type="checkbox" /></div>
-      <div><label for="color">color</label> <input type="color" /></div>
       <div>
-        <select name="" id="">
+        <label for="name">Name</label>
+        <input type="text" />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="checkbox" />
+      </div>
+
+      <div>
+        <label for="color">Color</label>
+        <input type="color" />
+      </div>
+
+      <div>
+        <label for="range">Range</label>
+        <input type="range" />
+      </div>
+
+      <div>
+        <label for="file">File Upload</label>
+        <input type="file" />
+      </div>
+
+      <div>
+        <label for="date">Date</label>
+        <input type="date" />
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input type="password" />
+      </div>
+
+      <div>
+        <select>
           <option value="">one</option>
           <option value="">two</option>
           <option value="">three</option>
         </select>
       </div>
-      <div>
-        <textarea name="" id="">textArea</textarea>
+
+      <div style="margin: 10px">
+        <textarea>textArea</textarea>
       </div>
     </form>
+
+    <!-- Semantic structure tags -->
+    <header>Header section</header>
+    <nav>Navigation bar</nav>
+    <section>Section tag</section>
+    <article>Article tag</article>
+    <aside>Sidebar content</aside>
+    <footer>Footer section</footer>
   </body>
 </html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-Cascading Style Sheets</title>
+
+    <style>
+      /* =========================
+           GLOBAL RESET + BASE
+        ========================== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      /* =====================================================
+           1. DIV — BOX MODEL (MOST IMPORTANT: MARGIN, PADDING)
+        ====================================================== */
+      div {
+        width: 250px;
+        height: 120px;
+        background-color: lightblue;
+        /* border: 2px solid #000; */
+        margin: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      /* =====================================================
+           2. P — TEXT STYLING (FONT, COLOR, LINE HEIGHT)
+        ====================================================== */
+      p {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.5;
+        font-style: italic;
+        margin: 15px 0;
+      }
+
+      /* =====================================================
+           3. H1 — ADVANCED TYPOGRAPHY (SPACING + DECORATION)
+        ====================================================== */
+
+      h1 {
+        font-size: 32px;
+        color: #003366;
+        font-weight: bold;
+        text-decoration: underline;
+        letter-spacing: 1px;
+        word-spacing: 5px;
+        margin: 20px;
+      }
+
+      /* =====================================================
+           4. SPAN — INLINE ELEMENT (BACKGROUND + BORDER STYLE)
+        ====================================================== */
+      span {
+        background-color: rgb(111, 245, 66);
+        padding: 3px;
+        border: 3px dotted red; /* new: dotted */
+      }
+
+      /* =====================================================
+           5. A — LINKS + HOVER (STATE CHANGE)
+        ====================================================== */
+      a {
+        color: purple;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: rgb(223, 63, 63);
+      }
+
+      /* =====================================================
+           6. IMG — DISPLAY + OBJECT-FIT + RADIUS
+        ====================================================== */
+      img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover; /*important*/
+        border-radius: 10px;
+      }
+
+      /* =====================================================
+           7. INPUT — FOCUS + BORDER
+        ====================================================== */
+      input {
+        padding: 10px;
+        border: 2px solid #777;
+        border-radius: 6px;
+        margin: 10px;
+        width: 150px;
+      }
+
+      input:focus {
+        border-color: blue;
+        outline: none;
+      }
+
+      input:hover {
+        width: 200px;
+        background-color: #5ea1e3;
+        color: black;
+        font-size: large;
+      }
+
+      /* =====================================================
+           8. BUTTON — HOVER + ACTIVE + TRANSITION
+        ====================================================== */
+      button {
+        padding: 10px 20px;
+        background-color: teal;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s; /* important */
+      }
+
+      button:hover {
+        background-color: #006666;
+        height: 50px;
+        width: 150px;
+      }
+
+      button:active {
+        background-color: black;
+      }
+
+      /* =====================================================
+           9. UL / OL — LIST STYLING
+        ====================================================== */
+      ul {
+        list-style-type: square;
+        padding-left: 30px;
+        margin: 20px 0;
+      }
+
+      ol {
+        list-style-type: upper-roman;
+        padding-left: 30px;
+        margin: 20px 0;
+      }
+
+      li {
+        margin: 6px 0;
+      }
+
+      /* =====================================================
+           10. TABLE — BORDERS + ALIGNMENT
+        ====================================================== */
+      table {
+        width: 60%;
+        border-collapse: collapse; /* important */
+        margin: 20px 0;
+      }
+
+      th,
+      td {
+        border: 2px solid #000;
+        padding: 10px;
+        text-align: center;
+      }
+
+      th {
+        background-color: #ddd;
+      }
+
+      /* =====================================================
+           11. BOX CLASS — POSITIONING (absolute, relative)
+        ====================================================== */
+      .box {
+        width: 150px;
+        height: 50px;
+        background-color: orange;
+        position: relative; /* main */
+        top: 10px;
+        left: 10px;
+      }
+
+      /* =====================================================
+           12. OVERFLOW DEMO — hidden / scroll
+        ====================================================== */
+      .overflow-demo {
+        width: 200px;
+        height: 60px;
+        border: 2px solid #000;
+        overflow: scroll; /* important */
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Cheat Sheet</h1>
+
+    <div>This is a DIV (Box Model)</div>
+
+    <p>This is a paragraph demonstrating text styling.</p>
+
+    <span>Highlighted span text.</span>
+    <br /><br />
+
+    <a href="https://www.flipkart.com/" target="_blank">This is a link</a>
+    <br /><br />
+
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThq03InrHUozDhT0097c1U6YEkCjl8aWRNPg&s"
+      alt="Sample"
+    />
+
+    <br /><br />
+
+    <input type="text" placeholder="Enter your name" />
+
+    <br />
+
+    <button>Click Me</button>
+
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+    </ul>
+
+    <ol>
+      <li>Ordered item one</li>
+      <li>Ordered item two</li>
+    </ol>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Amit</td>
+        <td>22</td>
+      </tr>
+      <tr>
+        <td>Riya</td>
+        <td>21</td>
+      </tr>
+    </table>
+
+    <div class="box">Position Demo</div>
+
+    <br />
+
+    <div class="overflow-demo">
+      This is an example of overflow scroll. Add more text to see scrolling in
+      action. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </div>
+  </body>
+</html>

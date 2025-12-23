@@ -15,7 +15,6 @@ let str2 = "Hello";
 let str3 = "JavaScript";
 // console.log(str3[0]); // J
 // console.log(str3[9]); // t
-
 //=====================================
 // 4. UPPERCASE AND LOWERCASE
 //=====================================
@@ -36,7 +35,6 @@ let name = "Alice";
 let age = 25;
 let message = `My name is ${name} and I am ${age} years old.`;
 // console.log(message); // My name is Alice and I am 25 years old.
-
 //=====================================
 // 7. INCLUDES - Check if Substring Exists
 //=====================================
@@ -53,10 +51,9 @@ let str6 = "Hello, world! Hello again";
 // console.log(str6.indexOf("o")); // 4
 // console.log(str6.indexOf("xyz")); // -1 (not found)
 
-// 9. LASTINDEXOF - count form start but shows last value's index
+// 9. .lastIndexOf() method searches the string from right to left, but it always returns the index based on a 0-indexed count from the beginning of the string.
 // console.log(str6.lastIndexOf("Hello")); // 14
 // console.log(str6.lastIndexOf("o")); // 18
-
 //=====================================
 // 10. STARTSWITH AND ENDSWITH
 //=====================================
@@ -65,7 +62,6 @@ let str7 = "JavaScript is awesome";
 // console.log(str7.startsWith("Script")); // false
 // console.log(str7.endsWith("awesome")); // true
 // console.log(str7.endsWith("is")); // false
-
 //=====================================
 // 11. SLICE - Extract Part of String
 //=====================================
@@ -119,11 +115,14 @@ let str15 = "cat dog cat bird cat";
 // 19. SPLIT - Convert String into Array
 //=====================================
 let str16 = "apple,banana,orange";
-let fruits = str16.split(",");
-// console.log(fruits); // ["apple", "banana", "orange"]
+// console.log(str16.split(",")); // ["apple", "banana", "orange"]
+// console.log(str16.split(",").reverse());
+// console.log(str16.split(",").reverse().join(", "));
 
 let str17 = "Hello";
 // console.log(str17.split("")); // ["H", "e", "l", "l", "o"]
+// console.log(str17.split("").reverse());
+// console.log(str17.split("").reverse().join(""));
 
 //=====================================
 // 20. REPEAT - Repeat String N Times
@@ -135,11 +134,11 @@ let str18 = "Ha";
 //=====================================
 // 21. PADSTART - Add Padding to Start
 //=====================================
-//  string.padStart(targetLength, padString) :- targetLength: The total length you want the final string to be. padString: The character (or characters) you want to use for padding.
+// string.padStart(targetLength, padString) :- targetLength: The total length you want the final string to be. padString: The character (or characters) you want to use for padding.
 
 let str19 = "5";
 // console.log(str19.padStart(3, "0")); // 005
-// console.log("7".padStart(4, "x")); // xxx7
+// console.log("7".padStart(3, "x")); // xx7
 
 //=====================================
 // 22. PADEND - Add Padding to End
@@ -259,13 +258,14 @@ let path = String.raw`C:\Users\Desktop\file.txt`;
 // BONUS: Array Methods vs String Methods
 // SPLICE - Works on arrays only (modifies original)
 //=====================================
-const numbers = [1, 2, 3, 4, 5];
-let removed = numbers.splice(1, 2, 10, 20);
-// console.log(removed); // [2, 3]
-// console.log(numbers); // [1, 10, 20, 4, 5]
-//------------------------------------------
+const numbers = [0, 1, 2, 3, 4, 5];
+let removed = numbers.splice(1, 3, 10, 20);
+// console.log(removed); // [1, 2, 3]
+// console.log(numbers); // [0, 10, 20, 4, 5]
+//----------------------
 // SLICE - Works on strings and arrays (doesn't modify)
-const fruits2 = ["apple", "banana", "orange"];
+const fruits2 = ["apple", "banana", "orange", "Litchi", "Mango"];
 let slicedFruits = fruits2.slice(1, 3);
 // console.log(slicedFruits); // ["banana", "orange"]
 // console.log(fruits2); // ["apple", "banana", "orange"] (unchanged)
+// ====================================================

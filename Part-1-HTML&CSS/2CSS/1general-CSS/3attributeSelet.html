@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>attribute Selector</title>
+    <style>
+      input[type="text"] {
+        color: red;
+        margin: 10px;
+        background-color: aquamarine;
+      }
+
+      input[type="email"] {
+        color: blue;
+        background-color: rgb(97, 236, 102);
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="i1">Enter Name</label>
+        <input type="text" id="i1" value="Text" />
+      </div>
+
+      <div>
+        <label for="i2">Enter email</label>
+        <input type="email" placeholder="email" />
+      </div>
+    </form>
+  </body>
+</html>

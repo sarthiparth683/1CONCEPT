@@ -68,35 +68,35 @@
 //-------------------------------------
 // Lexical Scope, also called static scope, is a scoping mechanism where a function's access to variables is determined by where the function is defined in the source code. Inner functions have access to variables in their outer (enclosing) functions, forming a scope chain that is established at compile/parse time, not execution time.
 // inner function access outer function
-let name = "Alice";
-function outer() {
-  let age = 25;
-  function inner() {
-    // inner can access both 'age' and 'name'
-    console.log(name); // "Alice" - from global scope
-    console.log(age);  // 25 - from outer function
-  }
-  inner();
-}
-outer();
+// let name = "Alice";
+// function outer() {
+//   let age = 25;
+//   function inner() {
+//     // inner can access both 'age' and 'name'
+//     console.log(name); // "Alice" - from global scope
+//     console.log(age);  // 25 - from outer function
+//   }
+//   inner();
+// }
+// outer();
 // inner looks in its own scope first, then outer's scope, then the global scope.
 
 
 // -------------------------------------------------------------
 // Closures = when a function remembers its parent scope, even after the parent has finished executing.
 // returns functions
-function outer() {
-  let count = 0;
-  return function () {
-    count++;
-    console.log(count);
-  };
-}
+// function outer() {
+//   let count = 0;
+//   return function () {
+//     count++;
+//     console.log(count);
+//   };
+// }
 
-let counter = outer();
-counter(); // 1
-counter(); // 2
-counter(); // 3
+// let counter = outer();
+// counter(); // 1
+// counter(); // 2
+// counter(); // 3
 
 // outer() // This runs outer() but discards the returned function
 // outer() // This runs outer() but discards the returned function
@@ -114,61 +114,61 @@ counter(); // 3
 // The magic is in the concept of scope and environment. Even though createCounter has finished executing, the increment function still has access to count because it remembers its scope environment.
 // Closures in JavaScript empower functions to retain access to their lexical environments.
 //------------------------------------------------------------------------------
-function greet() {
-  let name = "Tom";
-  return function () {
-    console.log(name);
-  };
-}
-let output = greet();
-output();
+// function greet() {
+//   let name = "Tom";
+//   return function () {
+//     console.log(name);
+//   };
+// }
+// let output = greet();
+// output();
 //--------------------------------------------------------------------------------
-function createCounter() {
-  let count = 0; // a variable in the outer scope
-  function increment() {
-    count++;
-    console.log(count);
-  }
-  return increment;
-}
+// function createCounter() {
+//   let count = 0; // a variable in the outer scope
+//   function increment() {
+//     count++;
+//     console.log(count);
+//   }
+//   return increment;
+// }
 
-let counter = createCounter();
-counter();
-counter();
-counter();
-counter();
-counter();
+// let counter = createCounter();
+// counter();
+// counter();
+// counter();
+// counter();
+// counter();
 // We return increment from createCounter, and every time we call counter(), it remembers the value of count and increments it.
 //---------------------------------------------------------------------------------
-function outerFunction() {
-    let x = 10;
-    function innerFunction() {
-        return x += 1;
-    };
-    return innerFunction;
-};
-let f1 = outerFunction();
-let f2 = outerFunction();
-console.log(f1());      //11
-console.log(f1());      //12
-console.log(f1());      //13
-console.log(f2());      //11
-console.log(f2());      //12
+// function outerFunction() {
+//     let x = 10;
+//     function innerFunction() {
+//         return x += 1;
+//     };
+//     return innerFunction;
+// };
+// let f1 = outerFunction();
+// let f2 = outerFunction();
+// console.log(f1());      //11
+// console.log(f1());      //12
+// console.log(f1());      //13
+// console.log(f2());      //11
+// console.log(f2());      //12
 //-------------------------------------------------------------------------------
-function createCounter() {
-    let count = 0; // Private variable
-    return {
-        increment: function () {
-            count++;
-        },
-        getCount: function () {
-            return count;
-        }
-    };
-};
-const counter = createCounter();
-counter.increment();
-counter.increment();
-counter.increment();
-console.log(counter.getCount()); // Output: 1
-console.log(counter.count); // Output: undefined (count is private)
+// function createCounter() {
+//     let count = 0; // Private variable
+//     return {
+//         increment: function () {
+//             count++;
+//         },
+//         getCount: function () {
+//             return count;
+//         }
+//     };
+// };
+// const counter = createCounter();
+// counter.increment();
+// counter.increment();
+// counter.increment();
+// console.log(counter.getCount()); // Output: 1
+// console.log(counter.count); // Output: undefined (count is private)

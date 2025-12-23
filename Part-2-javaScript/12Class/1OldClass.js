@@ -10,9 +10,11 @@
 // ==============================================
 // 2. FUNCTION PROTOTYPE CHAIN
 // ==============================================
-// function fun() { return "hello"; }
-// console.log(fun.__proto__ === Function.prototype)
-// console.log(Function.prototype.__proto__ === Object.prototype)
+// function fun() {
+//   return "hello";
+// }
+// console.log(fun.__proto__ === Function.prototype);
+// console.log(Function.prototype.__proto__ === Object.prototype);
 // ==============================================
 // 3. MANUAL PROTOTYPE LINK USING setPrototypeOf
 // ==============================================
@@ -38,10 +40,8 @@
 // // user.sayHello();
 // // user.fun();
 // Object.setPrototypeOf(emp, user); // Make user is the prototype of emp.So emp can use all methods defined inside user.
-// console.log("emp object", emp);
-// emp.work();
-// emp.sayHello();
-// emp.fun();
+// // emp.sayHello();
+// // emp.fun();
 // ==============================================
 // 4. CONSTRUCTOR FUNCTION (WITHOUT 'new')
 // ==============================================
@@ -102,21 +102,21 @@
 // let baseObj = {
 //   name: "vivek",
 //   sayHello() {
-//     console.log("Hello");
+//     console.log("Say Hello");
 //   },
 // };
 
-// let derivedObj = Object.create(baseObj);// derivedObj now inherits sayHello()
+// let derivedObj = Object.create(baseObj); // derivedObj now inherits sayHello()
 // derivedObj.salary = 100000;
 // derivedObj.work = function () {
 //   console.log("Working");
 // };
 
-// console.log(derivedObj)
+// console.log(derivedObj);
 // derivedObj.sayHello();
-// console.log(derivedObj.salary)
+// console.log(derivedObj.salary);
 // derivedObj.work();
-// // ==============================================
+// ==============================================
 // 6. Object.keys / Object.values / Object.entries
 // ==============================================
 // const sample = { a: 1, b: 2, c: 3, d: 4, e: 5 };
@@ -151,10 +151,10 @@
 // };
 
 // // let p = new Person("Parth", "Sarthi", 21);
-// // console.log(p)
-// // console.log(p.age)
-// // console.log(p.sleep())
-// // console.log(p.introduceSelf())
+// // console.log(p);
+// // console.log(p.age);
+// // console.log(p.sleep());
+// // console.log(p.introduceSelf());
 // // ===== Employee Inheriting Person (with new) =====
 
 // function Employee(firstName, lastName, age, department, salary) {
@@ -213,4 +213,3 @@
 // console.log(b2);
 // console.log(b3);
 // ==============================================
-

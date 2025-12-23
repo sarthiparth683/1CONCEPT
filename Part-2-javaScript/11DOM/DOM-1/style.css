@@ -138,6 +138,15 @@ input[type="text"]:focus {
     margin-bottom: 10px;
 }
 
+#mainPara{
+    border: 1px solid #1e07ea;
+    background-color: #49e64e;
+}
+#insertDemo{
+    border: 2px solid #000306;
+    background-color: #a3d2f7;
+}
+
 /* Classes for ClassList Demo */
 .highlight {
     background-color: #fef08a !important;

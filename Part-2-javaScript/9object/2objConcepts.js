@@ -9,7 +9,8 @@ obj.name = "Sarthi";
 obj.age = 25;
 obj.isMarried = false;
 
-// console.log(obj.name); // John
+// console.log(obj.name); // Sarthi
+// console.log(obj["age"]); // bracket notation need string as key
 // console.log(obj.age); // 25
 // console.log(obj.isMarried); // false
 
@@ -25,6 +26,7 @@ let student = {
 
 // console.log(student.name); // Ravi
 // console.log(student.age); // 21
+// console.log(student["course"]); // JavaScript
 
 // ============================================================================
 // 3. ACCESSING OBJECT PROPERTIES - Dot Notation (simplest way)
@@ -60,7 +62,7 @@ user.profession = "Developer";
 user.hobbies = "coding";
 
 // Method 2: Bracket Notation (for dynamic keys)
-user["Date_of_Birth"] = "02-Oct-1984";
+user["Date_of_Birth"] = "7-Oct-1984";
 // console.log(user);
 // ============================================================================
 // 6. MODIFYING OBJECT PROPERTIES
@@ -102,7 +104,7 @@ let studentWithSubjects = {
 
 // console.log(studentWithSubjects.subjects); // ["HTML", "CSS", "JS"]
 // console.log(studentWithSubjects.subjects[1]); // HTML
-// console.log(studentWithSubjects.number.sort((a, b) => a - b));
+// console.log(studentWithSubjects.number.sort((a, b) => a - b)); // [1, 2, 5, 8, 41, 89, 98]
 
 // ============================================================================
 // 9. LOOPING THROUGH OBJECTS - for...in loop
@@ -205,25 +207,25 @@ let personData = {
   },
 };
 
-// console.log(personData?.name);
+// console.log(personData?.name); // John
 // console.log(personData?.email); // undefined
 // console.log(personData.getDetails());
 // ============================================================================
 // 17. THIS KEYWORD - Regular Functions in Objects
 // ============================================================================
-// var personWithMethods = {
-//   name: "Alice",
-//   age: 30,
+var personWithMethods = {
+  name: "Alice",
+  age: 30,
 
-//   sayRegularHello: function() {
-//     console.log("Regular Hello");
-//   },
+  sayRegularHello: function () {
+    console.log("Regular Hello");
+  },
 
-//   sayRegularName: function() {
-//     console.log("My Regular name is", this.name);
-//     this.sayRegularHello();
-//   }
-// };
+  sayRegularName: function () {
+    console.log("My Regular name is", this.name);
+    this.sayRegularHello();
+  },
+};
 
 // personWithMethods.sayRegularName();
 // ============================================================================
@@ -233,39 +235,41 @@ let personData = {
 // Method (generic term) Any function that is a property of an object
 // Arrow functions inside objects are arrow methods
 
-// var personArrow = {
-//   name: "Alice",
-//   age: 30,
+var personArrow = {
+  name: "Alice",
+  age: 30,
 
-//   // Arrow function doesn't have its own 'this'
-//   sayArrowHello: () => {
-//     console.log("Arrow Hello");
-//     // console.log(this.name); // Won't work properly
-//   },
+  // Arrow function doesn't have its own 'this'
+  sayArrowHello: () => {
+    console.log("Arrow Hello");
+    // console.log(this.name); // Won't work properly
+  },
 
-//   // Regular function has its own 'this'
-//   sayRegularHello: function () {
-//     console.log("Regular Hello");
-//   },
+  // Regular function has its own 'this'
+  sayRegularHello: function () {
+    console.log("Regular Hello");
+    console.log(this.name, this.age);
+  },
 
-//   sayRegularName: function () {
-//     this.sayArrowHello();
-//     this.sayRegularHello();
-//     console.log("My Regular name is", this.name);
+  sayRegularName: function () {
+    this.sayArrowHello();
+    this.sayRegularHello();
+    console.log("My Regular name is", this.name);
 
-//     // Arrow function inside method inherits 'this' or we can say lexixal/parent scope
-//     var sayArrowGoodbye = () => {
-//       console.log("Arrow Goodbye, still", this.name);
-//     };
-//     sayArrowGoodbye();
-//   },
-// };
+    // Arrow function inside method inherits 'this' or we can say lexixal/parent scope
+    var sayArrowGoodbye = () => {
+      console.log("Arrow Goodbye, still", this.name);
+    };
+    sayArrowGoodbye();
+  },
+};
 
 // personArrow.sayRegularName();
 // ============================================================================
 // 19. COUNTING CHARACTER OCCURRENCES - Using objects as hashmaps
 // ============================================================================
-var str = "ssarthi";
+var str = "saarthi";
+// console.log(str.length);
 var charCount = {};
 
 for (let i = 0; i < str.length; i++) {
@@ -280,20 +284,20 @@ for (let i = 0; i < str.length; i++) {
 // ============================================================================
 // 20. MAPPING CHARACTERS TO NUMBERS
 // ============================================================================
-// function mapChar(N) {
-//   let obj = {};
-//   let alphabets = "abcdefghijklmnopqrstuvwxyz";
+function mapChar(N) {
+  let obj = {};
+  let alphabets = "abcdefghijklmnopqrstuvwxyz";
 
-//   for (let i = 0; i < N; i++) {
-//     obj[alphabets[i]] = i + 1;
-//   }
+  for (let i = 0; i < N; i++) {
+    obj[alphabets[i]] = i + 1;
+  }
 
-//   console.log(obj);
+  console.log(obj);
 
-//   for (let key in obj) {
-//     console.log(key + "-" + obj[key]);
-//   }
-// }
+  for (let key in obj) {
+    console.log(key + "-" + obj[key]);
+  }
+}
 
 // mapChar(5);
 // ============================================================================
@@ -318,20 +322,19 @@ function mapSymbols(N) {
 // ============================================================================
 // 22. SHALLOW COPY - Copies only first level
 // ============================================================================
-// Changing shallowCopy.name does NOT affect originalUser.name.
-// Changing shallowCopy.address.city changes originalUser.address.city too—they both refer to the same nested object.
+// shallow copy changes nested objects
 
-// const originalUser = {
-//   name: "Alice",
-//   address: {
-//     city: "Kolkata",
-//     zip: 91829,
-//   },
-// };
+const originalUser = {
+  name: "Alice",
+  address: {
+    city: "Kolkata",
+    zip: 91829,
+  },
+};
 
-// const shallowCopy = { ...originalUser };
-// shallowCopy.name = "Bob"; // Doesn't affect original obj
-// shallowCopy.address.city = "Bangalore"; // AFFECTS original (nested reference)
+const shallowCopy = { ...originalUser };
+shallowCopy.name = "Bob"; // Doesn't affect original obj
+shallowCopy.address.city = "Bangalore"; // AFFECTS original (nested reference)
 
 // console.log("Original Name:", originalUser.name); // Alice (unchanged)
 // console.log("Original City:", originalUser.address.city); // Bangalore (changed!)
@@ -340,7 +343,7 @@ function mapSymbols(N) {
 // ============================================================================
 // 23. DEEP COPY - Copies all levels independently
 // ============================================================================
-// Deep Copy: fully independent objects, safe to mutate without affecting the original.Shallow Copy: only the outer layer is safe to mutate; inner (nested) properties are linked with the original.So, deep copies are the best choice when you need to ensure the original data remains untouched, even after making changes to the copy.
+// Deep Copy: fully independent objects, safe to mutate without affecting the original.
 
 const user4 = {
   name: "Alice",
@@ -439,9 +442,9 @@ let studentData = {
   hobbies: ["Dancing", "Singing"],
 };
 
-// console.log(studentData.marks[0].maths); // 31
-// console.log(studentData.marks[1]["english"]); // 82
-// console.log(studentData["marks"][1].science); // 72
+// console.log(studentData.marks[0].maths); // 91
+// console.log(studentData.marks[1]["english"]); // 88
+// console.log(studentData["marks"][0].science); // 95
 
 // for (let key in studentData) {
 //   console.log(key, "-", studentData[key]);
@@ -508,12 +511,12 @@ const employees2 = [
 // ============================================================================
 // 31. ARRAY DESTRUCTURING WITH OBJECTS - Swapping elements
 // ============================================================================
-// function destructuringToSwap(employees) {
-//   let [first, middle, last] = employees;
-//   // console.log(first,middle)
-//   let swappedArray = [last, middle, first];
-//   console.log(swappedArray);
-// }
+function destructuringToSwap(employees) {
+  let [first, middle, last] = employees;
+  // console.log(first,middle)
+  let swappedArray = [last, middle, first];
+  console.log(swappedArray);
+}
 // destructuringToSwap(employees2);
 // ============================================================================
 // 32. CHECKING PROPERTY EXISTENCE - hasOwnProperty and 'in' operator
@@ -529,7 +532,7 @@ const testObj = { name: "Test", age: 25 };
 // 33. OBJECT.ASSIGN() - Merging objects
 // ============================================================================
 const target = { a: 1, b: 2 };
-const source = { c: 4, d: 4 };
+const source = { c: 3, d: 4 };
 const merged = Object.assign({}, target, source);
 // console.log(merged);
 
@@ -551,7 +554,7 @@ const frozenObj = Object.freeze({ name: "Frozen", age: 30 });
 frozenObj.city = "Delhi"; // Won't add (silently fails)
 frozenObj.age = 40; // Won't change (silently fails)
 delete frozenObj.name; // Won't delete (silently fails)
-console.log(frozenObj); // { name: "Frozen", age: 30 }
+// console.log(frozenObj); // { name: "Frozen", age: 30 }
 
 // ============================================================================
 // END OF JAVASCRIPT OBJECTS GUIDE

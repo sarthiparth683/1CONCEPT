@@ -1,6 +1,6 @@
-// 🔹 Bank (Parent Class) teaches: Constructor, Private properties, Static vs non-static, Static block, Static methods, Factory method, Encapsulation via getters & setters, Instance methods
+// Bank (Parent Class) teaches: Constructor, Private properties, Static vs non-static, Static block, Static methods, Factory method, Encapsulation via getters & setters, Instance methods
 
-// 🔹 Employee (Child Class) teaches: Inheritance (extends), Calling parent constructor (super()), Overriding methods, Private child fields, Protected convention (_department), Child-level getters, setters, and methods
+// Employee (Child Class) teaches: Inheritance (extends), Calling parent constructor (super()), Overriding methods, Private child fields, Protected convention (_department), Child-level getters, setters, and methods
 
 // ========================================================================
 // CLASS 1: BANK (PARENT CLASS)
@@ -15,7 +15,7 @@ class Bank {
   // STATIC BLOCK-Runs ONCE when the class is loaded. Good for initialization, logging, configuration.
   static {
     console.log(
-      "🏦 Bank System Initialized...Runs ONCE when the class is loaded"
+      "STATIC BLOCK-Runs ONCE when the class is loaded..."
     );
   }
   // --------------------------------------------------------------------
@@ -67,20 +67,20 @@ class Bank {
   // --------------------------------------------------------------------
   // STATIC FACTORY METHOD-A clean way to create preconfigured objects.Common pattern for “default settings” or “professional templates”.
   static createDefaultBank() {
-    return new Bank("Central Bank", "Capital City", 500000000);
+    return new Bank("Central Bank", "Capital City", 8888888);
   }
 }
 
 // =======================TESTING THE BANK CLASS============================
 // const bank = new Bank("State Bank of India", "Mexico", 50000000000);
 
-// console.log(Bank.bankingSystem); // Accessing static property directly from class
+// console.log("bankingSystem",Bank.bankingSystem); // Accessing static property directly from class
 // // console.log(Bank.#totalBanks) // You cannot access a private static property (#totalBanks) from outside the class — that is exactly the purpose of # (hard privacy).
-// console.log(Bank.getTotalBanks()); // But you CAN access it indirectly through a public static method provided inside the class:
+// console.log("getTotalBanks",Bank.getTotalBanks()); // But you CAN access it indirectly through a public static method provided inside the class:
 // console.log(bank.name);
 // console.log(bank.location);
 // console.log(bank.assets);
-// console.log(bank.getInfo());
+// console.log("getInfo",bank.getInfo());
 // console.log(bank.code);
 // console.log(bank.assets);
 // bank.assets = 999999999; // Update value (setter)
@@ -135,12 +135,12 @@ class Employee extends Bank {
   // --------------------------------------------------------------------
   // INSTANCE METHOD
   getDetails() {
-    return `${this.empName} [${this.employeeId}] | Dept: ${this._department}`;
+    return `${this.empName} [${this.employeeId}] | Deptartment: ${this._department}`;
   }
 }
 
 // ========================================================================
-// TESTING THE CLASSES
+// TESTING EMPLOYEE CLASS
 // ========================================================================
 
 // const emp = new Employee(
@@ -151,13 +151,12 @@ class Employee extends Bank {
 //   85000
 // );
 
-// console.log(emp.getInfo());          // Overridden method
-// console.log(emp.getDetails());       // Employee method
-
-// console.log("Bank Code:", emp.code); // Getter
-// console.log("Salary:", emp.salary);
-
-// emp.salary = 120000;                 // Setter validation
-// console.log("Updated Salary:", emp.salary);
-
-// console.log("Total Banks:", Bank.getTotalBanks());
+// console.log(emp)
+// // console.log(Employee.#salary) // Error: You cannot access #salary or #empId from outside the class — that’s the whole purpose of private fields (#) in JavaScript.Because private fields belong to instances, not the class itself. Also, private fields can only be accessed inside the class body that defines
+// console.log(emp.salary);  // uses get salary()
+// console.log(emp.employeeId);  // uses get employeeId()
+// console.log(emp._department);
+// console.log(emp.getDetails()) // to access _department
+// console.log(emp.getInfo()); // Overridden method
+// console.log("Bank Code:", emp.code); // inhereted inside protorype
+// ===============================================================================

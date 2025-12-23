@@ -22,8 +22,7 @@ function demoSelect() {
   const byTag = document.getElementsByTagName("span");
   console.log("By Tag:", byTag);
 
-  // querySelector - Returns FIRST matching element
-  // For a class: Use a period (.) For an ID: Use a hash (#) followed by the ID name (e.g., #text)
+  // querySelector - Returns FIRST matching element, Use a period (.) For an ID: Use a hash (#) followed by the ID name (e.g., #text)
   const query = document.querySelector(".text");
   console.log("querySelector (first):", query);
 
@@ -55,10 +54,12 @@ function demoProperties() {
   // tagName - Returns the tag name in uppercase
   console.log("tagName:", element.tagName);
 
-  alert(`innerText: "${element.innerText}"
-textContent: "${element.textContent}"
-innerHTML: "${element.innerHTML}"
-tagName: ${element.tagName}`);
+  alert(
+    `innerText: "${element.innerText}"
+     textContent: "${element.textContent}"
+     innerHTML: "${element.innerHTML}"
+     tagName: ${element.tagName}`
+  );
 }
 
 //=============================================================================
@@ -98,8 +99,9 @@ width: ${width}`);
 
 function applyStyles() {
   const element = document.getElementById("styleText");
-  element.style.color = "#dc2626";
-  element.style.backgroundColor = "#fef2f2";
+  element.style.color = "#030203ff";
+  element.style.background =
+    "linear-gradient(to left, #65c010ff, #ca0b0bff, #121cabff)";
   element.style.padding = "20px";
   element.style.fontSize = "24px";
   element.style.borderRadius = "8px";
@@ -118,32 +120,27 @@ function resetStyles() {
 // 5. CREATING & INSERTING ELEMENTS
 // Four methods: append, prepend, before, after
 //=============================================================================
-
 function demoInsert() {
   const mainPara = document.getElementById("mainPara");
 
   // append() - Adds at the END inside the element
   const appendEl = document.createElement("p");
   appendEl.textContent = "✓ append() - Added inside at end";
-  appendEl.style.color = "#059669";
   mainPara.append(appendEl);
 
   // prepend() - Adds at the START inside the element
   const prependEl = document.createElement("p");
   prependEl.textContent = "✓ prepend() - Added inside at start";
-  prependEl.style.color = "#7c3aed";
   mainPara.prepend(prependEl);
 
   // before() - Adds BEFORE the element (outside, as sibling)
   const beforeEl = document.createElement("p");
   beforeEl.textContent = "✓ before() - Added outside before";
-  beforeEl.style.color = "#dc2626";
   mainPara.before(beforeEl);
 
   // after() - Adds AFTER the element (outside, as sibling)
   const afterEl = document.createElement("p");
   afterEl.textContent = "✓ after() - Added outside after";
-  afterEl.style.color = "#ea580c";
   mainPara.after(afterEl);
 }
 
@@ -153,22 +150,16 @@ function clearInserts() {
 }
 
 //=============================================================================
-// 6. REMOVING ELEMENTS
-// Delete elements from the DOM using .remove()
+// 6. REMOVING ELEMENTS-Delete elements from the DOM using .remove()
 //=============================================================================
-
 function removeElements() {
   const container = document.getElementById("removeDemo");
   const children = [...container.children]; // Convert to array to avoid live collection issues
-
-  // Remove each child using .remove()
-  children.forEach((child) => child.remove());
+  children.forEach((child) => child.remove()); // Remove each child using .remove()
 
   // Add confirmation message
   const msg = document.createElement("p");
   msg.textContent = "✓ All items removed!";
-  msg.style.color = "#dc2626";
-  msg.style.fontWeight = "bold";
   container.append(msg);
 }
 
@@ -180,26 +171,24 @@ function restoreItems() {
         <p>Item 3</p>
     `;
 }
-
 //=============================================================================
 // 7. CLASSLIST MANIPULATION
 // Add, remove, toggle, and check classes dynamically
 //=============================================================================
-
 function addClasses() {
   const element = document.getElementById("classDemo");
   // classList.add() - Add one or more classes
   element.classList.add("highlight", "bold-text", "large-text");
+  alert(`✓ Classes added:-, ${element.className}`);
   console.log("Classes added:", element.className);
-  alert("✓ Classes added: highlight, bold-text, large-text");
 }
 
 function removeClasses() {
   const element = document.getElementById("classDemo");
   // classList.remove() - Remove one or more classes
-  element.classList.remove("highlight", "bold-text", "large-text");
+  element.classList.remove("highlight", "bold-text");
+  alert(`✓ Classes removed, ${element.className}`);
   console.log("Classes after removal:", element.className);
-  alert("✓ Classes removed");
 }
 
 function toggleClass() {
@@ -220,8 +209,8 @@ function toggleClass() {
 document.getElementById("clickBtn")?.addEventListener("click", function (e) {
   const output = document.getElementById("eventOutput");
   output.textContent = `✓ Button clicked! Event type: ${e.type}`;
-  output.style.color = "#059669";
   // Event object properties
+  alert(`Event object ${e}, Target element-${e.target}, Event type:${e.type}`);
   console.log("Event object:", e);
   console.log("Target element:", e.target);
   console.log("Event type:", e.type);
@@ -280,17 +269,12 @@ function demoTraverse() {
   prevSibling.style.color = "#dc2626";
   nextSibling.style.color = "#46e01bff";
   parent.style.border = "2px solid #3fcd10ff";
-
-  alert(
-    `✓ DOM Traversing Demo:- showing how Parent,Child or Sibling is manipulated`
-  );
 }
 
 //=============================================================================
 // 10. PRACTICAL EXAMPLE - DYNAMIC PRODUCT CARDS
 // Real-world example combining all DOM concepts
 //=============================================================================
-
 const products = [
   {
     id: 1,
@@ -336,8 +320,6 @@ const products = [
 
 function displayProducts() {
   const container = document.getElementById("productContainer");
-
-  // Loop through products array
   products.forEach((product) => {
     const card = document.createElement("div");
     card.className = "product-card";
@@ -360,42 +342,25 @@ function displayProducts() {
     const btn = document.createElement("button");
     btn.textContent = "Add to Cart";
 
-    // 2. Add event listener
+    // Append all elements (Creating DOM structure)
+    card.append(img, title, price, category, btn);
+    container.append(card);
+
+    // Add event listener
     btn.addEventListener("click", function () {
-      alert(`✓ Added "${product.title}" to cart!\nPrice: $${product.price}`);
+      alert(`✓ Added "${product.title}" to cart! \n Price: $${product.price}`);
       btn.textContent = "Added ✓";
       btn.style.background = "#059669";
 
-      // Reset button after 2 seconds
       setTimeout(() => {
         btn.textContent = "Add to Cart";
         btn.style.background = "#2563eb";
       }, 2000);
     });
-
-    // 3. Append all elements (Creating DOM structure)
-    card.append(img, title, price, category, btn);
-    container.append(card);
+    
   });
 }
 
-// Initialize products when DOM is loaded
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", displayProducts);
-} else {
-  displayProducts();
-}
+displayProducts();
 
-//=============================================================================
-// KEY CONCEPTS COVERED:
-// ✓ 1. Selecting Elements (getElementById, querySelector, etc.)
-// ✓ 2. Properties (innerText, innerHTML, textContent, tagName)
-// ✓ 3. Attributes (getAttribute, setAttribute)
-// ✓ 4. Styling (element.style)
-// ✓ 5. Creating & Inserting (createElement, append, prepend, before, after)
-// ✓ 6. Removing (element.remove())
-// ✓ 7. ClassList (add, remove, toggle, contains)
-// ✓ 8. Event Handling (addEventListener, event object)
-// ✓ 9. DOM Traversing (parent, children, siblings)
-// ✓ 10. Practical Application (combining all concepts)
 //=============================================================================

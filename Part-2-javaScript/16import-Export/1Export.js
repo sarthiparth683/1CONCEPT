@@ -10,8 +10,8 @@ function mul(x, y) {
 function div(x, y) {
   return x / y;
 }
-let test = () => {
-  return "Arrow Funciton Test";
-};
+function test() {
+  return "Testing function exported or not";
+}
 
-export { add, sub, mul, div, test};
+export { add, sub, mul, div, test };

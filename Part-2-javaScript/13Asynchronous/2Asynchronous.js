@@ -1,7 +1,6 @@
 // ============================================================================
 // Synchronous, Asynchronous, Callbacks, Promises, Event Loop, Async/Await, Scope
 // ============================================================================
-
 // 1) SYNCHRONOUS CODE - Code runs line by line in order. Next line waits until previous one finishes.
 // ============================================================================
 // console.log("[SYNC] Start");
@@ -28,7 +27,6 @@
 // function greet(name, callback) {
 //   console.log("Hello " + name);
 //   if (typeof callback === "function") callback();
-//   // callback();
 // }
 
 // function work() {
@@ -94,12 +92,12 @@
 
 // const showUserData = async () => {
 //   const user = await fetchUser(101);
-//   console.log(user);
+//   console.log("Fetching data:",user);
 //   console.log("Fetching posts for:", user.name);
 // };
 // showUserData();
 // ============================================================================
-// 9) EVENT LOOP DEMO — MICROTASKS vs MACROTASKS
+// 7) EVENT LOOP DEMO — MICROTASKS vs MACROTASKS
 // - Microtasks (Promise.then) ALWAYS run before MACROTASKS (setTimeout).
 // - Event loop decides execution order.
 // ============================================================================
@@ -108,11 +106,11 @@
 // Promise.resolve().then(() => console.log("1st-Promise.then (Microtask)"));
 // console.log("[LOOP] End");
 // ============================================================================
-// 10) TIMERS: setTimeout vs setInterval
+// 8) TIMERS: setTimeout vs setInterval
 // - setTimeout → runs only one time.
 // - setInterval → repeats until stopped.
 // ============================================================================
-// setTimeout(() => console.log("Runs only one time"), 1000);
-// const intervalId = setInterval(() => console.log("Interval every 3 sec"), 3000);
-// setTimeout(() => clearInterval(intervalId), 3500); // This stops the interval that was started by setInterval(...).
+setTimeout(() => console.log("Runs only one time"), 1000);
+const intervalId = setInterval(() => console.log("Interval every 3 sec"), 3000);
+setTimeout(() => clearInterval(intervalId), 3500); // This stops the interval that was started by setInterval(...).
 // ============================================================================
