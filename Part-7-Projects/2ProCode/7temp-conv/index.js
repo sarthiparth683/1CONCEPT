@@ -1,6 +1,6 @@
 const calcius = document.querySelector("#calcius");
-const fahrenheit = document.querySelector("#farenheit");
 const kelvin = document.querySelector("#kelvin");
+const fahrenheit = document.querySelector("#farenheit");
 console.log(calcius, fahrenheit, kelvin);
 // calcius to fahrenheit => (0°C × 9/5) + 32 = 32°F
 // calcius to kelvin => 0°C + 273.15 = 273.15K
@@ -8,7 +8,7 @@ calcius.addEventListener("input", function () {
     let c = parseFloat(calcius.value);
     let f = (c * 9 / 5) + 32;
     let k = c + 273.15;
-    fahrenheit.value = f;
+    fahrenheit.value = f; 
     kelvin.value = k;
 });
 
