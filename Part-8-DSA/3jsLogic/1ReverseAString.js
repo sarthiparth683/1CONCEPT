@@ -12,13 +12,12 @@ function reverseAString(inputString) {
     return result;
 }
 
-function reverseAString2(inputString) { 
+function reverseAString2(inputString) {
     const splittedInput = inputString.split('');
     const reversedArray = splittedInput.reverse();
     const result = reversedArray.join('');
     return result;
 }
-
 
 console.log(reverseAString("Ashish"));
 console.log(reverseAString("Software development"));
@@ -26,3 +25,17 @@ console.log(reverseAString("Software development"));
 console.log("reverseAString2")
 console.log(reverseAString2("Ashish"));
 console.log(reverseAString("Software development"));
+
+// ----------------------------------------------
+function reverse(str) {
+  //   let reverse = str.split("").reverse().join("");
+  //   console.log(reverse);
+// -----------------
+  let reverse = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reverse += str[i];
+    console.log(str[i]);
+  }
+  console.log(reverse)
+}
+reverse("Ashish");
