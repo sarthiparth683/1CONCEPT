@@ -10,9 +10,9 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
+} 
 
-.container {
+.container { 
     width: 350px;
     border-radius: 10px;
     text-align: center;
