@@ -8,4 +8,4 @@ window.addEventListener("mouseover", (event) => {
     const yclient = event.clientY;
     xpos.textContent = xclient;
     ypos.textContent = yclient;
-} );
+} );  
