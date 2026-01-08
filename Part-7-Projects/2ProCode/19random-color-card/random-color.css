@@ -13,7 +13,7 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-}
+} 
 
 .color-card {
     border: 2px solid black;    

@@ -10,7 +10,8 @@ search.addEventListener('click', async() => {
         const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${val}`;
         let meaning = await fetch(url);
         meaning = await meaning.json();
-        console.log("meaning",meaning[0]['meanings'][0]["definitions"][0]["definition"])  
+        console.log(meaning)
+        // console.log("meaning",meaning[0]['meanings'][0]["definitions"][0]["definition"])  
         output.textContent = meaning[0]['meanings'][0]["definitions"][0]["definition"];       
     }
-});
+}); 
