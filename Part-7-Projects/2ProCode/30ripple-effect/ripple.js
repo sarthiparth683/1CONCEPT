@@ -11,4 +11,4 @@ btn.addEventListener("click", (event)=>{
     circle.style.left = `${event.clientX - rect.left - rect.width/2}px`
     circle.style.top = `${event.clientY - rect.top - rect.width/2}px`
     btn.appendChild(circle)
-})
+}) 
