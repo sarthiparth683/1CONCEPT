@@ -11,7 +11,7 @@ let [ss,mm,hh] = [0,0,0];
 let interval;
 
 function watchcount(){
-    ss++;
+    ss++;  
     if ( ss > 59 ) {
         ss = 0;
         mm++;
