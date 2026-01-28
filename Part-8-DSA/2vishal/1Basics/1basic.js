@@ -33,37 +33,58 @@ function sumOfDigits(num) {
 
 function countDigits(num) {
   num = Math.abs(num);
+  // console.log(Math.abs(-5)); // 5
+  // console.log(Math.abs(5)); // 5
+  // console.log(Math.abs(0)); // 0
+  // console.log(Math.abs(-3.7)); // 3.7
   let count = 0;
   do {
     count++;
     num = Math.floor(num / 10);
+    // num = (num / 10);
+    // console.log(num);
   } while (num > 0);
   return count;
 }
 
+// console.log(countDigits(17859)); // 5
 // console.log(countDigits(121)); // 3
 // console.log(countDigits(-1211413131)); // 10
+// ----------------------------------------
+// Method II
+function count(num) {
+  num = Math.abs(num);
+  let str = num.toString();
+  return str.length;
+}
+
+// console.log(count(17859)); // 5
+// console.log(count(121)); // 3
+// console.log(count(-1211413131)); // 10
 // ==========================================================================
 // ### Question 4: Check if a number is palindrome
 
 let isPalindrome = function (x) {
-  let copyNum = x,
+  let num = x,
     reverseNum = 0;
 
-  while (copyNum > 0) {
-    const lastDigit = copyNum % 10;
-    reverseNum = reverseNum * 10 + lastDigit;
-    copyNum = Math.floor(copyNum / 10);
+  while (num > 0) {
+    const lastDigit = num % 10; // gives last digit
+    reverseNum = reverseNum * 10 + lastDigit; // reverse number
+    num = Math.floor(num / 10); // Main work:- reduces digit after every iteration
   }
 
   return x === reverseNum;
 };
 
+// console.log(isPalindrome(-121)); // false
 // console.log(isPalindrome(121)); // true
 // console.log(isPalindrome(1234)); // false
+// console.log(isPalindrome(5445)); // true
 // =============================================================================
 // ### Question 5: Find nth Fibonacci number
-// The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1.
+// The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. eg.0112358
+// Fibonacci Sequence: 0 1 1 2 3 5 8...
 
 let fib = function (n) {
   if (n < 2) {
@@ -77,35 +98,25 @@ let fib = function (n) {
     next = prev + curr;
     prev = curr;
     curr = next;
+    // console.log(i, next)
   }
   return next;
 };
 
-// Fibonacci Sequence: 0 1 1 2 3 5 8...
 // console.log(fib(5)); // 5
 // console.log(fib(10)); // 55
 // =======================================================================================
 // ### Question 6: Missing Number in an Array
 // Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
 
-let missingNumber = function (nums) {
+let missingNumber = function (arr) {
   let sum = 0;
-  for (let i = 0; i < nums.length; i++) {
-    sum += nums[i];
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
   }
-  return (nums.length * (nums.length + 1)) / 2 - sum;
+  return (arr.length * (arr.length + 1)) / 2 - sum;
 };
 
-// -----------------------------------------------
-// One Line Solution:
-// let missingNumber = (nums) => nums.length*(nums.length+1)/2 - nums.reduce((acc, num) => num + acc);
-// --------------------------------------------------
-// console.log(missingNumber([3,0,1])); // 2
-// console.log(missingNumber([9,6,4,2,3,5,7,0,1])); // 8
-// ======================================================================================
-
-// ## Practice Questions:-
-// - [Count Odd Numbers in an Interval Range](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/)
-// - [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)
-// - [Power of Two](https://leetcode.com/problems/power-of-two/)
-// - [Find Square root of a Number](https://leetcode.com/problems/sqrtx/)
+console.log(missingNumber([3,0,1])); // 2
+console.log(missingNumber([9,6,4,2,3,5,7,0,1])); // 8
+// =====================================================================================
