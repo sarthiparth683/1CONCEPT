@@ -165,3 +165,16 @@ const strings = ["hello world", "i am openai", "welcome to javascript"];
 
 // Expected Output: ['Hello World', 'I Am Openai', 'Welcome To Javascript']
 // ========================================================================
+// Data Structure 👇
+const studentsDatabase = ["jordan", "erick", "john", "michel"];
+
+// Algorithm for finding a specific user
+const findStudent = (allStudents, studentName) => {
+  for (let i = 0; i < allStudents.length; i++) {
+    if (allStudents[i] === studentName) {
+      console.log(`Found ${studentName}`);
+    }
+  }
+};
+
+findStudent(studentsDatabase, "erick");
