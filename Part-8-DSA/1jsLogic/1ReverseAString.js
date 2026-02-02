@@ -22,7 +22,7 @@ function reverseAString2(inputString) {
 console.log(reverseAString("Ashish"));
 console.log(reverseAString("Software development"));
 
-console.log("reverseAString2")
+console.log("reverseAString2") 
 console.log(reverseAString2("Ashish"));
 console.log(reverseAString("Software development"));
 
