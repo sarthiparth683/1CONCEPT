@@ -1,34 +1,35 @@
 function fizzBuzz(inputNumber) {
-  // Add validation that input number should be
-  // a positive integer
+  if (!Number.isInteger(inputNumber) || inputNumber <= 0) {
+    throw new Error("Input must be a positive integer");
+  }
+
+  let arr = [];
+
   for (let i = 1; i <= inputNumber; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
-      console.log("Fizz Buzz");
+      arr.push("FizzBuzz");
     } else if (i % 3 === 0) {
-      console.log("Fizz");
+      arr.push("Fizz");
     } else if (i % 5 === 0) {
-      console.log("Buzz");
+      arr.push("Buzz");
     } else {
-      console.log(i);
+      arr.push(i);
     }
   }
+
+  return arr;
 }
 
-// fizzBuzz(36);
-// ======================================================================
-function fizzBuzz2(num) {
-  for (let i = 1; i <= num; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      console.log("Fizz Buzz");
-    } else if (i % 3 === 0) {
-      console.log("Fizz");
-    } else if (i % 5 === 0) {
-      console.log("Buzz");
-    } else {
-        console.log(i);
-    }
-  }
-}
-// fizzBuzz2(15);
-// fizzBuzz2(35);
-fizzBuzz2(100);
+console.log(fizzBuzz(15));
+console.log(fizzBuzz(10));
+// console.log(fizzBuzz(-9));
+console.log(fizzBuzz(25));
+console.log(fizzBuzz(8));
+//------------------------ 
+console.log(Number(true))
+console.log(Number(false))
+console.log(typeof "uai")
+console.log(typeof Number("77"))
+console.log(Number.isInteger(89)); // Output: true
+// console.log(isInteger(89))
+// ===============================================================

@@ -4,21 +4,23 @@ a = a + b; // 11
 b = a - b; // 11 - 6 = 5
 a = a - b; // 11 - 5 = 6
 
-// console.log(`Value after swapping a=${a} and b=${b}`);
+console.log(`Value after swapping a=${a} and b=${b}`);
 // =============================================================================
 function swap(a, b) {
   let c = a;
   a = b;
   b = c;
-  console.log([a, b]);
+  return { a, b };
 }
-// swap(4, 5);
-// swap(8, 9);
+
+console.log(swap(4, 5));
+console.log(swap(8, 9));
 // ==============================================================================
 function swap2(a, b) {
-  [a, b] = [b, a]; // destructuring method
-  console.log([a, b]);
+  [a, b] = [b, a];
+  return { a, b };
 }
-// swap2(4, 5);
-// swap2(8, 9);
-// ================================================================================
+
+console.log(swap2(4, 5));
+console.log(swap2(8, 9));
+// ===============================================================================

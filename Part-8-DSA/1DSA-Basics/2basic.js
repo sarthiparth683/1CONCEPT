@@ -18,11 +18,15 @@ function sumOfDigits(num) {
   let sum = 0;
   while (num > 0) {
     sum += num % 10; // Modulas gives last digits(as a remainder)
-    num = Math.floor(num / 10); // to get remaining digits
+    num = Math.floor(num / 10); // Quotient in decimal
   }
   return sum;
 }
 
+// console.log(Math.floor(679.9));
+// console.log(Math.floor(679.1));
+// console.log(Math.floor(5.9));
+// console.log(Math.floor(5.1));
 // console.log(sumOfDigits(1287));
 // console.log(sumOfDigits(375));
 // =====================================================================
@@ -30,25 +34,26 @@ function sumOfDigits(num) {
 
 function countDigits(num) {
   num = Math.abs(num);
-  // console.log(Math.abs(-5)); // 5
-  // console.log(Math.abs(5)); // 5
-  // console.log(Math.abs(0)); // 0
-  // console.log(Math.abs(-3.7)); // 3.7
-
   let count = 0;
+
   do {
     count++;
     num = Math.floor(num / 10); // removes last digits with every iteration
-    // num = (num / 10);
-    // console.log(num);
   } while (num > 0);
   return count;
 }
 
-// console.log(countDigits(17859)); // 5
-// console.log(countDigits(121)); // 3
-// console.log(countDigits(-1211413131)); // 10
-// console.log(Math.floor(1287 / 10))
+console.log(Math.abs(-5));
+console.log(Math.abs(5));
+console.log(Math.abs(0));
+console.log(Math.abs(-3.7));
+console.log(Math.abs(-54.87));
+console.log(Math.floor(387.565656));
+console.log(Math.floor(1287 / 10));
+
+console.log(countDigits(17859));
+console.log(countDigits(121));
+console.log(countDigits(-1211413131));
 // ----------------------------------------
 // Method II
 function count(num) {
@@ -76,6 +81,7 @@ let isPalindrome = function (x) {
   return x === reverseNum;
 };
 
+console.log((898).toString());
 // console.log(isPalindrome(-121)); // false
 // console.log(isPalindrome(121)); // true
 // console.log(isPalindrome(1234)); // false
@@ -219,17 +225,17 @@ console.log(smallestOfThree2(3, 3, 3));
 console.log(smallestOfThree2(3, 3, 1));
 console.log(smallestOfThree2(3, 3, 4));
 // =====================================================================================
-// function sum(a, b) {
-//   const sum = a + b;
-//   // console.log("Sum is", sum);
-//   return sum
-// }
-// console.log(sum(1, 2))
+function sum(a, b) {
+  const sum = a + b;
+  // console.log("Sum is", sum);
+  return sum;
+}
+console.log(sum(1, 2));
 
-// sum(123, 234);
-// sum(-1, 2); 
-// sum(-1, -2);
-// sum(1, 0);
-// sum(1, 1.5);
-// sum(2.5, 1.5);
+sum(123, 234);
+sum(-1, 2);
+sum(-1, -2);
+sum(1, 0);
+sum(1, 1.5);
+sum(2.5, 1.5);
 // =====================================================================================

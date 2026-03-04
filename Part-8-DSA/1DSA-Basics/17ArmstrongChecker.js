@@ -18,12 +18,12 @@ function isArmstrong(inputNumber) {
   return res;
 }
 
-// console.log(isArmstrong(153));
-// console.log(isArmstrong(370));
-// console.log(isArmstrong(371));
-// console.log(isArmstrong(132));
-// console.log(isArmstrong(18273));
-// console.log(isArmstrong(92727));
+console.log(isArmstrong(153));
+console.log(isArmstrong(370));
+console.log(isArmstrong(371));
+console.log(isArmstrong(132));
+console.log(isArmstrong(18273));
+console.log(isArmstrong(92727));
 // ==================================================================
 function Armstrong(num) {
   let str = num.toString();
@@ -32,20 +32,20 @@ function Armstrong(num) {
     // sum += Number(str[i]) ** str.length;
     sum += Math.pow(Number(str[i]), str.length);
   }
-  console.log("sum = ", sum);
+
   let res = sum === num ? true : false;
-  console.log(res);
+  return res;
 }
 
-// Armstrong(153);
-// Armstrong(375);
-// Armstrong(370);
-// Armstrong(371);
-// Armstrong(407);
-// Armstrong(370);
-// Armstrong(1634);
-// Armstrong(8208);
-// Armstrong(9474);
-// Armstrong(54748);
-// Armstrong(92727);
-// ==========================================================================
+console.log(Armstrong(153));
+console.log(Armstrong(375));
+console.log(Armstrong(370));
+console.log(Armstrong(371));
+console.log(Armstrong(407));
+console.log(Armstrong(370));
+console.log(Armstrong(1634));
+console.log(Armstrong(8208));
+console.log(Armstrong(9474));
+console.log(Armstrong(54748));
+console.log(Armstrong(92727));
+// ====================================================================

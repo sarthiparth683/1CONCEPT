@@ -1,17 +1,3 @@
-function factorial(num) {
-  let res = 1;
-  for (let i = num; i >= 1; i--) {
-    res *= i;
-  }
-  console.log(res);
-}
-
-// factorial(1); // 1
-// factorial(2); // 2
-// factorial(3); // 6
-// factorial(4); // 24
-// factorial(0); // 1
-// ==========================================================================
 function calculateFactorial(inputNumber) {
   if (inputNumber < 0) {
     throw new Error("inputNumber should be greater than or equal to zero");
@@ -24,15 +10,16 @@ function calculateFactorial(inputNumber) {
   return result;
 }
 
-// console.log("4",calculateFactorial(4));
-// console.log("3!", calculateFactorial(3));
-// console.log("10!", calculateFactorial(10));
-// console.log("0!", calculateFactorial(0));
-// console.log("1!", calculateFactorial(1));
+console.log(calculateFactorial(1));
+console.log(calculateFactorial(2));
+console.log(calculateFactorial(3));
+console.log(calculateFactorial(4));
+console.log(calculateFactorial(5));
+console.log(calculateFactorial(7));
+console.log(calculateFactorial(0));
 // ==============================================================================
 
 function calculateFactorialUsingRecursion(inputNumber) {
-  console.log('inputNumber is', inputNumber)
   if (inputNumber < 0) {
     throw new Error("inputNumber should be greater than or equal to zero");
   }
@@ -44,13 +31,10 @@ function calculateFactorialUsingRecursion(inputNumber) {
   return inputNumber * calculateFactorialUsingRecursion(inputNumber - 1);
 }
 
-// console.log("1!", calculateFactorialUsingRecursion(1)); // 1
-// console.log("2!", calculateFactorialUsingRecursion(2)); // 2
-// console.log("3!", calculateFactorialUsingRecursion(3)); // 6
-// console.log("4", calculateFactorialUsingRecursion(4)); // 24
-// console.log("10!", calculateFactorialUsingRecursion(10)); // 3628800
-// console.log("0!", calculateFactorialUsingRecursion(0)); // 1
-// =====================================================================
-// ===========================
-// =========================
-// ===============================
+console.log(calculateFactorialUsingRecursion(1)); // 1
+console.log(calculateFactorialUsingRecursion(2)); // 2
+console.log(calculateFactorialUsingRecursion(3)); // 6
+console.log(calculateFactorialUsingRecursion(4)); // 24
+console.log(calculateFactorialUsingRecursion(10)); // 3628800
+console.log(calculateFactorialUsingRecursion(0)); // 1
+// ============================================================================

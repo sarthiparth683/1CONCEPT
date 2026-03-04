@@ -7,10 +7,10 @@ function isPalindrome(inputString) {
   return true;
 }
 
-// console.log("ashish", isPalindrome("ashish"));
-// console.log("madam", isPalindrome("madam"));
-// console.log("level", isPalindrome("level"));
-// console.log("abba", isPalindrome("abba"));
+console.log(isPalindrome("ashish"));
+console.log(isPalindrome("madam"));
+console.log(isPalindrome("level"));
+console.log(isPalindrome("abba"));
 // ===========================================================================
 function isPalindrome2(inputString) {
   inputString = inputString.toLowerCase();
@@ -24,24 +24,20 @@ function isPalindrome2(inputString) {
   return true;
 }
 
-// console.log("ashish", isPalindrome2("ashish"));
-// console.log("madam", isPalindrome2("madam"));
-// console.log("level", isPalindrome2("level"));
-// console.log("abba", isPalindrome2("Abba"));
+console.log(isPalindrome2("ashish"));
+console.log(isPalindrome2("madam"));
+console.log(isPalindrome2("level"));
+console.log(isPalindrome2("Abba"));
 // ===========================================================================
 function isPalindrome3(inputString) {
   inputString = inputString.toLowerCase();
 
   const reversedString = inputString.split("").reverse().join("");
-  if (reversedString === inputString) {
-    return true;
-  } else {
-    return false;
-  }
+  return reversedString === inputString ? true : false
 }
 
-// console.log("ashish", isPalindrome3("ashish"));
-// console.log("madam", isPalindrome3("madaM"));
-// console.log("level", isPalindrome3("level"));
-// console.log("abba", isPalindrome3("Abba"));
+console.log(isPalindrome3("ashish"));
+console.log(isPalindrome3("madaM"));
+console.log(isPalindrome3("level"));
+console.log(isPalindrome3("Abba"));
 // ===========================================================================
