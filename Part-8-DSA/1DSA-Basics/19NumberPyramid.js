@@ -1,7 +1,12 @@
 function generatePyramid(inputNumber) {
-  // Validate that input number is a positive integer
+  // Validation
+  if (!Number.isInteger(inputNumber) || inputNumber <= 0) {
+    throw new Error("Input must be a positive integer");
+  }
+
   for (let i = 1; i <= inputNumber; i++) {
     let lineContent = "";
+
     for (let space = 1; space <= inputNumber - i; space++) {
       lineContent = lineContent + " ";
     }
@@ -18,13 +23,17 @@ function generatePyramid(inputNumber) {
   }
 }
 
-// generatePyramid(15);
-// =============================================================================
+generatePyramid(8);
+generatePyramid(5);
+// generatePyramid("jhj");
+generatePyramid(4);
+
+// ==========================================================================
 function pyramid(num) {
   for (let i = 1; i <= num; i++) {
     let str = "";
     for (let j = num - i; j >= 1; j--) {
-      str += " ";
+      str += "*";
     }
     for (let k = 1; k <= i; k++) {
       str += k;
@@ -36,6 +45,7 @@ function pyramid(num) {
   }
 }
 
+// pyramid(4);
+pyramid(5);
 // pyramid(10);
-// =============================================================================
-  
+// ========================================================================

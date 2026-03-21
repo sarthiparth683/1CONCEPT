@@ -1,3 +1,15 @@
+const text = " Hello   Middle   World ";
+const noSpaces = text.replace(/ /g, "");
+console.log(noSpaces);
+// --------------------
+// string.includes(searchString, position)
+const text2 = "Hello World";
+console.log(text2.includes("H"));
+console.log(text2.includes("H"), 0);
+console.log(text2.includes("H"), 1);
+console.log(text2.includes("h"), 2);
+console.log(text2.includes("World"));
+// ===========================================
 function isStrongPassword(passwordString) {
   passwordString = passwordString.trim();
   if (passwordString.length < 8) {
@@ -13,6 +25,7 @@ function isStrongPassword(passwordString) {
   let upperCaseCharacterExists = false;
   let numberExists = false;
   let specialCharExists = false;
+
   for (let char of passwordString) {
     if (lowerCaseCharacters.includes(char)) {
       lowerCaseCharacterExists = true;
@@ -37,49 +50,10 @@ function isStrongPassword(passwordString) {
   return false;
 }
 
-// console.log("Ashish1! is ", isStrongPassword("Ashish1!"));
-// console.log("Ash1! is ", isStrongPassword("Ash1!"));
-// console.log("Ashis1! is ", isStrongPassword("Ashis1!"));
-// console.log("ashish1! is ", isStrongPassword("ashish1!"));
-// console.log("ashisha! is ", isStrongPassword("ashisha!"));
-// console.log("ashish1a is ", isStrongPassword("ashish1a"));
+console.log(isStrongPassword("Ashish1!"));
+console.log(isStrongPassword("Ash1!"));
+console.log(isStrongPassword("Ashis1!"));
+console.log(isStrongPassword("ashish1!"));
+console.log(isStrongPassword("ashisha!"));
+console.log(isStrongPassword("ashish1a"));
 // =========================================================================
-function isStrongPassword2(passwordString) {
-  passwordString = passwordString.trim();
-  if (passwordString.length < 8) {
-    return false;
-  }
-
-  const lowerCaseCharacters = "abcdefghijklmnopqrstuvwxyz";
-  const upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const numbers = "0123456789";
-  const specialChars = "!@#$%^&*";
-
-  let lower = false;
-  let upper = false;
-  let num = false;
-  let special = false;
-
-  for (let char of passwordString) {
-    if (lowerCaseCharacters.includes(char)) {
-      lower = true;
-    } else if (upperCaseCharacters.includes(char)) {
-      upper = true;
-    } else if (numbers.includes(char)) {
-      num = true;
-    } else if (specialChars.includes(char)) {
-      special = true;
-    }
-  }
-
-  return lower && upper && num && special;
-}
-
-// console.log("Ashish1! is ", isStrongPassword2("Ashish1!")); // true
-// console.log("Ash1! is ", isStrongPassword2("Ash1!")); // false
-// console.log("Ashis1! is ", isStrongPassword2("Ashis1!")); // false
-// console.log("ashish1! is ", isStrongPassword2("ashish1!")); // false
-// console.log("ashisha! is ", isStrongPassword2("ashisha!")); // false
-// console.log("ashish1a is ", isStrongPassword2("ashish1a")); // false
-// console.log("testTEST123 is ", isStrongPassword2("testTEST123@#2")); // true
-// =================================================================================
