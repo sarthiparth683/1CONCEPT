@@ -1,5 +1,8 @@
 function matrixMultiplication(array1, array2) {
-  // Add validation to check if input are arrays
+  if (!Array.isArray(array1) || !Array.isArray(array2)) {
+    throw new Error("Inputs must be arrays");
+  }
+
   const rowsInResult = array1.length;
   const columnsInResult = array2[0].length;
 
@@ -10,7 +13,7 @@ function matrixMultiplication(array1, array2) {
     for (let j = 0; j < columnsInResult; j++) {
       let cellValue = 0;
       for (let n = 0; n < rownInSecondArray; n++) {
-        cellValue += array1[i][n] * array2[n][j];
+        cellValue += array1[i][n] * array2[n][j]; //Row of first matrix × Column of second matrix
       }
 
       if (!result[i]) {
@@ -26,6 +29,7 @@ function matrixMultiplication(array1, array2) {
 //   [1, 2],
 //   [3, 4],
 // ];
+
 // const secondArray = [
 //   [5, 6],
 //   [7, 8],

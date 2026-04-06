@@ -4,8 +4,9 @@ function printMultiplicationTable(tableOf, tableTill) {
   for (let i = 1; i <= tableTill; i++) {
     result.push(`${tableOf} * ${i} = ${tableOf * i}`);
   }
+
   return result.join("\n");
-}
+}  
 
 console.log(printMultiplicationTable(4, 10));
 console.log(printMultiplicationTable(8, 20));

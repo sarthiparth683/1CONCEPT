@@ -17,6 +17,7 @@ console.log(calculateFactorial(4));
 console.log(calculateFactorial(5));
 console.log(calculateFactorial(7));
 console.log(calculateFactorial(0));
+// console.log(calculateFactorial(-8))
 // ==============================================================================
 
 function calculateFactorialUsingRecursion(inputNumber) {
@@ -28,6 +29,7 @@ function calculateFactorialUsingRecursion(inputNumber) {
     return 1;
   }
 
+  //The formula for a factorial can be written recursively as:$n! = n \times (n-1)!$
   return inputNumber * calculateFactorialUsingRecursion(inputNumber - 1);
 }
 
@@ -37,4 +39,5 @@ console.log(calculateFactorialUsingRecursion(3)); // 6
 console.log(calculateFactorialUsingRecursion(4)); // 24
 console.log(calculateFactorialUsingRecursion(10)); // 3628800
 console.log(calculateFactorialUsingRecursion(0)); // 1
+// console.log(calculateFactorialUsingRecursion(-3))
 // ============================================================================

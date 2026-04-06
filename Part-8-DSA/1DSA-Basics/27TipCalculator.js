@@ -1,3 +1,5 @@
+// "Write a JavaScript function that takes a base bill amount, an array of tip percentages, a locale string, and a currency code. It should return an array containing the calculated tip amounts, formatted accurately as currency strings for the specified locale."
+
 function calculateTipAmount(baseAmount, tipPercentages, locale, currency) {
   let result = [];
 
@@ -14,13 +16,6 @@ function calculateTipAmount(baseAmount, tipPercentages, locale, currency) {
   return result;
 }
 
-console.log(
-  "1000, [5, 10, 15]",
-  calculateTipAmount(1000, [5, 10, 15], "en-IN", "INR")
-);
-
-console.log(
-  "997, [5, 10, 15]",
-  calculateTipAmount(997, [5, 10, 15], "en-US", "USD")
-);
+console.log(calculateTipAmount(1000, [5, 10, 15], "en-IN", "INR"));
+console.log(calculateTipAmount(997, [5, 10, 15], "en-US", "USD"));
 // =====================================================================

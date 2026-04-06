@@ -4,8 +4,9 @@ function findTheBiggestNumber(arrayOfNumbers) {
   }
 
   let biggestNumber = arrayOfNumbers[0];
+
   for (let i = 1; i < arrayOfNumbers.length; i++) {
-    if (arrayOfNumbers[i] > biggestNumber) {
+    if (biggestNumber < arrayOfNumbers[i]) {
       biggestNumber = arrayOfNumbers[i];
     }
   }
@@ -22,15 +23,21 @@ function findTheBiggestNumber2(arrayOfNumbers) {
   return Math.max(...arrayOfNumbers);
 }
 
+console.log(findTheBiggestNumber2([4, 5, 2]));
+console.log(findTheBiggestNumber2([3, 6, 1, 8, 3, 7, 8, 9]));
 console.log(findTheBiggestNumber2([36, 67, 84, 8, 3]));
 // ==============================================================================
+// to find both min and max
+
 let biggestNum = (arr) => {
   let max = arr[0];
   let min = arr[0];
+
   for (let i = 0; i < arr.length; i++) {
     if (max < arr[i]) {
       max = arr[i];
     }
+
     if (min > arr[i]) {
       min = arr[i];
     }
