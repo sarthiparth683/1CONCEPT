@@ -1,7 +1,10 @@
+console.log(" What is    the date  today  ".trim());
+//====================================================================================
+
 function countWords(sentence) {
   const splittedSentence = sentence.trim().split(" "); // converted to array
   // console.log(splittedSentence);
-  const nonEmptyElements = splittedSentence.filter((element) => element != "");
+  const nonEmptyElements = splittedSentence.filter((element) => element != ""); // “Keep only those elements which are NOT empty strings”
   // console.log(nonEmptyElements);
   return nonEmptyElements.length;
 }
@@ -18,7 +21,7 @@ function count(string) {
   let count = 0;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] !== "") {
-      count += 1;
+      count++;
     }
   }
 

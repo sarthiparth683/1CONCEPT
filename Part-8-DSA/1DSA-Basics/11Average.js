@@ -1,14 +1,17 @@
 function calculateAverage(inputArray) {
   let sumOfElements = 0;
+
   for (let i = 0; i < inputArray.length; i++) {
     sumOfElements += inputArray[i];
   }
 
   let result = sumOfElements / inputArray.length;
-  return result;
+  // return Math.round(result);
+  return result.toFixed(2);
 }
 
 console.log(calculateAverage([1, 2, 4]));
 console.log(calculateAverage([1, 2, 7, 14]));
 console.log(calculateAverage([1, 5, 7, 3]));
-// ================================================================================
+console.log(calculateAverage([4, 5, 2]));
+// ============================================================

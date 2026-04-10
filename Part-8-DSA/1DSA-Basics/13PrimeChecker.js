@@ -1,13 +1,16 @@
 function isPrime(inputNumber) {
-  let result = true;
+  if (inputNumber <= 1) return false;
+  if (inputNumber === 2) return true;
+  let res = true;
+
   for (let i = 2; i < inputNumber; i++) {
     if (inputNumber % i === 0) {
-      result = false;
+      res = false;
       break;
     }
   }
 
-  return result;
+  return res;
 }
 
 console.log(isPrime(2));
@@ -20,15 +23,18 @@ console.log(isPrime(11));
 console.log(isPrime(13));
 // =====================================================
 function prime2(num) {
-  let flag = true;
+  if (num <= 1) return false; // handle 0, 1, and negatives
+  if (num === 2) return true; // 2 is prime
+  let res = true;
+  
   for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) {
-      flag = false;
+      res = false;
       break;
     }
   }
 
-  return flag;
+  return res;
 }
 
 console.log(prime2(2));
@@ -36,6 +42,7 @@ console.log(prime2(3));
 console.log(prime2(4));
 console.log(prime2(5));
 console.log(prime2(6));
+console.log(prime2(9));
 console.log(prime2(7));
 console.log(prime2(11));
 console.log(prime2(13));

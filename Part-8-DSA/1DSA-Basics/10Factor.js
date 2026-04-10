@@ -4,15 +4,17 @@ function calculateFactors(inputNumber) {
   }
 
   let result = [];
+
   for (let i = 1; i <= inputNumber; i++) {
     if (inputNumber % i === 0) {
       result.push(i);
     }
   }
 
-  return result;
+  return `Factors of ${inputNumber} are ${result}`;
 }
 
+console.log(calculateFactors(10));
 console.log(calculateFactors(4));
 console.log(calculateFactors(14));
 console.log(calculateFactors(35));

@@ -8,6 +8,7 @@ function calculateVowelAndConsonants(inputString) {
 
   for (let i = 0; i < inputString.length; i++) {
     if (vowels.includes(inputString[i])) {
+      // char of str present in vowel or not
       vowelCount++;
     } else if (consonants.includes(inputString[i])) {
       // else if (/^[a-z]$/.test(inputString[i])) {
@@ -28,33 +29,40 @@ console.log(calculateVowelAndConsonants("Ashish Saluja"));
 console.log(calculateVowelAndConsonants("Ashish Saluja Saluja"));
 console.log(calculateVowelAndConsonants("Ashish Saluja 123 $%#"));
 
-// console.log("  s arth i   ");
-// console.log("  s a rthi   ".trim());
-// console.log("s a rt hi".replace(/ /g, "" ))
-// console.log("sartshis".replace(/s/, "z" ))
-// console.log("sartshis".replace(/s/g, "z" ))
-// console.log("sartshis".replaceAll(/s/g, "z" ))
+console.log("  s arth i   ");
+console.log("  s a rthi   ".trim());
+console.log("s a rt hi".replace(/ /g, ""));
+console.log("sartshis".replace(/s/, "z"));
+console.log("sartshis".replace(/s/g, "z"));
+console.log("sartshis".replaceAll(/s/g, "z"));
 // =========================================================================================
 function calvowelconst(string) {
   let str = string.toLowerCase();
   let vowel = 0;
   let consonant = 0;
+
   for (let i = 0; i < str.length; i++) {
-    if (
-      str[i] == "a" ||
-      str[i] == "e" ||
-      str[i] == "i" ||
-      str[i] == "o" ||
-      str[i] == "u"
-    ) {
-      vowel += 1;
-    } else {
-      consonant += 1;
+    let chr = str[i];
+
+    if (str[i] >= "a" && str[i] <= "z") {
+      if ("aeiou".includes(chr)) {
+        vowel++;
+      } else {
+        consonant++;
+      }
     }
   }
 
-  return `vowel = ${vowel} consonanat = ${consonant}`;
+  return { vowel, consonant };
 }
+
+console.log(calvowelconst("aeiou"));
+console.log(calvowelconst("rstvwx"));
+console.log(calvowelconst("98"));
+console.log(calvowelconst("Hello World"));
+console.log(calvowelconst("Ashish Saluja"));
+console.log(calvowelconst("Ashish Saluja Saluja"));
+console.log(calvowelconst("Ashish Saluja 123 $%#"));
 console.log(calvowelconst("aavHJLKJvKKHH"));
 console.log(calvowelconst("aeizzq"));
 // ======================================================================================
@@ -70,9 +78,16 @@ function calVowelConst2(str) {
     }
   }
 
-  console.log(`vowel = ${vowel}, consonant = ${consonant}`);
+  return { vowel, consonant };
 }
 
-// calVowelConst2("aavHJLKJvKKHH");
-// calVowelConst2("aeizzq");
+console.log(calVowelConst2("aeiou"));
+console.log(calVowelConst2("rstvwx"));
+console.log(calVowelConst2("98"));
+console.log(calVowelConst2("Hello World"));
+console.log(calVowelConst2("Ashish Saluja"));
+console.log(calVowelConst2("Ashish Saluja Saluja"));
+console.log(calVowelConst2("Ashish Saluja 123 $%#"));
+console.log(calVowelConst2("aavHJLKJvKKHH"));
+console.log(calVowelConst2("aeizzq"));
 // ==================================================================================
