@@ -22,14 +22,6 @@ function fizzBuzz(inputNumber) {
 
 console.log(fizzBuzz(15));
 console.log(fizzBuzz(10));
-// console.log(fizzBuzz(-9));
 console.log(fizzBuzz(25));
 console.log(fizzBuzz(8));
-//------------------------ 
-console.log(Number(true))
-console.log(Number(false))
-console.log(typeof "uai")
-console.log(typeof Number("77"))
-console.log(Number.isInteger(89)); // Output: true
-// console.log(isInteger(89))
-// ===============================================================
+//--------------------------------------------------------------------
