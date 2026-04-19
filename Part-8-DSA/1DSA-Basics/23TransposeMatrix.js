@@ -1,4 +1,4 @@
-// transposing rows into column in new array
+// transpose Matrix
 function transposeMatrix(inputArray) {
   const numberOfRows = inputArray.length;
   const numberOfColumns = inputArray[0].length;
@@ -17,32 +17,66 @@ function transposeMatrix(inputArray) {
 
   return result;
 }
+// ------------------------------------------------
+console.log(
+  transposeMatrix([
+    [3, 4, 8],
+    [5, 6, 9],
+  ]),
+);
 // -------------------------------------------------
-const inputMatrix1 = [
-  [3, 4, 8],
-  [5, 6, 9],
-];
-console.log(transposeMatrix(inputMatrix1));
+console.log(
+  transposeMatrix([
+    [3, 4, 8],
+    [5, 6, 9],
+  ]),
+);
+// -------------------------------------------------
+console.log(
+  transposeMatrix([
+    [3, 4, 8, 11],
+    [5, 6, 9, 12],
+  ]),
+);
 // -------------------------------------------------
 
-const inputMatrix2 = [
-  [3, 4, 8, 11],
-  [5, 6, 9, 12],
-];
-console.log(transposeMatrix(inputMatrix2));
+console.log(
+  transposeMatrix([
+    [3, 4],
+    [5, 6],
+    [7, 8],
+  ]),
+);
 // -------------------------------------------------
+console.log(
+  transposeMatrix([
+    [3, 4],
+    [5, 6, 9, 12],
+  ]),
+);
+// -------------------------------------------------
+function matrix(matrix) {
+  let rows = matrix.length;
+  let cols = matrix[0].length;
 
-const inputMatrix3 = [
-  [3, 4],
-  [5, 6],
-  [7, 8],
-];
-console.log(transposeMatrix(inputMatrix3));
-// -------------------------------------------------
+  let res = [];
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < cols; j++) {
+      if (!res[j]) {
+        res[j] = [];
+      }
 
-const inputMatrix4 = [
-  [3, 4],
-  [5, 6, 9, 12],
-];
-console.log(transposeMatrix(inputMatrix4));
-// -------------------------------------------------
+      res[j][i] = matrix[i][j];
+    }
+  }
+
+  return res;
+}
+
+console.log(
+  matrix([
+    [1, 2, 3],
+    [4, 5, 6],
+  ]),
+);
+// -----------------------------------------------------------

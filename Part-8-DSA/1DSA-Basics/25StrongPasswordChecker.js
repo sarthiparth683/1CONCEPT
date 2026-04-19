@@ -1,7 +1,6 @@
 const text = " Hello   Middle   World ";
-const noSpaces = text.replace(/ /g, "");
-console.log(noSpaces);
-// --------------------
+console.log(text.replace(/ /g, "-"));
+// -----------------------------------------------
 // string.includes(searchString, position)
 const text2 = "Hello World";
 console.log(text2.includes("H"));
@@ -38,16 +37,12 @@ function isStrongPassword(passwordString) {
     }
   }
 
-  if (
+  return (
     lowerCaseCharacterExists &&
     upperCaseCharacterExists &&
     numberExists &&
     specialCharExists
-  ) {
-    return true;
-  }
-
-  return false;
+  );
 }
 
 console.log(isStrongPassword("Ashish1!"));
@@ -57,3 +52,55 @@ console.log(isStrongPassword("ashish1!"));
 console.log(isStrongPassword("ashisha!"));
 console.log(isStrongPassword("ashish1a"));
 // =========================================================================
+function isStrongPassword2(password) {
+  if (password.length < 8) return false;
+
+  const hasLower = /[a-z]/.test(password);
+  const hasUpper = /[A-Z]/.test(password);
+  const hasNumber = /[0-9]/.test(password);
+  const hasSpecial = /[!@#$%^&*]/.test(password);
+
+  return hasLower && hasUpper && hasNumber && hasSpecial;
+}
+
+console.log(isStrongPassword2("Ashish1!"));
+console.log(isStrongPassword2("Ash1!"));
+console.log(isStrongPassword2("Ashis1!"));
+console.log(isStrongPassword2("ashish1!"));
+console.log(isStrongPassword2("ashisha!"));
+console.log(isStrongPassword2("ashish1a"));
+// ================================================================================
+function strong(str) {
+  if (str.length < 8) {
+    return false;
+  }
+
+  let lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let num = "1234567890";
+  let specialChar = "!@#$%^&*";
+
+  let lower = false;
+  let upper = false;
+  let number = false;
+  let special = false;
+
+  for (let char of str) {
+    if (lowerCase.includes(char)) {
+      lower = true;
+    } else if (upperCase.includes(char)) {
+      upper = true;
+    } else if (num.includes(char)) {
+      number = true;
+    } else if (specialChar.includes(char)) {
+      special = true;
+    }
+  }
+
+  return lower && upper && number && special;
+}
+
+console.log(strong("Ashish1!"));
+console.log(strong("Ash1!"));
+console.log(strong("Ashis1!"));
+// ====================================================

@@ -5,7 +5,6 @@ function matrixMultiplication(array1, array2) {
 
   const rowsInResult = array1.length;
   const columnsInResult = array2[0].length;
-
   const rownInSecondArray = array2.length;
   const result = [];
 

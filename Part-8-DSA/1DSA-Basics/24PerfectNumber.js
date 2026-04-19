@@ -22,4 +22,4 @@ console.log(isPerfectNumber(28));
 console.log(isPerfectNumber(27));
 console.log(isPerfectNumber(496));
 console.log(isPerfectNumber(500));
-// ===================================================
+// =================================================

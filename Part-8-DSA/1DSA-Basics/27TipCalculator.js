@@ -19,3 +19,14 @@ function calculateTipAmount(baseAmount, tipPercentages, locale, currency) {
 console.log(calculateTipAmount(1000, [5, 10, 15], "en-IN", "INR"));
 console.log(calculateTipAmount(997, [5, 10, 15], "en-US", "USD"));
 // =====================================================================
+function billCalculator(baseAmount, tipPercentages) {
+  let arr = [];
+  for (let i = 0; i < tipPercentages.length; i++) {
+    let tip = baseAmount * (tipPercentages[i] / 100);
+    arr.push(tip.toFixed(2));
+  }
+  return arr;
+}
+
+console.log(billCalculator(1000, [5, 10, 15]));
+console.log(billCalculator(997, [5, 10, 15]));
