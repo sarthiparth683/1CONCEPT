@@ -1,6 +1,26 @@
-const prompt = require("prompt-sync")(); // to run in node(terminal)
+// let str = "12.78";
+// console.log(Number(str));
+// console.log(parseInt(str));
+// console.log(parseFloat(str));
+// console.log(+str);
+// console.log(str * 1);
+// console.log(~~str);
+// console.log(Math.floor(str));
+// console.log(Math.round(str));
+// console.log(Math.ceil(str));
+// =============================================================
+
+function acceptTwoNumbers() {
+  let firstNumber = prompt("Please enter the first number: ");
+  let secondNumber = prompt("Please enter the second number: ");
+  firstNumber = parseInt(firstNumber);
+  secondNumber = parseInt(secondNumber);
+
+  return { firstNumber, secondNumber };
+}
 
 let exit = false;
+
 while (!exit) {
   let userChoice = prompt(`Please select one of the below options
 1. Press 1 for Addition
@@ -11,10 +31,11 @@ while (!exit) {
 `);
 
   userChoice = parseInt(userChoice);
+  5;
+
   switch (userChoice) {
     case 1:
       console.log("Addition");
-
       const userInputAddition = acceptTwoNumbers();
       const resultAddition =
         userInputAddition.firstNumber + userInputAddition.secondNumber;
@@ -22,6 +43,7 @@ while (!exit) {
         `${userInputAddition.firstNumber} + ${userInputAddition.secondNumber} = ${resultAddition}`,
       );
       break;
+
     case 2:
       console.log("Subtraction");
       const userInputSubtraction = acceptTwoNumbers();
@@ -64,34 +86,4 @@ while (!exit) {
 
 console.log("Thanks for using the calculator!");
 
-function acceptTwoNumbers() {
-  let firstNumber = prompt("Please enter the first number: ");
-  let secondNumber = prompt("Please enter the second number: ");
-  firstNumber = parseInt(firstNumber);
-  secondNumber = parseInt(secondNumber);
-
-  return { firstNumber, secondNumber };
-}
-
 // ================================================================
-// convert string into number
-let str = "12.78";
-
-console.log(Number(str));
-console.log(parseFloat(str));
-console.log(parseInt(str));
-console.log(+str);
-console.log(str * 1);
-console.log(~~str);
-console.log(Math.floor(str));
-console.log(Math.round(str));
-console.log(Math.ceil(str));
-// =============================================================
-console.log(Math.floor(Math.random() * 5) + 1);
-console.log(Math.floor(Math.random() * 5) + 1);
-console.log(Math.floor(Math.random() * 5) + 1);
-console.log(Math.floor(Math.random() * 5) + 1);
-console.log(Math.floor(Math.random() * 5) + 1);
-console.log(Math.floor(Math.random() * 5) + 1);
-console.log(Math.floor(Math.random() * 5) + 1);
-console.log(Math.floor(Math.random() * 5) + 1);

@@ -1,10 +1,14 @@
-//  Guess The Number Game
-
-const prompt = require("prompt-sync")();
+// Str to Num conversion
+// console.log(Number("42"));
+// console.log(parseInt("42"));
+// console.log(parseFloat("3.14"));
+// console.log(+"42");
+// ============================================================
 const randomNumber = Math.floor(Math.random() * 100) + 1;
 
 let userInput = prompt("Please guess the number, its between 1 and 100: ");
-userInput = parseInt(userInput);
+// userInput = parseInt(userInput); // or
+userInput = Number(userInput);
 
 while (userInput != randomNumber) {
   if (userInput > randomNumber) {
@@ -24,5 +28,4 @@ while (userInput != randomNumber) {
 }
 
 console.log("Congratulation!! you have found the correct number", randomNumber);
-
-console.log(userInput);
+// --------------------------------------------------------------------------

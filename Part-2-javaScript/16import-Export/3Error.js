@@ -25,6 +25,6 @@ try {
   console.error("Inside catch block: An error occurred.");
 } finally {
   console.log(
-    "No matter what happens in the try or catch blocks, the finally block will always execute, making it ideal for important cleanup actions in your code."
+    "No matter what happens in the try or catch blocks, the finally block will always execute, making it ideal for important cleanup actions in your code.",
   );
 }

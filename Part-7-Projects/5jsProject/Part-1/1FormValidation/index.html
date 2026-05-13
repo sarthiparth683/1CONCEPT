@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form validation</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div id="error"></div>
+
+    <form id="form" action="/" method="GET">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required placeholder="name" />
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="**********"
+        />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="text" placeholder="email" />
+      </div>
+
+      <div>
+        <label for="age">Age</label>
+        <input id="age" type="text" placeholder="age" />
+      </div>
+
+      <button style="margin-top: 10px" type="submit">Submit</button>
+    </form>
+  </body>
+</html>

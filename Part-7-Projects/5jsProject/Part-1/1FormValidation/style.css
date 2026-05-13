@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, lightcyan, lightblue, lightgreen);
+  /* background-color: lightcyan; */
+}
+
+div {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  margin-left: 5px;
+}
+
+button {
+    border: none;
+  margin-left: 43%;
+  /* height: 50px; */
+  font-size: 21px;
+  font-weight: 400;
+  background: linear-gradient(
+    to top,
+    rgb(146, 215, 146),
+    rgb(170, 148, 231),
+    rgb(213, 107, 45)
+  );
+}
