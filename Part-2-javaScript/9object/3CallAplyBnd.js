@@ -1,35 +1,52 @@
 // ============================================
 // Call, Apply, Bind in js
 // ============================================
-const employee = {
+const employee1 = {
   name: "Sarah Johnson",
   role: "Senior Developer",
   department: "Engineering",
   salary: 95000,
   yearsOfExperience: 5,
-  location: "New York"
+  location: "New York",
 };
 
-// One function that displays detailed employee information
+const employee2 = {
+  name: "Parth Sarthi",
+  role: "MERN Developer",
+  department: "Engineering",
+  salary: 98000,
+  yearsOfExperience: 8,
+  location: "Hawai",
+};
+
 function displayEmployeeProfile(bonus, projectName) {
-  console.log("===== EMPLOYEE PROFILE =====");
-  console.log(`Name: ${this.name}`);
-  console.log(`Role: ${this.role} | Department: ${this.department}`);
-  console.log(`Experience: ${this.yearsOfExperience} years | Location: ${this.location}`);
-  console.log(`Annual Salary: $${this.salary} | Bonus: $${bonus}`);
-  console.log(`Total Compensation: $${this.salary + bonus}`);
-  console.log(`Current Project: ${projectName}`);
-  console.log("============================\n");
+  console.log(`${this.name}`);
+  console.log(`${this.role}`);
+  console.log(`${this.department}`);
+  console.log(`${this.salary}`);
+  console.log(`${this.yearsOfExperience}`);
+  console.log(`${this.location}`);
+  console.log(`${this.salary + bonus}`);
+  console.log(`${bonus}`);
+  console.log(`${projectName}`);
 }
-//=======================================================
-// 1. USING CALL() - Execute immediately, args one by one
-// let empl = displayEmployeeProfile.call(employee, 10000, "Mobile App Redesign");
-// ============================================
-// 2. USING APPLY() - Execute immediately, args as array
-// displayEmployeeProfile.apply(employee, [15000, "Cloud Migration Project"]);
-// ============================================
-// 3. USING BIND() - Create reusable function
-// Create a bound function that can be called later
-// const showEmployeeProfile = displayEmployeeProfile.bind(employee, 12000, "AI Integration");
+
+//==================================================================================
+// 1. USING CALL() - first object is passed , then pass the arguments you wnat
+
+// displayEmployeeProfile.call(employee1, 10000, "Mobile App Redesign");
+// displayEmployeeProfile.call(employee2, 10000, "Mobile App Redesign");
+// =================================================================================
+// 2. USING APPLY() - first object is passed , then arguments is passed inside Array
+
+// displayEmployeeProfile.apply(employee1, [15000, "Cloud Migration Project"]);
+// displayEmployeeProfile.apply(employee2, [15000, "Cloud Migration Project"]);
+// =================================================================================
+// 3. USING BIND() - same as call but kept in variable to call it later...
+
+const showEmployeeProfile = displayEmployeeProfile.bind(employee1, 12000, "AI Integration");
 // showEmployeeProfile();
 
+const showEmployeeProfile2 = displayEmployeeProfile.bind(employee2, 12000, "AI Integration");
+// showEmployeeProfile2()
+// =================================================================================

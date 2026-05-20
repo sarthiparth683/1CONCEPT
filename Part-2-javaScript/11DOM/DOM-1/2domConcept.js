@@ -1,64 +1,47 @@
 //=============================================================================
 // WHAT IS DOM?
-// The Document Object Model (DOM) is a programming interface for web documents.
-// It represents the page structure as a tree of objects that can be manipulated.
+// The Document Object Model (DOM) is a programming interface for web documents.It represents the page structure as a tree of objects that can be manipulated.
 //=============================================================================
 
 //=============================================================================
-// 1. SELECTING ELEMENTS
-// Different methods to access HTML elements from JavaScript
+// 1. SELECTING ELEMENTS by:- id,class,tag,querySelector
 //=============================================================================
 
 function demoSelect() {
-  // Select by ID - Returns single element
   const byId = document.getElementById("selectDemo");
   console.log("By ID:", byId);
 
-  // Select by Class - Returns HTMLCollection (array-like, live)
   const byClass = document.getElementsByClassName("text");
-  console.log("By Class:", byClass, "Count:", byClass.length);
+  console.log("By Class:", byClass);
+  console.log("Count:", byClass.length);
 
-  // Select by Tag - Returns HTMLCollection
   const byTag = document.getElementsByTagName("span");
   console.log("By Tag:", byTag);
 
-  // querySelector - Returns FIRST matching element, Use a period (.) For an ID: Use a hash (#) followed by the ID name (e.g., #text)
   const query = document.querySelector(".text");
   console.log("querySelector (first):", query);
 
-  // querySelectorAll - Returns NodeList of ALL matching elements (static)
   const queryAll = document.querySelectorAll(".text");
   console.log("querySelectorAll (all):", queryAll);
 
-  alert("✓ Check console for selection Elements results!");
+  alert(`Results are in Console...`);
 }
 
 //=============================================================================
-// 2. PROPERTIES
-// Different ways to get/set content of elements
-// innerText: visible text only | textContent: all text | innerHTML: HTML markup
+// 2. PROPERTIES:- innerText: visible text only | textContent: all text | innerHTML: HTML markup
 //=============================================================================
-
 function demoProperties() {
   const element = document.getElementById("propDemo").children[0];
-
-  // innerText - Returns visible text only (ignores hidden elements & respects CSS)
   console.log("innerText:", element.innerText);
-
-  // textContent - Returns all text including hidden elements (faster than innerText)
   console.log("textContent:", element.textContent);
-
-  // innerHTML - Returns HTML markup as string (can set HTML)
   console.log("innerHTML:", element.innerHTML);
-
-  // tagName - Returns the tag name in uppercase
   console.log("tagName:", element.tagName);
 
   alert(
     `innerText: "${element.innerText}"
      textContent: "${element.textContent}"
      innerHTML: "${element.innerHTML}"
-     tagName: ${element.tagName}`
+     tagName: ${element.tagName}`,
   );
 }
 
@@ -66,7 +49,6 @@ function demoProperties() {
 // 3. ATTRIBUTES
 // Get and set HTML attributes (src, href, id, class, data-*, etc.)
 //=============================================================================
-
 function changeAttribute() {
   const img = document.getElementById("demoImg");
   const newUrl = document.getElementById("newImgUrl").value;
@@ -85,7 +67,6 @@ function getAttributes() {
   const src = img.getAttribute("src");
   const alt = img.getAttribute("alt");
   const width = img.getAttribute("width");
-  console.log("Current Attributes:", { src, alt, width });
   alert(`Current Attributes:
 src: ${src}
 alt: ${alt}
@@ -94,11 +75,10 @@ width: ${width}`);
 
 //=============================================================================
 // 4. STYLING
-// Modify CSS styles using JavaScript (inline styles)
 //=============================================================================
-
 function applyStyles() {
   const element = document.getElementById("styleText");
+
   element.style.color = "#030203ff";
   element.style.background =
     "linear-gradient(to left, #65c010ff, #ca0b0bff, #121cabff)";
@@ -108,12 +88,12 @@ function applyStyles() {
   element.style.fontWeight = "bold";
   element.style.textAlign = "center";
   element.style.transition = "all 0.3s ease";
-  element.style.border = "2px solid #dc2626";
+  element.style.border = "5px solid black";
 }
 
 function resetStyles() {
   const element = document.getElementById("styleText");
-  element.removeAttribute("style"); // Remove all inline styles
+  element.removeAttribute("style");
 }
 
 //=============================================================================
@@ -122,6 +102,8 @@ function resetStyles() {
 //=============================================================================
 function demoInsert() {
   const mainPara = document.getElementById("mainPara");
+  mainPara.style.border = "2px solid black";
+  mainPara.style.background = "linear-gradient(to right, green, blue, grey)";
 
   // append() - Adds at the END inside the element
   const appendEl = document.createElement("p");
@@ -148,14 +130,15 @@ function clearInserts() {
   const container = document.getElementById("insertDemo");
   container.innerHTML = '<p id="mainPara">Main Paragraph</p>';
 }
-
 //=============================================================================
 // 6. REMOVING ELEMENTS-Delete elements from the DOM using .remove()
 //=============================================================================
 function removeElements() {
   const container = document.getElementById("removeDemo");
-  const children = [...container.children]; // Convert to array to avoid live collection issues
-  children.forEach((child) => child.remove()); // Remove each child using .remove()
+  console.log("Container", container);
+  const children = [...container.children];
+  console.log("children", children);
+  children.forEach((child) => child.remove());
 
   // Add confirmation message
   const msg = document.createElement("p");
@@ -171,29 +154,25 @@ function restoreItems() {
         <p>Item 3</p>
     `;
 }
+
 //=============================================================================
 // 7. CLASSLIST MANIPULATION
 // Add, remove, toggle, and check classes dynamically
 //=============================================================================
 function addClasses() {
   const element = document.getElementById("classDemo");
-  // classList.add() - Add one or more classes
   element.classList.add("highlight", "bold-text", "large-text");
   alert(`✓ Classes added:-, ${element.className}`);
-  console.log("Classes added:", element.className);
 }
 
 function removeClasses() {
   const element = document.getElementById("classDemo");
-  // classList.remove() - Remove one or more classes
   element.classList.remove("highlight", "bold-text");
   alert(`✓ Classes removed, ${element.className}`);
-  console.log("Classes after removal:", element.className);
 }
 
 function toggleClass() {
   const element = document.getElementById("classDemo");
-  // classList.toggle() - Add if doesn't exist, remove if exists
   element.classList.toggle("border-class");
 
   // classList.contains() - Check if class exists
@@ -202,18 +181,18 @@ function toggleClass() {
   alert(`✓ Border class ${hasClass ? "added" : "removed"}`);
 }
 
+function checkClass() {
+  const element = document.getElementById("classDemo");
+  alert(`${element.className}`);
+}
+
 //=============================================================================
 // 8. EVENT HANDLING - Respond to user interactions (click, hover, keyboard, etc.)
 //=============================================================================
-// Click event with addEventListener
 document.getElementById("clickBtn")?.addEventListener("click", function (e) {
   const output = document.getElementById("eventOutput");
   output.textContent = `✓ Button clicked! Event type: ${e.type}`;
-  // Event object properties
   alert(`Event object ${e}, Target element-${e.target}, Event type:${e.type}`);
-  console.log("Event object:", e);
-  console.log("Target element:", e.target);
-  console.log("Event type:", e.type);
 });
 
 // Mouse enter event
@@ -225,6 +204,7 @@ document
     output.style.color = "#7c3aed";
     e.target.style.background = "#7c3aed";
   });
+
 // Mouse leave event
 document
   .getElementById("hoverBtn")
@@ -240,8 +220,7 @@ document.getElementById("inputField")?.addEventListener("keyup", function (e) {
 });
 
 //=============================================================================
-// 9. DOM TRAVERSING
-// Navigate between parent, children, and sibling elements
+// 9. DOM TRAVERSING - Navigate between parent, children, and sibling elements
 //=============================================================================
 function demoTraverse() {
   const middle = document.getElementById("middleChild");
@@ -273,7 +252,6 @@ function demoTraverse() {
 
 //=============================================================================
 // 10. PRACTICAL EXAMPLE - DYNAMIC PRODUCT CARDS
-// Real-world example combining all DOM concepts
 //=============================================================================
 const products = [
   {
@@ -320,6 +298,7 @@ const products = [
 
 function displayProducts() {
   const container = document.getElementById("productContainer");
+
   products.forEach((product) => {
     const card = document.createElement("div");
     card.className = "product-card";
@@ -362,5 +341,4 @@ function displayProducts() {
 }
 
 displayProducts();
-
 //=============================================================================

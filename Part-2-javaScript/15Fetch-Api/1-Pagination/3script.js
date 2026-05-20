@@ -1,15 +1,16 @@
+// for pagination whole magic — the URL is just a template string, and the server does the actual slicing of data.
 // ------------------------------------
-// FETCH DATA FUNCTION
+// Fetching Data
 // ------------------------------------
-async function getData(page = 1, limit = 20) {
+async function getData(page = 1, limit = 4) {
   try {
     let url = `https://jsonplaceholder.typicode.com/todos?_page=${page}&_limit=${limit}`;
     let res = await fetch(url);
-
     let totalCount = res.headers.get("X-Total-Count");
     createPagination(totalCount, limit, page);
 
     let data = await res.json();
+    console.log(data);
     displayData(data);
   } catch (err) {
     console.log(err);
@@ -17,13 +18,13 @@ async function getData(page = 1, limit = 20) {
 }
 
 // ------------------------------------
-// DISPLAY TODOS IN #container
+// Display Card
 // ------------------------------------
-function displayData(arr) {
+function displayData(data) {
   let container = document.getElementById("container");
   container.innerHTML = "";
 
-  arr.forEach(item => {
+  data.forEach((item) => {
     let card = document.createElement("div");
     card.className = "card";
 
@@ -38,7 +39,7 @@ function displayData(arr) {
 }
 
 // ------------------------------------
-// PAGINATION BUTTONS
+// Pagination Button
 // ------------------------------------
 function createPagination(total, limit, currentPage) {
   let paginationDiv = document.getElementById("pagination");
@@ -62,7 +63,4 @@ function createPagination(total, limit, currentPage) {
   }
 }
 
-// ------------------------------------
-// INITIAL CALL
-// ------------------------------------
-getData(1);
+getData(1); // For initial call

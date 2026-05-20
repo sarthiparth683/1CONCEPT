@@ -1,16 +1,15 @@
 // Debouncing ensures that a function runs ONLY AFTER the user stops typing for a specific amount of time (delay).
 // ======================================================
-//  1. GENERIC DEBOUNCE FUNCTION  (Final Version)
+//  1. GENERIC DEBOUNCE FUNCTION 
 // ======================================================
-function debounce(func, delay) {
-  // 'timer' is PRIVATE due to closure
+function debounce(func, delay) { 
   let timer;
 
   return function (...args) {
-    clearTimeout(timer); // cancel previous timer
+    clearTimeout(timer);
 
     timer = setTimeout(() => {
-      func.apply(this, args); // run the function with latest args
+      func.apply(this, args); 
     }, delay);
   };
 }

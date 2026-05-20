@@ -1,7 +1,6 @@
 // Bank (Parent Class) teaches: Constructor, Private properties, Static vs non-static, Static block, Static methods, Factory method, Encapsulation via getters & setters, Instance methods
 
 // Employee (Child Class) teaches: Inheritance (extends), Calling parent constructor (super()), Overriding methods, Private child fields, Protected convention (_department), Child-level getters, setters, and methods
-
 // ========================================================================
 // CLASS 1: BANK (PARENT CLASS)
 // ========================================================================
@@ -72,20 +71,24 @@ class Bank {
 }
 
 // =======================TESTING THE BANK CLASS============================
-// const bank = new Bank("State Bank of India", "Mexico", 50000000000);
+const bank = new Bank("State Bank of India", "Mexico", 50000000000);
 
-// console.log("bankingSystem",Bank.bankingSystem); // Accessing static property directly from class
-// // console.log(Bank.#totalBanks) // You cannot access a private static property (#totalBanks) from outside the class — that is exactly the purpose of # (hard privacy).
-// console.log("getTotalBanks",Bank.getTotalBanks()); // But you CAN access it indirectly through a public static method provided inside the class:
-// console.log(bank.name);
-// console.log(bank.location);
-// console.log(bank.assets);
-// console.log("getInfo",bank.getInfo());
-// console.log(bank.code);
-// console.log(bank.assets);
-// bank.assets = 999999999; // Update value (setter)
-// console.log(bank.assets);
-// console.log(Bank.createDefaultBank()); //Static methods are always called on the class itself, not on an object.
+console.log("bankingSystem", Bank.bankingSystem); // Accessing static property directly from class
+
+// console.log(Bank.#totalBanks) // You cannot access a private static property (#totalBanks) from outside the class — that is exactly the purpose of # (hard privacy).
+
+console.log("getTotalBanks",Bank.getTotalBanks()); // But you CAN access it indirectly through a public static method provided inside the class:
+
+console.log(bank.name);
+console.log(bank.location);
+console.log(bank.assets);
+
+console.log("getInfo", bank.getInfo());
+console.log(bank.code);
+console.log(bank.assets);
+bank.assets = 999999999; // Update value (setter)
+console.log(bank.assets);
+console.log(Bank.createDefaultBank()); //Static methods are always called on the class itself, not on an object.
 // ========================================================================
 // CLASS 2: EMPLOYEE (CHILD CLASS)-Demonstrates inheritance and child-specific features.
 // ========================================================================
@@ -143,20 +146,20 @@ class Employee extends Bank {
 // TESTING EMPLOYEE CLASS
 // ========================================================================
 
-// const emp = new Employee(
-//   "State Bank of India",
-//   "Mumbai",
-//   50000000000,
-//   "Rajesh",
-//   85000
-// );
+const emp = new Employee(
+  "State Bank of India",
+  "Mumbai",
+  50000000000,
+  "Rajesh",
+  85000
+);
 
-// console.log(emp)
-// // console.log(Employee.#salary) // Error: You cannot access #salary or #empId from outside the class — that’s the whole purpose of private fields (#) in JavaScript.Because private fields belong to instances, not the class itself. Also, private fields can only be accessed inside the class body that defines
-// console.log(emp.salary);  // uses get salary()
-// console.log(emp.employeeId);  // uses get employeeId()
-// console.log(emp._department);
-// console.log(emp.getDetails()) // to access _department
-// console.log(emp.getInfo()); // Overridden method
-// console.log("Bank Code:", emp.code); // inhereted inside protorype
+console.log(emp)
+// console.log(Employee.#salary) // Error: You cannot access #salary or #empId from outside the class — that’s the whole purpose of private fields (#) in JavaScript.Because private fields belong to instances, not the class itself. Also, private fields can only be accessed inside the class body that defines
+console.log(emp.salary);  // uses get salary()
+console.log(emp.employeeId);  // uses get employeeId()
+console.log(emp._department);
+console.log(emp.getDetails()) // to access _department
+console.log(emp.getInfo()); // Overridden method
+console.log("Bank Code:", emp.code); // inhereted inside protorype
 // ===============================================================================

@@ -10,5 +10,6 @@ function add(a) {
 }
 
 console.log(add(1)(2)(3));
-// in arrow function
-const add = (a) => (b) => (c) => a + b + c;
+const add2 = (a) => (b) => (c) => a + b + c;
+console.log(add2(2)(3)(4));
+// ===============================================

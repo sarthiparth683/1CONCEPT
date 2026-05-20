@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,14 +8,15 @@
     <script src="2domConcept.js" defer></script>
   </head>
   <body>
-    <h1>Complete DOM Manipulation Study Guide</h1>
+    <h1>Complete DOM Manipulation</h1>
 
     <!-- Section 1: Selecting Elements -->
     <div class="section">
       <h2>1. Selecting Elements</h2>
+
       <div id="selectDemo" class="demo-box">
         <p class="text">I have a class "text"</p>
-        <p class="text">Me too!</p>  
+        <p class="text">Me too!</p>
         <span>I'm a span tag</span>
       </div>
 
@@ -24,7 +25,7 @@
 
     <!-- Section 2: Properties (innerText, innerHTML, textContent) -->
     <div class="section">
-      <h2>2. Properties: innerText, innerHTML, textContent</h2>
+      <h2>2.Properties: innerText, innerHTML, textContent</h2>
 
       <div id="propDemo" class="demo-box">
         <p>Original Text <span style="display: none">Hidden Text</span></p>
@@ -41,10 +42,11 @@
         <img
           id="demoImg"
           src="https://via.placeholder.com/150"
-          alt="Demo Image"
-          width="150"
+          alt="Old Image"
+          width="250"
         />
         <br />
+
         <input
           type="text"
           id="newImgUrl"
@@ -59,9 +61,11 @@
     <!-- Section 4: Styling -->
     <div class="section">
       <h2>4. Styling with JavaScript</h2>
+
       <div id="styleDemo" class="demo-box">
         <div id="styleText">Style me with JavaScript!</div>
       </div>
+
       <button onclick="applyStyles()">Apply Styles</button>
       <button onclick="resetStyles()">Reset Styles</button>
     </div>
@@ -69,16 +73,19 @@
     <!-- Section 5: Creating & Inserting Elements -->
     <div class="section">
       <h2>5. Creating & Inserting Elements</h2>
+
       <div id="insertDemo" class="demo-box">
         <p id="mainPara">Main Paragraph</p>
       </div>
+
       <button onclick="demoInsert()">Demo Insert Methods</button>
       <button onclick="clearInserts()">Clear</button>
     </div>
 
     <!-- Section 6: Removing Elements -->
     <div class="section">
-      <h2>6.Removing Elements</h2>
+      <h2>6. Removing Elements</h2>
+
       <div class="demo-box">
         <div id="removeDemo">
           <p>Item 1</p>
@@ -102,6 +109,7 @@
       <button onclick="addClasses()">Add Classes</button>
       <button onclick="removeClasses()">Remove Classes</button>
       <button onclick="toggleClass()">Toggle Class</button>
+      <button onclick="checkClass()">Check Class-list</button>
     </div>
 
     <!-- Section 8: Events -->
@@ -111,6 +119,7 @@
       <div class="demo-box">
         <button id="clickBtn">Click Me</button>
         <button id="hoverBtn">Hover Over Me</button>
+        
         <input type="text" id="inputField" placeholder="Type something..." />
         <p id="eventOutput">Event info will appear here</p>
       </div>
@@ -119,6 +128,7 @@
     <!-- Section 9: Traversing DOM -->
     <div class="section">
       <h2>9. DOM Traversing (parent, children, siblings)</h2>
+
       <div id="traverseDemo" class="demo-box">
         <div id="parentDiv">
           <p>First Child</p>
@@ -126,6 +136,7 @@
           <p>Last Child</p>
         </div>
       </div>
+
       <button onclick="demoTraverse()">Demo Traversing</button>
     </div>
 
@@ -134,5 +145,6 @@
       <h2>10. Practical Example: Dynamic Product Cards</h2>
       <div id="productContainer"></div>
     </div>
+    
   </body>
 </html>

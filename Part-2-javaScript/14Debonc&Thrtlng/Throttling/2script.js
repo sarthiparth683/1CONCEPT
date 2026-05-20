@@ -26,9 +26,10 @@ async function fetchMovies() {
 
   try {
     let res = await fetch(
-      `https://www.omdbapi.com/?apikey=a4ed1e08&s=${query}`
+      `https://www.omdbapi.com/?apikey=a4ed1e08&s=${query}`,
     );
     let data = await res.json();
+    console.log(data);
     displayMovies(data.Search || []);
   } catch (error) {
     console.log(error);
@@ -70,3 +71,13 @@ function displayMovies(list) {
 searchBtn.addEventListener("click", () => {
   throttle(fetchMovies, 2000); // function runs once every 2 seconds
 });
+// ===============================================
+
+// const users = {
+//   user1: { id: 1, name: "Parth", age: 22, city: "Jamshedpur" },
+//   user2: { id: 2, name: "Raj", age: 25, city: "Mumbai" },
+//   user3: { id: 3, name: "Sneha", age: 23, city: "Delhi" },
+//   user4: { id: 4, name: "Vikram", age: 27, city: "Pune" },
+// };
+// let arr = [...users];
+// console.log(arr);

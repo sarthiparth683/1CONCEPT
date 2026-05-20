@@ -1,5 +1,3 @@
-// three ways to export module
-
 function add(x, y) {
   return x + y;
 }
@@ -17,8 +15,7 @@ function div(x, y) {
 }
 
 function test() {
-  return "Testing function exported or not";
+  return "Test function Exported Successfully...";
 }
 
-// export default add
 export { add, sub, mul, div, test };

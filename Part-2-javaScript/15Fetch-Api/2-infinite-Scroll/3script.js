@@ -1,26 +1,21 @@
-// API URL
 const url = "https://jsonplaceholder.typicode.com/photos";
 let page = 1;
-let isLoading = false; // prevent multiple calls at once
+let isLoading = false;
 
-// Fetch data
+// Fetching Data
 async function getData(page) {
   isLoading = true;
   toggleLoader(true);
 
   const resp = await fetch(`${url}?_page=${page}&_limit=25`);
   const data = await resp.json();
-
   displayData(data);
-
   toggleLoader(false);
   isLoading = false;
 }
 
-// Initial load
-getData(page);
-
-// Render content on the page
+getData(page);  
+// ==============================================================
 function displayData(photos) {
   const gallery = document.getElementById("gallery");
 
@@ -37,7 +32,7 @@ function displayData(photos) {
     gallery.append(card);
   });
 }
-
+// =============================================================
 // Loader show/hide
 function toggleLoader(show) {
   const loader = document.getElementById("loader");
