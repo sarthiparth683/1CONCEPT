@@ -12,6 +12,7 @@ function run() {
   var num = 87;
   console.log(num);
 }
+
 run()
 // console.log(num); // Error: since var is funciton scope
 // -----------------------------------------------------------------------------------------------------
