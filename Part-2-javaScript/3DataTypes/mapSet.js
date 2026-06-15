@@ -1,6 +1,4 @@
-// # Map and Set in JavaScript
-
-// ## Set - A Collection of Unique Values -  set-Methods - `add()`, `has()`, `delete()`
+// Set - A Collection of Unique Values -  set-Methods - `add()`, `has()`, `delete()`
 const mySet = new Set();
 mySet.add(1);
 mySet.add(9);
@@ -8,46 +6,50 @@ mySet.add(2);
 mySet.add(3);
 mySet.add(2); // This won't be added (duplicate!)
 console.log(mySet);
+
 console.log(typeof mySet);
 console.log(mySet.size);
 console.log(mySet.has(2));
 console.log(mySet.has(5));
-mySet.delete(2);
+// mySet.delete(2);
 console.log(mySet);
-mySet.clear();
-console.log(mySet);
-// =========================================================
-// Example 1: Remove duplicates from an array
+// mySet.clear();
+console.log(mySet["2"]);
+// --------------------
+let obj = {
+    0:"a",
+    1:"v"
+}
 
+console.log(obj["1"]);
+// to remove duplicates we need to convert back into arrays
+let arr = [...mySet]
+console.log(arr)
+let set2 = new Set(arr)
+console.log(set2) 
+// -----------------------------------------------------------------
+// Example 1: Remove duplicates from an array
 const numbers = [1, 8, 2, 2, 3, 4, 4, 5];
 const uniqueNumbers = new Set(numbers);
 console.log(uniqueNumbers);
 const uniqueArray = [...uniqueNumbers]; // Convert back to array
 console.log(uniqueArray);
-// ------------------------------------------
-// Example 2: Track unique visitors
-
-const visitors = new Set();
-visitors.add("John");
-visitors.add("Sarah");
-visitors.add("John"); // Won't be added again
-visitors.add("Mike");
-console.log(visitors);
-console.log(visitors.size);
-//=========================================================================================
+// ===========================================================================
+// ===========================================================================
 // Map - A Collection of Key-Value Pairs.Main methods | `set()`, `get()`, `has()`, `delete()`
 const myMap = new Map();
 myMap.set("name", "John");
 myMap.set("age", 30);
 myMap.set("city", "New York");
 console.log(myMap);
-console.log(myMap.size);
+
 console.log(myMap.get("name"));
 console.log(myMap.get("age"));
 console.log(myMap.has("name"));
 console.log(myMap.has("country"));
 myMap.delete("age");
 console.log(myMap);
+console.log(myMap.size);
 myMap.clear();
 console.log(myMap);
 // ----------------------------------------------------
@@ -72,3 +74,6 @@ console.log(taskStatus);
 console.log(taskStatus.get(task1));
 console.log(taskStatus.get(task2));
 // --------------------------------------------------------
+let arr9 =  [1, 5, 3, 2]
+console.log(arr9.slice(0,(arr9.length/2)))
+console.log(arr9.slice((arr9.length/2)))

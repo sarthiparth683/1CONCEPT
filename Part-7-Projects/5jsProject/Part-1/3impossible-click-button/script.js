@@ -18,7 +18,7 @@ document.addEventListener('mousemove', (e) => {
     setButtonPosition(
       buttonBox.x + horizontalOffset / horizontalDistanceFrom * 10,
       buttonBox.y + verticalOffset / verticalDistanceFrom * 10
-    )
+    )  
   }
 })
 

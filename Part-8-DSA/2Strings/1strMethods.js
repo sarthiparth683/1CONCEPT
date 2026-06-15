@@ -1,4 +1,3 @@
-// String-Method
 // str.length
 // str.toUpperCase()
 // str.toLowerCase()
@@ -139,8 +138,6 @@ console.log("*".repeat(5));
 //=====================================
 // 21. PADSTART - Add Padding to Start
 //=====================================
-// string.padStart(targetLength, padString) :- targetLength: The total length you want the final string to be. padString: The character (or characters) you want to use for padding.
-
 let str19 = "5";
 console.log(str19.padStart(3, "0"));
 console.log("7".padStart(3, "x"));
@@ -153,8 +150,6 @@ console.log("7".padEnd(4, "x"));
 //=====================================
 // 23. CHARCODEAT - Get Unicode Value
 //=====================================
-// The charCodeAt() method is useful when you need to work with the numeric Unicode value of a character instead of the character itself.
-
 let str21 = "azAZHello";
 console.log(str21.charCodeAt(0));
 console.log(str21.charCodeAt(1));
