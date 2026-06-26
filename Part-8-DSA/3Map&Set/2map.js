@@ -27,6 +27,10 @@ for (const [key, value] of map2) {
   console.log(value);
 }
 
+for (const value of map2) {
+  console.log(value);
+}
+
 for (const value of map2.values()) {
   console.log(value);
 }

@@ -140,7 +140,7 @@ function solveNQueens(n) {
 
   function backtrack(row) {
     if (row === n) {
-      result.push(board.map(r => r.join("")));
+      result.push(board.map((r) => r.join("")));
       return;
     }
 
@@ -215,13 +215,7 @@ function mazeSolver(maze) {
   const cols = maze[0].length;
 
   function dfs(r, c) {
-    if (
-      r < 0 ||
-      c < 0 ||
-      r >= rows ||
-      c >= cols ||
-      maze[r][c] !== 0
-    ) {
+    if (r < 0 || c < 0 || r >= rows || c >= cols || maze[r][c] !== 0) {
       return false;
     }
 
@@ -232,12 +226,7 @@ function mazeSolver(maze) {
 
     maze[r][c] = 2;
 
-    if (
-      dfs(r + 1, c) ||
-      dfs(r - 1, c) ||
-      dfs(r, c + 1) ||
-      dfs(r, c - 1)
-    ) {
+    if (dfs(r + 1, c) || dfs(r - 1, c) || dfs(r, c + 1) || dfs(r, c - 1)) {
       return true;
     }
 
@@ -253,9 +242,9 @@ function mazeSolver(maze) {
 }
 
 const maze = [
-  [0,0,1],
-  [1,0,1],
-  [0,0,0]
+  [0, 0, 1],
+  [1, 0, 1],
+  [0, 0, 0],
 ];
 
 console.log(mazeSolver(maze));
@@ -288,3 +277,4 @@ function backtrack(state) {
 //========================================================================
 //========================================================================
 
+console.log(76945 % 11);

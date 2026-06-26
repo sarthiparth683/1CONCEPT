@@ -1,19 +1,8 @@
 // Recursion is a technique where a function calls itself to solve a smaller version of the same problem.
-
-// Recursion
-// ├── Recursive Functions
-// ├── Base Condition
-// ├── Factorial
-// ├── Fibonacci
-// ├── Binary Search
-// └── Tree Traversal
 // =======================================================================
 // Example 1: Count Down
 function countDown(n) {
-  if (n === 0) {
-    console.log("Done!");
-    return;
-  }
+  if (n === 0) return;
 
   console.log(n);
   countDown(n - 1); // Recursive Call
@@ -44,25 +33,8 @@ function reverse(str) {
 
   return reverse(str.slice(1)) + str[0];
 }
-// =======================================================================
-// Base condition
-function printNumbers(n) {
-  if (n === 0) return; // Base Condition
 
-  console.log(n);
-  printNumbers(n - 1);
-}
-
-printNumbers(5);
-// =======================================================================
-// Fibonacci
-function fibonacci(n) {
-  if (n <= 1) return n;
-
-  return fibonacci(n - 1) + fibonacci(n - 2);
-}
-
-console.log(fibonacci(6));
+console.log(reverse("reverse"));
 // =======================================================================
 // Recursive Binary Search Array must be sorted.
 function binarySearch(arr, target, left = 0, right = arr.length - 1) {
@@ -80,4 +52,4 @@ function binarySearch(arr, target, left = 0, right = arr.length - 1) {
 }
 
 console.log(binarySearch([1, 3, 5, 7, 9], 7));
-// =======================================================================
+// ================================================================================
