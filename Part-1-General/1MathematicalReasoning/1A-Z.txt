@@ -21,6 +21,6 @@ G-T - GT road
 H-S - High School
 I-R - Indian Railway
 J-Q - 
-K-P
+K-P - pk movie
 L-O - Love
 M-N

@@ -14,5 +14,6 @@
     "editor.renderWhitespace": "none",
     "editor.lightbulb.enabled": "off",
     "git.decorations.enabled": false,
-    "editor.minimap.enabled": true
+    "editor.minimap.enabled": true,
+    "workbench.browser.openLocalhostLinks": false
 }

@@ -1,3 +1,8 @@
+const arr = [10, 20, 30, 40, 50, 60];
+console.log(arr.slice(0))
+console.log(arr.slice(0, 3))
+console.log(arr.slice(-3))
+console.log(arr.slice(-1))
 
 // ================================================================
 // windows + .(period) = emoji
@@ -517,8 +522,6 @@ const totalExpense = customers
 
 console.log("Total Expense of Married Customers in INR: ", totalExpense);
 // --------------------------------------------------------------
-const arr = [1, 2, 3, 4, 5];
-
 // forEach()
 let sum = 0;
 arr.forEach((elem) => {
