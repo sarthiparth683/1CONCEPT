@@ -1,22 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>attribute Selector</title>
+    <title>Attribute Selector</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      div {
+        margin-top: 10px;
+      }
+      /* Selecting Attributes */
       input[type="text"] {
         color: red;
-        margin: 10px;
-        background-color: aquamarine;
+        background-color: lightcoral;
+        height: 40px;
+        border-radius: 8px;
       }
 
       input[type="email"] {
         color: blue;
-        background-color: rgb(97, 236, 102);
+        background-color: lightgreen;
+        height: 40px;
+        border-radius: 8px;
       }
     </style>
   </head>
+
   <body>
     <form action="">
       <div>

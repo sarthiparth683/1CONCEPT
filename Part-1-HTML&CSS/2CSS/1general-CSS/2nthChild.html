@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,27 +10,33 @@
       display: grid;
       grid-template-columns: repeat(4, 100px);
       /* grid-template-rows: repeat(5, 100px); */
-      gap: 10px 10px;
+      gap: 10px;
       border: 5px solid black;
+      /* width: 100vh; */
       width: fit-content;
       height: fit-content;
       text-align: center;
       padding: 10px;
     }
+    
     .box div {
-      border: 5px solid blue;
+      border: 2px solid blue;
+      border-radius: 5px;
     }
+
     /* ------------------------------------------------------------- */
     /* n'th child concept  */
+
+    .box > div:nth-child(5n + 1) {
+      /* starts form 3 and [(6n)means after 5 box]  */
+      background-color: chartreuse;
+    }
 
     .box > div:nth-child(17) {
       /* only colors one box */
       background-color: aqua;
     }
-    .box > div:nth-child(2n + 3) {
-      /* starts form 3 and [(2n)means after 2 box, 3,5,7,9...]  */
-      background-color: chartreuse;
-    }
+
     /* higher order number 1,2,3... comes to end; */
     .box > div:nth-child(7) {
       background-color: red;
@@ -39,10 +45,6 @@
     .box > div:nth-child(8) {
       background-color: orange;
       order: 8;
-    }
-    .box > div:nth-child(9) {
-      background-color: black;
-      order: 9;
     }
   </style>
   <body>
@@ -77,6 +79,16 @@
       <div>28</div>
       <div>29</div>
       <div>30</div>
+      <div>31</div>
+      <div>32</div>
+      <div>33</div>
+      <div>34</div>
+      <div>35</div>
+      <div>36</div>
+      <div>37</div>
+      <div>38</div>
+      <div>39</div>
+      <div>40</div>
     </div>
   </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,23 +6,33 @@
     <title>FLEX</title>
 
     <style>
-      .mainbox {
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
         display: flex;
-        border: 1px solid black;
-        padding: 3px;
-      }
-      .box1 {
-        border: 4px solid blue;
-        width: 300px;
-      }
-      .box2 {
-        border: 4px solid orange;
-        /* height: 800px; */
+        border: 10px solid greenyellow;
+        padding: 10px;
         height: 100vh;
-        width: 990px;
-        margin-left: 40px;
-        margin-right: 20px;
-        margin-top: 30px;
+      }
+
+      .box1 {
+        border: 3px solid blue;
+        width: 300px;
+        padding: 8px;
+      }
+
+      ol {
+        list-style-type: none;
+      }
+
+      .box2 {
+        border: 3px solid black;
+        width: 1450px;
+        margin-left: 20px;
 
         display: flex;
         /* flex-direction: row; */
@@ -44,84 +54,76 @@
         /* to reduce extra space during wraping */
         text-align: center;
       }
+
       .box2 div {
-        border: 3px solid blueviolet;
+        border: 2px solid blueviolet;
         height: 25px;
         width: 25px;
         margin: 10px;
       }
+
       /* n'th child and order concept  */
-      .box2 div:nth-child(1) {
+      .box2 div:nth-child(3) {
         background-color: blue;
         order: 1;
       }
-      .box2 div:nth-child(3) {
+
+      .box2 div:nth-child(5) {
         background-color: chartreuse;
         order: 2;
       }
-      /* .box2 div:nth-child(2) {
+
+      .box2 div:nth-child(2) {
         background-color: red;
         flex-grow: 0.25;
-      } */
+      }
 
-      /* .box2 div:nth-child(2) {
+      .box2 div:nth-child(4) {
         background-color: red;
         flex-shrink: 0;
-      } */
-
-      .game {
-        font-size: 1.8rem;
-        font-weight: 500;
-        /* text-decoration: none; */
-        color: green;
       }
     </style>
   </head>
   <body>
-    <a href="https://flexboxfroggy.com/" class="game" target="_blank"
-      >Flexbox Froggy game link</a
-    >
-    <div class="mainbox">
-      <div class="box1">
-        <ol>
-          <h3>Flex-Parent Properties:-</h3>
-          <li>display:flex</li>
-          <li>
-            flex-direction:- Row,Column, rowreverse, and column-reverse, (gives
-            Direction rowWise or columnWise).
-          </li>
-          <li>
-            justify-content:-
-            Center,space-between,space-around,space-evenly,flex-start,flex-end,(Everything
-            Row-wise, Horizontally).
-          </li>
-          <li>
-            align-items:- Center,flex-start | flex-end | | baseline |
-            stretch;(Everything, Column-wise, Vertically)
-          </li>
-          <li>flex-wrap:- wrap,nowrap,wrap-revese,(it wraps the items)</li>
-        </ol>
+    <div class="box1">
+      <ol>
+        <h3>Flex-Parent Properties:-</h3>
 
-        <ol>
-          <h3>Flex-Child Properties:-</h3>
-          <li>.box1 div:nth-child(1)</li>
-          <li>align-self:- overrides alignment set on parent</li>
-          <li>flex-grow:- (Defaults to 0)</li>
-          <li>flex-shrink:- (Defaults to 1)</li>
-          <li>order</li>
-          <li>flex-basis</li>
-        </ol>
-      </div>
-      <div class="box2">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-      </div>
+        <li>display:flex</li>
+        <li>flex-direction:- Row, Column, rowreverse, and column-reverse.</li>
+        <li>
+          justify-content:-
+          Center,space-between,space-around,space-evenly,flex-start,flex-end,(Everything
+          Row-wise, Horizontally).
+        </li>
+        <li>
+          align-items:- Center,flex-start,flex-end,baseline,stretch;(Everything,
+          Column-wise, Vertically)
+        </li>
+        <li>flex-wrap:- wrap,nowrap,wrap-revese.</li>
+      </ol>
+      <hr />
+      <hr />
+      <ol>
+        <h3>Flex-Child Properties:-</h3>
+        <li>.box1 div:nth-child(1)</li>
+        <li>align-self:- overrides alignment set on parent</li>
+        <li>flex-grow:- (Defaults to 0)</li>
+        <li>flex-shrink:- (Defaults to 1)</li>
+        <li>order</li>
+        <li>flex-basis</li>
+      </ol>
+    </div>
+
+    <div class="box2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
     </div>
   </body>
 </html>
