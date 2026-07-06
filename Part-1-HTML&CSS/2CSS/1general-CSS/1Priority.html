@@ -1,18 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Selectors - Priority or Specificity</title>
+    <style>
+      /* This is the Tag Selector */
+      /* It targets every <li> tag on the page */
+      li {
+        color: navy;
+        text-decoration: underline;
+        font-size: large;
+        font-weight: 500;
+      }
+
+      /* This targets every <b> tag on the page */
+      b {
+        font-size: 30px;
+        color: black;
+      }
+    </style>
   </head>
   <body>
     <ol>
-      <b>inline Style > id > Class > Tag > Universal</b>
-      <li>Priority of various selectors:-SICTU</li>
+      <b>Priority of various selectors:-SICTU</b>
+      <li>inline Styling > id > Class > Tag > Universal</li>
       <li>S - inline styling</li>
-      <li>I - Id selector (#)</li>
-      <li>C - Class selector (.dot)</li>
-      <li>T - Tag selector</li>
+      <li>I - Id selector (#) - Targeting a specific, tag or element</li>
+      <li>C - Class selector (.) - Targeting a group of tag or element</li>
+      <li>T - Tag selector - Targeting a category of tag or element</li>
       <li>U - Universal selector (*)</li>
     </ol>
   </body>

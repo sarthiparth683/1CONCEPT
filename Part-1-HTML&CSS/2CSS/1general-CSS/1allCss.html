@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,124 +6,220 @@
     <title>CSS-Cascading Style Sheets</title>
 
     <style>
-      /* =========================
-           GLOBAL RESET + BASE
-        ========================== */
       * {
-        margin: 0;
+        margin: 5px;
         padding: 0;
         box-sizing: border-box;
       }
 
-      /* =====================================================
-           Pseudo-classes CANNOT be written inline, kept here
-        ====================================================== */
-
-      /* 5. A — HOVER */
-      a:hover {
-        text-decoration: underline;
-        color: rgb(223, 63, 63);
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
 
-      /* 7. INPUT — FOCUS + HOVER */
+      mark {
+        background-color: rgb(248, 119, 26);
+      }
+      /* =====================================================
+         Pseudo-classes CANNOT be written inline.
+        ====================================================== */
+
+      /* 7. input tag */
       input:focus {
-        border-color: blue;
+        border-color: red;
         outline: none;
       }
 
       input:hover {
-        width: 200px;
         background-color: #5ea1e3;
         color: black;
-        font-size: large;
       }
 
-      /* 8. BUTTON — HOVER + ACTIVE */
-      button:hover {
-        background-color: #006666;
-        height: 50px;
+      /* 8. Button */
+      button {
+        padding: 10px;
+        background-color: teal;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.5s;
         width: 150px;
       }
 
+      button:hover {
+        background-color: rgb(54, 187, 9);
+      }
+
       button:active {
-        background-color: black;
+        background-color: red;
+      }
+
+      /* ---- Table --- */
+      th {
+        border: 2px solid #000;
+        padding: 10px;
+        text-align: center;
+        background-color: #ddd;
+      }
+
+      td {
+        border: 2px solid #000;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .Box {
+        width: 250px;
+        height: 70px;
+        background-color: orange;
+        /* margin-top: 200px; */
+        /* position: absolute; */
+        /* position: relative; */
+        /* position:fixed */
+        /* position: static; */
+        /* position:sticky */
+      }
+
+      .overflow {
+        width: 400px;
+        height: 100px;
+        border: 2px solid #000;
+        overflow: scroll;
+        padding: 5px;
       }
     </style>
   </head>
 
-  <!-- 0. BODY -->
-  <body style="font-family: Arial, sans-serif; padding: 20px;">
+  <body style="font-family: Arial, sans-serif">
+    <h1
+      style="
+        font-size: 32px;
+        color: #003366;
+        font-weight: bold;
+        text-decoration: underline;
+        letter-spacing: 1px;
+        word-spacing: 5px;
+        margin: 20px;
+      "
+    >
+      CSS Cheat Sheet
+    </h1>
 
-    <!-- 3. H1 — ADVANCED TYPOGRAPHY -->
-    <h1 style="font-size: 32px; color: #003366; font-weight: bold; text-decoration: underline; letter-spacing: 1px; word-spacing: 5px; margin: 20px;">CSS Cheat Sheet</h1>
-
-    <!-- 1. DIV — BOX MODEL -->
-    <div style="width: 250px; height: 120px; background-color: lightblue; /* border: 2px solid #000; */ margin: 20px; padding: 15px; border-radius: 10px; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);">This is a DIV (Box Model)</div>
+    <div
+      style="
+        width: 250px;
+        height: 120px;
+        background-color: lightblue;
+        /* border: 2px solid #000; */
+        margin: 2px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+      "
+    >
+      1. This is a DIV (Box Model)
+    </div>
 
     <!-- 2. P — TEXT STYLING -->
-    <p style="font-size: 18px; color: #333; line-height: 1.5; font-style: italic; margin: 15px 0;">This is a paragraph demonstrating text styling.</p>
+    <p
+      style="
+        font-size: 18px;
+        color: #333;
+        line-height: 0.5;
+        font-style: italic;
+        margin: 15px;
+        text-decoration: underline;
+      "
+    >
+      2. This is a paragraph demonstrating text styling.
+    </p>
 
-    <!-- 4. SPAN — INLINE ELEMENT -->
-    <span style="background-color: rgb(111, 245, 66); padding: 3px; border: 3px dotted red;">Highlighted span text.</span>
-    <br /><br />
+    <span
+      style="
+        background-color: rgb(111, 245, 66);
+        padding: 3px;
+        border: 3px dotted black;
+      "
+      >3. Highlighted span text.</span
+    >
 
-    <!-- 5. A — LINKS -->
-    <a href="https://www.flipkart.com/" target="_blank" style="color: purple; font-weight: bold; text-decoration: none;">This is a link</a>
-    <br /><br />
+    <mark>4. Mark tag is used for marking text</mark>
 
-    <!-- 6. IMG — DISPLAY + OBJECT-FIT + RADIUS -->
+    <a
+      href="https://www.flipkart.com/"
+      target="_blank"
+      style="color: purple; font-weight: bold; text-decoration: none"
+      >5.This is flipkart link</a
+    >
+
     <img
       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThq03InrHUozDhT0097c1U6YEkCjl8aWRNPg&s"
       alt="Sample"
-      style="width: 200px; height: 150px; object-fit: cover; border-radius: 10px;"
+      style="
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+      "
     />
 
-    <br /><br />
+    <input
+      type="text"
+      placeholder="7. Enter your name"
+      style="
+        padding: 10px;
+        border: 2px solid #777;
+        border-radius: 6px;
+        margin: 10px;
+        width: 150px;
+      "
+    />
 
-    <!-- 7. INPUT — FOCUS + BORDER -->
-    <input type="text" placeholder="Enter your name" style="padding: 10px; border: 2px solid #777; border-radius: 6px; margin: 10px; width: 150px;" />
+    <button>8. Click Me</button>
 
-    <br />
-
-    <!-- 8. BUTTON — HOVER + ACTIVE + TRANSITION -->
-    <button style="padding: 10px 20px; background-color: teal; color: white; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s;">Click Me</button>
-
-    <!-- 9. UL / OL — LIST STYLING -->
-    <ul style="list-style-type: none; padding-left: 30px; margin: 20px 0;">
-      <li style="margin: 6px 0;">List item one</li>
-      <li style="margin: 6px 0;">List item two</li>
+    <ul style="list-style-type: disc">
+      <li style="margin: 6px">9. Unordered List item one</li>
+      <li style="margin: 6px">Unordered List item two</li>
     </ul>
 
-    <ol style="list-style-type: none; padding-left: 30px; margin: 20px 0;">
-      <li style="margin: 6px 0;">Ordered item one</li>
-      <li style="margin: 6px 0;">Ordered item two</li>
+    <ol style="list-style-type: lower-roman">
+      <li style="margin: 6px 0">Ordered List item one</li>
+      <li style="margin: 6px 0">Ordered List item two</li>
     </ol>
 
-    <!-- 10. TABLE — BORDERS + ALIGNMENT -->
-    <table style="width: 60%; border-collapse: collapse; margin: 20px 0;">
+    <table style="width: 60%; border-collapse: collapse; margin: 20px 0">
+      <caption>
+        10.Table
+      </caption>
+
       <tr>
-        <th style="border: 2px solid #000; padding: 10px; text-align: center; background-color: #ddd;">Name</th>
-        <th style="border: 2px solid #000; padding: 10px; text-align: center; background-color: #ddd;">Age</th>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+
+      <tr>
+        <td>Amit</td>
+        <td>22</td>
+      </tr>
+
+      <tr>
+        <td>Riya</td>
+        <td>21</td>
       </tr>
       <tr>
-        <td style="border: 2px solid #000; padding: 10px; text-align: center;">Amit</td>
-        <td style="border: 2px solid #000; padding: 10px; text-align: center;">22</td>
-      </tr>
-      <tr>
-        <td style="border: 2px solid #000; padding: 10px; text-align: center;">Riya</td>
-        <td style="border: 2px solid #000; padding: 10px; text-align: center;">21</td>
+        <td>Priya</td>
+        <td>22</td>
       </tr>
     </table>
 
-    <!-- 11. BOX CLASS — POSITIONING -->
-    <div style="width: 150px; height: 50px; background-color: orange; position: relative; top: 10px; left: 10px;">Position Demo</div>
-
-    <br />
-
-    <!-- 12. OVERFLOW DEMO -->
-    <div style="width: 200px; height: 60px; border: 2px solid #000; overflow: scroll; padding: 5px;">
-      This is an example of overflow scroll. Add more text to see scrolling in
-      action. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <div class="Box">11. Box Position demo</div>
+    <div class="overflow">
+      12. This is an example of overflow scroll. Add more text to see scrolling
+      in action. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis eveniet, sunt qui tempore suscipit in accusantium molestiae quidem, expedita nesciunt voluptatum blanditiis necessitatibus exercitationem eos iure nam debitis aperiam, commodi porro animi reprehenderit aliquam sit repudiandae minima. Consectetur voluptatum, dolores inventore saepe illum dolorem esse id cum consequatur nesciunt mollitia?
     </div>
+
   </body>
 </html>
