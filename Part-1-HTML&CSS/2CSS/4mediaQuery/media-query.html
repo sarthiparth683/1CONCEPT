@@ -1,27 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Media Query</title>
     <style>
-      body {
-        font-size: 16px;
-        background-color: white;
-        color: black;
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
       }
 
-      @media all and (min-width: 04px) and (max-width: 767px) {
+      body {
+        border: 8px solid red;
+        height: 100vh;
+        padding: 10px;
+        background-color: lightgreen;
+      }
+
+      @media all and (min-width: 04px) and (max-width: 320px) {
         body {
           background-color: black;
           color: white;
         }
       }
 
-      @media all and (min-width: 768px) and (max-width: 1023px) {
+      @media all and (min-width: 321px) and (max-width: 425px) {
         body {
-          background-color: red;
-          font-size: 18px;
+          background-color: lightcyan;
+        }
+      }
+
+      @media all and (min-width: 426px) and (max-width: 768px) {
+        body {
+          background-color: lightsteelblue;
+        }
+      }
+
+      @media all and (min-width: 769px) {
+        body {
+          background-color: lightpink;
         }
       }
     </style>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,28 +6,27 @@
     <title>1Grid-Area</title>
 
     <style>
+      .box1 div {
+        border: 4px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       .box1 {
         border: 4px solid blue;
         padding: 10px;
-        width: auto;
-        height: 70vh;
-        margin-top: 10px;
-        margin-left: 50px;
-        text-align: center;
-        font-size: 25px;
-        font-weight: 999;
+        height: 80vh;
+        margin: 10px;
+        font-size: 85px;
 
         display: grid;
-        /* grid-template-rows: repeat(7, 50px);
-        grid-template-columns: repeat(5, 50px); */
-        grid-template-areas: "q1 q2 q3"
-                             "q1 q4 q5";
+        grid-template-areas:
+          "q1 q2 q5"
+          "q3 q4 q5";
         gap: 10px;
       }
-      .box1 div {
-        border: 4px solid black;
-        /* width: 90px; */
-      }
+
       /* --------------------------------------------------------- */
       .box1 div:nth-child(1) {
         background-color: rgb(23, 209, 23);

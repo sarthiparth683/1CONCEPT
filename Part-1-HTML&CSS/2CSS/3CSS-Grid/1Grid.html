@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,124 +6,112 @@
     <title>1Grid</title>
 
     <style>
-      .mainbox {
-        display: flex;
-        height: 100vh;
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
       }
-      .box2 {
-        width: 300px;
-        border: 4px solid green;
+
+      body {
+        display: flex;
+        border: 10px solid rgb(48, 225, 28);
         padding: 5px;
-        margin-left: 10px;
-        margin-top: 10px;
-        display: flex;
-        font-size: 20px;
-        font-weight: 500;
+        height: 100vh;
+        background-color: rgb(228, 210, 240);
       }
-      .box2 div {
-        border: 2px solid black;
-        margin: 5px;
-        padding: 10px;
+      /* --------------------------------------------- */
+      ol {
+        list-style-type: none;
       }
 
       .box1 {
-        border: 4px solid blue;
+        width: 300px;
+        border: 3px solid green;
         padding: 10px;
-        width: fit-content;
-        margin-top: 10px;
-        margin-left: 50px;
-        text-align: center;
+        margin: 5px;
+        font-size: 20px;
+      }
+
+      .box2 {
+        padding: 10px;
+        margin: 5px;
+        border: 3px solid blue;
+        width: 1700px;
         font-size: 25px;
-        font-weight: 999;
 
         display: grid;
-        grid-template-rows: repeat(7, 50px);
         grid-template-columns: repeat(5, 50px);
+        grid-template-rows: repeat(7, 50px);
         gap: 10px;
-
-        /* justify-content: center;
-        align-items: center; */
       }
-      .box1 div {
+      
+      .box2 div {
         border: 4px solid black;
+        text-align: center;
       }
       /* --------------------------------------------------------- */
-      .box1 div:nth-child(5n + 2) {
+      .box2 div:nth-child(5n + 2) {
         /* stars at 2 and after every 5th element */
         background-color: rgb(143, 245, 143);
       }
 
       /* ------------------------------------------------------- */
       /* higher order at last*/
-      .box1 div:nth-child(17) {
+      .box2 div:nth-child(17) {
         background-color: rgb(41, 27, 229);
         order: 1;
       }
-      .box1 div:nth-child(15) {
+      .box2 div:nth-child(15) {
         background-color: green;
         order: 5;
-      }
-      .box1 div:nth-child(4) {
-        background-color: red;
-        order: 3;
-      }
-      .game {
-        font-size: 1.7rem;
       }
     </style>
   </head>
   <body>
-    <a href="https://cssgridgarden.com/" class="game" target="_blank"
-      >Grid Garden game link</a
-    >
-    <div class="mainbox">
-      <div class="box2">
-        <div>
-          <ol>
-            <li>display: grid;</li>
-            <li>grid-template-rows: repeat(7, 100px);</li>
-            <li>grid-template-columns: repeat(7, 100px);</li>
-            <li>gap: 10px 10px;</li>
-            <li>grid-row-gap: 10px;</li>
-            <li>grid-column-gap: 10px;</li>
-            <li>.box1 div:nth-child(1)</li>
-            <li>units: 10% or 10px or 1fr ;</li>
-          </ol>
-        </div>
-      </div>
+    <div class="box1">
+      <ol>
+        <li>display: grid;</li>
+        <li>grid-template-columns: repeat(7, 100px);</li> <hr>
+        <li>grid-template-rows: repeat(7, 100px);</li> <hr>
+        <li>gap: 10px;</li> <hr>
+        <li>grid-row-gap: 10px;</li> <hr>
+        <li>grid-column-gap: 10px;</li> <hr>
+        <li>.box1 div:nth-child(1)</li> <hr>
+        <li>units: 10% or 10px or 1fr ;</li>
+      </ol>
+    </div>
 
-      <div class="box1">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-        <div>11</div>
-        <div>12</div>
-        <div>13</div>
-        <div>14</div>
-        <div>15</div>
-        <div>16</div>
-        <div>17</div>
-        <div>18</div>
-        <div>19</div>
-        <div>20</div>
-        <div>21</div>
-        <div>22</div>
-        <div>23</div>
-        <div>24</div>
-        <div>25</div>
-        <div>26</div>
-        <div>27</div>
-        <div>28</div>
-        <div>29</div>
-        <div>30</div>
-      </div>
+    <div class="box2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+      <div>15</div>
+      <div>16</div>
+      <div>17</div>
+      <div>18</div>
+      <div>19</div>
+      <div>20</div>
+      <div>21</div>
+      <div>22</div>
+      <div>23</div>
+      <div>24</div>
+      <div>25</div>
+      <div>26</div>
+      <div>27</div>
+      <div>28</div>
+      <div>29</div>
+      <div>30</div>
     </div>
   </body>
 </html>
