@@ -36,21 +36,23 @@
 
         display: flex;
         /* flex-direction: row; */
+        /* flex-direction: row-reverse; */
         /* flex-direction: column; */
+        /* flex-direction:column-reverse; */
         /* flex-wrap: wrap; */
 
         justify-content: center;
-        /* justify-content: flex-start;    */
+        /* justify-content: flex-start; */
         /* justify-content: flex-end; */
-        /* justify-content: space-around; */
         /* justify-content: space-between; */
+        /* justify-content: space-around; */
         /* justify-content: space-evenly; */
 
         /* align-item changes axis */
         align-items: center;
-        /* align-items: flex-end; */
         /* align-items: flex-start; */
-        /* align-content: start; */
+        /* align-items: flex-end; */
+
         /* to reduce extra space during wraping */
         text-align: center;
       }
@@ -75,12 +77,12 @@
 
       .box2 div:nth-child(2) {
         background-color: red;
-        flex-grow: 0.25;
+        /* flex-grow: 0.25; */
       }
 
       .box2 div:nth-child(4) {
-        background-color: red;
-        flex-shrink: 0;
+        background-color: navajowhite;
+        /* flex-shrink: 0; */
       }
     </style>
   </head>
@@ -90,16 +92,19 @@
         <h3>Flex-Parent Properties:-</h3>
 
         <li>display:flex</li>
-        <li>flex-direction:- Row, Column, rowreverse, and column-reverse.</li>
+        <li>flex-direction:- row, row-reverse, column, column-reverse.</li>
+        <hr />
         <li>
           justify-content:-
-          Center,space-between,space-around,space-evenly,flex-start,flex-end,(Everything
+          Center,flex-start,flex-end,space-between,space-around,space-evenly,(Everything
           Row-wise, Horizontally).
         </li>
+        <hr />
         <li>
           align-items:- Center,flex-start,flex-end,baseline,stretch;(Everything,
           Column-wise, Vertically)
         </li>
+        <hr />
         <li>flex-wrap:- wrap,nowrap,wrap-revese.</li>
       </ol>
       <hr />
