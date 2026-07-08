@@ -16,15 +16,16 @@ console.log(mySet);
 // mySet.clear();
 console.log(mySet["2"]);
 // --------------------
-let obj = {
+let obj = {  
     0:"a",
     1:"v"
 }
 
 console.log(obj["1"]);
-// to remove duplicates we need to convert back into arrays
+// convert back into arrays
 let arr = [...mySet]
 console.log(arr)
+// convert back to Set
 let set2 = new Set(arr)
 console.log(set2) 
 // -----------------------------------------------------------------
@@ -33,7 +34,7 @@ const numbers = [1, 8, 2, 2, 3, 4, 4, 5];
 const uniqueNumbers = new Set(numbers);
 console.log(uniqueNumbers);
 const uniqueArray = [...uniqueNumbers]; // Convert back to array
-console.log(uniqueArray);
+console.log(uniqueArray.sort());
 // ===========================================================================
 // ===========================================================================
 // Map - A Collection of Key-Value Pairs.Main methods | `set()`, `get()`, `has()`, `delete()`
@@ -74,6 +75,3 @@ console.log(taskStatus);
 console.log(taskStatus.get(task1));
 console.log(taskStatus.get(task2));
 // --------------------------------------------------------
-let arr9 =  [1, 5, 3, 2]
-console.log(arr9.slice(0,(arr9.length/2)))
-console.log(arr9.slice((arr9.length/2)))

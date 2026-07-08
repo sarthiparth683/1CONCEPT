@@ -7,7 +7,7 @@
 // Null → Intentional empty value let x = null;
 // Symbol → Unique identifier (rarely used)
 // BigInt → Very large integers - 123456789012345678901234567890n
-// ----------------------------------------------------------------------
+
 console.log(typeof "Sarthi");
 console.log(typeof 99);
 console.log(typeof true);
@@ -26,7 +26,7 @@ console.log(typeof 4896n);
 // Regular Expressions
 // Map & Set
 // Any user-defined objects
-// ----------------------------------------------------------------------------
+
 console.log(typeof {});
 console.log(typeof []);
 console.log(typeof function () {});
@@ -44,9 +44,9 @@ console.log(set);
 // -------------------------------------------------------------------------------
 // Type Coercion (Auto-Conversion) - JavaScript auto-converts types in some operations:
 
-console.log("5" + 1); // "51" → number converted to string
-console.log("5" - 1); // 4 → string converted to number
+console.log("5" + 1); // "51" → converted to string
+console.log("5" - 1); // 4 → converted to number
 console.log(true + 1 + true);
-console.log(null + 1);
+console.log(null + 1 + 1);
 console.log(undefined + 1);
 // ================================================================================

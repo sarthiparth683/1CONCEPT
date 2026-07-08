@@ -1,16 +1,15 @@
-// ------------------------------------------------------------
-// ## Function declarations vs. function expression
+// Function declarations vs. function expression
 // Difference:
 // - Function declarations are hoisted
 // - Function expressions are not hoisted
 
 // Function Declaration
-function greet() {
+function greet5() {
   return "Function Declaration";
 }
-console.log(greet());
-
-//  Function Expression or Arrow Function
+console.log(greet5());
+//----------------------------------------
+// Function Expression or Arrow Function
 const greet2 = () => {
   return "Function Expression";
 };
@@ -67,7 +66,7 @@ function outer() {
     let inside = "inside";
   }
   inner();
-  //   console.log(inside); // inside is not defined
+  // console.log(inside); // inside is not defined
 }
 outer();
 
@@ -93,14 +92,4 @@ outer(); // This runs outer() but discards the returned function
 outer(); // This runs outer() but discards the returned function
 
 // Even though outer has finished running, the returned function still has access to count. The inner function "closes over" the variable.
-// -----------------------------------------------------------------------------------------------
-function greet() {
-  let name = "Tom";
-  return function () {
-    console.log(name);
-  };
-}
-
-let output = greet();
-output();
-//-------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------

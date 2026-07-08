@@ -1,4 +1,5 @@
 // Truthy and Falsy Values
+
 // Falsy values: false , 0 , "" , null , undefined , NaN
 // Everything else is truthy, including: "0" , "false" , [] , {} , function(){}
 // -----------------------------------------------------------------

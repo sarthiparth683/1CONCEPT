@@ -25,11 +25,13 @@ function sayHello() {
   console.log("Hello!");
 }
 // -------------------------------------------
-// // Function Expression Hoisting 
+// Function Expression Hoisting
+
 // greet(); // ❌ TypeError: greet is not a function
 // var greet = () => {
 //   console.log("Hi!");
 // };
+
 // -------------------------------------------------------------------------------------------------------------------------------
 // ### Summary Table
 

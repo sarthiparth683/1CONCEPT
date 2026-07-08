@@ -1,8 +1,9 @@
 // forEach – Arrays
 
 const numbers = [1, 2, 3, 4, 5];
-numbers.forEach((num) => {
+numbers.forEach((num, i) => {
   console.log(num);
+  console.log(i);
   console.log(num * 2);
 });
 // ----------------------------------------------------

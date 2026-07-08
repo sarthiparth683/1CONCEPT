@@ -1,9 +1,9 @@
 // Spread Operator (...) - used to expand elements of an iteratable(like array or object) into individual elements.
 
-const nums = [1, 2, 3];
-const newNum = [...nums, 4, 5];
+const nums = [1, 2, 3, 4, 5];
+const newNum = [...nums, 6, 7, 8, 9];
 console.log(newNum);
-// -------------------------------------------------------------------
+// -------------------
 const user = {
   name: "Alice",
   age: 25,
@@ -12,10 +12,10 @@ const user = {
 const updatedUser = { ...user, city: "Kolkata" };
 console.log(updatedUser);
 //======================================================================
-// The rest operator (...) in JavaScript allows functions to accept an indefinite number of arguments as an array.
+// The rest operator (...) used in functions.
 function sum(...numbers) {
-  // return numbers  // converted to array
-  return numbers.reduce((total, num) => total + num, 0);
+  return numbers  // converted to array
+  // return numbers.reduce((total, num) => total + num, 0);
 }
 
 console.log(sum(1, 2, 3));

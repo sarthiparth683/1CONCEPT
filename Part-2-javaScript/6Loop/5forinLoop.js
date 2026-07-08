@@ -4,19 +4,26 @@
 
 // 2. Picks up custom properties — if anyone adds a property to the array (like `arr.myProp = "oops"`), `for...in` will iterate over that too, giving unexpected results.
 
-// 3. **Picks up inherited properties** — if `Array.prototype` has been extended (by your code or a library), `for...in` will loop over those inherited properties as well.
+// 3. Picks up inherited properties — if `Array.prototype` has been extended (by your code or a library), `for...in` will loop over those inherited properties as well.
 
-// 4. **Order is not guaranteed** — `for...in` does not guarantee iteration in index order. For objects, JS engines may reorder keys; arrays should always be visited in order.
+// 4. Order is not guaranteed — `for...in` does not guarantee iteration in index order. For objects, JS engines may reorder keys; arrays should always be visited in order.
 
-// 5. **Skips holes inconsistently** — sparse arrays like `[1, , , 4]` have "holes", and `for...in` skips them silently, making it hard to detect missing elements.
+// 5. Skips holes inconsistently — sparse arrays like `[1, , , 4]` have "holes", and `for...in` skips them silently, making it hard to detect missing elements.
 
-// 6. **Misleading intent** — `for...in` is designed for plain objects. Using it on an array signals the wrong intent to anyone reading your code, hurting readability.
+// 6. Misleading intent — `for...in` is designed for plain objects. Using it on an array signals the wrong intent to anyone reading your code, hurting readability.
 // -------------------------------------------------------------
 const fruits = ["apple", "banana", "mango"];
 
 for (let index in fruits) {
   console.log(index);
   console.log(fruits[index]);
+}
+
+const fruit2 = [1,2,3,4,5];
+
+for (let index in fruit2) {
+  console.log(index);
+  console.log(fruit2[index]);
 }
 // =================================================================
 // for...in loop :- used in Objects

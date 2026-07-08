@@ -18,7 +18,7 @@
 // --------------------------------------------------------------------
 // Comparison Operators
 
-// ==  equal (loose, only check value)
+// ==  equal (loose, only check value, not data type)
 // ===  equal (strict equality – value + dataType)
 // !=  not equal (loose)
 // !==  not equal (strict)
@@ -59,5 +59,6 @@ console.log(!!"Sarthi");
 
 let score = 80;
 let grade = score > 50 ? "Pass" : "Fail";
+console.log(score > 50 ? "Pass" : "Fail");
 console.log(grade);
 //----------------------------------------------------------------

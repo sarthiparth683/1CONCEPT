@@ -1,7 +1,7 @@
 // filter - used for Selecting elements that meet a condition
 // ---------------------------------------------------------------------------------------
 let arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
-let res = arr.filter((ele) => {
+let res = arr.sort().filter((ele) => {
   return ele % 2 === 0;
 });
 
@@ -13,7 +13,7 @@ const products = [
   { id: 3, name: "Product 3", price: 30 },
 ];
 
-const f6 = products.filter((el, i) => el.price >= 40);
+const f6 = products.filter((el, i) => el.price > 40);
 console.log(f6);
 // ----------------------------------------------------------------------------------
 function prime1(num) {

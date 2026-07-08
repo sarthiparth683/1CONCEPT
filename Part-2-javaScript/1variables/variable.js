@@ -6,7 +6,7 @@
 // Difference between var, let and const
 // var- Function-scoped,  Re-declare-yes,  Re-assign-yes, Hoisted-yes(initialized as undefined)
 // let- Block-scope, Re-declare-No, Re-assign-yes, Hoisted-yes(TDZ)
-// const- Block-scope,Re-declare-No, Re-assign-No, Hoisted-yes(TDZ)
+// const- Block-scope, Re-declare-No, Re-assign-No, Hoisted-yes(TDZ)
 // ---------------------------------------------------------------------------------------------------
 function run() {
   var num = 87;
@@ -19,13 +19,13 @@ run()
 let age = 25;
 age = 30; 
 // let age = 40; // ❌ Error (same block)
-console.log(age)
+console.log(age);
 // -----------------------------------------------------------------------------------------------------
 const PI = 3.14;
 // PI = 3.14159; // ❌ Error
 
 //  But: If const holds an object/array, you can still change its contents: const only prevents reassignment of the variable name — it does not make objects immutable.
 const student = { name: "Riya" };
-student.name = "Priya"; // ✅ OK
+student.name = "Priya"; 
 console.log(student);
 // -----------------------------------------------------------------------------------------------------
