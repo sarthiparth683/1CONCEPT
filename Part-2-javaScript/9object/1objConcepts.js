@@ -7,7 +7,7 @@ let obj = {};
 obj.name = "Sarthi";
 obj.age = 25;
 obj.isMarried = false;
-
+console.log(obj);
 console.log(obj.name);
 console.log(obj["age"]);
 console.log(obj.age);
@@ -61,6 +61,9 @@ user.hobbies = "coding";
 user["Date_of_Birth"] = "7-Oct-1984";
 user["xyz"] = "xyz";
 console.log(user);
+console.log(user.profession);
+console.log(user.Date_of_Birth);
+console.log(user["Date_of_Birth"]);
 // ============================================================================
 // 6. MODIFYING OBJECT PROPERTIES
 // ============================================================================
@@ -74,10 +77,9 @@ console.log(user.age);
 // ============================================================================
 let user2 = {
   name: "Rahul",
-  age: 25,
   gender: "male",
-  city: "Bangalore",
-  hobbies: "coding",
+  age: 25,
+  hobbies: "Working",
   marks: [25, 100, 80, 90, 80],
 };
 
@@ -88,6 +90,7 @@ delete user2.name;
 delete user2["gender"];
 
 console.log(user2);
+console.log(user2.name);
 // ============================================================================
 // 8. OBJECTS WITH ARRAYS - Storing arrays as values
 // ============================================================================
@@ -191,6 +194,7 @@ let person = {
 };
 
 console.log(person?.address?.city);
+// console.log(person.profile.email); // without ? mark throws error
 console.log(person?.profile?.email);
 console.log(person?.address?.zip);
 // ============================================================================
@@ -235,12 +239,12 @@ var personArrow = {
   name: "Alice",
   age: 30,
 
-  // Arrow function doesn't have its own 'this'
+  // Arrow function doesn't have its own 'this' inside an object
   sayArrowHello: () => {
     console.log(this.name); // Won't work properly
   },
 
-  // Regular function has its own 'this'
+  // Regular function has its own 'this' inside an object
   sayRegularHello: function () {
     console.log(this.name, this.age);
   },
@@ -277,6 +281,8 @@ for (let i = 0; i < str.length; i++) {
 }
 
 console.log(obj2);
+console.log(obj2.y);
+console.log(obj2["z"]);
 // ============================================================================
 // 20. MAPPING CHARACTERS TO NUMBERS
 // ============================================================================
@@ -327,6 +333,7 @@ const originalUser = {
 };
 
 const shallowCopy = { ...originalUser };
+console.log(shallowCopy);
 shallowCopy.name = "Bob"; // Doesn't affect original obj
 shallowCopy.address.city = "Bangalore"; // AFFECTS original (nested reference)
 
@@ -350,6 +357,7 @@ const user4 = {
 
 // Method 2: structuredClone() - Preferred modern method
 const deepCopy = structuredClone(user4);
+console.log(deepCopy);
 deepCopy.name = "Charlie";
 deepCopy.address.city = "Delhi";
 
@@ -373,12 +381,9 @@ console.log(res);
 // ============================================================================
 // 25. FILTERING ARRAY OF OBJECTS - Basic conditions
 // ============================================================================
-let rating = amazon.filter((el) => el.rating === 4);
-console.log(rating);
-
-// Print products with price between 2500 and 10000
-let price = amazon.filter((el) => el.price >= 2500 && el.price <= 10000);
-console.log(price);
+console.log(amazon.filter((el) => el.rating > 4));
+console.log(amazon.filter((el) => el.rating === 4));
+console.log(amazon.filter((el) => el.price >= 2500 && el.price <= 10000));
 // ============================================================================
 // 26. CALCULATING AVERAGE FROM ARRAY OF OBJECTS
 // ============================================================================
@@ -416,11 +421,11 @@ let studentData = {
   name: "Rajesh",
   grade: "A1",
   section: "A",
+  hobbies: ["Dancing", "Singing"],
   marks: [
     { maths: 91, science: 95, english: 85 },
     { maths: 82, science: 98, english: 88 },
   ],
-  hobbies: ["Dancing", "Singing"],
 };
 
 let sample = "sample";

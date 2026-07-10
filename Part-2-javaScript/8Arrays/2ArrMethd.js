@@ -16,9 +16,8 @@
 // 1. push() - add elements to the end
 
 let fruits = ["apple", "banana"];
-fruits.push("orange", "litchi");
+fruits.push("litchi");
 fruits.push(true);
-fruits.push("testing");
 fruits.push(45);
 fruits.push("this is last element");
 console.log(fruits);
@@ -26,7 +25,6 @@ console.log(fruits);
 // 2. pop() - removes element from the end
 
 let arr1 = ["apple", "banana", "orange", 4, 5, "2nd last", "last"];
-arr1.pop();
 arr1.pop();
 console.log(arr1);
 //--------------------------------------------------------------------------------------------------
@@ -72,8 +70,8 @@ console.log(arr8.includes("orange"));
 
 let arr9 = ["apple", "banana", "orange"];
 let arr10 = arr9.join(", ");
-let arr11 = arr9.join("--");
 console.log(arr10);
+let arr11 = arr9.join("--");
 console.log(arr11);
 //--------------------------------------------------------------------------------------------------
 // 9. The reverse() method reverses the order of the elements in an array. It's like flipping a deck of cards.

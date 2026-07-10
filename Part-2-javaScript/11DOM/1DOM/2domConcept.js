@@ -159,20 +159,19 @@ function restoreItems() {
 // 7. CLASSLIST MANIPULATION
 // Add, remove, toggle, and check classes dynamically
 //=============================================================================
+const element = document.getElementById("classDemo");
+
 function addClasses() {
-  const element = document.getElementById("classDemo");
   element.classList.add("highlight", "bold-text", "large-text");
   alert(`✓ Classes added:-, ${element.className}`);
 }
 
 function removeClasses() {
-  const element = document.getElementById("classDemo");
   element.classList.remove("highlight", "bold-text");
   alert(`✓ Classes removed, ${element.className}`);
 }
 
 function toggleClass() {
-  const element = document.getElementById("classDemo");
   element.classList.toggle("border-class");
 
   // classList.contains() - Check if class exists
@@ -182,7 +181,6 @@ function toggleClass() {
 }
 
 function checkClass() {
-  const element = document.getElementById("classDemo");
   alert(`${element.className}`);
 }
 
@@ -191,8 +189,7 @@ function checkClass() {
 //=============================================================================
 document.getElementById("clickBtn")?.addEventListener("click", function (e) {
   const output = document.getElementById("eventOutput");
-  output.textContent = `✓ Button clicked! Event type: ${e.type}`;
-  alert(`Event object ${e}, Target element-${e.target}, Event type:${e.type}`);
+  output.textContent = `✓ Button clicked! Event type: ${e.type}, Event object ${e}, Target element-${e.target}, Event type:${e.type}`;
 });
 
 // Mouse enter event
@@ -336,7 +333,6 @@ function displayProducts() {
         btn.style.background = "#2563eb";
       }, 2000);
     });
-    
   });
 }
 

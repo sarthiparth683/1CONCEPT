@@ -45,8 +45,7 @@ function displayEmployeeProfile(bonus, projectName) {
 // 3. USING BIND() - same as call but kept in variable to call it later...
 
 const showEmployeeProfile = displayEmployeeProfile.bind(employee1, 12000, "AI Integration");
-// showEmployeeProfile();
-
 const showEmployeeProfile2 = displayEmployeeProfile.bind(employee2, 12000, "AI Integration");
-// showEmployeeProfile2()
+showEmployeeProfile();
+showEmployeeProfile2();
 // =================================================================================

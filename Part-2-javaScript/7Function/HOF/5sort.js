@@ -32,6 +32,7 @@ const people = [
   { name: "Bob", age: 30 },
 ];
 
+console.log(people.sort());
 console.log(people.sort((a, b) => a.name - b.name));
 console.log(people.sort((a, b) => a.name.localeCompare(b.name)));
 console.log(people.sort((a, b) => a.age - b.age));

@@ -50,16 +50,11 @@ let obj1 = {
   city: "New York",
 };
 
-let stringify = JSON.stringify(obj1);
-localStorage.setItem("obj-1", stringify);
-
-let retrievedData = localStorage.getItem("obj-1");
-console.log(retrievedData);
-
-let parsedData = JSON.parse(retrievedData);
+localStorage.setItem("obj-1", JSON.stringify(obj1));
+let parsedData = JSON.parse(localStorage.getItem("obj-1"));
 console.log("Type of Data", typeof parsedData, parsedData);
 
-localStorage.clear();
+// localStorage.clear();
 //==============================================================================
 // 4. Combining localStorage and JSON
 //==============================================================================
@@ -68,10 +63,12 @@ let studentProfile = {
   age: 45,
   powers: ["Genius", "Inventor", "Billionaire"],
 };
+localStorage.setItem("obj", JSON.stringify(studentProfile));
+let profileData = JSON.parse(localStorage.getItem("obj"));
 
-localStorage.setItem("studentProfile", JSON.stringify(studentProfile));
-let profileData = JSON.parse(localStorage.getItem("studentProfile"));
 console.log("Type of Data", typeof profileData, profileData);
-
+console.log(profileData.name);
+console.log(profileData.age);
+console.log(profileData.powers[0]);
 // localStorage.clear();
 //==============================================================================

@@ -2,10 +2,11 @@
 // reduce = (accumulator, currnet-element and index) = final one answer. it works on three parameters
 // ------------------------------------------------------------------------------------------
 let arr = [9, 8, 7];
-let sum = arr.reduce((acc, el) => {
+let sum = arr.reduce((acc, el, i) => {
+  console.log(el);
+  console.log(i);
   return acc + el;
 }, 0);
-
 console.log(sum);
 //-----------------------------------------------------------------------------------------
 let arr3 = [24, 45, 56, 67, 78, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];

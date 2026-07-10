@@ -54,8 +54,9 @@ console.log(message);
 //========================================
 let str5 = "Welcome to JavaScript!";
 console.log(str5.includes("JavaScript"));
-console.log(str5.includes("java"));
+console.log(str5.includes("Java"));
 console.log(str5.includes("come"));
+console.log(str5.includes("xyz"));
 //=====================================
 // 8. INDEXOF - Find First Occurrence
 //=====================================
@@ -81,7 +82,7 @@ console.log(str7.endsWith("is"));
 let str8 = "JavaScript";
 console.log(str8.slice(0, 4));
 console.log(str8.slice(4));
-console.log(str8.slice(-6));
+console.log(str8.slice(-3));
 // =====================================
 // 12. SUBSTRING - Similar to Slice
 // =====================================
@@ -218,7 +219,7 @@ console.log(a.localeCompare("apple"));
 // 30. REVERSING A STRING
 //=====================================
 let str26 = "JavaScript";
-let reversed = str26.split("").reverse().join("");  
+let reversed = str26.split("").reverse().join("");
 console.log(reversed);
 //=====================================
 // 31. STRING TO NUMBER CONVERSION
@@ -252,18 +253,23 @@ console.log(String.fromCodePoint(128512));
 //=====================================
 // 35. RAW STRINGS - Template Literal Raw
 //=====================================
+console.log("C:\Users\Desktop\file.txt"); // the backslash (\) is treated as an escape characte
+console.log("C:\\Users\\Desktop\\file.txt");
+// Output: C:\Users\Desktop\file.txt
 let path = String.raw`C:\Users\Desktop\file.txt`;
 console.log(path);
 //=====================================
 // Splice :-
 //=====================================
 const numbers = [0, 1, 2, 3, 4, 5];
+// console.log(numbers.splice(1, 3));
 let removed = numbers.splice(0, 3, "add1", "add2", "...");
 console.log(removed);
 console.log(numbers);
 //--------------------------------------------------------------
 // Slice :-
 const fruits2 = ["apple", "banana", "orange", "Litchi", "Mango"];
+console.log(fruits2.slice(1,3))
 let slicedFruits = fruits2.slice(1, 3);
 console.log(slicedFruits);
 console.log(fruits2);

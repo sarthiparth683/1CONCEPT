@@ -17,25 +17,10 @@ for (let start = 0; start < arr.length; start++) {
   }
 }
 
-// -------------------------------------------------------------------------------------
-// Subset - An array subset is a set of elements from an array where all elements of the subset exist in the original array, but not necessarily in consecutive order or in the same sequence.
-
-function getAllSubsets(arr) {
-  const subsets = [];
-
-  for (let i = 0; i < Math.pow(2, arr.length); i++) {
-    const subset = [];
-    for (let j = 0; j < arr.length; j++) {
-      // Check if jth bit is set in i
-      if (i & (1 << j)) {
-        subset.push(arr[j]);
-      }
-    }
-    subsets.push(subset);
+for (let i = 0; i <= str.length; i++) {
+  for (let j = i + 1; j <= str.length; j++) {
+    console.log(str.slice(i, j));
   }
-
-  return subsets;
 }
 
-console.log(getAllSubsets([1, 2, 3]));
-// ----------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------

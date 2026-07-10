@@ -2,11 +2,11 @@
 // --------------------------------------------------------------
 // Array Destructuring
 const numbers = [1, 2, 3, 4, 5, 6, 7];
-const [first, second, third, ...rest] = numbers;
+const [first, second, third, ...xyyz] = numbers;
 console.log(first);
 console.log(second);
 console.log(third);
-console.log(rest);
+console.log(xyyz);
 //--------------------------------------------------------------
 // Object Destructuring: Allows you to extract properties from objects into variables.
 
