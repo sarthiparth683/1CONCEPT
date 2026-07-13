@@ -1,11 +1,13 @@
 import React from "react";
+import UserProfile from "./Props";
+import Comp from "./Comp";
 
 const Test = () => {
   return (
-    <div>
-      <li>npm create vite@latest my-app -- --template react-ts</li>
-      <li>need to remove ts(type Script)</li>
-    </div>
+    <>
+      <Comp name="Sarthi" age="24" prop3="prop3" prop4="prop4" />
+      <UserProfile name="Alice" age={25}  />
+    </>
   );
 };
 

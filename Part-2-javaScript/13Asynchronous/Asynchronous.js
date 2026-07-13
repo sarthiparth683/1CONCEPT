@@ -17,10 +17,11 @@ console.log("A");
 setTimeout(() => {
   console.log("B");
   Promise.resolve().then(() => console.log("C"));
-}, 2000);
+}, 3000);
 
 Promise.resolve().then(() => console.log("D"));
 console.log("E");
+// A E D B C runs in this sequence
 // ============================================================================
 // 3) CALLBACK FUNCTIONS
 // - A function passed as an argument to another function.

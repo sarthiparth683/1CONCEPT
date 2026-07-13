@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import styles from "./Eff.module.css";
 
-const UseEff = () => {
+export default function UseEff() {
   const [count, setCount] = useState(0);
   const [randomText, setRandomText] = useState("");
 
@@ -20,15 +21,13 @@ const UseEff = () => {
 
   return (
     <>
-      <div style={{ marginBottom: "20px" }}>
-        <p>
-          <strong>Count:</strong> {count}
-        </p>
-        <button onClick={() => setCount(count + 1)}>+</button>
-      </div>
-
-      <div>
+      <div className={styles.box1}>
+        <strong>Count:{count} </strong>
+        <button className={styles.btn1} onClick={() => setCount(count + 1)}>
+          +
+        </button>
         <button
+          className={styles.btn2}
           onClick={() => setRandomText(Math.random().toString(36).substring(7))}
         >
           <strong>Random Text: {randomText}</strong>
@@ -36,6 +35,4 @@ const UseEff = () => {
       </div>
     </>
   );
-};
-
-export default UseEff;
+}

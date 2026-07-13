@@ -1,0 +1,65 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.focus {
+  border: 3px solid black;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: 10px auto;
+  padding-bottom: 10px;
+}
+.focus input {
+  margin: 10px;
+}
+/* --------------------------- */
+.btn1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 90px;
+  margin: auto;
+  font-size: large;
+  border: none;
+  background-color: aquamarine;
+}
+/* --------------------------------- */
+.ref3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid lightgreen;
+  margin: auto;
+  width: 500px;
+}
+
+.ref3 button {
+  margin: 5px;
+  width: 150px;
+  height: 30px;
+}
+/* --------------------------------- */
+.ref4 {
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  margin: auto;
+  text-align:justify;
+  padding: 8px;
+}
+
+.ref4 li {
+  list-style: none;
+}

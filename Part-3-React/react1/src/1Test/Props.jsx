@@ -1,15 +1,16 @@
 import React from "react";
+import styles from "./style2.module.css";
 
-// export function UserProfile({ name, age, isOnline }) {
-function UserProfile({ name, age, isOnline }) {
+export default function UserProfile({ name, age }) {
+  // function UserProfile({ name, age }) {
   return (
-    <div className="card">
-      <h1>Props</h1>
-      <h2>{name}</h2>
-      {age && <p>Age: {age}</p>}
-      <p>Status: {isOnline ? "🟢 Online" : "🔴 Offline"}</p>
+    <div className={styles.card}>
+      <h2>
+        {name} age={age}
+      </h2>
     </div>
   );
 }
 
-export default UserProfile;
+// export default UserProfile;
+// can be exported directly form function itself

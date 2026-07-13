@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./state.module.css";
 
 function Counter() {
   const [count, setCount] = useState(0); // 0 is initial value
@@ -13,10 +14,12 @@ function Counter() {
 
   return (
     <>
-      <span>{count}</span>
-      <button onClick={() => changeCount(1)}>+</button>
-      <button onClick={() => changeCount(-1)}>-</button>
-      <button onClick={() => resetCount()}>Reset</button>
+      <div className={styles.box1}>
+        <b>{count}</b>
+        <button onClick={() => changeCount(1)}>+</button>
+        <button onClick={() => changeCount(-1)}>-</button>
+        <button onClick={() => resetCount()}>Reset</button>
+      </div>
     </>
   );
 }

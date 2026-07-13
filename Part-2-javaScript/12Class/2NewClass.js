@@ -5,6 +5,10 @@
 // CLASS 1: BANK (PARENT CLASS)
 // ========================================================================
 class Bank {
+  // PRIVATE FIELDS (#) - at top, These cannot be accessed directly from outside the object. TRUE ENCAPSULATION in JavaScript. Prevents accidental or unauthorized modification. Only methods inside this class can read/write these fields.
+  #bankCode;
+  #assets;
+  // -----------------------------------------------------------------------
   // STATIC PROPERTY (public)-Belongs to the class itself, not to objects. Shared across ALL objects. Used for system-level information.
   static bankingSystem = "Reserve Banking Model";
   // --------------------------------------------------------------------
@@ -13,14 +17,10 @@ class Bank {
   // --------------------------------------------------------------------
   // STATIC BLOCK-Runs ONCE when the class is loaded. Good for initialization, logging, configuration.
   static {
-    console.log(
-      "STATIC BLOCK-Runs ONCE when the class is loaded..."
-    );
+    console.log("STATIC BLOCK-Runs ONCE when the class is loaded...");
   }
   // --------------------------------------------------------------------
-  // PRIVATE FIELDS (#)- These cannot be accessed directly from outside the object. TRUE ENCAPSULATION in JavaScript. Prevents accidental or unauthorized modification. Only methods inside this class can read/write these fields.
-  #bankCode;
-  #assets;
+
   // --------------------------------------------------------------------
   // CONSTRUCTOR-Runs automatically when a new object is created. Initializes object properties. Public properties are accessible from anywhere.
   constructor(name, location, assets) {
@@ -77,7 +77,7 @@ console.log("bankingSystem", Bank.bankingSystem); // Accessing static property d
 
 // console.log(Bank.#totalBanks) // You cannot access a private static property (#totalBanks) from outside the class — that is exactly the purpose of # (hard privacy).
 
-console.log("getTotalBanks",Bank.getTotalBanks()); // But you CAN access it indirectly through a public static method provided inside the class:
+console.log("getTotalBanks", Bank.getTotalBanks()); // But you CAN access it indirectly through a public static method provided inside the class:
 
 console.log(bank.name);
 console.log(bank.location);
@@ -88,57 +88,20 @@ console.log(bank.code);
 console.log(bank.assets);
 bank.assets = 999999999; // Update value (setter)
 console.log(bank.assets);
+console.log(Bank.getTotalBanks());
 console.log(Bank.createDefaultBank()); //Static methods are always called on the class itself, not on an object.
 // ========================================================================
 // CLASS 2: EMPLOYEE (CHILD CLASS)-Demonstrates inheritance and child-specific features.
 // ========================================================================
 class Employee extends Bank {
-  // PRIVATE FIELDS
-  #salary;
-  #empId;
-
-  // --------------------------------------------------------------------
   // PROTECTED (by convention)-JS does NOT have real protected fields. Using "_" tells developers: "Don't access this from outside." Child classes can access it.
   _department = "General";
   // --------------------------------------------------------------------
-  // CONSTRUCTOR (with inheritance)
-  // - super() calls the parent constructor first.
-  // - Then we initialize the child-specific properties.
+  // Super() calls the parent constructor first.
   // --------------------------------------------------------------------
-  constructor(bankName, location, assets, empName, salary) {
-    super(bankName, location, assets); // Parent constructor
+  constructor(name, location, assets, empName, salary) {
+    super(name, location, assets); // Parent constructor
     this.empName = empName;
-    this.#salary = salary;
-    this.#empId = "EMP" + Math.floor(Math.random() * 100000);
-  }
-  // --------------------------------------------------------------------
-  // METHOD OVERRIDING-To change or extend the behavior of a paren Child method replaces parent method with more super.getInfo() lets us REUSE parent logic.
-  // --------------------------------------------------------------------
-  getInfo() {
-    return `${super.getInfo()} | Employee: ${this.empName}`;
-  }
-  // --------------------------------------------------------------------
-  // GETTERS for private fields
-  get employeeId() {
-    return this.#empId;
-  }
-
-  get salary() {
-    return this.#salary;
-  }
-  // --------------------------------------------------------------------
-  // SETTER for salary (controlled update)
-  set salary(amount) {
-    if (amount < 15000 || amount > 2000000) {
-      console.log("❌ Salary must be between 15k and 20L");
-      return;
-    }
-    this.#salary = amount;
-  }
-  // --------------------------------------------------------------------
-  // INSTANCE METHOD
-  getDetails() {
-    return `${this.empName} [${this.employeeId}] | Deptartment: ${this._department}`;
   }
 }
 
@@ -151,15 +114,11 @@ const emp = new Employee(
   "Mumbai",
   50000000000,
   "Rajesh",
-  85000
+  85000,
 );
 
-console.log(emp)
-// console.log(Employee.#salary) // Error: You cannot access #salary or #empId from outside the class — that’s the whole purpose of private fields (#) in JavaScript.Because private fields belong to instances, not the class itself. Also, private fields can only be accessed inside the class body that defines
-console.log(emp.salary);  // uses get salary()
-console.log(emp.employeeId);  // uses get employeeId()
+console.log(emp);
 console.log(emp._department);
-console.log(emp.getDetails()) // to access _department
-console.log(emp.getInfo()); // Overridden method
-console.log("Bank Code:", emp.code); // inhereted inside protorype
+console.log(emp.name);
+console.log(emp.location);
 // ===============================================================================
