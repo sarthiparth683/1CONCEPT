@@ -1,7 +1,6 @@
 import React, { useState, useCallback, memo } from "react";
 // In React, when a parent component updates, it automatically re-renders all of its children by default. memo allows you to tell React: "Hey, only re-render this child if the data passed into it (the props) actually changed."
-// onClick is prop used to add value in component
-// To be precise, children is the technical name React uses for everything you put between the opening and closing tags of a component.
+
 const ChildButton = memo(({ onClick, children }) => {
   console.log(`[Re-rendered] Button: ${children}`); 
   return (
@@ -13,15 +12,12 @@ const ChildButton = memo(({ onClick, children }) => {
 
 export default function UseCallBack() {
   const [count, setCount] = useState(0);
-  const [step, setStep] = useState(1); // NEW: The condition that will change!
+  const [step, setStep] = useState(1); 
   const [text, setText] = useState("");
 
-  // ✅ The Condition Array:
-  // We tell React: "Keep this function cached, UNLESS the 'step' variable changes. 
-  // If 'step' changes, you MUST rebuild the function so it can access the new step value inside its closure."
   const increment = useCallback(() => {
     setCount((prev) => prev + step); 
-  }, [step]); // <-- We added 'step' here!
+  }, [step]); 
 
   return (
     <div style={{ padding: "20px", fontFamily: "sans-serif" }}>

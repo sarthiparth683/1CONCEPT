@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import styles from "./ref.module.css";
 
 export default function UseRef5() {
   const [count, setCount] = useState(0);
@@ -10,60 +11,49 @@ export default function UseRef5() {
   }, [count]);
 
   const testDangerousClosure = () => {
-    // ❌ Dangerous: We capture the primitive value RIGHT NOW.
+    // ❌ Dangerous: We capture saving the value into a variable outside of it.Why is it dangerous?Because the timeout is using the capturedValue variable, which took a "snapshot" of the data at the exact moment the button was clicked. It has no idea the count changed afterward. In real apps, this causes bugs where your app submits old data to a server or displays incorrect information to a user.
     const capturedValue = myRef.current;
 
     setTimeout(() => {
       alert(`Dangerous/Stale Value: ${capturedValue}`);
-    }, 3000);
+    }, 2000);
   };
 
   const testSafeClosure = () => {
-    // ✅ Safe: We don't read .current until the timeout actually runs 3 seconds later.
+    // ✅ Safe: We don't read .current until the timeout actually runs 2 seconds later.Why is it safe?Because useRef returns a mutable object (an object that can change) that looks like this: { current: 0 }. When you update it, React just changes the value inside that same object box. By checking myRef.current inside the timeout, you are looking inside the box at the very last second, ensuring you see the newest number.
     setTimeout(() => {
       alert(`Safe/Latest Value: ${myRef.current}`);
-    }, 3000);
+    }, 2000);
   };
 
   return (
-    <div style={{ padding: "20px", fontFamily: "sans-serif" }}>
+    <div className={styles["ref5-container"]}>
       <h2>Understanding Stale Closures with useRef</h2>
 
-      <div style={{ marginBottom: "20px" }}>
+      <div className={styles["ref5-counter-section"]}>
         <strong>Current Count: {count}</strong>
         <button
+          className={styles["ref5-increase-btn"]}
           onClick={() => setCount(count + 1)}
-          style={{ marginLeft: "10px", padding: "5px 10px" }}
         >
           Increase Count
         </button>
       </div>
 
-      <div style={{ display: "flex", gap: "10px" }}>
+      <div className={styles["ref5-actions-container"]}>
         <button
+          className={styles["ref5-dangerous-btn"]}
           onClick={testDangerousClosure}
-          style={{
-            padding: "8px 16px",
-            backgroundColor: "#ffcccc",
-            cursor: "pointer",
-          }}
         >
           1. Test Dangerous Closure
         </button>
 
-        <button
-          onClick={testSafeClosure}
-          style={{
-            padding: "8px 16px",
-            backgroundColor: "#ccffcc",
-            cursor: "pointer",
-          }}
-        >
+        <button onClick={testSafeClosure} className={styles["ref5-safe-btn"]}>
           2. Test Safe Closure
         </button>
       </div>
 
-      <p style={{ marginTop: "20px", maxWidth: "500px", lineHeight: "1.5" }}>
+      <p className={styles["ref5-description"]}>
         <strong>"Stale" Closures:</strong> Because <code>useRef</code> persists
         across renders, it is often used inside timeouts. However, if you are
         not careful, you might be capturing an old version of a variable in a

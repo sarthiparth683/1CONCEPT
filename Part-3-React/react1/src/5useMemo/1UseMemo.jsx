@@ -2,24 +2,24 @@
 
 import React, { useState, useMemo } from "react";
 
-function ExpensiveCalculator() {
+export default function UseMemo1() {
   const [number, setNumber] = useState(0);
   const [num2, setNum2] = useState(0);
 
   const slowCalculation = (num) => {
-    console.log("Running slow calculation...");
     for (let i = 0; i < 1000000000; i++) {}
     return num * 2;
-  }; 
+  };
 
   const doubleNumber = useMemo(() => {
     return slowCalculation(number);
   }, [number]);
 
+  // const doubleNumber = slowCalculation(number);
+
   const increment = () => {
     setNum2((prev) => prev + 1);
   };
-  // ---------------------------------------------------------
 
   return (
     <>
@@ -32,11 +32,9 @@ function ExpensiveCalculator() {
       />
 
       <button onClick={increment}>
-        Fast rendering not dependent on useMemo {num2}
+        when component reRenders increment doesn't slow down but without useMemo
+        it would slow down {num2}
       </button>
-
     </>
   );
 }
-
-export default ExpensiveCalculator;
