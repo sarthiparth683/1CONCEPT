@@ -5,10 +5,12 @@ const Navigation = () => {
     <>
       <nav>
         <img src="brand_logo.png" alt="Nike-Logo" />
-        <li>MENU</li>
-        <li>LOCATION</li>
-        <li>ABOUT</li>
-        <li>CONTACT</li>
+        <ul>
+          <li>MENU</li>
+          <li>LOCATION</li>
+          <li>ABOUT</li>
+          <li>CONTACT</li>
+        </ul>
         <button>Login</button>
       </nav>
     </>
@@ -16,4 +18,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-  

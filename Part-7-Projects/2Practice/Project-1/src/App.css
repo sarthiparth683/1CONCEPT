@@ -1,15 +1,72 @@
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-nav li{
-    list-style: none;
-    display: flex;
-    
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-nav button{
-    background-color: #D01C28;
-    color: whitesmoke;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+nav li {
+  list-style: none;
+  display: flex;
+}
+nav ul {
+  display: flex;
+  gap: 15px;
+}
+
+nav button {
+  background-color: #d01c28;
+  color: whitesmoke;
+  border: none;
+  height: 31px;
+  width: 75px;
+}
+.box1 {
+  display: flex;
+  justify-content: center;
+}
+.box1 h1 {
+  width: 595px;
+  height: 306px;
+  font-weight: 800;
+  font-size: 108px;
+  line-height: 102px;
+  letter-spacing: 0%;
+}
+.para1 {
+  width: 404px;
+  height: 91px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-top: 110px;
+}
+.img2 {
+  /* width: 530px; */
+  height: 487px;
+}
+.btn {
+  display: flex;
+  gap: 40px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.btn button {
+  border: none;
+  width: 118px;
+  height: 29px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.img1 {
+  display: flex;
+  gap: 16px;
+  width: 80px;
+  height: 32px;
 }
