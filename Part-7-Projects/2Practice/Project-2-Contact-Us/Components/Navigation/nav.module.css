@@ -1,0 +1,29 @@
+.navigation {
+  display: flex;
+  justify-content: space-around;
+}
+.navigation img {
+  height: 72px;
+}
+.navigation h1 {
+  margin-top: 5px;
+  font-weight: bolder;
+  font-size: 48px;
+  color: #000000;
+}
+.navigation li {
+  list-style: none;
+}
+.nav2 {
+  display: flex;
+  gap: 15px;
+  font-size: 21px;
+  margin-top: 10px;
+}
+.para1{
+  text-align: justify;
+  width: 900px;
+  margin-left: 400px;
+  margin-top: -20px;
+  font-weight: 500;
+}

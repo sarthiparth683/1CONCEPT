@@ -5,7 +5,7 @@ function Comp(props) {
   return (
     // <div className={styles.welcome}>
     <div className={`${styles.welcome}  ${styles.anotherClass}`}>
-      <li>npm create vite@latest my-app -- --template react-ts</li>
+      <li>npm create vite@latest</li>
       <li>need to remove ts(type Script)</li>
       <li>Test component-1</li>
       <li>
