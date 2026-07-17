@@ -1,12 +1,11 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-export const useCounter = (initialValue = 0) => {
-  const [count, setCount] = useState(initialValue);
+export const useCounter = () => {
+  const [count, setCount] = useState(0);
 
   const increment = () => setCount((prev) => prev + 1);
   const decrement = () => setCount((prev) => prev - 1);
-  const reset = () => setCount(initialValue);
+  const reset = () => setCount(0);
 
-  // We return the state and the functions to modify it
   return { count, increment, decrement, reset };
 };

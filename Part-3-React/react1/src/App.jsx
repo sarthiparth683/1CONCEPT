@@ -19,11 +19,11 @@ function App() {
       {/* <UseEff /> */}
       {/* <ZuseRef/> */}
       {/* <UseMemo1 /> */}
-      <UseCallBack />
+      {/* <UseCallBack /> */}
       {/* <Custom2 /> */}
       {/* <Reducer1/> */}
       {/* <Zroute /> */}
-      {/* <MyModalComponent/> */}
+      {/* <MyModalComponent /> */}
       {/* <TooltipLayout/> */}
     </>
   );

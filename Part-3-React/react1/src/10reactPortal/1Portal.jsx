@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 
-// 1. The reusable Portal Modal
+// React automatically uses the "children" prop to grab whatever you put inside the opening and closing tags of a component.isOpen, onClose, are custom props not inbuilt.
 export function Modal({ isOpen, onClose, children }) {
   if (!isOpen) return null;
 
@@ -19,7 +19,6 @@ export function Modal({ isOpen, onClose, children }) {
   );
 }
 
-// 2. The main component you will export and use in App.jsx
 export default function MyModalComponent() {
   const [open, setOpen] = useState(false);
 
@@ -28,6 +27,7 @@ export default function MyModalComponent() {
       <button onClick={() => setOpen(true)}>Open Modal</button>
       
       <Modal isOpen={open} onClose={() => setOpen(false)}>
+        {/* EVERYTHING IN HERE IS PASSED AS "children" */}
         <h2>Fancy Modal</h2>
         <p>This is rendering completely outside the parent container!</p>
       </Modal>

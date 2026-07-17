@@ -1,0 +1,15 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav li{
+    list-style: none;
+    display: flex;
+    
+}
+
+nav button{
+    background-color: #D01C28;
+    color: whitesmoke;
+}

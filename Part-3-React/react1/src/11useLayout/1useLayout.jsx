@@ -19,8 +19,6 @@ export default function TooltipLayout() {
   return (
     <div style={{ padding: "50px" }}>
       <button ref={buttonRef}>Hover Me</button>
-
-      {/* This tooltip relies on the measurement taken in useLayoutEffect */}
       <div
         style={{
           position: "absolute",
